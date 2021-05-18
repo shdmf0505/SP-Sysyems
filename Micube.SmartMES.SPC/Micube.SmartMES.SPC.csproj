@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19B8B53E-22BF-4C05-A70F-EB1C7A8D4F7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Micube.SmartMES.SPC</RootNamespace>
+    <AssemblyName>Micube.SmartMES.SPC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.BonusSkins.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Charts.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Data.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.DataAccess.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.DataAccess.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Diagram.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Images.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Images.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Office.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Pdf.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.PivotGrid.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Printing.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.RichEdit.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Sparkline.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Spreadsheet.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraBars.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.Extensions, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraDiagram.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraLayout.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraNavBar.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPivotGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPrinting.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraReports.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraRichEdit.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraSpreadsheet.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraTreeList.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraVerticalGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.1.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.1.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Jot, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Jot.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Net.Wcf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.Net.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.SmartControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.SmartControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Nito.AsyncEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Enlightenment">
+      <HintPath>..\..\lib\Nito.AsyncEx.Enlightenment.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\lib\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\lib\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SmartDeploy.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\SmartDeploy.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections" />
+    <Reference Include="System.ComponentModel.EventBasedAsync" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.Debug" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Reflection" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Extensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.ValueTuple, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\SpcClass.cs" />
+    <Compile Include="Enum\SpcDisplayOption.cs" />
+    <Compile Include="Popup\SpcStatusDetailChartPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\SpcStatusDetailChartPopup.Designer.cs">
+      <DependentUpon>SpcStatusDetailChartPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\SpcStatusRawDataPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\SpcStatusRawDataPopup.Designer.cs">
+      <DependentUpon>SpcStatusRawDataPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\SpcControlRulesSettingPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\SpcControlRulesSettingPopup.Designer.cs">
+      <DependentUpon>SpcControlRulesSettingPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\SpcControlRulesResultPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\SpcControlRulesResultPopup.Designer.cs">
+      <DependentUpon>SpcControlRulesResultPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\SpcStatusRawDataAnalysisPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\SpcStatusRawDataAnalysisPopup.Designer.cs">
+      <DependentUpon>SpcStatusRawDataAnalysisPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\SpcStatusRawDataChartPointPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\SpcStatusRawDataChartPointPopup.Designer.cs">
+      <DependentUpon>SpcStatusRawDataChartPointPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SPCStatus\ChemicalSpcStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCStatus\ChemicalSpcStatus.Designer.cs">
+      <DependentUpon>ChemicalSpcStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCStatus\EtchingRateSpcStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCStatus\EtchingRateSpcStatus.Designer.cs">
+      <DependentUpon>EtchingRateSpcStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCStatus\QualityAnalysisSpcStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCStatus\QualityAnalysisSpcStatus.Designer.cs">
+      <DependentUpon>QualityAnalysisSpcStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCStatus\QualityTotalSpcStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCStatus\QualityTotalSpcStatus.Designer.cs">
+      <DependentUpon>QualityTotalSpcStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCStatus\QualityStandardSpcStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCStatus\QualityStandardSpcStatus.Designer.cs">
+      <DependentUpon>QualityStandardSpcStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCStatus\IncommingInspectionSpcStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCStatus\IncommingInspectionSpcStatus.Designer.cs">
+      <DependentUpon>IncommingInspectionSpcStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCStatus\ReliaVerifiSpcStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCStatus\ReliaVerifiSpcStatus.Designer.cs">
+      <DependentUpon>ReliaVerifiSpcStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucAnalysisPlotPart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucAnalysisPlotPart.Designer.cs">
+      <DependentUpon>ucAnalysisPlotPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucChartDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucChartDetail.Designer.cs">
+      <DependentUpon>ucChartDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucXBarFrame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucXBarFrame.Designer.cs">
+      <DependentUpon>ucXBarFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucCpkFrame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucCpkFrame.Designer.cs">
+      <DependentUpon>ucCpkFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucXBarGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucXBarGrid.Designer.cs">
+      <DependentUpon>ucXBarGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucXBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucXBar.Designer.cs">
+      <DependentUpon>ucXBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucCpk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucCpk.Designer.cs">
+      <DependentUpon>ucCpk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucCpkGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucCpkGrid.Designer.cs">
+      <DependentUpon>ucCpkGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucAnalysisPlot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucAnalysisPlot.Designer.cs">
+      <DependentUpon>ucAnalysisPlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart01.Designer.cs">
+      <DependentUpon>TestSpcBaseChart01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart02.Designer.cs">
+      <DependentUpon>TestSpcBaseChart02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart03.Designer.cs">
+      <DependentUpon>TestSpcBaseChart03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart0301Raw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart0301Raw.Designer.cs">
+      <DependentUpon>TestSpcBaseChart0301Raw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart0302DB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart0302DB.Designer.cs">
+      <DependentUpon>TestSpcBaseChart0302DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart03XBar01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart03XBar01.Designer.cs">
+      <DependentUpon>TestSpcBaseChart03XBar01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart04Cpk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart04Cpk.Designer.cs">
+      <DependentUpon>TestSpcBaseChart04Cpk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart04CpkFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart04CpkFrame.Designer.cs">
+      <DependentUpon>TestSpcBaseChart04CpkFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart05XBarFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcBaseChart05XBarFrame.Designer.cs">
+      <DependentUpon>TestSpcBaseChart05XBarFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcDataCreate01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTestForm\TestSpcDataCreate01.Designer.cs">
+      <DependentUpon>TestSpcDataCreate01.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Popup\SpcStatusDetailChartPopup.resx">
+      <DependentUpon>SpcStatusDetailChartPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\SpcStatusRawDataPopup.resx">
+      <DependentUpon>SpcStatusRawDataPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\SpcControlRulesSettingPopup.resx">
+      <DependentUpon>SpcControlRulesSettingPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\SpcControlRulesResultPopup.resx">
+      <DependentUpon>SpcControlRulesResultPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\SpcStatusRawDataAnalysisPopup.resx">
+      <DependentUpon>SpcStatusRawDataAnalysisPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\SpcStatusRawDataChartPointPopup.resx">
+      <DependentUpon>SpcStatusRawDataChartPointPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SPCStatus\ChemicalSpcStatus.resx">
+      <DependentUpon>ChemicalSpcStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCStatus\EtchingRateSpcStatus.resx">
+      <DependentUpon>EtchingRateSpcStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCStatus\QualityAnalysisSpcStatus.resx">
+      <DependentUpon>QualityAnalysisSpcStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCStatus\QualityTotalSpcStatus.resx">
+      <DependentUpon>QualityTotalSpcStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCStatus\QualityStandardSpcStatus.resx">
+      <DependentUpon>QualityStandardSpcStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCStatus\IncommingInspectionSpcStatus.resx">
+      <DependentUpon>IncommingInspectionSpcStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCStatus\ReliaVerifiSpcStatus.resx">
+      <DependentUpon>ReliaVerifiSpcStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucAnalysisPlotPart.resx">
+      <DependentUpon>ucAnalysisPlotPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucChartDetail.resx">
+      <DependentUpon>ucChartDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucXBarFrame.resx">
+      <DependentUpon>ucXBarFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucCpkFrame.resx">
+      <DependentUpon>ucCpkFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucXBarGrid.resx">
+      <DependentUpon>ucXBarGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucXBar.resx">
+      <DependentUpon>ucXBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucCpk.resx">
+      <DependentUpon>ucCpk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucCpkGrid.resx">
+      <DependentUpon>ucCpkGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucAnalysisPlot.resx">
+      <DependentUpon>ucAnalysisPlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTestForm\TestSpcBaseChart01.resx">
+      <DependentUpon>TestSpcBaseChart01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTestForm\TestSpcBaseChart02.resx">
+      <DependentUpon>TestSpcBaseChart02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTestForm\TestSpcBaseChart03.resx">
+      <DependentUpon>TestSpcBaseChart03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTestForm\TestSpcBaseChart0301Raw.resx">
+      <DependentUpon>TestSpcBaseChart0301Raw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTestForm\TestSpcBaseChart0302DB.resx">
+      <DependentUpon>TestSpcBaseChart0302DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTestForm\TestSpcBaseChart03XBar01.resx">
+      <DependentUpon>TestSpcBaseChart03XBar01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTestForm\TestSpcBaseChart04Cpk.resx">
+      <DependentUpon>TestSpcBaseChart04Cpk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTestForm\TestSpcBaseChart04CpkFrame.resx">
+      <DependentUpon>TestSpcBaseChart04CpkFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTestForm\TestSpcBaseChart05XBarFrame.resx">
+      <DependentUpon>TestSpcBaseChart05XBarFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTestForm\TestSpcDataCreate01.resx">
+      <DependentUpon>TestSpcDataCreate01.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.Controls\Micube.SmartMES.Commons.Controls.csproj">
+      <Project>{6c8616d8-4620-477e-a1ac-2a02a94d4984}</Project>
+      <Name>Micube.SmartMES.Commons.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.SPCLibrary\Micube.SmartMES.Commons.SPCLibrary.csproj">
+      <Project>{22839825-69f9-48de-8eb7-d88ee70bbc78}</Project>
+      <Name>Micube.SmartMES.Commons.SPCLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons\Micube.SmartMES.Commons.csproj">
+      <Project>{1b6a2eb9-f134-49fc-80fa-982418d6490f}</Project>
+      <Name>Micube.SmartMES.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\extension.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InstrumentationDocument019.xls" />
+    <None Include="Resources\reduction.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

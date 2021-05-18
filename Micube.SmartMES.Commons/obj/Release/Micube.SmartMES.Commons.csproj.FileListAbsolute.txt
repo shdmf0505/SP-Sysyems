@@ -1,0 +1,13 @@
+C:\YPMES\Client\bin\Release\Report\LotCardProduction.repx
+C:\YPMES\Client\bin\Release\Micube.SmartMES.Commons.dll
+C:\YPMES\Client\bin\Release\Micube.SmartMES.Commons.pdb
+C:\YPMES\Client\src\Micube.SmartMES.Commons\obj\Release\Micube.SmartMES.Commons.ProductRevisionInputPopup.resources
+C:\YPMES\Client\src\Micube.SmartMES.Commons\obj\Release\Micube.SmartMES.Commons.SendInspectionMailPopup.resources
+C:\YPMES\Client\src\Micube.SmartMES.Commons\obj\Release\Micube.SmartMES.Commons.ShipmentInspectionMailPopup.resources
+C:\YPMES\Client\src\Micube.SmartMES.Commons\obj\Release\Micube.SmartMES.Commons.Properties.Resources.resources
+C:\YPMES\Client\src\Micube.SmartMES.Commons\obj\Release\Micube.SmartMES.Commons.csproj.GenerateResource.cache
+C:\YPMES\Client\src\Micube.SmartMES.Commons\obj\Release\Micube.SmartMES.Commons.csproj.CoreCompileInputs.cache
+C:\YPMES\Client\src\Micube.SmartMES.Commons\obj\Release\Micube.SmartMES.Commons.csproj.CopyComplete
+C:\YPMES\Client\src\Micube.SmartMES.Commons\obj\Release\Micube.SmartMES.Commons.dll
+C:\YPMES\Client\src\Micube.SmartMES.Commons\obj\Release\Micube.SmartMES.Commons.pdb
+C:\YPMES\Client\src\Micube.SmartMES.Commons\obj\Release\Micube.SmartMES.Commons.csprojAssemblyReference.cache

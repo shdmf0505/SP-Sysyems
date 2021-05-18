@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EAC3479C-5BB7-43EC-8C97-DEDBE1CCD5CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Micube.SmartMES.OutsideOrderMgnt</RootNamespace>
+    <AssemblyName>Micube.SmartMES.OutsideOrderMgnt</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Charts.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.CodeParser.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Data.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.DataAccess.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Diagram.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Office.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Pdf.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.PivotGrid.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Printing.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.RichEdit.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Export, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.RichEdit.v18.1.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Sparkline.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Xpo.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraBars.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraDiagram.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraGauges.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraLayout.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPrinting.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraReports.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraScheduler.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraScheduler.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.SmartControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.SmartControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OutsideClaimDeadline\OutsourcedClaimPeriodConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideClaimDeadline\OutsourcedClaimPeriodConfirmation.Designer.cs">
+      <DependentUpon>OutsourcedClaimPeriodConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcedCostsforMajorSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcedCostsforMajorSuppliers.Designer.cs">
+      <DependentUpon>OutsourcedCostsforMajorSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideClaimDeadline\OutsourcedClaimBaseAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideClaimDeadline\OutsourcedClaimBaseAmount.Designer.cs">
+      <DependentUpon>OutsourcedClaimBaseAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideClaimDeadline\OtherOutsourcedClaimCostRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideClaimDeadline\OtherOutsourcedClaimCostRegistration.Designer.cs">
+      <DependentUpon>OtherOutsourcedClaimCostRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideClaimDeadline\OutsourcedClaimConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideClaimDeadline\OutsourcedClaimConfirmation.Designer.cs">
+      <DependentUpon>OutsourcedClaimConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideClaimDeadline\OutsourcedClaimClosureStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideClaimDeadline\OutsourcedClaimClosureStatus.Designer.cs">
+      <DependentUpon>OutsourcedClaimClosureStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingDeadline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingDeadline.Designer.cs">
+      <DependentUpon>OutsourcingDeadline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingCostClosing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingCostClosing.Designer.cs">
+      <DependentUpon>OutsourcingCostClosing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingExclusionProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingExclusionProcessing.Designer.cs">
+      <DependentUpon>OutsourcingExclusionProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingSettleConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingSettleConfirmation.Designer.cs">
+      <DependentUpon>OutsourcingSettleConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingPeriodConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingPeriodConfirmation.Designer.cs">
+      <DependentUpon>OutsourcingPeriodConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcedBudgetManagement\OutsourcingBudgetEexpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcedBudgetManagement\OutsourcingBudgetEexpenses.Designer.cs">
+      <DependentUpon>OutsourcingBudgetEexpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcedBudgetManagement\OutsourcingExceptBudgetRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcedBudgetManagement\OutsourcingExceptBudgetRegister.Designer.cs">
+      <DependentUpon>OutsourcingExceptBudgetRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherExpensesManagement\OtherSoutsourcedPerformanceRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherExpensesManagement\OtherSoutsourcedPerformanceRegistration.Designer.cs">
+      <DependentUpon>OtherSoutsourcedPerformanceRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherExpensesManagement\OtherOutsourcedPerformanceApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherExpensesManagement\OtherOutsourcedPerformanceApproval.Designer.cs">
+      <DependentUpon>OtherOutsourcedPerformanceApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherExpensesManagement\OtherSubcontractingResultsConfirmed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherExpensesManagement\OtherSubcontractingResultsConfirmed.Designer.cs">
+      <DependentUpon>OtherSubcontractingResultsConfirmed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherExpensesManagement\OtherSubcontractCostRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherExpensesManagement\OtherSubcontractCostRegistration.Designer.cs">
+      <DependentUpon>OtherSubcontractCostRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcedWarehouse\OutsourcedWarehouseShipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcedWarehouse\OutsourcedWarehouseShipment.Designer.cs">
+      <DependentUpon>OutsourcedWarehouseShipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcedWarehouse\IssueOutboundWarehouseInquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcedWarehouse\IssueOutboundWarehouseInquiry.Designer.cs">
+      <DependentUpon>IssueOutboundWarehouseInquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcedWarehouse\OutsourcedWarehouseWear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcedWarehouse\OutsourcedWarehouseWear.Designer.cs">
+      <DependentUpon>OutsourcedWarehouseWear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcedWarehouse\OutboundwarehouseStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcedWarehouse\OutboundwarehouseStatus.Designer.cs">
+      <DependentUpon>OutboundwarehouseStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcedWarehouse\OutsourcedDistribution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcedWarehouse\OutsourcedDistribution.Designer.cs">
+      <DependentUpon>OutsourcedDistribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcedBudgetManagement\OutsourcingDistributionRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcedBudgetManagement\OutsourcingDistributionRatio.Designer.cs">
+      <DependentUpon>OutsourcingDistributionRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\OutsourcingCostChangeInquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\OutsourcingCostChangeInquiry.Designer.cs">
+      <DependentUpon>OutsourcingCostChangeInquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcingCostStatus\OutsourcedSettlementErrList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcingCostStatus\OutsourcedSettlementErrList.Designer.cs">
+      <DependentUpon>OutsourcedSettlementErrList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcingCostStatus\OutsourcingCostStatusList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcingCostStatus\OutsourcingCostStatusList.Designer.cs">
+      <DependentUpon>OutsourcingCostStatusList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcingCostStatus\OutsourcingProcessingCosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcingCostStatus\OutsourcingProcessingCosts.Designer.cs">
+      <DependentUpon>OutsourcingProcessingCosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcingCostStatus\OutsourcingCostsByDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcingCostStatus\OutsourcingCostsByDate.Designer.cs">
+      <DependentUpon>OutsourcingCostsByDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\OutsourcingSpecialAmountModifiedBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\OutsourcingSpecialAmountModifiedBrowse.Designer.cs">
+      <DependentUpon>OutsourcingSpecialAmountModifiedBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\OutsourcedBasedUnitPriceRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\OutsourcedBasedUnitPriceRegistration.Designer.cs">
+      <DependentUpon>OutsourcedBasedUnitPriceRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\OutsourcedFixedRateDownPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\OutsourcedFixedRateDownPrice.Designer.cs">
+      <DependentUpon>OutsourcedFixedRateDownPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\OutsourcedSpecialUnitPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\OutsourcedSpecialUnitPrice.Designer.cs">
+      <DependentUpon>OutsourcedSpecialUnitPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\SubcontractPriceRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcingUnitPriceManagement\SubcontractPriceRegistration.Designer.cs">
+      <DependentUpon>SubcontractPriceRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\OutsideFinishingEexpensePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\OutsideFinishingEexpensePopup.designer.cs">
+      <DependentUpon>OutsideFinishingEexpensePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\OutsourcingYoungPongPriceCodePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\OutsourcingYoungPongPriceCodePopup.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongPriceCodePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\OutsourcedCostsforMajorSuppliersYoungPongPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\OutsourcedCostsforMajorSuppliersYoungPongPopup.Designer.cs">
+      <DependentUpon>OutsourcedCostsforMajorSuppliersYoungPongPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\OutsourcingPeriodConfirmationPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\OutsourcingPeriodConfirmationPopup.Designer.cs">
+      <DependentUpon>OutsourcingPeriodConfirmationPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\OspConCurRequestPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\OspConCurRequestPopup.Designer.cs">
+      <DependentUpon>OspConCurRequestPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongCostClosing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongCostClosing.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongCostClosing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongAmountStatusBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongAmountStatusBrowse.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongAmountStatusBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongPeriodConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongPeriodConfirmation.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongPeriodConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongPublishStatusBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongPublishStatusBrowse.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongPublishStatusBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongErrList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongErrList.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongErrList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingCostStatus\SampleOutsourcingCostStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingCostStatus\SampleOutsourcingCostStatus.designer.cs">
+      <DependentUpon>SampleOutsourcingCostStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingCostStatus\OutsourcingYoungPongSettlementErrList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingCostStatus\OutsourcingYoungPongSettlementErrList.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongSettlementErrList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingCostStatus\OutsourcingYoungPongCostsByDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingCostStatus\OutsourcingYoungPongCostsByDate.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongCostsByDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingCostStatus\OutsourcingYoungPongCostStatusList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingCostStatus\OutsourcingYoungPongCostStatusList.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongCostStatusList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingCostStatus\OutsourcingYoungPongProcessingCosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingCostStatus\OutsourcingYoungPongProcessingCosts.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongProcessingCosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongFixedRateDownPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongFixedRateDownPrice.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongFixedRateDownPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongPriceClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongPriceClass.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongPriceClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongPriceCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongPriceCode.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongPriceCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongPriceItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongPriceItem.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongPriceItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\OutsourcedWarehouseShipmentPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\OutsourcedWarehouseShipmentPopup.Designer.cs">
+      <DependentUpon>OutsourcedWarehouseShipmentPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ProductItemPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ProductItemPopup.Designer.cs">
+      <DependentUpon>ProductItemPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\OutsourcedClaimBaseAmountPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\OutsourcedClaimBaseAmountPopup.Designer.cs">
+      <DependentUpon>OutsourcedClaimBaseAmountPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\OutsourcedDistributionPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\OutsourcedDistributionPopup.Designer.cs">
+      <DependentUpon>OutsourcedDistributionPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ClaimClosePeriodPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ClaimClosePeriodPopup.Designer.cs">
+      <DependentUpon>ClaimClosePeriodPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\OutsourcedCostsforMajorSuppliersPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\OutsourcedCostsforMajorSuppliersPopup.Designer.cs">
+      <DependentUpon>OutsourcedCostsforMajorSuppliersPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\OutsourcedResourceidpopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\OutsourcedResourceidpopup.Designer.cs">
+      <DependentUpon>OutsourcedResourceidpopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingAmountStatusBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingAmountStatusBrowse.Designer.cs">
+      <DependentUpon>OutsourcingAmountStatusBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherExpensesManagement\OutsourcingEtcWorkStatusBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherExpensesManagement\OutsourcingEtcWorkStatusBrowse.Designer.cs">
+      <DependentUpon>OutsourcingEtcWorkStatusBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsourcedBudgetManagement\OutsourcingFulfillmentRateBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsourcedBudgetManagement\OutsourcingFulfillmentRateBrowse.Designer.cs">
+      <DependentUpon>OutsourcingFulfillmentRateBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingPublishStatusBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutsideFinishingEexpense\OutsourcingPublishStatusBrowse.Designer.cs">
+      <DependentUpon>OutsourcingPublishStatusBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucItemPopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucItemPopup.Designer.cs">
+      <DependentUpon>ucItemPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongSpecialPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongSpecialPrice.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongSpecialPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongCostChangeInquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongCostChangeInquiry.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongCostChangeInquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongPriceCodeTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongPriceCodeTemp.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongPriceCodeTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongSpecialPriceInquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongSpecialPriceInquiry.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongSpecialPriceInquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongfinalinspst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongfinalinspst.Designer.cs">
+      <DependentUpon>OutsourcingYoungPongfinalinspst.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="OutsideClaimDeadline\OutsourcedClaimPeriodConfirmation.resx">
+      <DependentUpon>OutsourcedClaimPeriodConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsideFinishingEexpense\OutsourcedCostsforMajorSuppliers.resx">
+      <DependentUpon>OutsourcedCostsforMajorSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsideClaimDeadline\OtherOutsourcedClaimCostRegistration.resx">
+      <DependentUpon>OtherOutsourcedClaimCostRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsideClaimDeadline\OutsourcedClaimBaseAmount.resx">
+      <DependentUpon>OutsourcedClaimBaseAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherExpensesManagement\OtherOutsourcedPerformanceApproval.resx">
+      <DependentUpon>OtherOutsourcedPerformanceApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherExpensesManagement\OtherSoutsourcedPerformanceRegistration.resx">
+      <DependentUpon>OtherSoutsourcedPerformanceRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherExpensesManagement\OtherSubcontractCostRegistration.resx">
+      <DependentUpon>OtherSubcontractCostRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherExpensesManagement\OtherSubcontractingResultsConfirmed.resx">
+      <DependentUpon>OtherSubcontractingResultsConfirmed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherExpensesManagement\OtherSubcontractWorkCommission.resx">
+      <DependentUpon>OtherSubcontractWorkCommission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsideClaimDeadline\OutsourcedClaimClosureStatus.resx">
+      <DependentUpon>OutsourcedClaimClosureStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsideClaimDeadline\OutsourcedClaimConfirmation.resx">
+      <DependentUpon>OutsourcedClaimConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsideFinishingEexpense\OutsourcingCostClosing.resx">
+      <DependentUpon>OutsourcingCostClosing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsideFinishingEexpense\OutsourcingDeadline.resx">
+      <DependentUpon>OutsourcingDeadline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsideFinishingEexpense\OutsourcingExclusionProcessing.resx">
+      <DependentUpon>OutsourcingExclusionProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsideFinishingEexpense\OutsourcingPeriodConfirmation.resx">
+      <DependentUpon>OutsourcingPeriodConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsideFinishingEexpense\OutsourcingSettleConfirmation.resx">
+      <DependentUpon>OutsourcingSettleConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcedBudgetManagement\OutsourcingBudgetEexpenses.resx">
+      <DependentUpon>OutsourcingBudgetEexpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcedBudgetManagement\OutsourcingExceptBudgetRegister.resx">
+      <DependentUpon>OutsourcingExceptBudgetRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcedWarehouse\IssueOutboundWarehouseInquiry.resx">
+      <DependentUpon>IssueOutboundWarehouseInquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcedWarehouse\OutboundwarehouseStatus.resx">
+      <DependentUpon>OutboundwarehouseStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcedWarehouse\OutsourcedDistribution.resx">
+      <DependentUpon>OutsourcedDistribution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcedWarehouse\OutsourcedWarehouseShipment.resx">
+      <DependentUpon>OutsourcedWarehouseShipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcedWarehouse\OutsourcedWarehouseWear.resx">
+      <DependentUpon>OutsourcedWarehouseWear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcedBudgetManagement\OutsourcingDistributionRatio.resx">
+      <DependentUpon>OutsourcingDistributionRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcingCostStatus\OutsourcedSettlementErrList.resx">
+      <DependentUpon>OutsourcedSettlementErrList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcingUnitPriceManagement\OutsourcingCostChangeInquiry.resx">
+      <DependentUpon>OutsourcingCostChangeInquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcingCostStatus\OutsourcingCostsByDate.resx">
+      <DependentUpon>OutsourcingCostsByDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcingCostStatus\OutsourcingCostStatusList.resx">
+      <DependentUpon>OutsourcingCostStatusList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcingCostStatus\OutsourcingProcessingCosts.resx">
+      <DependentUpon>OutsourcingProcessingCosts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcingUnitPriceManagement\OutsourcedBasedUnitPriceRegistration.resx">
+      <DependentUpon>OutsourcedBasedUnitPriceRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcingUnitPriceManagement\OutsourcedFixedRateDownPrice.resx">
+      <DependentUpon>OutsourcedFixedRateDownPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcingUnitPriceManagement\OutsourcedSpecialUnitPrice.resx">
+      <DependentUpon>OutsourcedSpecialUnitPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcingUnitPriceManagement\SubcontractPriceRegistration.resx">
+      <DependentUpon>SubcontractPriceRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\OspConCurRequestPopup.resx">
+      <DependentUpon>OspConCurRequestPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\OutsideFinishingEexpensePopup.resx">
+      <DependentUpon>OutsideFinishingEexpensePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\OutsourcingPeriodConfirmationPopup.resx">
+      <DependentUpon>OutsourcingPeriodConfirmationPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\OutsourcingYoungPongPriceCodePopup.resx">
+      <DependentUpon>OutsourcingYoungPongPriceCodePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongCostClosing.resx">
+      <DependentUpon>OutsourcingYoungPongCostClosing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoungPong\OutsideFinishingEexpense\OutsourcingYoungPongErrList.resx">
+      <DependentUpon>OutsourcingYoungPongErrList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoungPong\OutsourcingCostStatus\OutsourcingYoungPongCostStatusList.resx">
+      <DependentUpon>OutsourcingYoungPongCostStatusList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoungPong\OutsourcingCostStatus\OutsourcingYoungPongProcessingCosts.resx">
+      <DependentUpon>OutsourcingYoungPongProcessingCosts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoungPong\OutsourcingCostStatus\OutsourcingYoungPongSettlementErrList.resx">
+      <DependentUpon>OutsourcingYoungPongSettlementErrList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongfinalinspst.resx">
+      <DependentUpon>OutsourcingYoungPongfinalinspst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongFixedRateDownPrice.resx">
+      <DependentUpon>OutsourcingYoungPongFixedRateDownPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongPriceClass.resx">
+      <DependentUpon>OutsourcingYoungPongPriceClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongPriceCode.resx">
+      <DependentUpon>OutsourcingYoungPongPriceCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoungPong\OutsourcingYoungPongPrice\OutsourcingYoungPongPriceItem.resx">
+      <DependentUpon>OutsourcingYoungPongPriceItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ClaimClosePeriodPopup.resx">
+      <DependentUpon>ClaimClosePeriodPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\OutsourcedClaimBaseAmountPopup.resx">
+      <DependentUpon>OutsourcedClaimBaseAmountPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\OutsourcedCostsforMajorSuppliersPopup.resx">
+      <DependentUpon>OutsourcedCostsforMajorSuppliersPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\OutsourcedDistributionPopup.resx">
+      <DependentUpon>OutsourcedDistributionPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\OutsourcedResourceidpopup.resx">
+      <DependentUpon>OutsourcedResourceidpopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\OutsourcedWarehouseShipmentPopup.resx">
+      <DependentUpon>OutsourcedWarehouseShipmentPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ProductItemPopup.resx">
+      <DependentUpon>ProductItemPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="OtherExpensesManagement\OtherSubcontractWorkCommission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherExpensesManagement\OtherSubcontractWorkCommission.Designer.cs">
+      <DependentUpon>OtherSubcontractWorkCommission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="OutsideFinishingEexpense\OutsourcingAmountStatusBrowse.resx">
+      <DependentUpon>OutsourcingAmountStatusBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherExpensesManagement\OutsourcingEtcWorkStatusBrowse.resx">
+      <DependentUpon>OutsourcingEtcWorkStatusBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcedBudgetManagement\OutsourcingFulfillmentRateBrowse.resx">
+      <DependentUpon>OutsourcingFulfillmentRateBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsideFinishingEexpense\OutsourcingPublishStatusBrowse.resx">
+      <DependentUpon>OutsourcingPublishStatusBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutsourcingUnitPriceManagement\OutsourcingSpecialAmountModifiedBrowse.resx">
+      <DependentUpon>OutsourcingSpecialAmountModifiedBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucItemPopup.resx">
+      <DependentUpon>ucItemPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\IssueOutboundWarehouseInquiry.repx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.Controls\Micube.SmartMES.Commons.Controls.csproj">
+      <Project>{6c8616d8-4620-477e-a1ac-2a02a94d4984}</Project>
+      <Name>Micube.SmartMES.Commons.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons\Micube.SmartMES.Commons.csproj">
+      <Project>{1b6a2eb9-f134-49fc-80fa-982418d6490f}</Project>
+      <Name>Micube.SmartMES.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

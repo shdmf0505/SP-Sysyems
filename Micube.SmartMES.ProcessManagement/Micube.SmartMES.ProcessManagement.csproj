@@ -1,0 +1,1576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C11939C9-50A6-419E-AA80-F2837F3CC533}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Micube.SmartMES.ProcessManagement</RootNamespace>
+    <AssemblyName>Micube.SmartMES.ProcessManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="AxRDVIEWER50Lib, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\AxRDVIEWER50Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Data.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.DataAccess.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Diagram.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.PivotGrid.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Printing.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Sparkline.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Xpo.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraBars.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraDiagram.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraLayout.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPivotGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPrinting.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraReports.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1.Extensions, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraReports.v18.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraRichEdit.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraTreeList.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraVerticalGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Evaluator, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Micube.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.SmartControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.SmartControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.SmartMES.Commons.SPCLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Micube.SmartMES.StandardInfo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Debug\Micube.SmartMES.StandardInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.SmartMES.SystemManagement, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Debug\Micube.SmartMES.SystemManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed" />
+    <Reference Include="RDVIEWER50Lib, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\lib\RDVIEWER50Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartDeploy.Common">
+      <HintPath>..\..\lib\SmartDeploy.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audit\AuditLotHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Audit\AuditLotHistory.Designer.cs">
+      <DependentUpon>AuditLotHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\AbnormalOccurence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\AbnormalOccurence.Designer.cs">
+      <DependentUpon>AbnormalOccurence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotHoldVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotHoldVerify.Designer.cs">
+      <DependentUpon>LotHoldVerify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\MaterialUsageDetailHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\MaterialUsageDetailHistory.Designer.cs">
+      <DependentUpon>MaterialUsageDetailHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\Popup\LotLeadTimePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\Popup\LotLeadTimePopup.Designer.cs">
+      <DependentUpon>LotLeadTimePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\ProductByOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\ProductByOwner.Designer.cs">
+      <DependentUpon>ProductByOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\ConsumableInOutHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\ConsumableInOutHistory.Designer.cs">
+      <DependentUpon>ConsumableInOutHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotLockingReserveRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotLockingReserveRelease.Designer.cs">
+      <DependentUpon>LotLockingReserveRelease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotModify.Designer.cs">
+      <DependentUpon>LotModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotReturnList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotReturnList.Designer.cs">
+      <DependentUpon>LotReturnList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotLeadTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotLeadTime.Designer.cs">
+      <DependentUpon>LotLeadTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\Popup\AffectLotByDelayPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\Popup\AffectLotByDelayPopup.Designer.cs">
+      <DependentUpon>AffectLotByDelayPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\ProgressPerProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\ProgressPerProduct.designer.cs">
+      <DependentUpon>ProgressPerProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\WIPPhysicalCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\WIPPhysicalCount.Designer.cs">
+      <DependentUpon>WIPPhysicalCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\AreaWorkResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\AreaWorkResult.Designer.cs">
+      <DependentUpon>AreaWorkResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\HumanTimeProductivityChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\HumanTimeProductivityChart.designer.cs">
+      <DependentUpon>HumanTimeProductivityChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\HumanTimeProductivityPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\HumanTimeProductivityPlan.designer.cs">
+      <DependentUpon>HumanTimeProductivityPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\WorkStepStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\WorkStepStatus.designer.cs">
+      <DependentUpon>WorkStepStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\PerformancestatusbyEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\PerformancestatusbyEquipment.designer.cs">
+      <DependentUpon>PerformancestatusbyEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\DetailResultByPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\DetailResultByPeriod.designer.cs">
+      <DependentUpon>DetailResultByPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\LotHoldResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\LotHoldResult.designer.cs">
+      <DependentUpon>LotHoldResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\ManufactureHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\ManufactureHistory.Designer.cs">
+      <DependentUpon>ManufactureHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\Popup\ReworkHistoryPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\Popup\ReworkHistoryPopup.designer.cs">
+      <DependentUpon>ReworkHistoryPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\ReturnProductResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\ReturnProductResult.Designer.cs">
+      <DependentUpon>ReturnProductResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\WorkResultByPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\WorkResultByPeriod.Designer.cs">
+      <DependentUpon>WorkResultByPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WipFunction.cs" />
+    <Compile Include="ProductResult\HumanTimeProductivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\HumanTimeProductivity.Designer.cs">
+      <DependentUpon>HumanTimeProductivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\CaculationInputQty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\CaculationInputQty.Designer.cs">
+      <DependentUpon>CaculationInputQty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\ConsumeSNMapping2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\ConsumeSNMapping2.designer.cs">
+      <DependentUpon>ConsumeSNMapping2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\ExportPackingConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\ExportPackingConfirm.Designer.cs">
+      <DependentUpon>ExportPackingConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\InputLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\InputLotList.Designer.cs">
+      <DependentUpon>InputLotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\InputLotRateSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\InputLotRateSearch.Designer.cs">
+      <DependentUpon>InputLotRateSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\CancelSplitLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\CancelSplitLot.Designer.cs">
+      <DependentUpon>CancelSplitLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotBatchTrackIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotBatchTrackIn.designer.cs">
+      <DependentUpon>LotBatchTrackIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotBatchTrackOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotBatchTrackOut.designer.cs">
+      <DependentUpon>LotBatchTrackOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotCreateReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotCreateReturn.Designer.cs">
+      <DependentUpon>LotCreateReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\DelayLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\DelayLot.Designer.cs">
+      <DependentUpon>DelayLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LockingStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LockingStatus.Designer.cs">
+      <DependentUpon>LockingStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotWindowTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotWindowTime.Designer.cs">
+      <DependentUpon>LotWindowTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\ProductDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\ProductDetail.Designer.cs">
+      <DependentUpon>ProductDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotProcessPathChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotProcessPathChange.Designer.cs">
+      <DependentUpon>LotProcessPathChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotHold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotHold.Designer.cs">
+      <DependentUpon>LotHold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotHoldRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotHoldRelease.Designer.cs">
+      <DependentUpon>LotHoldRelease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotLockingReserve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotLockingReserve.Designer.cs">
+      <DependentUpon>LotLockingReserve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotReleaseLocking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotReleaseLocking.Designer.cs">
+      <DependentUpon>LotReleaseLocking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\MultiLotWorkEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\MultiLotWorkEnd.Designer.cs">
+      <DependentUpon>MultiLotWorkEnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\AddReelConsumableInputPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\AddReelConsumableInputPopup.Designer.cs">
+      <DependentUpon>AddReelConsumableInputPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\ChangeCustomerPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\ChangeCustomerPopup.Designer.cs">
+      <DependentUpon>ChangeCustomerPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\RegDefectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\RegDefectPopup.Designer.cs">
+      <DependentUpon>RegDefectPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\PrintPackingLabelPopup3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\PrintPackingLabelPopup3.Designer.cs">
+      <DependentUpon>PrintPackingLabelPopup3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\PrintPackingLabelPopup2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\PrintPackingLabelPopup2.Designer.cs">
+      <DependentUpon>PrintPackingLabelPopup2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\PrintPackingLabelPopup4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\PrintPackingLabelPopup4.designer.cs">
+      <DependentUpon>PrintPackingLabelPopup4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\StayReasonCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\StayReasonCode.Designer.cs">
+      <DependentUpon>StayReasonCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\EquipmentRecipeParameterPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\EquipmentRecipeParameterPopup.Designer.cs">
+      <DependentUpon>EquipmentRecipeParameterPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\LotHistoryDefectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\LotHistoryDefectPopup.Designer.cs">
+      <DependentUpon>LotHistoryDefectPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\SampleRoutingDurablePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\SampleRoutingDurablePopup.Designer.cs">
+      <DependentUpon>SampleRoutingDurablePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\SampleRoutingResourcePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\SampleRoutingResourcePopup.designer.cs">
+      <DependentUpon>SampleRoutingResourcePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\SelectResourcePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\SelectResourcePopup.Designer.cs">
+      <DependentUpon>SelectResourcePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\WindowTimeArrivedPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\WindowTimeArrivedPopup.designer.cs">
+      <DependentUpon>WindowTimeArrivedPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\PpCasePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\PpCasePrint.Designer.cs">
+      <DependentUpon>PpCasePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\ProcessResultCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\ProcessResultCreate.designer.cs">
+      <DependentUpon>ProcessResultCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\SampleRouting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\SampleRouting.Designer.cs">
+      <DependentUpon>SampleRouting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\MultiLotSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\MultiLotSend.Designer.cs">
+      <DependentUpon>MultiLotSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\MultiLotStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\MultiLotStart.Designer.cs">
+      <DependentUpon>MultiLotStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\NotInputLotSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\NotInputLotSearch.designer.cs">
+      <DependentUpon>NotInputLotSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\MultiLotAccept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\MultiLotAccept.Designer.cs">
+      <DependentUpon>MultiLotAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\PackingHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\PackingHistory.Designer.cs">
+      <DependentUpon>PackingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\ModifiyImagePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\ModifiyImagePopup.Designer.cs">
+      <DependentUpon>ModifiyImagePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\ReworkRoutingForAoiRepairPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\ReworkRoutingForAoiRepairPopup.Designer.cs">
+      <DependentUpon>ReworkRoutingForAoiRepairPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\RollLotConsumableLotListPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\RollLotConsumableLotListPopup.Designer.cs">
+      <DependentUpon>RollLotConsumableLotListPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\ReworkLotInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\ReworkLotInput.designer.cs">
+      <DependentUpon>ReworkLotInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotWorkInProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotWorkInProcess.Designer.cs">
+      <DependentUpon>LotWorkInProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\Popup\DetailLogicStatePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\Popup\DetailLogicStatePopup.Designer.cs">
+      <DependentUpon>DetailLogicStatePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\RecieveConsumable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\RecieveConsumable.Designer.cs">
+      <DependentUpon>RecieveConsumable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\ReturnConsumable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\ReturnConsumable.Designer.cs">
+      <DependentUpon>ReturnConsumable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\WorkInProcessByProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\WorkInProcessByProduct.Designer.cs">
+      <DependentUpon>WorkInProcessByProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\WIPAging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\WIPAging.Designer.cs">
+      <DependentUpon>WIPAging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\CompareDailyWorkResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\CompareDailyWorkResult.Designer.cs">
+      <DependentUpon>CompareDailyWorkResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\LotConsumableHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\LotConsumableHistory.Designer.cs">
+      <DependentUpon>LotConsumableHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\ReworkHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\ReworkHistory.Designer.cs">
+      <DependentUpon>ReworkHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\WorkIncommingResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\WorkIncommingResult.Designer.cs">
+      <DependentUpon>WorkIncommingResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\WorkResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\WorkResult.Designer.cs">
+      <DependentUpon>WorkResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductResult\WorkResultPerManageSegment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductResult\WorkResultPerManageSegment.Designer.cs">
+      <DependentUpon>WorkResultPerManageSegment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\RCLotApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\RCLotApply.Designer.cs">
+      <DependentUpon>RCLotApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportBoxPackingPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBoxPackingPopup.Designer.cs">
+      <DependentUpon>ReportBoxPackingPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\CancelInputLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\CancelInputLot.designer.cs">
+      <DependentUpon>CancelInputLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\WIPPerDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\WIPPerDaily.Designer.cs">
+      <DependentUpon>WIPPerDaily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\InkjetQrPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\InkjetQrPrint.designer.cs">
+      <DependentUpon>InkjetQrPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\InputLotRecordPerPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\InputLotRecordPerPlan.designer.cs">
+      <DependentUpon>InputLotRecordPerPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\PackingAccept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\PackingAccept.Designer.cs">
+      <DependentUpon>PackingAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\PackingResult2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\PackingResult2.Designer.cs">
+      <DependentUpon>PackingResult2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\ReInputLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\ReInputLot.designer.cs">
+      <DependentUpon>ReInputLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\RollLossPerSegment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\RollLossPerSegment.Designer.cs">
+      <DependentUpon>RollLossPerSegment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\SalseOrderStausPerProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\SalseOrderStausPerProduct.designer.cs">
+      <DependentUpon>SalseOrderStausPerProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\InOutLotRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\InOutLotRecord.Designer.cs">
+      <DependentUpon>InOutLotRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\StartWorkSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\StartWorkSimple.Designer.cs">
+      <DependentUpon>StartWorkSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\TransitBatchRegist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\TransitBatchRegist.Designer.cs">
+      <DependentUpon>TransitBatchRegist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\TransitCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\TransitCancel.Designer.cs">
+      <DependentUpon>TransitCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\UserControl\ucEquipment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WIP\UserControl\ucEquipment.Designer.cs">
+      <DependentUpon>ucEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\UserControl\ucProcessFourStepInfoSimple.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WIP\UserControl\ucProcessFourStepInfoSimple.Designer.cs">
+      <DependentUpon>ucProcessFourStepInfoSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\UserControl\usInspectionResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WIP\UserControl\usInspectionResult.Designer.cs">
+      <DependentUpon>usInspectionResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\CancelWorkCompletion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\CancelWorkCompletion.Designer.cs">
+      <DependentUpon>CancelWorkCompletion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\WorkCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\WorkCancel.Designer.cs">
+      <DependentUpon>WorkCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotAcceptCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotAcceptCancel.Designer.cs">
+      <DependentUpon>LotAcceptCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotHistory.Designer.cs">
+      <DependentUpon>LotHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\LotMessagePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\LotMessagePopup.Designer.cs">
+      <DependentUpon>LotMessagePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\LotMessagePopupView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\LotMessagePopupView.Designer.cs">
+      <DependentUpon>LotMessagePopupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\UserControl\ucMessageInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WIP\UserControl\ucMessageInfo.Designer.cs">
+      <DependentUpon>ucMessageInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\ChangeLotEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\ChangeLotEquipment.Designer.cs">
+      <DependentUpon>ChangeLotEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\ConsumeSNMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\ConsumeSNMapping.Designer.cs">
+      <DependentUpon>ConsumeSNMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\FinalInspectionSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\FinalInspectionSend.Designer.cs">
+      <DependentUpon>FinalInspectionSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\FinalInspectionWorkComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\FinalInspectionWorkComplete.Designer.cs">
+      <DependentUpon>FinalInspectionWorkComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\FinalInspectionWorkStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\FinalInspectionWorkStart.Designer.cs">
+      <DependentUpon>FinalInspectionWorkStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\FinalInspectionAccept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\FinalInspectionAccept.Designer.cs">
+      <DependentUpon>FinalInspectionAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotMessage.Designer.cs">
+      <DependentUpon>LotMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotBatchAccept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotBatchAccept.Designer.cs">
+      <DependentUpon>LotBatchAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotWorkAreaChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotWorkAreaChange.Designer.cs">
+      <DependentUpon>LotWorkAreaChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\PrintPackingLabelPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\PrintPackingLabelPopup.Designer.cs">
+      <DependentUpon>PrintPackingLabelPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\SendLotRollCut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\SendLotRollCut.Designer.cs">
+      <DependentUpon>SendLotRollCut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotMerge.Designer.cs">
+      <DependentUpon>LotMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotSplit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotSplit.Designer.cs">
+      <DependentUpon>LotSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotDefect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotDefect.Designer.cs">
+      <DependentUpon>LotDefect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\ConsumableDefectProcessPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\ConsumableDefectProcessPopup.Designer.cs">
+      <DependentUpon>ConsumableDefectProcessPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\RePackingResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\RePackingResult.Designer.cs">
+      <DependentUpon>RePackingResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\InputLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\InputLot.Designer.cs">
+      <DependentUpon>InputLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\PackingTransitCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\PackingTransitCancel.Designer.cs">
+      <DependentUpon>PackingTransitCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\PackingTransit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\PackingTransit.Designer.cs">
+      <DependentUpon>PackingTransit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\PrintPackingLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\PrintPackingLabel.Designer.cs">
+      <DependentUpon>PrintPackingLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\SplitLotForPacking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\SplitLotForPacking.Designer.cs">
+      <DependentUpon>SplitLotForPacking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\RollSplitWorkStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\RollSplitWorkStart.Designer.cs">
+      <DependentUpon>RollSplitWorkStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\UserControl\usDefectGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WIP\UserControl\usDefectGrid.Designer.cs">
+      <DependentUpon>usDefectGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\TransitRegist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\TransitRegist.Designer.cs">
+      <DependentUpon>TransitRegist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\UserControl\usLotMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WIP\UserControl\usLotMessage.Designer.cs">
+      <DependentUpon>usLotMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\WorkCompletionSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\WorkCompletionSimple.Designer.cs">
+      <DependentUpon>WorkCompletionSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\WorkCompletion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\WorkCompletion.Designer.cs">
+      <DependentUpon>WorkCompletion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\StartWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\StartWork.Designer.cs">
+      <DependentUpon>StartWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotCreateSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotCreateSheet.Designer.cs">
+      <DependentUpon>LotCreateSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\LotLocking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\LotLocking.Designer.cs">
+      <DependentUpon>LotLocking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\PrintLotCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\PrintLotCard.Designer.cs">
+      <DependentUpon>PrintLotCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotMgnt\RequestConsumableRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotMgnt\RequestConsumableRelease.Designer.cs">
+      <DependentUpon>RequestConsumableRelease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\AddImagePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\AddImagePopup.Designer.cs">
+      <DependentUpon>AddImagePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\Popup\LotConditionPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\Popup\LotConditionPopup.Designer.cs">
+      <DependentUpon>LotConditionPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\LotIncommingInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotIncommingInspection.Designer.cs">
+      <DependentUpon>LotIncommingInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\UserControl\DefectProcessListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WIP\UserControl\DefectProcessListControl.Designer.cs">
+      <DependentUpon>DefectProcessListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WIP\LotAccept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\LotAccept.Designer.cs">
+      <DependentUpon>LotAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\UserControl\ucProcessFourStepDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WIP\UserControl\ucProcessFourStepDetail.Designer.cs">
+      <DependentUpon>ucProcessFourStepDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\UserControl\ucProcessFourStepInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WIP\UserControl\ucProcessFourStepInfo.Designer.cs">
+      <DependentUpon>ucProcessFourStepInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIP\InputLotRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WIP\InputLotRecord.Designer.cs">
+      <DependentUpon>InputLotRecord.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Audit\AuditLotHistory.resx">
+      <DependentUpon>AuditLotHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\AbnormalOccurence.resx">
+      <DependentUpon>AbnormalOccurence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotHoldVerify.resx">
+      <DependentUpon>LotHoldVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\MaterialUsageDetailHistory.resx">
+      <DependentUpon>MaterialUsageDetailHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\Popup\LotLeadTimePopup.resx">
+      <DependentUpon>LotLeadTimePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\ProductByOwner.resx">
+      <DependentUpon>ProductByOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\ConsumableInOutHistory.resx">
+      <DependentUpon>ConsumableInOutHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotLockingReserveRelease.resx">
+      <DependentUpon>LotLockingReserveRelease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotModify.resx">
+      <DependentUpon>LotModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotReturnList.resx">
+      <DependentUpon>LotReturnList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotLeadTime.resx">
+      <DependentUpon>LotLeadTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\Popup\AffectLotByDelayPopup.resx">
+      <DependentUpon>AffectLotByDelayPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\ProgressPerProduct.resx">
+      <DependentUpon>ProgressPerProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\WIPPhysicalCount.resx">
+      <DependentUpon>WIPPhysicalCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\AreaWorkResult.resx">
+      <DependentUpon>AreaWorkResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\HumanTimeProductivityChart.resx">
+      <DependentUpon>HumanTimeProductivityChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\HumanTimeProductivityPlan.resx">
+      <DependentUpon>HumanTimeProductivityPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\WorkStepStatus.resx">
+      <DependentUpon>WorkStepStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\PerformancestatusbyEquipment.resx">
+      <DependentUpon>PerformancestatusbyEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\DetailResultByPeriod.resx">
+      <DependentUpon>DetailResultByPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\HumanTimeProductivity.resx">
+      <DependentUpon>HumanTimeProductivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\LotHoldResult.resx">
+      <DependentUpon>LotHoldResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\ManufactureHistory.resx">
+      <DependentUpon>ManufactureHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\Popup\ReworkHistoryPopup.resx">
+      <DependentUpon>ReworkHistoryPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\ReturnProductResult.resx">
+      <DependentUpon>ReturnProductResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\WorkResultByPeriod.resx">
+      <DependentUpon>WorkResultByPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\CaculationInputQty.resx">
+      <DependentUpon>CaculationInputQty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\ConsumeSNMapping2.resx">
+      <DependentUpon>ConsumeSNMapping2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\ExportPackingConfirm.resx">
+      <DependentUpon>ExportPackingConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\InputLotList.resx">
+      <DependentUpon>InputLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\InputLotRateSearch.resx">
+      <DependentUpon>InputLotRateSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\CancelSplitLot.resx">
+      <DependentUpon>CancelSplitLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotBatchTrackIn.resx">
+      <DependentUpon>LotBatchTrackIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotBatchTrackOut.resx">
+      <DependentUpon>LotBatchTrackOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotCreateReturn.resx">
+      <DependentUpon>LotCreateReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\DelayLot.resx">
+      <DependentUpon>DelayLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LockingStatus.resx">
+      <DependentUpon>LockingStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotWindowTime.resx">
+      <DependentUpon>LotWindowTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\ProductDetail.resx">
+      <DependentUpon>ProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotProcessPathChange.resx">
+      <DependentUpon>LotProcessPathChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotHold.resx">
+      <DependentUpon>LotHold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotHoldRelease.resx">
+      <DependentUpon>LotHoldRelease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotLockingReserve.resx">
+      <DependentUpon>LotLockingReserve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotReleaseLocking.resx">
+      <DependentUpon>LotReleaseLocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\MultiLotWorkEnd.resx">
+      <DependentUpon>MultiLotWorkEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\AddReelConsumableInputPopup.resx">
+      <DependentUpon>AddReelConsumableInputPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\ChangeCustomerPopup.resx">
+      <DependentUpon>ChangeCustomerPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\RegDefectPopup.resx">
+      <DependentUpon>RegDefectPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\PrintPackingLabelPopup3.resx">
+      <DependentUpon>PrintPackingLabelPopup3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\PrintPackingLabelPopup2.resx">
+      <DependentUpon>PrintPackingLabelPopup2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\PrintPackingLabelPopup4.resx">
+      <DependentUpon>PrintPackingLabelPopup4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\StayReasonCode.resx">
+      <DependentUpon>StayReasonCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\EquipmentRecipeParameterPopup.resx">
+      <DependentUpon>EquipmentRecipeParameterPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\LotHistoryDefectPopup.resx">
+      <DependentUpon>LotHistoryDefectPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\SampleRoutingDurablePopup.resx">
+      <DependentUpon>SampleRoutingDurablePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\SampleRoutingResourcePopup.resx">
+      <DependentUpon>SampleRoutingResourcePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\SelectResourcePopup.resx">
+      <DependentUpon>SelectResourcePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\WindowTimeArrivedPopup.resx">
+      <DependentUpon>WindowTimeArrivedPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\PpCasePrint.resx">
+      <DependentUpon>PpCasePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\ProcessResultCreate.resx">
+      <DependentUpon>ProcessResultCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\SampleRouting.resx">
+      <DependentUpon>SampleRouting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\MultiLotSend.resx">
+      <DependentUpon>MultiLotSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\MultiLotStart.resx">
+      <DependentUpon>MultiLotStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\NotInputLotSearch.resx">
+      <DependentUpon>NotInputLotSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\MultiLotAccept.resx">
+      <DependentUpon>MultiLotAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\PackingHistory.resx">
+      <DependentUpon>PackingHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\ModifiyImagePopup.resx">
+      <DependentUpon>ModifiyImagePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\ReworkRoutingForAoiRepairPopup.resx">
+      <DependentUpon>ReworkRoutingForAoiRepairPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\RollLotConsumableLotListPopup.resx">
+      <DependentUpon>RollLotConsumableLotListPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\ReworkLotInput.resx">
+      <DependentUpon>ReworkLotInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotWorkInProcess.resx">
+      <DependentUpon>LotWorkInProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\Popup\DetailLogicStatePopup.resx">
+      <DependentUpon>DetailLogicStatePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\RecieveConsumable.resx">
+      <DependentUpon>RecieveConsumable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\ReturnConsumable.resx">
+      <DependentUpon>ReturnConsumable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\WorkInProcessByProduct.resx">
+      <DependentUpon>WorkInProcessByProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\WIPAging.resx">
+      <DependentUpon>WIPAging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\CompareDailyWorkResult.resx">
+      <DependentUpon>CompareDailyWorkResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\LotConsumableHistory.resx">
+      <DependentUpon>LotConsumableHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\ReworkHistory.resx">
+      <DependentUpon>ReworkHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\WorkIncommingResult.resx">
+      <DependentUpon>WorkIncommingResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\WorkResult.resx">
+      <DependentUpon>WorkResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductResult\WorkResultPerManageSegment.resx">
+      <DependentUpon>WorkResultPerManageSegment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\RCLotApply.resx">
+      <DependentUpon>RCLotApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportBoxPackingPopup.resx">
+      <DependentUpon>ReportBoxPackingPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\CancelInputLot.resx">
+      <DependentUpon>CancelInputLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\ChangeLotEquipment.resx">
+      <DependentUpon>ChangeLotEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\WIPPerDaily.resx">
+      <DependentUpon>WIPPerDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\FinalInspectionSend.resx">
+      <DependentUpon>FinalInspectionSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\FinalInspectionWorkComplete.resx">
+      <DependentUpon>FinalInspectionWorkComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\FinalInspectionWorkStart.resx">
+      <DependentUpon>FinalInspectionWorkStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\InkjetQrPrint.resx">
+      <DependentUpon>InkjetQrPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\InputLot.resx">
+      <DependentUpon>InputLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\ConsumeSNMapping.resx">
+      <DependentUpon>ConsumeSNMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\FinalInspectionAccept.resx">
+      <DependentUpon>FinalInspectionAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\InputLotRecordPerPlan.resx">
+      <DependentUpon>InputLotRecordPerPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\PackingAccept.resx">
+      <DependentUpon>PackingAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\PackingResult2.resx">
+      <DependentUpon>PackingResult2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\ReInputLot.resx">
+      <DependentUpon>ReInputLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\RollLossPerSegment.resx">
+      <DependentUpon>RollLossPerSegment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\SalseOrderStausPerProduct.resx">
+      <DependentUpon>SalseOrderStausPerProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\InOutLotRecord.resx">
+      <DependentUpon>InOutLotRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\StartWorkSimple.resx">
+      <DependentUpon>StartWorkSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\TransitBatchRegist.resx">
+      <DependentUpon>TransitBatchRegist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\TransitCancel.resx">
+      <DependentUpon>TransitCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\UserControl\ucEquipment.resx">
+      <DependentUpon>ucEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\UserControl\ucProcessFourStepInfoSimple.resx">
+      <DependentUpon>ucProcessFourStepInfoSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\UserControl\usInspectionResult.resx">
+      <DependentUpon>usInspectionResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\CancelWorkCompletion.resx">
+      <DependentUpon>CancelWorkCompletion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\WorkCancel.resx">
+      <DependentUpon>WorkCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotAcceptCancel.resx">
+      <DependentUpon>LotAcceptCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotMessage.resx">
+      <DependentUpon>LotMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotBatchAccept.resx">
+      <DependentUpon>LotBatchAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotHistory.resx">
+      <DependentUpon>LotHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotWorkAreaChange.resx">
+      <DependentUpon>LotWorkAreaChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\LotMessagePopup.resx">
+      <DependentUpon>LotMessagePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\LotMessagePopupView.resx">
+      <DependentUpon>LotMessagePopupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\PrintPackingLabelPopup.resx">
+      <DependentUpon>PrintPackingLabelPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\SendLotRollCut.resx">
+      <DependentUpon>SendLotRollCut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotMerge.resx">
+      <DependentUpon>LotMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotSplit.resx">
+      <DependentUpon>LotSplit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotDefect.resx">
+      <DependentUpon>LotDefect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\PackingTransitCancel.resx">
+      <DependentUpon>PackingTransitCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\PackingTransit.resx">
+      <DependentUpon>PackingTransit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\ConsumableDefectProcessPopup.resx">
+      <DependentUpon>ConsumableDefectProcessPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\PrintPackingLabel.resx">
+      <DependentUpon>PrintPackingLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\SplitLotForPacking.resx">
+      <DependentUpon>SplitLotForPacking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\RePackingResult.resx">
+      <DependentUpon>RePackingResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\RollSplitWorkStart.resx">
+      <DependentUpon>RollSplitWorkStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\UserControl\ucMessageInfo.resx">
+      <DependentUpon>ucMessageInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\UserControl\usDefectGrid.resx">
+      <DependentUpon>usDefectGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\TransitRegist.resx">
+      <DependentUpon>TransitRegist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\UserControl\usLotMessage.resx">
+      <DependentUpon>usLotMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\WorkCompletionSimple.resx">
+      <DependentUpon>WorkCompletionSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\WorkCompletion.resx">
+      <DependentUpon>WorkCompletion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\StartWork.resx">
+      <DependentUpon>StartWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotCreateSheet.resx">
+      <DependentUpon>LotCreateSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\LotLocking.resx">
+      <DependentUpon>LotLocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\PrintLotCard.resx">
+      <DependentUpon>PrintLotCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotMgnt\RequestConsumableRelease.resx">
+      <DependentUpon>RequestConsumableRelease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\AddImagePopup.resx">
+      <DependentUpon>AddImagePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\Popup\LotConditionPopup.resx">
+      <DependentUpon>LotConditionPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\LotIncommingInspection.resx">
+      <DependentUpon>LotIncommingInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\UserControl\DefectProcessListControl.resx">
+      <DependentUpon>DefectProcessListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WIP\LotAccept.resx">
+      <DependentUpon>LotAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\UserControl\ucProcessFourStepDetail.resx">
+      <DependentUpon>ucProcessFourStepDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\UserControl\ucProcessFourStepInfo.resx">
+      <DependentUpon>ucProcessFourStepInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WIP\InputLotRecord.resx">
+      <DependentUpon>InputLotRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\LotCardProduction.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BoxPackingPrint.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RequestConsumableRelease.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\WipPhysicalCountList.repx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.Controls\Micube.SmartMES.Commons.Controls.csproj">
+      <Project>{6c8616d8-4620-477e-a1ac-2a02a94d4984}</Project>
+      <Name>Micube.SmartMES.Commons.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.Gerber\Micube.SmartMES.Commons.Gerber.csproj">
+      <Project>{4b0e74df-1add-47f4-b8b7-a5f7d9689356}</Project>
+      <Name>Micube.SmartMES.Commons.Gerber</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons\Micube.SmartMES.Commons.csproj">
+      <Project>{1b6a2eb9-f134-49fc-80fa-982418d6490f}</Project>
+      <Name>Micube.SmartMES.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LotMgnt\UserControl\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDocking_Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDocking_Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report\LabelScript.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

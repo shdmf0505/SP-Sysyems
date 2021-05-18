@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29F54809-1C14-44AD-9EF8-7F60C815B3F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Micube.SmartMES.SystemManagement</RootNamespace>
+    <AssemblyName>Micube.SmartMES.SystemManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Data.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.PivotGrid.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Printing.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraBars.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraLayout.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPivotGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPrinting.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraReports.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1.Extensions, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraReports.v18.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraTreeList.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraVerticalGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework">
+      <HintPath>..\..\lib\Micube.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Net">
+      <HintPath>..\..\lib\Micube.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.SmartControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.SmartControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartDeploy.Common">
+      <HintPath>..\..\lib\SmartDeploy.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code.Designer.cs">
+      <DependentUpon>Code.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeClass.Designer.cs">
+      <DependentUpon>CodeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConditionItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConditionItem.Designer.cs">
+      <DependentUpon>ConditionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionHistory.Designer.cs">
+      <DependentUpon>ConnectionHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionary.Designer.cs">
+      <DependentUpon>Dictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DictionaryClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DictionaryClass.Designer.cs">
+      <DependentUpon>DictionaryClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IdDefinitionManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IdDefinitionManagement.designer.cs">
+      <DependentUpon>IdDefinitionManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manual.designer.cs">
+      <DependentUpon>Manual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAuthority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAuthority.Designer.cs">
+      <DependentUpon>MenuAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuConditionItemMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuConditionItemMapping.Designer.cs">
+      <DependentUpon>MenuConditionItemMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuToolbarMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuToolbarMapping.Designer.cs">
+      <DependentUpon>MenuToolbarMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageClass.Designer.cs">
+      <DependentUpon>MessageClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlantUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantUser.Designer.cs">
+      <DependentUpon>PlantUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ConditionInput_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ConditionInput_Popup.Designer.cs">
+      <DependentUpon>ConditionInput_Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ModifyManualPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ModifyManualPopup.designer.cs">
+      <DependentUpon>ModifyManualPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\RequestInfoPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\RequestInfoPopup.Designer.cs">
+      <DependentUpon>RequestInfoPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcedureMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcedureMng.Designer.cs">
+      <DependentUpon>ProcedureMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestInfo.Designer.cs">
+      <DependentUpon>RequestInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleManagement.designer.cs">
+      <DependentUpon>ScheduleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DongDoGold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DongDoGold.Designer.cs">
+      <DependentUpon>DongDoGold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemLog.Designer.cs">
+      <DependentUpon>SystemLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toolbar.Designer.cs">
+      <DependentUpon>Toolbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolbarAuthority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolbarAuthority.Designer.cs">
+      <DependentUpon>ToolbarAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserClass.Designer.cs">
+      <DependentUpon>UserClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserClassCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserClassCopy.Designer.cs">
+      <DependentUpon>UserClassCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserClassUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserClassUser.Designer.cs">
+      <DependentUpon>UserClassUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucMessageInfoNoPopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucMessageInfoNoPopup.Designer.cs">
+      <DependentUpon>ucMessageInfoNoPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRequestApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRequestApproval.Designer.cs">
+      <DependentUpon>UserRequestApproval.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Code.resx">
+      <DependentUpon>Code.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeClass.resx">
+      <DependentUpon>CodeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConditionItem.resx">
+      <DependentUpon>ConditionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionHistory.resx">
+      <DependentUpon>ConnectionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionary.resx">
+      <DependentUpon>Dictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryClass.resx">
+      <DependentUpon>DictionaryClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IdDefinitionManagement.resx">
+      <DependentUpon>IdDefinitionManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manual.resx">
+      <DependentUpon>Manual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAuthority.resx">
+      <DependentUpon>MenuAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuConditionItemMapping.resx">
+      <DependentUpon>MenuConditionItemMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuToolbarMapping.resx">
+      <DependentUpon>MenuToolbarMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageClass.resx">
+      <DependentUpon>MessageClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantUser.resx">
+      <DependentUpon>PlantUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ConditionInput_Popup.resx">
+      <DependentUpon>ConditionInput_Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ModifyManualPopup.resx">
+      <DependentUpon>ModifyManualPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\RequestInfoPopup.resx">
+      <DependentUpon>RequestInfoPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcedureMng.resx">
+      <DependentUpon>ProcedureMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestInfo.resx">
+      <DependentUpon>RequestInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleManagement.resx">
+      <DependentUpon>ScheduleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DongDoGold.resx">
+      <DependentUpon>DongDoGold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemLog.resx">
+      <DependentUpon>SystemLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toolbar.resx">
+      <DependentUpon>Toolbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolbarAuthority.resx">
+      <DependentUpon>ToolbarAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserClass.resx">
+      <DependentUpon>UserClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserClassCopy.resx">
+      <DependentUpon>UserClassCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserClassUser.resx">
+      <DependentUpon>UserClassUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucMessageInfoNoPopup.resx">
+      <DependentUpon>ucMessageInfoNoPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRequestApproval.resx">
+      <DependentUpon>UserRequestApproval.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.Controls\Micube.SmartMES.Commons.Controls.csproj">
+      <Project>{6c8616d8-4620-477e-a1ac-2a02a94d4984}</Project>
+      <Name>Micube.SmartMES.Commons.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons\Micube.SmartMES.Commons.csproj">
+      <Project>{1b6a2eb9-f134-49fc-80fa-982418d6490f}</Project>
+      <Name>Micube.SmartMES.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="18.1.5.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" Landscape="true" Margins="50, 48, 50, 50" PaperKind="A4" PageWidth="1169" PageHeight="827" Version="18.1">
+  <Bands>
+    <Item1 Ref="1" ControlType="TopMarginBand" Name="TopMargin" HeightF="50" />
+    <Item2 Ref="2" ControlType="DetailBand" Name="Detail" HeightF="0" />
+    <Item3 Ref="3" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="50" />
+    <Item4 Ref="4" ControlType="DetailReportBand" Name="DetailReport" Level="0">
+      <Bands>
+        <Item1 Ref="5" ControlType="DetailBand" Name="Detail1" HeightF="15">
+          <Controls>
+            <Item1 Ref="6" ControlType="XRTable" Name="table3" TextAlignment="MiddleLeft" SizeF="1069.33,15" LocationFloat="0.00329017639, 0" Font="맑은 고딕 Semilight, 5.25pt" Borders="Left, Right, Bottom" BorderWidth="0.2">
+              <Rows>
+                <Item1 Ref="7" ControlType="XRTableRow" Name="tableRow5" Weight="1">
+                  <Cells>
+                    <Item1 Ref="8" ControlType="XRTableCell" Name="tbcSeq4" Weight="0.23171518025614524" Multiline="true" Text="1" TextAlignment="MiddleCenter" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SEQ">
+                      <StylePriority Ref="9" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="10" ControlType="XRTableCell" Name="tbcProductDefId4" Weight="0.9698970776206397" Multiline="true" Text="2041692BA01B7" TextAlignment="MiddleLeft" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTDEFID">
+                      <StylePriority Ref="11" UsePadding="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="12" ControlType="XRTableCell" Name="tbcProductDefName4" Weight="2.3889440312112331" Multiline="true" Text="AMS983JC02 SUB(4L)-(3/4L)BASE" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTDEFNAME">
+                      <StylePriority Ref="13" UsePadding="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="14" ControlType="XRTableCell" Name="tbcLotId4" Weight="1.3126496664466343" Multiline="true" Text="191015F001-1-BA01-004-001" TextAlignment="MiddleCenter" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LOTID">
+                      <StylePriority Ref="15" UsePadding="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="16" ControlType="XRTableCell" Name="tbcProcessSegmentName4" Weight="0.92637479891689711" Multiline="true" Text="RTR 노광" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PROCESSSEGMENTNAME">
+                      <StylePriority Ref="17" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="18" ControlType="XRTableCell" Name="tbcPanelQty4" Weight="0.50573695234315763" TextFormatString="{0:#,0}" Multiline="true" Text="40" TextAlignment="MiddleRight" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PANELQTY">
+                      <StylePriority Ref="19" UsePadding="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="20" ControlType="XRTableCell" Name="tbcPcsQty4" Weight="0.50573695234315719" TextFormatString="{0:#,0}" Multiline="true" Text="17,920" TextAlignment="MiddleRight" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="QTY">
+                      <StylePriority Ref="21" UsePadding="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="22" ControlType="XRTableCell" Name="tbcRealQty4" Weight="0.60785724928712337" TextFormatString="{0:#,#}" Multiline="true" TextAlignment="MiddleRight" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REALWIPPCSQTY">
+                      <StylePriority Ref="23" UsePadding="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="24" ControlType="XRTableCell" Name="tbcLossQty4" Weight="0.60785729566295488" TextFormatString="{0:#,#}" Multiline="true" TextAlignment="MiddleRight" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REALWIPLOSSQTY">
+                      <StylePriority Ref="25" UsePadding="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="26" ControlType="XRTableCell" Name="tbcEtcQty4" Weight="0.60785724928712659" TextFormatString="{0:#,#}" Multiline="true" TextAlignment="MiddleRight" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REALWIPETCQTY">
+                      <StylePriority Ref="27" UsePadding="false" UseTextAlignment="false" />
+                    </Item10>
+                    <Item11 Ref="28" ControlType="XRTableCell" Name="tbcComment4" Weight="4.335373111178165" Multiline="true" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REASONCOMMENT">
+                      <StylePriority Ref="29" UsePadding="false" />
+                    </Item11>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="30" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="31" ControlType="GroupHeaderBand" Name="GroupHeader1" RepeatEveryPage="true" HeightF="166.249969">
+          <Controls>
+            <Item1 Ref="32" ControlType="XRLabel" Name="txtArea" TextFormatString="{0} ]" Multiline="true" Text="1가접_2F ]" TextAlignment="MiddleLeft" SizeF="139.583328,17.7916565" LocationFloat="60.4166679, 98.45832" Font="맑은 고딕 Semilight, 7.75pt" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="AREANAME">
+              <StylePriority Ref="33" UseFont="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="34" ControlType="XRLabel" Name="lblArea" Multiline="true" Text="[ 작업장  : " TextAlignment="MiddleLeft" SizeF="60.4166679,17.7916565" LocationFloat="0, 98.45832" Font="맑은 고딕 Semilight, 7.75pt" Padding="2,2,0,0,100">
+              <StylePriority Ref="35" UseFont="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="36" ControlType="XRTable" Name="table1" SizeF="1069.33325,50" LocationFloat="0, 116.249977" Font="맑은 고딕 Semilight, 6.25pt" Borders="All" BorderWidth="0.2">
+              <Rows>
+                <Item1 Ref="37" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+                  <Cells>
+                    <Item1 Ref="38" ControlType="XRTableCell" Name="tbcSeq1" Weight="0.25561329591627197" RowSpan="3" Multiline="true" Text="No" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="39" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="40" ControlType="XRTableCell" Name="tbcProductDefId1" Weight="1.0698421641598408" RowSpan="3" Multiline="true" Text="품목코드" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="41" UsePadding="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="42" ControlType="XRTableCell" Name="tbcProductDefName1" Weight="2.6350615221030589" RowSpan="3" Multiline="true" Text="품목명" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="43" UsePadding="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="44" ControlType="XRTableCell" Name="tbcLotId1" Weight="1.4478853110044798" RowSpan="3" Multiline="true" Text="LOT NO" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="45" UsePadding="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="46" ControlType="XRTableCell" Name="tbcProcessSegmentName1" Weight="1.0218140874675" RowSpan="3" Multiline="true" Text="현공정" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="47" UsePadding="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="48" ControlType="XRTableCell" Name="tbcDataWip" Weight="1.115680890706988" Multiline="true" Text="전산재공" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="49" UsePadding="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="50" ControlType="XRTableCell" Name="tbcRealWip" Weight="2.0114451745841295" Multiline="true" Text="실 재공" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="51" UsePadding="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="52" ControlType="XRTableCell" Name="tbcComment1" Weight="4.78202563263066" RowSpan="3" Multiline="true" Text="비고" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="53" UsePadding="false" UseTextAlignment="false" />
+                    </Item8>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="54" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+                  <Cells>
+                    <Item1 Ref="55" ControlType="XRTableCell" Name="tbcSeq2" Weight="0.255613295916272" Multiline="true" Text="tbcSeq2" Padding="2,2,0,0,100">
+                      <StylePriority Ref="56" UsePadding="false" />
+                    </Item1>
+                    <Item2 Ref="57" ControlType="XRTableCell" Name="tbcProductDefId2" Weight="1.0698421641598408" Multiline="true" Text="tbcProductDefId2" Padding="2,2,0,0,100">
+                      <StylePriority Ref="58" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="59" ControlType="XRTableCell" Name="tbcProductDefName2" Weight="2.6350615221030589" Multiline="true" Text="tbcProductDefName2" Padding="2,2,0,0,100">
+                      <StylePriority Ref="60" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="61" ControlType="XRTableCell" Name="tbcLotId2" Weight="1.4478853110044794" Multiline="true" Text="tbcLotId2" Padding="2,2,0,0,100">
+                      <StylePriority Ref="62" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="63" ControlType="XRTableCell" Name="tbcProcessSegmentName2" Weight="1.021814292082285" Multiline="true" Text="tbcProcessSegmentName2" Padding="2,2,0,0,100">
+                      <StylePriority Ref="64" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="65" ControlType="XRTableCell" Name="tbcPanelQty2" Weight="0.55784077561305134" RowSpan="2" Multiline="true" Text="PNL" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="66" UsePadding="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="67" ControlType="XRTableCell" Name="tbcPcsQty2" Weight="0.55784078902074918" RowSpan="2" Multiline="true" Text="PCS" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="68" UsePadding="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="69" ControlType="XRTableCell" Name="tbcTotalPcsQty" Weight="2.0114450787867133" Multiline="true" Text="PCS" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="70" UsePadding="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="71" ControlType="XRTableCell" Name="tbcComment2" Weight="4.7820248498864775" Multiline="true" Text="tbcComment2" Padding="2,2,0,0,100">
+                      <StylePriority Ref="72" UsePadding="false" />
+                    </Item9>
+                  </Cells>
+                </Item2>
+                <Item3 Ref="73" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+                  <Cells>
+                    <Item1 Ref="74" ControlType="XRTableCell" Name="tbcSeq3" Weight="0.255613295916272" Multiline="true" Text="tbcSeq3" Padding="2,2,0,0,100">
+                      <StylePriority Ref="75" UsePadding="false" />
+                    </Item1>
+                    <Item2 Ref="76" ControlType="XRTableCell" Name="tbcProductDefId3" Weight="1.0698421641598408" Multiline="true" Text="tbcProductDefId3" Padding="2,2,0,0,100">
+                      <StylePriority Ref="77" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="78" ControlType="XRTableCell" Name="tbcProductDefName3" Weight="2.6350615221030584" Multiline="true" Text="tbcProductDefName3" Padding="2,2,0,0,100">
+                      <StylePriority Ref="79" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="80" ControlType="XRTableCell" Name="tbcLotId3" Weight="1.4478853110044792" Multiline="true" Text="tbcLotId3" Padding="2,2,0,0,100">
+                      <StylePriority Ref="81" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="82" ControlType="XRTableCell" Name="tbcProcessSegmentName3" Weight="1.0218142920822846" Multiline="true" Text="tbcProcessSegmentName3" Padding="2,2,0,0,100">
+                      <StylePriority Ref="83" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="84" ControlType="XRTableCell" Name="tbcPanelQty3" Weight="0.55784046869087467" Multiline="true" Text="tbcPanelQty3" Padding="2,2,0,0,100">
+                      <StylePriority Ref="85" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="86" ControlType="XRTableCell" Name="tbcPcsQty3" Weight="0.55784048209857218" Multiline="true" Text="tbcPcsQty3" Padding="2,2,0,0,100">
+                      <StylePriority Ref="87" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="88" ControlType="XRTableCell" Name="tbcRealQty3" Weight="0.67048171379324262" Multiline="true" Text="실수량" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="89" UsePadding="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="90" ControlType="XRTableCell" Name="tbcLossQty3" Weight="0.67048171965811854" Multiline="true" Text="유실" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="91" UsePadding="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="92" ControlType="XRTableCell" Name="tbcEtcQty3" Weight="0.67048171965811876" Multiline="true" Text="기타" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                      <StylePriority Ref="93" UseTextAlignment="false" />
+                    </Item10>
+                    <Item11 Ref="94" ControlType="XRTableCell" Name="tbcComment3" Weight="4.782025389408064" Multiline="true" Text="tbcComment3" Padding="2,2,0,0,100">
+                      <StylePriority Ref="95" UsePadding="false" />
+                    </Item11>
+                  </Cells>
+                </Item3>
+              </Rows>
+              <StylePriority Ref="96" UseFont="false" UseBorders="false" UseBorderWidth="false" />
+            </Item3>
+            <Item4 Ref="97" ControlType="XRLabel" Name="lblConfirm" Multiline="true" Text="결&#xD;&#xA;&#xD;&#xA;재" TextAlignment="MiddleCenter" SizeF="24,77" LocationFloat="800, 1" Font="맑은 고딕, 8pt" Padding="0,0,0,0,100" Borders="Left, Top, Bottom" BorderWidth="0.2">
+              <StylePriority Ref="98" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="99" ControlType="XRLabel" Name="txtAuditCheck" Multiline="true" Text="/" TextAlignment="MiddleCenter" SizeF="82,18" LocationFloat="987.66, 59" Font="맑은 고딕, 9pt, charSet=0" Padding="0,0,0,0,100" Borders="Left, Right, Bottom" BorderWidth="0.2">
+              <StylePriority Ref="100" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="101" ControlType="XRLabel" Name="txtInspectorCheck" Multiline="true" Text="/" TextAlignment="MiddleCenter" SizeF="82,18" LocationFloat="905.66, 59" Font="맑은 고딕, 9pt, charSet=0" Padding="0,0,0,0,100" Borders="Left, Bottom" BorderWidth="0.2">
+              <StylePriority Ref="102" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item6>
+            <Item7 Ref="103" ControlType="XRLabel" Name="txtSurveyerCheck" Multiline="true" Text="/" TextAlignment="MiddleCenter" SizeF="82,18" LocationFloat="823.66, 59" Font="맑은 고딕, 9pt, charSet=0" Padding="0,0,0,0,100" Borders="Left, Bottom" BorderWidth="0.2">
+              <StylePriority Ref="104" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item7>
+            <Item8 Ref="105" ControlType="XRLabel" Name="txtAudit" Multiline="true" SizeF="82,40" LocationFloat="987.66, 19" Font="맑은 고딕, 9pt, charSet=0" Padding="0,0,0,0,100" Borders="Left, Right, Bottom" BorderWidth="0.2">
+              <StylePriority Ref="106" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" />
+            </Item8>
+            <Item9 Ref="107" ControlType="XRLabel" Name="txtInspector" Multiline="true" SizeF="82,40" LocationFloat="905.6601, 19.0000134" Font="맑은 고딕, 9pt, charSet=0" Padding="0,0,0,0,100" Borders="Left, Bottom" BorderWidth="0.2">
+              <StylePriority Ref="108" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" />
+            </Item9>
+            <Item10 Ref="109" ControlType="XRLabel" Name="txtSurveyer" Multiline="true" SizeF="82,40" LocationFloat="823.66, 19" Font="맑은 고딕, 9pt, charSet=0" Padding="0,0,0,0,100" Borders="Left, Bottom" BorderWidth="0.2">
+              <StylePriority Ref="110" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" />
+            </Item10>
+            <Item11 Ref="111" ControlType="XRLabel" Name="lblAudit" Multiline="true" Text="회계감사" TextAlignment="MiddleCenter" SizeF="82,18" LocationFloat="987.6601, 1.00000691" Font="맑은 고딕, 8pt" Padding="0,0,0,0,100" Borders="All" BorderWidth="0.2">
+              <StylePriority Ref="112" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item11>
+            <Item12 Ref="113" ControlType="XRLabel" Name="lblInspector" Multiline="true" Text="실사" TextAlignment="MiddleCenter" SizeF="82,18" LocationFloat="905.6601, 1.00000691" Font="맑은 고딕, 8pt" Padding="0,0,0,0,100" Borders="Left, Top, Bottom" BorderWidth="0.2">
+              <StylePriority Ref="114" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item12>
+            <Item13 Ref="115" ControlType="XRLabel" Name="lblSurveyer" Multiline="true" Text="피실사자" TextAlignment="MiddleCenter" SizeF="82,17.9999981" LocationFloat="823.6601, 1" Font="맑은 고딕, 8pt" Padding="0,0,0,0,100" Borders="Left, Top, Bottom" BorderWidth="0.2">
+              <StylePriority Ref="116" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item13>
+            <Item14 Ref="117" ControlType="XRLabel" Name="lblTitle" Multiline="true" Text="공정별 재공실사 LIST" TextAlignment="TopCenter" SizeF="272.0644,31.9583244" LocationFloat="397.43512, 22.9999542" Font="맑은 고딕, 12.75pt, style=Underline, charSet=129" Padding="2,2,0,0,100">
+              <StylePriority Ref="118" UseFont="false" UseTextAlignment="false" />
+            </Item14>
+            <Item15 Ref="119" ControlType="XRPageInfo" Name="pageInfo" TextFormatString="Page {0} of {1}" TextAlignment="BottomRight" SizeF="100,23" LocationFloat="969.3334, 79.24998" Font="맑은 고딕, 8pt" Padding="2,2,0,0,100">
+              <StylePriority Ref="120" UseFont="false" UseTextAlignment="false" />
+            </Item15>
+          </Controls>
+        </Item2>
+        <Item3 Ref="121" ControlType="ReportFooterBand" Name="ReportFooter" HeightF="0.787401557">
+          <Controls>
+            <Item1 Ref="122" ControlType="XRPageBreak" Name="xrPageBreak1" LocationFloat="0, 0" />
+          </Controls>
+        </Item3>
+      </Bands>
+    </Item4>
+  </Bands>
+</XtraReportsLayoutSerializer>

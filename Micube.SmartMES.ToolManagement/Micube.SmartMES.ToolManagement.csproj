@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CECC2B5-137A-49B0-9DEC-E09D4B165886}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Micube.SmartMES.ToolManagement</RootNamespace>
+    <AssemblyName>Micube.SmartMES.ToolManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Data.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Diagram.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Office.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Printing.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Spreadsheet.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraBars.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraDiagram.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraLayout.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPrinting.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraReports.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraRichEdit.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraSpreadsheet.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraTreeList.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.SmartControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.SmartControls.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartDeploy.Common">
+      <HintPath>..\..\lib\SmartDeploy.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FilmManagement\BrowseFilmStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmManagement\BrowseFilmStatus.Designer.cs">
+      <DependentUpon>BrowseFilmStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmManagement\NewRequestMakeFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmManagement\NewRequestMakeFilm.Designer.cs">
+      <DependentUpon>NewRequestMakeFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmManagement\NewRequestMakeFilmVerINTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmManagement\NewRequestMakeFilmVerINTER.Designer.cs">
+      <DependentUpon>NewRequestMakeFilmVerINTER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmManagement\RegistReceiveFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmManagement\RegistReceiveFilm.Designer.cs">
+      <DependentUpon>RegistReceiveFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmManagement\RegistRequestMakeFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmManagement\RegistRequestMakeFilm.Designer.cs">
+      <DependentUpon>RegistRequestMakeFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmManagement\RegistScrapFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmManagement\RegistScrapFilm.Designer.cs">
+      <DependentUpon>RegistScrapFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmManagement\RegistSendFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmManagement\RegistSendFilm.Designer.cs">
+      <DependentUpon>RegistSendFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmManagement\RequestMakeFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmManagement\RequestMakeFilm.Designer.cs">
+      <DependentUpon>RequestMakeFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmManagement\NewRequestMakeFilmVerYp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmManagement\NewRequestMakeFilmVerYp.Designer.cs">
+      <DependentUpon>NewRequestMakeFilmVerYp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmMove\ReceiptMoveFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmMove\ReceiptMoveFilm.Designer.cs">
+      <DependentUpon>ReceiptMoveFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmMove\SendMoveFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmMove\SendMoveFilm.Designer.cs">
+      <DependentUpon>SendMoveFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\FilmCodePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\FilmCodePopup.Designer.cs">
+      <DependentUpon>FilmCodePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\MultiFilmCodePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\MultiFilmCodePopup.Designer.cs">
+      <DependentUpon>MultiFilmCodePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\popupRequestMakeFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\popupRequestMakeFilm.Designer.cs">
+      <DependentUpon>popupRequestMakeFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PrintRequestFilmDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PrintRequestFilmDocument.Designer.cs">
+      <DependentUpon>PrintRequestFilmDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PrintRequestToolDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PrintRequestToolDocument.Designer.cs">
+      <DependentUpon>PrintRequestToolDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PrintRequestToolDocumentYP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PrintRequestToolDocumentYP.Designer.cs">
+      <DependentUpon>PrintRequestToolDocumentYP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ProductCodePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ProductCodePopup.designer.cs">
+      <DependentUpon>ProductCodePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\RequestToolMakingDetailPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\RequestToolMakingDetailPopup.Designer.cs">
+      <DependentUpon>RequestToolMakingDetailPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\RequestToolMakingLotPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\RequestToolMakingLotPopup.Designer.cs">
+      <DependentUpon>RequestToolMakingLotPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ToolApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ToolApproval.Designer.cs">
+      <DependentUpon>ToolApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ToolNumberForReceiptPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ToolNumberForReceiptPopup.Designer.cs">
+      <DependentUpon>ToolNumberForReceiptPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ToolNumberForRepairPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ToolNumberForRepairPopup.Designer.cs">
+      <DependentUpon>ToolNumberForRepairPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ToolNumberForUpdatePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ToolNumberForUpdatePopup.Designer.cs">
+      <DependentUpon>ToolNumberForUpdatePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ToolNumberPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ToolNumberPopup.Designer.cs">
+      <DependentUpon>ToolNumberPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\ToolResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaking\ReceiptRepairTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolMaking\ReceiptRepairTool.Designer.cs">
+      <DependentUpon>ReceiptRepairTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaking\ReceiptRequestToolMaking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolMaking\ReceiptRequestToolMaking.Designer.cs">
+      <DependentUpon>ReceiptRequestToolMaking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaking\RegistRepairToolResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolMaking\RegistRepairToolResult.Designer.cs">
+      <DependentUpon>RegistRepairToolResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaking\RepairToolRequestSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolMaking\RepairToolRequestSend.Designer.cs">
+      <DependentUpon>RepairToolRequestSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaking\RequestToolMaking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolMaking\RequestToolMaking.Designer.cs">
+      <DependentUpon>RequestToolMaking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaking\RequestToolMakingRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolMaking\RequestToolMakingRegister.Designer.cs">
+      <DependentUpon>RequestToolMakingRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaking\UpdateToolRepairSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolMaking\UpdateToolRepairSend.Designer.cs">
+      <DependentUpon>UpdateToolRepairSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMove\ReceiptMoveTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolMove\ReceiptMoveTool.Designer.cs">
+      <DependentUpon>ReceiptMoveTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMove\SendMoveTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolMove\SendMoveTool.Designer.cs">
+      <DependentUpon>SendMoveTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolStatus\BrowseToolStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolStatus\BrowseToolStatus.Designer.cs">
+      <DependentUpon>BrowseToolStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolStatus\ToolInformationManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolStatus\ToolInformationManagement.Designer.cs">
+      <DependentUpon>ToolInformationManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucFilmCodePopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucFilmCodePopup.Designer.cs">
+      <DependentUpon>ucFilmCodePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucProductCodePopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucProductCodePopup.designer.cs">
+      <DependentUpon>ucProductCodePopup.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FilmManagement\BrowseFilmStatus.resx">
+      <DependentUpon>BrowseFilmStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmManagement\NewRequestMakeFilm.resx">
+      <DependentUpon>NewRequestMakeFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmManagement\NewRequestMakeFilmVerINTER.resx">
+      <DependentUpon>NewRequestMakeFilmVerINTER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmManagement\RegistReceiveFilm.resx">
+      <DependentUpon>RegistReceiveFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmManagement\RegistRequestMakeFilm.resx">
+      <DependentUpon>RegistRequestMakeFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmManagement\RegistScrapFilm.resx">
+      <DependentUpon>RegistScrapFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmManagement\RegistSendFilm.resx">
+      <DependentUpon>RegistSendFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmManagement\RequestMakeFilm.resx">
+      <DependentUpon>RequestMakeFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmMove\ReceiptMoveFilm.resx">
+      <DependentUpon>ReceiptMoveFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmMove\SendMoveFilm.resx">
+      <DependentUpon>SendMoveFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\FilmCodePopup.resx">
+      <DependentUpon>FilmCodePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\MultiFilmCodePopup.resx">
+      <DependentUpon>MultiFilmCodePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\popupRequestMakeFilm.resx">
+      <DependentUpon>popupRequestMakeFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\PrintRequestFilmDocument.resx">
+      <DependentUpon>PrintRequestFilmDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\PrintRequestToolDocument.resx">
+      <DependentUpon>PrintRequestToolDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\PrintRequestToolDocumentYP.resx">
+      <DependentUpon>PrintRequestToolDocumentYP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ProductCodePopup.resx">
+      <DependentUpon>ProductCodePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\RequestToolMakingDetailPopup.resx">
+      <DependentUpon>RequestToolMakingDetailPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\RequestToolMakingLotPopup.resx">
+      <DependentUpon>RequestToolMakingLotPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ToolApproval.resx">
+      <DependentUpon>ToolApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ToolNumberForReceiptPopup.resx">
+      <DependentUpon>ToolNumberForReceiptPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ToolNumberForRepairPopup.resx">
+      <DependentUpon>ToolNumberForRepairPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ToolNumberForUpdatePopup.resx">
+      <DependentUpon>ToolNumberForUpdatePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ToolNumberPopup.resx">
+      <DependentUpon>ToolNumberPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\ToolResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ToolResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolMaking\ReceiptRepairTool.resx">
+      <DependentUpon>ReceiptRepairTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolMaking\ReceiptRequestToolMaking.resx">
+      <DependentUpon>ReceiptRequestToolMaking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolMaking\RegistRepairToolResult.resx">
+      <DependentUpon>RegistRepairToolResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolMaking\RepairToolRequestSend.resx">
+      <DependentUpon>RepairToolRequestSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolMaking\RequestToolMaking.resx">
+      <DependentUpon>RequestToolMaking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolMaking\RequestToolMakingRegister.resx">
+      <DependentUpon>RequestToolMakingRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolMaking\UpdateToolRepairSend.resx">
+      <DependentUpon>UpdateToolRepairSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolMove\ReceiptMoveTool.resx">
+      <DependentUpon>ReceiptMoveTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolMove\SendMoveTool.resx">
+      <DependentUpon>SendMoveTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolStatus\BrowseToolStatus.resx">
+      <DependentUpon>BrowseToolStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolStatus\ToolInformationManagement.resx">
+      <DependentUpon>ToolInformationManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucFilmCodePopup.resx">
+      <DependentUpon>ucFilmCodePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucProductCodePopup.resx">
+      <DependentUpon>ucProductCodePopup.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report\filmLabel.repx" />
+    <None Include="Resources\FilmRequestReport.xltm" />
+    <None Include="Resources\FilmRequestReport_chn.xltm" />
+    <None Include="Resources\FilmRequestReport_eng.xltm" />
+    <None Include="Resources\FilmRequestReport_vtn.xltm" />
+    <None Include="Resources\FILM_REPORT.xltm" />
+    <None Include="Resources\ToolReworkReport.xltm" />
+    <None Include="Resources\ToolReworkReport_chn.xltm" />
+    <None Include="Resources\ToolReworkReport_eng.xltm" />
+    <None Include="Resources\ToolReworkReport_vtn.xltm" />
+    <None Include="Resources\ToolReworkReport_YP.xltm" />
+    <None Include="Resources\ToolReworkReport_YP_chn.xltm" />
+    <None Include="Resources\ToolReworkReport_YP_eng.xltm" />
+    <None Include="Resources\ToolReworkReport_YP_vtn.xltm" />
+    <None Include="Resources\TOOL_REPORT.xltm" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.Controls\Micube.SmartMES.Commons.Controls.csproj">
+      <Project>{6c8616d8-4620-477e-a1ac-2a02a94d4984}</Project>
+      <Name>Micube.SmartMES.Commons.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons\Micube.SmartMES.Commons.csproj">
+      <Project>{1b6a2eb9-f134-49fc-80fa-982418d6490f}</Project>
+      <Name>Micube.SmartMES.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

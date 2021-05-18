@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5559777-E2AE-414C-9A44-986F37EDD282}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Micube.SmartMES.EquipmentManagement</RootNamespace>
+    <AssemblyName>Micube.SmartMES.EquipmentManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Data.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Printing.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraBars.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraLayout.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPrinting.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraReports.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1.Extensions, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraReports.v18.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraRichEdit.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraScheduler.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraScheduler.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraVerticalGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework">
+      <HintPath>..\..\lib\Micube.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Net">
+      <HintPath>..\..\lib\Micube.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.SmartControls">
+      <HintPath>..\..\lib\Micube.Framework.SmartControls.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Equipment\ManageEquipmentChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipment\ManageEquipmentChange.Designer.cs">
+      <DependentUpon>ManageEquipmentChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintWorkOrder\BrowseMaintWorkOrderDailyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintWorkOrder\BrowseMaintWorkOrderDailyReport.Designer.cs">
+      <DependentUpon>BrowseMaintWorkOrderDailyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintWorkOrder\BrowseMaintWorkOrderResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintWorkOrder\BrowseMaintWorkOrderResult.Designer.cs">
+      <DependentUpon>BrowseMaintWorkOrderResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintWorkOrder\ReceiptMaintWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintWorkOrder\ReceiptMaintWorkOrder.Designer.cs">
+      <DependentUpon>ReceiptMaintWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintWorkOrder\ReceiptRequestMaintWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintWorkOrder\ReceiptRequestMaintWorkOrder.Designer.cs">
+      <DependentUpon>ReceiptRequestMaintWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintWorkOrder\RegistPMPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintWorkOrder\RegistPMPlan.Designer.cs">
+      <DependentUpon>RegistPMPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintWorkOrder\RegistMaintWorkOrderResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintWorkOrder\RegistMaintWorkOrderResult.Designer.cs">
+      <DependentUpon>RegistMaintWorkOrderResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintWorkOrder\RegistPMWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintWorkOrder\RegistPMWorkOrder.Designer.cs">
+      <DependentUpon>RegistPMWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintWorkOrder\RequestMaintWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintWorkOrder\RequestMaintWorkOrder.Designer.cs">
+      <DependentUpon>RequestMaintWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\DurableCodePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\DurableCodePopup.designer.cs">
+      <DependentUpon>DurableCodePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\EquipmentCodePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\EquipmentCodePopup.Designer.cs">
+      <DependentUpon>EquipmentCodePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PrintEquipmentDetailInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PrintEquipmentDetailInfo.Designer.cs">
+      <DependentUpon>PrintEquipmentDetailInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\MaintWorkOrderResultSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\MaintWorkOrderResultSelector.Designer.cs">
+      <DependentUpon>MaintWorkOrderResultSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PlanWorkOrderCreatorPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PlanWorkOrderCreatorPopup.Designer.cs">
+      <DependentUpon>PlanWorkOrderCreatorPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PlanWorkOrderUploader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\PlanWorkOrderUploader.Designer.cs">
+      <DependentUpon>PlanWorkOrderUploader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\RegistDelayReasonMaintWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\RegistDelayReasonMaintWorkOrder.Designer.cs">
+      <DependentUpon>RegistDelayReasonMaintWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\RegistRequestMaintWorkOrderPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\RegistRequestMaintWorkOrderPopup.Designer.cs">
+      <DependentUpon>RegistRequestMaintWorkOrderPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\RegistResultMaintWorkOrderAppPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\RegistResultMaintWorkOrderAppPopup.Designer.cs">
+      <DependentUpon>RegistResultMaintWorkOrderAppPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\RegistResultMaintWorkOrderProductPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\RegistResultMaintWorkOrderProductPopup.Designer.cs">
+      <DependentUpon>RegistResultMaintWorkOrderProductPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\EqpResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EqpResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SparePart\SparePartEquipmentBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SparePart\SparePartEquipmentBrowse.Designer.cs">
+      <DependentUpon>SparePartEquipmentBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SparePart\SparePartInbound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SparePart\SparePartInbound.Designer.cs">
+      <DependentUpon>SparePartInbound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SparePart\SparePartMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SparePart\SparePartMove.Designer.cs">
+      <DependentUpon>SparePartMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SparePart\SparePartStockBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SparePart\SparePartStockBrowse.Designer.cs">
+      <DependentUpon>SparePartStockBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\DurableCodeCurrentQtyPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\DurableCodeCurrentQtyPopup.designer.cs">
+      <DependentUpon>DurableCodeCurrentQtyPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucDurableCodeCurrentQtyPopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucDurableCodeCurrentQtyPopup.Designer.cs">
+      <DependentUpon>ucDurableCodeCurrentQtyPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucDurableCodePopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucDurableCodePopup.designer.cs">
+      <DependentUpon>ucDurableCodePopup.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Equipment\ManageEquipmentChange.resx">
+      <DependentUpon>ManageEquipmentChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintWorkOrder\BrowseMaintWorkOrderDailyReport.resx">
+      <DependentUpon>BrowseMaintWorkOrderDailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintWorkOrder\BrowseMaintWorkOrderResult.resx">
+      <DependentUpon>BrowseMaintWorkOrderResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintWorkOrder\ReceiptMaintWorkOrder.resx">
+      <DependentUpon>ReceiptMaintWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintWorkOrder\ReceiptRequestMaintWorkOrder.resx">
+      <DependentUpon>ReceiptRequestMaintWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintWorkOrder\RegistPMPlan.resx">
+      <DependentUpon>RegistPMPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintWorkOrder\RegistMaintWorkOrderResult.resx">
+      <DependentUpon>RegistMaintWorkOrderResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintWorkOrder\RegistPMWorkOrder.resx">
+      <DependentUpon>RegistPMWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintWorkOrder\RequestMaintWorkOrder.resx">
+      <DependentUpon>RequestMaintWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\DurableCodePopup.resx">
+      <DependentUpon>DurableCodePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\EquipmentCodePopup.resx">
+      <DependentUpon>EquipmentCodePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\MaintWorkOrderResultSelector.resx">
+      <DependentUpon>MaintWorkOrderResultSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\PlanWorkOrderCreatorPopup.resx">
+      <DependentUpon>PlanWorkOrderCreatorPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\PlanWorkOrderUploader.resx">
+      <DependentUpon>PlanWorkOrderUploader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\PrintEquipmentDetailInfo.resx">
+      <DependentUpon>PrintEquipmentDetailInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\RegistDelayReasonMaintWorkOrder.resx">
+      <DependentUpon>RegistDelayReasonMaintWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\RegistRequestMaintWorkOrderPopup.resx">
+      <DependentUpon>RegistRequestMaintWorkOrderPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\RegistResultMaintWorkOrderAppPopup.resx">
+      <DependentUpon>RegistResultMaintWorkOrderAppPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\RegistResultMaintWorkOrderProductPopup.resx">
+      <DependentUpon>RegistResultMaintWorkOrderProductPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\EqpResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EqpResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SparePart\SparePartEquipmentBrowse.resx">
+      <DependentUpon>SparePartEquipmentBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SparePart\SparePartInbound.resx">
+      <DependentUpon>SparePartInbound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SparePart\SparePartMove.resx">
+      <DependentUpon>SparePartMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\DurableCodeCurrentQtyPopup.resx">
+      <DependentUpon>DurableCodeCurrentQtyPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SparePart\SparePartStockBrowse.resx">
+      <DependentUpon>SparePartStockBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucDurableCodeCurrentQtyPopup.resx">
+      <DependentUpon>ucDurableCodeCurrentQtyPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucDurableCodePopup.resx">
+      <DependentUpon>ucDurableCodePopup.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.Controls\Micube.SmartMES.Commons.Controls.csproj">
+      <Project>{6c8616d8-4620-477e-a1ac-2a02a94d4984}</Project>
+      <Name>Micube.SmartMES.Commons.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons\Micube.SmartMES.Commons.csproj">
+      <Project>{1b6a2eb9-f134-49fc-80fa-982418d6490f}</Project>
+      <Name>Micube.SmartMES.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EQP_TEMPLATE.xlsx" />
+    <None Include="Resources\MaintWorkOrderDetailReportSample.xlsx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

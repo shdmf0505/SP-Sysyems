@@ -1,0 +1,1829 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LabelPrintScript>
+<!-- APPLE(FCY)_BOX -->
+  <ZPL name="001" visibleColums="PARTNO,QTY">
+    ^XA
+
+    ^FO50,20^GB880,910,3^FS
+
+    ^CF0, 50
+    ^FO90,80^FD(P)C P/N : {!@PARTNO}^FS
+    ^FO90,130^BY4.5,3,20^BCN,80,N,N,N
+    ^FD;{!@PARTNO}>^FS
+
+    ^FO90,250^FD(Q)QY :  {!@QTY}^FS
+    ^FO90,300^BY3,3,25^BCN,80,N,N,N
+    ^FD;{!@QTY}>^FS
+
+    ^FO90,420^FD(M)Mfr P/N : {!@PRODUCTDEFID}^FS
+    ^FO90,470^BY5,3,25^BCN,80,N,N,N
+    ^FD;{!@PRODUCTDEFID}>^FS
+
+    ^FO90,600^FD(D)DATE CODE : {!@BOXWEEK}^FS
+    ^FO90,650^BY5,3,25^BCN,80,N,N,N
+    ^FD;{!@BOXWEEK}>^FS
+
+    ^FO90,760^FD(L)LOT# : {!@LOTNO}^FS
+    ^FO90,810^BY5,3,25^BCN,80,N,N,N
+    ^FD;{!@LOTNO}>^FS
+
+    ^FO950,680^FD{!@ETC}^FS
+    ^FO950,850^FD[{!@INSPECTOR}]^FS
+
+    ^XZ
+  </ZPL>
+  	
+  <!-- APPLE(FCY)_CASE -->
+  <ZPL name="002" visibleColums="PARTNO,QTY">
+	  ^XA
+
+	  ^FO50,20^GB950,600,3^FS
+	  ^FO320,680^GB130,80,3^FS
+
+	  ^CF0, 50
+	  ^FO90,80^FDA P/N :^FS
+	  ^FO240,80^FD{!@PARTNO2}^FS
+
+	  ^FO90,170^FDP/N :^FS
+	  ^FO210,170^FD{!@PARTNO}^FS
+	  ^FO560,170^FDDATE : ^FS
+	  ^FO720,170^FD{!@BOXWEEK} ^FS
+
+	  ^FO90,260^FDQTY(PC) :^FS
+	  ^FO300,260^FD{!@QTY}/{!@DEFECTQTY}^FS
+	  ^FO560,260^FDLOT : ^FS
+	  ^FO690,260^FDZFY{!@LOTNO}^FS
+
+	  ^FO90,330^BCN,120,N,N,N^FD{!@PARTNO}/{!@BOXWEEK}/{!@QTY}/{!@DEFECTQTY}/ZF{!@LOTNO}^FS
+	  ^CF0,40
+	  ^FO90,490^FD{!@PARTNO}/{!@BOXWEEK}/{!@QTY}/{!@DEFECTQTY}/ZFY{!@LOTNO}^FS
+	  ^FO90,560^FDYPE P/N :^FS
+	  ^FO260,560^FD{!@PRODUCTDEFID} / {!@BLOCK}^FS
+	  ^FO940,560^FD[{!@INSPECTOR}]^FS
+          ^FO90,640^FD[{!@ETC}]^FS
+
+	  ^CF0,60
+	  ^FO90,700^FDX-OUT :^FS
+	  ^FO370,700^FD{!@XOUT}^FS
+	  ^CF0,50
+	  ^FO600,680^BCN,80,N,N,N^FD{!@XOUT}/ZF{!@BOXNO}^FS
+
+	  ^FO90,790^FDConfig :^FS
+	  ^FO260,790^FD{!@PARTDESCRIPTION}^FS
+	  ^FO90,860^FDPACKING NO :^FS
+	  ^FO390,860^FDZF{!@BOXNO}^FS
+
+	  ^CF0,40
+	  ^FO720,860^FDMADE IN KOREA^FS
+
+	  ^XZ
+  </ZPL>
+  <!-- APPLE(GORETEK)_BOX -->
+  <ZPL name="004">
+    ^XA
+
+    ^FO70,20^GB1080,800,3^FS
+
+    ^CF0,40
+    ^FO90,30^FDGT P/N: ^FS
+    ^FO340,30^FD{!@GTPN}^FS
+    ^BY2,2
+    ^FO340,65^BCN,40,N,N,N^FD{!@GTPN}^FS
+
+    ^FO810,60^BQN,2,4^FDHA,{"GTPN":"{!@GTPN}", "VDPN":"{!@PRODUCTDEFID}","VDCODE":"19855","LN":"{!@LOTNO}","DC":"{!@BOXDATE}","LNVD":"{!@LOTNO}-19855-{!@BOXDATE}","QTY":"{!@QTY}","SPN":"{!@PRODUCTDEFID}-{!@BOXWEEK}-{!@RN}"}^FS
+
+    ^CF0,48
+    ^FO790,390^FDMade In Korea^FS
+    ^FO920,440^GE180,95,2,B^FS
+    ^FO920,550^GE180,95,2,B^FS
+    ^FO955,465^FD{!@ROHS}^FS
+    ^FO975,577^FD{!@HF}^FS
+
+    ^CF0,35
+    ^FO690,665^FDG({!@QTY}) B({!@DEFECTQTY}) XOUT({!@XOUT})^FS
+
+    ^CF0,40
+    ^FO90,130^FDVD P/N: ^FS
+    ^FO340,130^FD{!@PRODUCTDEFID}^FS
+    ^BY2,2
+    ^FO340,165^BCN,40,N,N,N^FD{!@PRODUCTDEFID}^FS
+
+    ^FO90,230^FDVD CODE: ^FS
+    ^FO340,230^FD19855^FS
+    ^BY4,2
+    ^FO340,265^BCN,40,N,N,N^FD19855^FS
+
+    ^FO90,330^FDL/N: ^FS
+    ^FO340,330^FD{!@LOTNO}^FS
+    ^BY3,2
+    ^FO340,365^BCN,40,N,N,N^FD{!@LOTNO}^FS
+
+    ^FO90,430^FDD/C: ^FS
+    ^FO340,430^FD{!@BOXDATE}^FS
+    ^BY2,2
+    ^FO340,465^BCN,40,N,N,N^FD{!@BOXDATE}^FS
+
+    ^FO90,530^FDLN/VD: ^FS
+    ^FO340,530^FD{!@LOTNO}-19855-{!@BOXDATE}^FS
+    ^BY2,2
+    ^FO340,565^BCN,40,N,N,N^FD{!@LOTNO}-19855-{!@BOXDATE}^FS
+
+    ^FO90,630^FDQTY: ^FS
+    ^FO340,630^FD{!@QTY}^FS
+    ^BY3,2
+    ^FO340,665^BCN,40,N,N,N^FD{!@QTY}^FS
+
+    ^FO90,730^FDSPN: ^FS
+    ^FO340,730^FD{!@PRODUCTDEFID}-{!@BOXWEEK}-{!@RN}^FS
+    ^BY2,2
+    ^FO340,765^BCN,40,N,N,N^FD{!@PRODUCTDEFID}-{!@BOXWEEK}-{!@RN}^FS
+
+    ^CF0,40
+    ^FO80,830^FDYPE^FS
+    ^FO280,830^FD{!@PRODUCTDEFID}^FS
+    ^FO740,830^FD[{!@BOXDATE}]^FS
+    ^FO940,830^FD[{!@INSPECTOR}]^FS
+    ^FO70,880{!#ETC:HY견고딕:25.5:R}
+
+    ^FO1040,825^BQN,2,3^FDMA,{!@PRODUCTDEFID}-{!@BOXWEEK}-{!@RN}/G/{!@QTY}/B/{!@DEFECTQTY}/XOUT/{!@XOUT}^FS
+
+    ^XZ
+  </ZPL>
+  <!-- APPLE(IAC)_BOX -->
+  <ZPL name="006">
+    ^XA
+
+    ^CF0,40
+    ^FO350,60^FD YPE ^FS
+    ^BY2,2,20
+    ^FO360,100^BCN,40,N,N,N^FDYPE^FS
+
+    ^FO90,160^FD P/N : ^FS
+    ^FO360,160^FD{!@PO}^FS
+    ^BY2,2,150
+    ^FO360,210^BCN,40,N,N,N^FD{!@PO}^FS
+
+    ^FO90,260^FD Date Code : ^FS
+    ^FO360,260^FD{!@BOXWEEK}^FS
+    ^BY2,2,100
+    ^FO360,310^BCN,40,N,N,N^FD{!@BOXWEEK}^FS
+
+    ^FO90,360^FD Lot No : ^FS
+    ^FO360,360^FD{!@LOTNO}^FS
+    ^BY2,2,100
+    ^FO360,410^BCN,40,N,N,N^FD{!@LOTNO}^FS
+
+    ^FO90,460^FD Qty : ^FS
+    ^FO360,460^FD{!@QTY}^FS
+    ^BY2,2,100
+    ^FO360,510^BCN,40,N,N,N^FD{!@QTY}^FS
+
+    ^FO90,560^FD Reel ID : ^FS
+    ^FO360,560^FD{!@REELID}^FS
+    ^BY2,2,100
+    ^FO360,610^BCN,40,N,N,N^FD{!@REELID}^FS
+
+    ^FO90,670^FD MSL : ^FS
+    ^FO200,670^FD 5a ^FS
+    ^FO650,670^FD Shelf life : ^FS
+    ^FO830,670^FD 6 months ^FS
+    ^FO90,730^FD Made In Korea ^FS
+    ^FO90,780^FD {!@PRODUCTDEFID} / {!@BLOCK} ^FS
+    ^CF1,40
+    ^FO650,780^FD [{!@BOXDATE}] ^FS
+    ^FO920,780^FD [{!@INSPECTOR}] ^FS
+    ^CF0,40
+    ^FO90,840^FD{!@ETC}^FS
+    ^FO450,840^FD XOUT {!@XOUT} {!@BOXWEEK} B({!@DEFECTQTY}) ^FS
+    ^BY1,2,20
+    ^FO780,840^BCN,60,N,N,N^FD{!@XOUT } {!@BOXWEEK} {!@DEFECTQTY}^FS
+
+    ^FO900,90^GE180,120,2,B^FS
+    ^CF0,50
+    ^FO920,130^FD {!@ROHS} ^FS
+
+    ^XZ
+  </ZPL>
+  <!-- APPLE(IAC)_CASE -->
+  <ZPL name="007">
+    ^XA
+
+    ^CF0,40
+    ^FO350,60^FD YPE ^FS
+    ^BY2,2,20
+    ^FO360,100^BCN,40,N,N,N^FDYPE^FS
+
+    ^FO90,160^FD P/N : ^FS
+    ^FO360,160^FD{!@PO}^FS
+    ^BY2,2,150
+    ^FO360,210^BCN,40,N,N,N^FD{!@PO}^FS
+
+    ^FO90,260^FD Date Code : ^FS
+    ^FO360,260^FD{!@BOXWEEK}^FS
+    ^BY2,2,100
+    ^FO360,310^BCN,40,N,N,N^FD{!@BOXWEEK}^FS
+
+    ^FO90,360^FD Lot No : ^FS
+    ^FO360,360^FD{!@LOTNO}^FS
+    ^BY2,2,100
+    ^FO360,410^BCN,40,N,N,N^FD{!@LOTNO}^FS
+
+    ^FO90,460^FD Qty : ^FS
+    ^FO360,460^FD{!@QTY}^FS
+    ^BY2,2,100
+    ^FO360,510^BCN,40,N,N,N^FD{!@QTY}^FS
+
+    ^FO90,560^FD Reel ID : ^FS
+    ^FO360,560^FD{!@REELID}^FS
+    ^BY2,2,100
+    ^FO360,610^BCN,40,N,N,N^FD{!@REELID}^FS
+
+    ^FO90,670^FD MSL : ^FS
+    ^FO200,670^FD 5a ^FS
+    ^FO650,670^FD Shelf life : ^FS
+    ^FO830,670^FD 6 months ^FS
+    ^FO90,730^FD Made In Korea ^FS
+    ^FO90,780^FD {!@PRODUCTDEFID} / {!@BLOCK} ^FS
+    ^CF1,40
+    ^FO650,780^FD [{!@BOXDATE}] ^FS
+    ^FO920,780^FD [{!@INSPECTOR}] ^FS
+    ^CF0,40
+    ^FO90,840^FD{!@ETC}^FS
+    ^FO450,840^FD XOUT {!@XOUT} {!@BOXWEEK} B({!@DEFECTQTY}) ^FS
+    ^BY1,2,20
+    ^FO780,840^BCN,60,N,N,N^FD{!@XOUT } {!@BOXWEEK} {!@DEFECTQTY}^FS
+
+    ^FO900,90^GE180,120,2,B^FS
+    ^CF0,50
+    ^FO920,130^FD {!@ROHS} ^FS
+
+    ^XZ
+  </ZPL>
+  <!-- APPLE(ICT)_BOX -->
+  <ZPL name="008">
+    ^XA
+
+    ^FO50,20^GB1130,700,3^FS
+
+    ^CF0,40
+    ^FO60,100^FD Vender : ^FS
+    ^FO300,100^FD YPE ^FS
+
+    ^FO60,225^FD CUST. P/N : ^FS
+    ^FO310,225^FD {!@PARTNO2} ^FS
+
+    ^FO60,350^FD D/C : ^FS
+    ^FO160,350^FD {!@BOXDATE} ^FS
+    ^FO380,350^FD QTY : ^FS
+    ^FO490,350^FD G({!@QTY}), B({!@DEFECTQTY})^FS
+    ^FO830,350^FD V/C : ^FS
+    ^FO1010,350^FD M49371 ^FS
+
+    ^FO60,475^FD Lot No : ^FS
+    ^FO190,475^FD {!@LOTNO} ^FS
+
+    ^FO60,630^FD ID : ^FS
+    ^FO140,630^FD {!@RN} ^FS
+    ^FO780,630^FD MSD : 5A^FS
+
+    ^FO60,750^FD YPE P/N ^FS
+    ^FO220,750^FD {!@PRODUCTDEFID} / {!@BLOCK} ^FS
+    ^CF0, 40
+    ^FO710,750^FD [{!@BOXDATE2}] ^FS
+    ^FO960,750^FD [{!@INSPECTOR}] ^FS
+    ^CF0,40
+    ^FO60,815^FD{!@ETC}^FS
+    ^CF0,50
+    ^FO60,875^FD Made In Korea ^FS
+    ^CF0,40
+    ^FO460,875^FD XOUT {!@XOUT} {!@BOXWEEK} B({!@DEFECTQTY}) ^FS
+
+    ^FO690,110^GE190,90,1,B^FS
+    ^FO690,210^GE190,90,1,B^FS
+    ^CF0,50
+    ^FO730,135^FDRoHS  ^FS
+    ^FO740,237^FD H/F^FS
+
+    ^FO900,50
+    ^BQN,2,8
+    ^FDMA,{!@PARTNO2}|{!@BOXDATE}|{!@QTY}|M49371|{!@LOTNO}|{!@RN}^FS
+
+    ^FO950,410
+    ^BQN,2,6
+    ^FDMA,{!@RN}^FS
+
+    ^FO990,780
+    ^BQN,2,5
+    ^FDMA,XOUT {!@XOUT}  {!@BOXWEEK} B({!@DEFECTQTY})^FS
+
+    ^XZ
+  </ZPL>
+  <!-- APPLE(ICT)_CASE -->
+  <ZPL name="009">
+    ^XA
+
+    ^FO50,20^GB1100,700,3^FS
+
+    ^CF0,40
+    ^FO60,100^FD Vender : ^FS
+    ^FO300,100^FD YPE ^FS
+
+    ^FO60,225^FD CUST. P/N : ^FS
+    ^FO310,225^FD {!@PARTNO2} ^FS
+
+    ^FO60,350^FD D/C : ^FS
+    ^FO160,350^FD {!@BOXDATE} ^FS
+    ^FO380,350^FD QTY : ^FS
+    ^FO490,350^FD G({!@QTY}), B({!@DEFECTQTY})^FS
+    ^FO830,350^FD V/C : ^FS
+    ^FO920,350^FD M49371 ^FS
+
+    ^FO60,475^FD Lot No : ^FS
+    ^FO190,475^FD {!@LOTNO} ^FS
+
+    ^FO60,630^FD ID : ^FS
+    ^FO140,630^FD {!@RN} ^FS
+    ^FO780,630^FD MSD : 5A^FS
+
+    ^FO60,750^FD YPE P/N ^FS
+    ^FO220,750^FD {!@PRODUCTDEFID} / {!@BLOCK} ^FS
+    ^CF0, 40
+    ^FO710,750^FD [{!@BOXDATE2}] ^FS
+    ^FO960,750^FD [{!@INSPECTOR}] ^FS
+    ^CF0,40
+    ^FO60,815^FD{!@ETC}^FS
+    ^CF0,50
+    ^FO60,875^FD Made In Korea ^FS
+    ^CF0,40
+    ^FO460,875^FD XOUT {!@XOUT} {!@BOXWEEK} B({!@DEFECTQTY}) ^FS
+
+    ^FO720,120^GE180,80,2,B^FS
+    ^FO720,210^GE180,80,2,B^FS
+    ^CF0,50
+    ^FO740,140^FD {!@ROHS} ^FS
+    ^FO770,230^FD {!@HF}^FS
+
+    ^FO930,80
+    ^BQN,2,5
+    ^FDMA,{!@PARTNO2}|{!@BOXDATE}|{!@QTY}|M49371|{!@LOTNO}|{!@RN}^FS
+
+    ^FO950,410
+    ^BQN,2,7
+    ^FDMA,{!@RN}^FS
+
+    ^FO990,775
+    ^BQN,2,5
+    ^FDMA,XOUT {!@XOUT}  {!@BOXWEEK} B({!@DEFECTQTY})^FS
+
+    ^XZ
+  </ZPL>
+  <!-- APPLE(PRIMAX)_BOX -->
+  <ZPL name="010">
+    ^XA
+
+    ^FO80,50^GB1050,700^FS
+
+    ^CF0,40,40
+    ^FO800,70^GB300,120^FS
+    ^FO860,115^FDG+HF+R2^FS
+
+    ^CF0,40,40
+    ^FO100,100^FDSUPPLIER :^FS
+    ^FO100,160^FDYoungPoong Electronics Co., LTD^FS
+
+    ^FO100,220^FDPRIMAX PART NO :^FS
+    ^FO440,220^FD{!@PARTNO}^FS
+
+    ^FO100,280^FDPART NAME :^FS
+    ^FO100,340^FD{!@PARTNAME}^FS
+
+    ^FO100,400^FDShip to :^FS
+    ^FO100,460^FD{!@SHIPTO}^FS
+
+    ^FO600,400^FDQty :^FS
+    ^FO700,400^FDG({!@QTY}), B({!@DEFECTQTY})^FS
+
+    ^BY2,1,
+    ^FO100,520^BCN,150,N,N,N
+    ^FD{!@PO}{!@PARTNO2}{!@RN}-{!@QTY2}-{!@LOTNO1}{!@LOTNO2}{!@DEFECTQTY2}^FS
+    ^CF0,30,30
+    ^FO200,690^FD{!@PO}{!@PARTNO2}{!@RN}-{!@QTY2}-{!@LOTNO1}{!@LOTNO2}{!@DEFECTQTY2}^FS
+
+    ^CF0,40,40
+    ^FO100,770^FDYPE P/N {!@PRODUCTDEFID} / {!@BLOCK}^FS
+    ^FO100,830^FD{!@ETC}^FS
+
+    ^CF0,30,30
+    ^FO800,770^FD[{!@BOXDATE}]^FS
+    ^FO1000,770^FD[{!@INSPECTOR}]^FS
+
+    ^FO900,890^FDXOUT {!@XOUT}^FS
+
+    ^XZ
+  </ZPL>
+  <!-- APPLE(PRIMAX)_CASE -->
+  <ZPL name="011">
+    ^XA
+
+    ^FO80,50^GB1050,700^FS
+
+    ^CF0,40,40
+    ^FO800,70^GB300,120^FS
+    ^FO860,115^FDG+HF+R2^FS
+
+    ^CF0,40,40
+    ^FO100,100^FDSUPPLIER :^FS
+    ^FO100,160^FDYoungPoong Electronics Co., LTD^FS
+
+    ^FO100,220^FDPRIMAX PART NO :^FS
+    ^FO440,220^FD{!@PARTNO}^FS
+
+    ^FO100,280^FDPART NAME :^FS
+    ^FO100,340^FD{!@PARTNAME}^FS
+
+    ^FO100,400^FDShip to :^FS
+    ^FO100,460^FD{!@SHIPTO}^FS
+
+    ^FO600,400^FDQty :^FS
+    ^FO700,400^FDG({!@QTY}), B({!@DEFECTQTY})^FS
+
+    ^BY2,1
+    ^FO100,520^BCN,150,N,N,N
+    ^FD{!@PO}{!@PARTNO2}{!@RN}-{!@QTY2}-{!@LOTNO1}{!@LOTNO2}{!@DEFECTQTY2}^FS
+    ^CF0,30,30
+    ^FO200,690^FD{!@PO}{!@PARTNO2}{!@RN}-{!@QTY2}-{!@LOTNO1}{!@LOTNO2}{!@DEFECTQTY2}^FS
+
+    ^CF0,40,40
+    ^FO100,770^FDYPE P/N {!@PRODUCTDEFID} / {!@BLOCK}^FS
+    ^FO100,830^FD{!@ETC}^FS
+
+    ^CF0,30,30
+    ^FO800,770^FD[{!@BOXDATE}]^FS
+    ^FO1000,770^FD[{!@INSPECTOR}]^FS
+
+    ^FO900,890^FDXOUT {!@XOUT}^FS
+
+    ^XZ
+  </ZPL>
+  
+  <!-- GIS_BOX -->
+  <ZPL name="015">
+    ^XA
+    ^CF0,40
+    ^FO350,40^FDGIS Display Corperation ^FS
+    ^BY4,1,100
+    ^FO100,120^BCN,100,Y,N,N^FD*{!@NOWDATE}{!@PARTNO2}{!@LOTNO}{!@QTY2}*^FS
+
+    ^CF0,40
+    ^FO80,270^FDSupplier: ^FS
+    ^FO300,270^FDYOUNGPOONG^FS
+    ^FO650,270^FDYP CODE: ^FS
+    ^FO830,270^FD{!@PRODUCTDEFID}[{!@WORKERNAME}]^FS
+
+    ^BY2,1
+    ^FO630,325^BCN,80,N,N,N^FD{!@PRODUCTDEFID}/{!@BOXWEEK}^FS
+
+    ^FO80,325^FDP/N: ^FS
+    ^FO300,325^FD{!@PARTNO}^FS
+
+    ^FO80,375^FDDescription: ^FS
+    ^FO300,375^FDFPCB^FS
+    ^FO80,425^FDEXP: ^FS
+    ^FO300,425^FD{!@EXPIREDDATE}^FS
+    ^FO80,475^FDVendor Lot: ^FS
+    ^FO300,475^FD{!@LOTNO}^FS
+    ^FO690,425^FDDATE: ^FS
+    ^FO820,425^FD{!@BOXDATE}^FS
+
+    ^FO80,525^FDShip QTY: ^FS
+    ^FO300,525^FD{!@QTY}{!@DEFECTQTY2}^FS
+
+    ^FO760,490^GC150,2,B^FS
+    ^FO790,550^FD{!@ROHS}^FS
+    ^FO920,490^GC150,2,B^FS
+    ^FO970,550^FD{!@HF}^FS
+
+    ^FO80,580^FD{!@BOXWEEK}^FS
+    ^FO80,635^FDETC: ^FS
+    ^FO300,635^FD{!@ETC}^FS
+    ^FO80,680^FDMade In Korea^FS
+
+    ^XZ
+
+  </ZPL>
+  <!-- GIS_CASE -->
+  <ZPL name="016">
+    ^XA
+    ^CF0,40
+    ^FO350,40^FDGIS Display Corperation ^FS
+    ^BY4,1,100
+    ^FO100,120^BCN,100,N,N,N^FD*{!@NOWDATE}{!@PARTNO2}{!@LOTNO}{!@QTY2}*^FS
+    ^CF1,30
+    ^FO320,230^FD*{!@NOWDATE}{!@PARTNO2}{!@LOTNO}{!@QTY2}*^FS
+
+    ^CF0,40
+    ^FO80,270^FDSupplier: ^FS
+    ^FO300,270^FDYOUNGPOONG^FS
+    ^FO650,270^FDYP CODE: ^FS
+    ^FO830,270^FD{!@PRODUCTDEFID}[{!@WORKERNAME}]^FS
+
+    ^BY2,1
+    ^FO630,325^BCN,80,N,N,N^FD{!@PRODUCTDEFID}{!@PRODUCTDEFVERSION}/{!@BOXWEEK}/{!@DEFECTQTY}^FS
+
+    ^FO80,325^FDP/N: ^FS
+    ^FO300,325^FD{!@PARTNO}^FS
+
+    ^FO80,375^FDDescription: ^FS
+    ^FO300,375^FDFPCB^FS
+    ^FO80,425^FDEXP: ^FS
+    ^FO300,425^FD{!@EXPIREDDATE}^FS
+    ^FO80,475^FDVendor Lot: ^FS
+    ^FO300,475^FD{!@LOTNO}^FS
+    ^FO690,425^FDDATE: ^FS
+    ^FO820,425^FD{!@BOXDATE}^FS
+
+    ^FO80,525^FDShip QTY: ^FS
+    ^FO300,525^FD{!@QTY}{!@DEFECTQTY2}^FS
+
+    ^FO760,490^GC150,2,B^FS
+    ^FO790,550^FDROHS^FS
+    ^FO920,490^GC150,2,B^FS
+    ^FO970,550^FDH/F^FS
+
+    ^FO80,580^FD{!@BOXWEEK}^FS
+    ^FO80,635^FDETC: ^FS
+    ^FO300,635^FD{!@ETC}^FS
+    ^FO80,680^FDMade In Korea^FS
+
+    ^XZ
+
+  </ZPL>
+  <!-- GIS_TRAY -->
+  <ZPL name="017">
+    ^XA
+    ^CF0,40
+    ^FO350,40^FDGIS Display Corperation ^FS
+    ^BY4,1,100
+    ^FO100,120^BCN,100,N,N,N^FD*{!@NOWDATE}{!@PARTNO2}{!@LOTNO}{!@QTY2}*^FS
+    ^CF1,30
+    ^FO320,230^FD*{!@NOWDATE}{!@PARTNO2}{!@LOTNO}{!@QTY2}*^FS
+
+    ^CF0,40
+    ^FO80,270^FDSupplier: ^FS
+    ^FO300,270^FDYOUNGPOONG^FS
+    ^FO650,270^FDYP CODE: ^FS
+    ^FO830,270^FD{!@PRODUCTDEFID}[{!@WORKERNAME}]^FS
+
+    ^BY2,1
+    ^FO630,325^BCN,80,N,N,N^FD{!@PRODUCTDEFID}{!@PRODUCTDEFVERSION}/{!@BOXWEEK}/{!@DEFECTQTY}^FS
+
+    ^FO80,325^FDP/N: ^FS
+    ^FO300,325^FD{!@PARTNO}^FS
+
+    ^FO80,375^FDDescription: ^FS
+    ^FO300,375^FDFPCB^FS
+    ^FO80,425^FDEXP: ^FS
+    ^FO300,425^FD{!@EXPIREDDATE}^FS
+    ^FO80,475^FDVendor Lot: ^FS
+    ^FO300,475^FD{!@LOTNO}^FS
+    ^FO690,425^FDDATE: ^FS
+    ^FO820,425^FD{!@BOXDATE}^FS
+
+    ^FO80,525^FDShip QTY: ^FS
+    ^FO300,525^FD{!@QTY}{!@DEFECTQTY2}^FS
+
+    ^FO760,490^GC150,2,B^FS
+    ^FO790,550^FDROHS^FS
+    ^FO920,490^GC150,2,B^FS
+    ^FO970,550^FDH/F^FS
+
+    ^FO80,580^FD{!@BOXWEEK}^FS
+    ^FO80,635^FDETC: ^FS
+    ^FO300,635^FD{!@ETC}^FS
+    ^FO80,680^FDMade In Korea^FS
+
+    ^XZ
+
+  </ZPL>
+  <!-- LG(HE)_BOX -->
+  <ZPL name="018">
+    ^XA
+
+    ^FO50,20^GB1100,600,3^FS
+
+    ^CF0,35,35
+    ^BY3,1,1
+    ^FO80,50^BCN,30,N,N,N^FD{!@PRODUCTDEFID}^FS
+    ^FO80,95^FDMarker P/N : ^FS
+    ^FO310,95^FD{!@PRODUCTDEFID}^FS
+
+    ^FO80,140^BCN,30,N,N,N^FD{!@LOTNO}^FS
+    ^FO80,180^FDPO. No. :^FS
+    ^FO310,180^FD{!@LOTNO}^FS
+
+    ^FO80,230^BCN,30,N,N,N^FD{!@PARTNO}^FS
+    ^FO80,270^FDP/N :^FS
+    ^CF0,70,70
+    ^FO310,270^FD{!@PARTNO}^FS
+
+    ^CF0,35,35
+    ^FO80,370^FDQ'ty :^FS
+    ^CF0,70,70
+    ^FO420,350^FD{!@QTY}^FS
+    ^CF0,35,35
+    ^FO560,370^FDPCS^FS
+
+    ^FO80,420^FDDesc :^FS
+    ^FO310,420^FD{!@PARTDESC}^FS
+
+    ^FO80,470^FDSpec :^FS
+    ^FO310,470^FD{!@SPEC}^FS
+
+    ^FO750,520^FDDate :^FS
+    ^FO310,520^FD{!@BOXDATE}^FS
+
+    ^FO80,570^FDVendor :^FS
+    ^FO310,570^FDYP Electonics^FS
+
+    ^FO80,650^FD{!@ETC}^FS
+    ^FO1050,650^FD[{!@INSPECTOR}]^FS
+
+    ^XZ
+
+  </ZPL>
+  <!-- LG(HE)_CASE -->
+  <ZPL name="019">
+    ^XA
+
+    ^FO50,20^GB1100,600,3^FS
+
+    ^CF0,35,35
+    ^BY3,1,1
+    ^FO80,50^BCN,30,N,N,N^FD{!@PRODUCTDEFID}^FS
+    ^FO80,95^FDMarker P/N : ^FS
+    ^FO310,95^FD{!@PRODUCTDEFID}^FS
+
+    ^FO80,140^BCN,30,N,N,N^FD{!@LOTNO}^FS
+    ^FO80,180^FDPO. No. :^FS
+    ^FO310,180^FD{!@LOTNO}^FS
+
+    ^FO80,230^BCN,30,N,N,N^FD{!@PARTNO}^FS
+    ^FO80,270^FDP/N :^FS
+    ^CF0,70,70
+    ^FO310,270^FD{!@PARTNO}^FS
+
+    ^CF0,35,35
+    ^FO80,370^FDQ'ty :^FS
+    ^CF0,70,70
+    ^FO420,350^FD{!@QTY}^FS
+    ^CF0,35,35
+    ^FO560,370^FDPCS^FS
+
+    ^FO80,420^FDDesc :^FS
+    ^FO310,420^FD{!@PARTDESC}^FS
+
+    ^FO80,470^FDSpec :^FS
+    ^FO310,470^FD{!@SPEC}^FS
+
+    ^FO750,520^FDDate :^FS
+    ^FO310,520^FD{!@BOXDATE}^FS
+
+    ^FO80,570^FDVendor :^FS
+    ^FO310,570^FDYP Electonics^FS
+
+    ^FO80,650^FD{!@ETC}^FS
+    ^FO1050,650^FD[{!@INSPECTOR}]^FS
+
+    ^XZ
+
+  </ZPL>
+  <!-- LG(MC)_BOX -->
+  <ZPL name="020">
+    ^XA
+    ^FO50,20^GB1100,640,3^FS
+    ^BY2,1
+    ^FO80,50^BCN,150,N,N,N^FD{!@PARTNO}-{!@PRODUCTDEFID}/{!@BOXWEEK}/{!@QTY}^FS
+    ^CF0,70,70
+    ^FO880,105^FD[{!@INSPECTOR}]^FS
+    ^CF0,50,50
+    ^FO80,220^FD{!@PARTNO}-{!@PRODUCTDEFID}/{!@BOXWEEK}/{!@QTY}^FS
+    ^FO810,220^FDQty :^FS
+    ^FO910,220^FD100^FS
+
+    ^CF0,30,30
+    ^FO80,290^FDSPEC :^FS
+    ^FO170,290^FD{!@PARTNAME}^FS
+
+    ^FO80,340^FDETC :^FS
+    ^FO160,340^FD{@!ETC}/{!@BOXWEEK}^FS
+
+    ^FO80,390^FDVENDOR NAME :^FS
+    ^FO300,390^FD{!#YP:HY견고딕:25:B}^FS
+
+    ^FO80,440^FDDATE :^FS
+    ^FO180,440^FD{@!BOXDATE}^FS
+
+    ^CF0,45,45
+    ^FO110,500
+    ^GC140,2,B^FS
+    ^FO130,560^FD{!@ROHS}^FS
+    ^FO290,500
+    ^GC140,2,B^FS
+    ^FO330,560^FD{!@HF}^FS
+    ^FO130,690^FDMADE IN KOREA^FS
+
+    ^XZ
+
+  </ZPL>
+  <!-- LG(MC)_BOX -->
+  <ZPL name="020" barcodetype="2D">
+    ^XA
+    ^FO50,20^GB1100,640,3^FS
+    ^BY2,1
+    ^FO80,50^BCN,150,N,N,N^FD{!@PARTNO}-{!@PRODUCTDEFID}/{!@BOXWEEK}/{!@QTY}^FS
+    ^CF0,70,70
+    ^FO880,105^FD[{!@INSPECTOR}]^FS
+    ^CF0,50,50
+    ^FO80,220^FD{!@PARTNO}-{!@PRODUCTDEFID}/{!@BOXWEEK}/{!@QTY}^FS
+    ^FO810,220^FDQty :^FS
+    ^FO910,220^FD100^FS
+
+    ^CF0,30,30
+    ^FO80,290^FDSPEC :^FS
+    ^FO170,290^FD{!@PARTNAME}^FS
+
+    ^FO80,340^FDETC :^FS
+    ^FO160,340^FD{@!ETC}/{!@BOXWEEK}^FS
+
+    ^FO80,390^FDVENDOR NAME :^FS
+    ^FO300,390^FD{!#YP:HY견고딕:25:B}^FS
+
+    ^FO80,440^FDDATE :^FS
+    ^FO180,440^FD{@!BOXDATE}^FS
+
+    ^FO570,380^GB550,90,3^FS
+    ^FO650,400^FD{!@LOTNO1}/{!@LOTNO12}^FS
+    ^FO650,430^FD/{!@PARTNAME}^FS
+
+    ^BY,,2
+    ^FO 580,390
+    ^BQN,2,2
+    ^FD{!@LOTNO1}/{!@LOTNO12}/{!@PARTNAME}^FS
+
+    ^FO570,465^GB550,90,3^FS
+    ^FO650,485^FD{!@LOTNO2}/{!@LOTNO22}^FS
+    ^FO650,520^FD/{!@PARTNAME}^FS
+
+    ^BY,,2
+    ^FO 580,475
+    ^BQN,2,2
+    ^FD{!@LOTNO2}/{!@LOTNO22}/{!@PARTNAME}^FS
+
+    ^FO570,550^GB550,90,3^FS
+    ^FO650,570^FD{!@LOTNO3}/{!@LOTNO32}^FS
+    ^FO650,600^FD/{!@PARTNAME}^FS
+
+    ^BY,,2
+    ^FO 580,565
+    ^BQN,2,2
+    ^FD{!@LOTNO3}/{!@LOTNO32}/{!@PARTNAME}^FS
+
+    ^CF0,45,45
+    ^FO110,500
+    ^GC140,2,B^FS
+    ^FO130,560^FD{!@ROHS}^FS
+    ^FO290,500
+    ^GC140,2,B^FS
+    ^FO330,560^FD{!@HF}^FS
+    ^FO130,690^FDMADE IN KOREA^FS
+
+    ^XZ
+
+  </ZPL>
+  <!-- LG(MC)_CASE -->
+  <ZPL name="021">
+    ^XA
+    ^FO50,20^GB1100,640,3^FS
+    ^BY2,1
+    ^FO80,50^BCN,150,N,N,N^FD{!@PARTNO}-{!@PRODUCTDEFID}/{!@BOXWEEK}/{!@QTY}^FS
+    ^CF0,70,70
+    ^FO880,105^FD[{!@INSPECTOR}]^FS
+    ^CF0,50,50
+    ^FO80,220^FD{!@PARTNO}-{!@PRODUCTDEFID}/{!@BOXWEEK}/{!@QTY}^FS
+    ^FO810,220^FDQty :^FS
+    ^FO910,220^FD100^FS
+
+    ^CF0,30,30
+    ^FO80,290^FDSPEC :^FS
+    ^FO170,290^FD{!@PARTNAME}^FS
+
+    ^FO80,340^FDETC :^FS
+    ^FO160,340^FD{@!ETC}/{!@BOXWEEK}^FS
+
+    ^FO80,390^FDVENDOR NAME :^FS
+    ^FO300,390^FD{!#YP:HY견고딕:25:B}^FS
+
+    ^FO80,440^FDDATE :^FS
+    ^FO180,440^FD{@!BOXDATE}^FS
+
+    ^CF0,45,45
+    ^FO110,500
+    ^GC140,2,B^FS
+    ^FO130,560^FD{!@ROHS}^FS
+    ^FO290,500
+    ^GC140,2,B^FS
+    ^FO330,560^FD{!@HF}^FS
+    ^FO130,690^FDMADE IN KOREA^FS
+
+    ^XZ
+
+  </ZPL>
+  <!-- LGD_BOX -->
+  <ZPL name="024" hiddenColums="QTY2">
+    ^XA
+    ^SEE:UHANGUL.DAT^FS
+    ^CW1,E:KFONT3.FNT^CI26^FS
+    ^PON^FS
+    ^BY2,1
+    ^FO130,100^BCN,200,N,N,N^FD{!@PARTNO} {!@QTY2} YP 0 {!@LOTNO} {!@BOXWEEK}^FS
+    ^CF0,40
+    ^FO130,335^FD{!@PARTNO} {!@QTY2} YP 0 {!@LOTNO} {!@BOXWEEK}^FS
+    ^FO130,400^FD- P/NO^FS
+    ^FO290,400^FD : {!@PARTNO}^FS
+    ^FO130,460^FD- Q'ty^FS
+    ^FO290,460^FD : {!@QTY}^FS1
+    ^FO130,520^FD- Maker  :^FS
+    ^FO315,517{!#YP:HY견고딕:25:B}
+    ^FO500,525^FD/ {!@PRODUCTDEFID} MADE IN KOREA^FS
+    ^FO130,580^FD- Lot No^FS
+    ^FO290,580^FD : {!@LOTNO}^FS
+    ^FO130,640^FD{!#ETC:HY견고딕:25:B}^FS
+    ^CF0,40
+    ^FO860,600^GB100,100,3^FS
+    ^FO900,635^FD{!@PRODUCTDEFVERSION}^FS
+    ^FO964,600^GB156,100,3^FS
+    ^FO975,635^FD{!@BOXDATE}{!@INSPECTOR}^FS
+
+    ^XZ
+  </ZPL>
+  <!-- LGD_TRAY -->
+  <ZPL name="025" hiddenColums="QTY2">
+    ^XA
+    ^SEE:UHANGUL.DAT^FS
+    ^CW1,E:KFONT3.FNT^CI26^FS
+    ^PON^FS
+    ^BY2,1
+    ^FO130,100^BCN,200,N,N,N^FD{!@PARTNO} {!@QTY2} YP 0 {!@LOTNO} {!@BOXWEEK}^FS
+    ^CF0,40
+    ^FO130,335^FD{!@PARTNO} {!@QTY2} YP 0 {!@LOTNO} {!@BOXWEEK}^FS
+    ^FO130,400^FD- P/NO^FS
+    ^FO290,400^FD : {!@PARTNO}^FS
+    ^FO130,460^FD- Q'ty^FS
+    ^FO290,460^FD : {!@QTY}^FS1
+    ^FO130,520^FD- Maker  :^FS
+    ^FO315,517{!#YP:HY견고딕:25:B}
+    ^FO500,525^FD/ {!@PRODUCTDEFID} MADE IN KOREA^FS
+    ^FO130,580^FD- Lot No^FS
+    ^FO290,580^FD : {!@LOTNO}^FS
+    ^FO130,640^FD{!#ETC:HY견고딕:25:B}^FS
+    ^CF0,40
+    ^FO860,600^GB100,100,3^FS
+    ^FO900,635^FD{!@PRODUCTDEFVERSION}^FS
+    ^FO964,600^GB156,100,3^FS
+    ^FO975,635^FD{!@BOXDATE}{!@INSPECTOR}^FS
+
+    ^XZ
+  </ZPL>
+  <!--SDC U TYPE_BOX -->
+  <ZPL name="026">
+    ^XA
+
+    ^FO50,30^GB1100,560,2^FS
+
+    ^FO390,100^GB760,1,2^FS
+    ^FO50,170^GB1100,1,2^FS
+    ^FO390,240^GB760,1,2^FS
+    ^FO390,310^GB760,1,2^FS
+    ^FO390,380^GB760,1,2^FS
+    ^FO390,450^GB760,1,2^FS
+    ^FO50,520^GB1100,1,2^FS
+
+    ^FO390,30^GB1,490,2^FS
+    ^FO770,30^GB1,490,2^FS
+
+    ^BY,,2
+    ^FO100,220
+    ^BQN,2,10
+    ^FDMA,{!@PARTNO2}DF81{!@MAKERCODE}{!@SDCDATE}{!@BOXSEQ}{!@QTY2}{!@EXPIRECODE}^FS
+
+    ^SEE:UHANGUL.DAT^FS
+    ^CW1,E:KFONT3.FNT^C126^FS
+    ^CF0,40
+    ^FO420,50^A1,40,40^FDMaterials Code^FS
+    ^FO780,50^A1,35,35^FD{!@PARTNO}^FS
+    ^FO420,120^A1,40,40^FDSDC Product^FS
+    ^FO780,130^A1,25,25^FD{!@PARTNAME}^FS
+    ^FO420,190^A1,40,40^FDSupplier(Factory)^FS
+    ^FO780,190^A1,35,35^FD{!#YP:HY견고딕:25:B}^FS
+    ^FO420,260^A1,40,40^FDQuantity^FS
+    ^FO780,260^A1,35,35^FD{!@QTY}^FS
+    ^FO420,330^A1,40,40^FDLot No.^FS
+    ^FO780,330^A1,35,35^FD{!@LOTNO}//{!@BOXWEEK}^FS
+    ^FO420,400^A1,40,40^FDExpiration date.^FS
+    ^FO780,400^A1,35,35^FD{!@EXPIREDDATE}^FS
+    ^FO420,470^A1,40,40^FDRemarks^FS
+    ^FO100,545^A1,30,30^FD{!@PARTNO2}DF81{!@MAKERCODE}{!@SDCDATE}{!@BOXSEQ}{!@QTY2}{!@EXPIRECODE}^FS
+
+    ^FO100,610^A1,40,40^FDYPE Code : {!@PRODUCTDEFID}^FS
+    ^FO650,610^A1,40,40^FD[ {!@BOXDATE} ]^FS
+    ^FO950,610^A1,40,40^FD[{!@INSPECTOR}]^FS
+    ^FO100,660^A1,40,40^FDETC^FS
+    ^FO200,660^A1,40,40^FD{!#ETC:HY견고딕:25:B}^FS
+    ^FO100,710^A1,40,40^FDLOTNO: {!@LOTNO}//{!@BOXWEEK}^FS
+    ^BY3,1,1
+    ^FO100,780^BC,100,N^FD{!@LOTNO}//{!@BOXWEEK}^FS
+
+    ^XZ
+  </ZPL>
+  <!--SDC U TYPE_CASE -->
+  <ZPL name="027">
+    ^XA
+
+    ^CF0,40
+    ^FO60,30^FDC.P/N :^FS
+    ^FO220,30^FD{!@PARTNO}^FS
+    ^FO930,30^AG^FD[{!@INSPECTOR}]^FS
+    ^BY5,1,50
+    ^FO60,80^BCN,50,N,N,N^FD{!@PARTNO}^FS
+    ^CF0,40
+    ^FO60,150^FDS.P/N : ^FS
+    ^FO220,145^FD{!@PARTNAME}^FS
+    ^BY3,1,50
+    ^FO60,190^BCN,50,N,N,N^FD{!@PARTNAME}^FS
+    ^CF0,40
+    ^FO60,270^FDLOTNO :^FS
+    ^FO220,270^FD{!@LOTNO}/{!@BOXWEEK}^FS
+    ^BY3,1,50
+    ^FO60,320^BCN,50,N,N,N^FD{!@LOTNO}/{!@BOXWEEK}^FS
+    ^CF0,40
+    ^FO60,390^FDQTY :^FS
+    ^FO220,390^FD{!@QTY}^FS
+    ^BY4,1,50
+    ^FO60,440^BCN,50,N,N,N^FD{!@QTY}^FS
+    ^CF0,40
+    ^FO60,510^FDPacking No :^FS
+    ^FO280,510^FD{!@PACKINGNO}^FS
+    ^BY3,1,50
+    ^FO60,560^BCN,50,N,N,N^FD{!@PACKINGNO}^FS
+    ^CF0,40
+    ^FO60,630^FDCODE :^FS
+    ^FO220,630^FD{!@PRODUCTDEFID}^FS
+    ^FO60,680^FDETC :^FS
+    ^FO220,680^FD{!#ETC:HY견고딕:25:B}^FS
+    ^CF0,50
+    ^FO795,450^FD{!@ROHS}^FS
+    ^FO995,455^FD{!@HF}^FS
+    ^FO770,390^GC160,1,B^FS
+    ^FO950,390^GC160,1,B^FS
+    ^CF0,40
+    ^FO840,580^FDEXPIRY DATE:^FS
+    ^FO865,635^FD{!@EXPIREDDATE}^FS
+    ^FO60,730^FDLOT ID^FS
+    ^FO60,780^BCN,90,N,N,N^FD{!@LOTID}^FS
+    ^FO60,880^FD{!@LOTID}^FS
+    ^XZ
+
+  </ZPL>
+  <!--SDC_BOX -->
+  <ZPL name="028">
+    ^XA
+
+    ^CF0,40
+    ^FO60,50^FDC.P/N :^FS
+    ^FO220,50^FD{!@PARTNO}^FS
+    ^FO930,40^AG^FD[{!@INSPECTOR}]^FS
+    ^BY5,1,50
+    ^FO60,100^BCN,50,N,N,N^FD{!@PARTNO}^FS
+    ^CF0,40
+    ^FO60,170^FDS.P/N : ^FS
+    ^FO220,170^FD{!@PARTNAME}^FS
+    ^BY3,1,50
+    ^FO60,210^BCN,50,N,N,N^FD{!@PARTNAME}^FS
+    ^CF0,40
+    ^FO60,290^FDLOTNO :^FS
+    ^FO220,290^FD{!@LOTNO}/{!@BOXWEEK}^FS
+    ^BY3,1,50
+    ^FO60,340^BCN,50,N,N,N^FD{!@LOTNO}/{!@BOXWEEK}^FS
+    ^CF0,40
+    ^FO60,410^FDQTY :^FS
+    ^FO220,410^FD{!@QTY}^FS
+    ^BY4,1,50
+    ^FO60,460^BCN,50,N,N,N^FD{!@QTY}^FS
+    ^CF0,40
+    ^FO60,530^FDPacking No :^FS
+    ^FO280,530^FD{!@PACKINGNO}^FS
+    ^BY3,1,50
+    ^FO60,580^BCN,50,N,N,N^FD{!@PACKINGNO}^FS
+    ^CF0,40
+    ^FO60,650^FDCODE :^FS
+    ^FO220,650^FD{!@PRODUCTDEFID}^FS
+    ^FO60,700^FDETC :^FS
+    ^FO220,700^FD{!#ETC:HY견고딕:25:B}^FS
+    ^CF0,50
+    ^FO795,470^FD{!@ROHS}^FS
+    ^FO995,475^FD{!@HF}^FS
+    ^FO770,410^GC160,1,B^FS
+    ^FO950,410^GC160,1,B^FS
+    ^CF0,40
+    ^FO840,600^FDEXPIRY DATE:^FS
+    ^FO865,655^FD{!@EXPIREDDATE}^FS
+
+    ^XZ
+  </ZPL>
+  <!--SDC_CASE -->
+  <ZPL name="029">
+    ^XA
+
+	  ^CF0,40
+	  ^FO60,50^FDC.P/N :^FS
+	  ^FO220,50^FD{!@PARTNO}^FS
+	  ^FO980,40^AG^FD[{!@INSPECTOR}]^FS
+	  ^BY5,1,50
+	  ^FO60,100^BCN,50,N,N,N^FD{!@{!@PARTNO}}^FS
+	  ^CF0,40
+	  ^FO60,170^FDS.P/N : ^FS
+	  ^FO220,170^FD{!@PARTNAME}^FS
+	  ^BY3,1,50
+	  ^FO60,210^BCN,50,N,N,N^FD{!@PARTNAME}^FS
+	  ^CF0,40
+	  ^FO60,290^FDLOTNO :^FS
+	  ^FO220,290^FD{!@LOTNO}/{!@BOXWEEK}^FS
+	  ^BY3,1,50
+	  ^FO60,340^BCN,50,N,N,N^FD{!@LOTNO}/{!@BOXWEEK}^FS
+	  ^CF0,40
+	  ^FO60,410^FDQTY :^FS
+	  ^FO220,410^FD{!@QTY}^FS
+	  ^BY4,1,50
+	  ^FO60,460^BCN,50,N,N,N^FD{!@QTY}^FS
+	  ^CF0,40
+	  ^FO60,530^FDPacking No :^FS
+	  ^FO280,530^FD{!@PACKINGNO}^FS
+	  ^BY3,1,50
+	  ^FO60,580^BCN,50,N,N,N^FD{!@PACKINGNO}^FS
+	  ^CF0,40
+	  ^FO60,650^FDCODE :^FS
+	  ^FO220,650^FD{!@PRODUCTDEFID}^FS
+	  ^FO60,700^FDETC :^FS
+	  ^FO220,700^FD{!@ETC}^FS
+	  ^CF0,50
+	  ^FO780,490^FD{!@ROHS}^FS
+	  ^FO1020,490^FD{!@HF}^FS
+	  ^FO740,410^GC180,2,B^FS
+	  ^FO950,410^GC180,2,B^FS
+	  ^CF0,40
+	  ^FO850,600^FDEXPIRY DATE:^FS
+	  ^FO850,660^FD{!@EXPIREDDATE}^FS
+
+	  ^XZ
+  </ZPL>
+  <!--Tianma_BOX -->
+  <ZPL name="030">
+    ^XA
+
+    --box
+    ^FO50,30^GB200,100^FS
+    ^FO250,30^GB900,100^FS
+
+    ^FO50,130^GB200,120^FS
+    ^FO250,130^GB550,120^FS
+    ^FO800,130^GB350,220^FS
+    ^FO800,130^GB350,220^FS
+
+    ^FO50,250^GB200,100^FS
+    ^FO250,250^GB550,100^FS
+
+    ^FO50,350^GB200,120^FS
+    ^FO250,350^GB550,120^FS
+    ^FO800,350^GB150,120^FS
+    ^FO800,350^GB350,120^FS
+    ^FO800,350^GB350,120^FS
+
+    ^FO50,470^GB200,120^FS
+    ^FO250,470^GB550,120^FS
+    ^FO800,470^GB150,120^FS
+    ^FO800,470^GB350,120^FS
+    ^FO800,470^GB350,120^FS
+
+    ^FO50,590^GB200,120^FS
+    ^FO250,590^GB550,120^FS
+    ^FO800,590^GB150,120^FS
+    ^FO800,590^GB350,120^FS
+    ^FO800,590^GB350,120^FS
+    --
+
+    ^CF0,35,35
+    ^FO90,65^FDsupplier^FS
+    ^FO290,65^FDYoung Poong electronics^FS
+
+    ^FO90,150^FDProduct^FS
+    ^FO90,200^FDName^FS
+    ^FO290,150^FD{!@PARTNAME}^FS
+    ^FO290,200^FD({!@PARTDESC})^FS
+
+    ^CF0,80,80
+    ^FO830,210^FDHSF+HF^FS
+
+    ^CF0,35,35
+    ^FO90,285^FDP N^FS
+    ^FO290,285^FD{!@PARTNO}^FS
+
+    ^FO90,370^FDOrder^FS
+    ^FO90,420^FDNumber^FS
+    ^FO290,395^FD{!@PO}^FS
+
+    ^FO80,490^FDProduction^FS
+    ^FO80,540^FDDate^FS
+    ^FO290,520^FD{!@BOXDATE}^FS
+
+    ^FO80,640^FDQuantity^FS
+    ^FO290,640^FD{!@QTY}^FS
+
+    ^FO820,370^FDLot^FS
+    ^FO820,420^FDNumber^FS
+    ^FO970,295^FD{!@LOTNO}^FS
+
+    ^FO820,490^FDExpiry^FS
+    ^FO820,540^FDDate^FS
+    ^FO970,520^FD{!@EXPIREDDATE}^FS
+
+    ^FO820,640^FDUnit^FS
+    ^FO970,640^FDPcs^FS
+
+    ^CF0,40,40
+    ^FO70,750^FD{!@PRODUCTDEFID}^FS
+    ^FO70,820^FD{!@ETC}^FS
+
+    ^CF0,35,35
+    ^FO690,750^FD[{!@BOXDATE2}]^FS
+    ^FO880,750^FD[{!@INSECTOR}]^FS
+
+    ^BY,,2
+    ^FO 970,730
+    ^BQN,2,5
+    ^FDMA,{!@PARTNAME}/{!@PARTNO}/{!@PO}/{!@ETC}/{!@LOTNO}/{!@QTY}^FS
+
+    ^XZ
+  </ZPL>
+ 
+  
+  <!-- FuYang BOX -->
+  <ZPL name="035">
+    ^XA
+
+    ^CF0,40
+    ^FO60,40^FDFuYang^FS
+
+    ^FO60,95^FDVENDOR^FS
+    ^BY2,1
+    ^FO350,95^FDYP^FS
+
+    ^FO60,150^FDFuyang^FS
+    ^FO350,150^BCN,60,N,N,N^FD{!@PARTNO}^FS
+    ^FO60,225^FDP/N^FS
+    ^FO350,225^FD{!@PARTNO}^FS
+
+    ^FO60,285^FDVendor P/N^FS
+
+    ^FO60,345^FDDateCode^FS
+    ^FO350,345^BCN,60,N,N,N^FD{!@BOXWEEK}^FS
+    ^FO350,415^FD{!@BOXWEEK}^FS
+
+    ^FO60,485^FDBatchNo^FS
+    ^BY3,1,1
+    ^FO350,485^BCN,60,N,N,N^FD            ^FS
+
+    ^FO60,605^FDQTY^FS
+    ^BY3,1,1
+    ^FO350,605^BCN,60,N,N,N^FD{!@QTY}^FS
+    ^FO350,675^FD{!@QTY}^FS
+
+    ^FO60,710^FDNote^FS
+    ^FO60,770^FDYP LOT NO.^FS
+    ^FO350,770^FD{!@LOTNO}^FS
+    ^FO60,830^FDMade In Korea^FS
+    ^CF0,40
+    ^FO60,880^FD{!@PRODUCTDEFID}^FS
+
+    ^BY2,1
+    ^FO750,760^BCN,100,N,N,N^FD{!@LOTNO}^FS
+    ^CF0,30
+    ^FO740,870^FD[{!@BOXDATE}]^FS
+    ^FO1020,870^FD[{!@INSPECTOR}]^FS
+
+    ^XZ
+  </ZPL>
+  <!-- FuYang TRAY -->
+  <ZPL name="043">
+    ^XA
+
+    ^CF0,40
+    ^FO60,40^FDFuYang^FS
+
+    ^FO60,95^FDVENDOR^FS
+    ^BY2,1
+    ^FO350,95^FDYP^FS
+
+    ^FO60,150^FDFuyang^FS
+    ^FO350,150^BCN,60,N,N,N^FD{!@PARTNO}^FS
+    ^FO60,225^FDP/N^FS
+    ^FO350,225^FD{!@PARTNO}^FS
+
+    ^FO60,285^FDVendor P/N^FS
+
+    ^FO60,345^FDDateCode^FS
+    ^FO350,345^BCN,60,N,N,N^FD{!@BOXWEEK}^FS
+    ^FO350,415^FD{!@BOXWEEK}^FS
+
+    ^FO60,485^FDBatchNo^FS
+    ^BY3,1,1
+    ^FO350,485^BCN,60,N,N,N^FD            ^FS
+
+    ^FO60,605^FDQTY^FS
+    ^BY3,1,1
+    ^FO350,605^BCN,60,N,N,N^FD{!@QTY}^FS
+    ^FO350,675^FD{!@QTY}^FS
+
+    ^FO60,710^FDNote^FS
+    ^FO60,770^FDYP LOT NO.^FS
+    ^FO350,770^FD{!@LOTNO}^FS
+    ^FO60,830^FDMade In Korea^FS
+    ^CF0,40
+    ^FO60,880^FD{!@PRODUCTDEFID}^FS
+
+    ^BY2,1
+    ^FO750,760^BCN,100,N,N,N^FD{!@LOTNO}^FS
+    ^CF0,30
+    ^FO740,870^FD[{!@BOXDATE}]^FS
+    ^FO1020,870^FD[{!@INSPECTOR}]^FS
+
+    ^XZ
+  </ZPL>  
+  <!-- BOE_TMP P BOX -->
+  <ZPL name="039">
+    ^XA
+
+    ^FO50,20^GB1100,640,3^FS
+
+    ^CF0,40
+
+    ^FO100,40^BY5.7,4,39^BCN,,N,N
+    ^FD>;{!@PO}>^FS
+
+    ^FO100,110^FDPO : ^FS
+    ^FO450,110^FD{!@PO}^FS
+    ^FO100,160^FDSupplier : ^FS
+    ^FO450,160^FDYoungPoong Electronics Co,. LTD^FS
+    ^FO100,210^FDPart Description : ^FS
+    ^FO450,210^FD{!@PARTNAME}^FS
+    ^FO100,260^FDS/N : ^FS
+    ^FO450,260^FD{!@SN}^FS
+    ^FO100,310^FDPart No : ^FS
+    ^FO450,310^FD{!@PARTNO}^FS
+    ^FO100,360^FDSupplier Code : ^FS
+    ^FO450,360^FD{!@VENDORCODE}^FS
+    ^FO100,410^FDQuality guarantee period : ^FS
+    ^FO540,410^FD6 Month^FS
+    ^FO100,460^FDManufactured Date : ^FS
+    ^FO450,460^FD{!@BOXDATE}^FS
+    ^FO100,510^FDExpired Date :  ^FS
+    ^FO450,510^FD{!@EXPIREDDATE}^FS
+    ^FO100,560^FDQ'ty :  ^FS
+    ^FO450,560^FD{!@QTY}^FS
+    ^FO100,610^FDMade In Korea^FS
+
+    ^CF0,40
+    ^FO70,680^FD{!@LOTNO}{!@BOXWEEK}^FS
+    ^FO570,680^BY3,4,39^BCN,75,N,N,N^FDY;{!@LOTNO}{!@BOXWEEK}^FS
+    
+    ^CF0,40
+    ^FO70,770^FD{!@PRODUCTDEFID} / {!@PACKAGEQTY}^FS
+    ^CF0,40
+    ^FO720,770^FD[{!@BOXDATE}]^FS
+    ^FO1050,770^FD[{!@INSPECTOR}]^FS
+    ^CF0,40
+    ^FO70,820^FD{!@ETC}^FS
+
+    ^BY,,2
+    ^FO 830,340
+    ^BQN,2,8
+    ^FDMA,{!@SN}|{!@PARTNO}|{!@QTY}|{!@VENDORCODE}|{!@BOXDATE}|{!@EXPIREDDATE}^FS
+
+    ^XZ
+  </ZPL>
+  <!-- BOE_TMP P BOX -->
+  <ZPL name="039-1">
+    ^XA
+
+    ^FO50,20^GB1100,640,3^FS
+
+    ^CF0,40
+
+    ^FO100,40^BY5.7,4,39^BCN,,N,N
+    ^FD>;{!@PO}>^FS
+
+    ^FO100,110^FDPO : ^FS
+    ^FO450,110^FD{!@PO}^FS
+    ^FO100,160^FDSupplier : ^FS
+    ^FO450,160^FDYoungPoong Electronics Co,. LTD^FS
+    ^FO100,210^FDPart Description : ^FS
+    ^FO450,210^FD{!@PARTNAME}^FS
+    ^FO100,260^FDS/N : ^FS
+    ^FO450,260^FD{!@SN}^FS
+    ^FO100,310^FDPart No : ^FS
+    ^FO450,310^FD{!@PARTNO}^FS
+    ^FO100,360^FDSupplier Code : ^FS
+    ^FO450,360^FD{!@VENDORCODE}^FS
+    ^FO100,410^FDQuality guarantee period : ^FS
+    ^FO540,410^FD6 Month^FS
+    ^FO100,460^FDManufactured Date : ^FS
+    ^FO450,460^FD{!@BOXDATE}^FS
+    ^FO100,510^FDExpired Date :  ^FS
+    ^FO450,510^FD{!@EXPIREDDATE}^FS
+    ^FO100,560^FDQ'ty :  ^FS
+    ^FO450,560^FD{!@QTY}^FS
+    ^FO100,610^FDMade In Korea^FS
+
+    ^CF0,40
+    ^FO70,680^FD{!@LOTNO}{!@BOXWEEK}^FS
+    ^FO570,680^BY3,4,39^BCN,75,N,N,N^FDY;{!@LOTNO}{!@BOXWEEK}^FS
+    
+    ^CF0,40
+    ^FO70,770^FD{!@PRODUCTDEFID} / {!@PACKAGEQTY}^FS
+    ^CF0,40
+    ^FO720,770^FD[{!@BOXDATE}]^FS
+    ^FO1050,770^FD[{!@INSPECTOR}]^FS
+    ^CF0,40
+    ^FO70,820^FD{!@ETC}^FS
+
+    ^BY,,2
+    ^FO 830,340
+    ^BQN,2,8
+    ^FDMA,{!@SN}|{!@PARTNO}|{!@QTY}|{!@VENDORCODE}|{!@BOXDATE}|{!@EXPIREDDATE}^FS
+
+    ^XZ
+  </ZPL>
+  <!-- BOE_TMP P CASE -->
+  <ZPL name="040">
+    ^XA
+
+    ^FO50,20^GB1100,520,3^FS
+
+    ^CF0,401
+    ^FO70,40^FDSupplier : ^FS
+    ^FO440,40^FDYoungPoong Electronics Co,. LTD^FS
+
+    ^FO70,90^FDPart No : ^FS
+    ^FO440,90^FD{!@PARTNO}^FS
+    ^FO70,140^FDPart Description : ^FS
+    ^FO440,140^FD{!@PARTNAME}^FS`+
+    ^FO70,190^FDQ'ty :  ^FS
+    ^FO440,190^FD{!@QTY}^FS
+    ^FO70,240^FDSupplier Code : ^FS
+    ^FO440,240^FD{!@VENDORCODE}^FS
+    ^FO70,290^FDManufactured Date : ^FS
+    ^FO440,290^FD{!@BOXDATE}^FS
+    ^FO70,340^FDBatch No : ^FS
+    ^FO440,340^FD{!@SN}^FS
+    ^FO70,390^FDExpired Date :  ^FS
+    ^FO440,390^FD{!@EXPIREDDATE}^FS
+    ^FO70,440^FDQuality guarantee period : ^FS
+    ^FO520,440^FD6 Month^FS
+    ^FO70,490^FDLot No : ^FS
+    ^FO460,490^FD{!@LOTNO}{!@BOXWEEK}^FS
+    ^CF0,40
+    ^FO70,560^FD{!@PRODUCTDEFID} / {!@CASEPCSQTY}^FS
+    ^CFJ,30
+    ^FO650,560^FD[{!@BOXDATE}]^FS
+    ^FO950,560^FD[{!@INSPECTOR}]^FS
+    ^CF0,40
+    ^FO70,620^FD{!@ETC}^FS
+
+    ^BY,,2
+    ^FO 780,180
+    ^BQN,2,9
+    ^FDMA,{!@SN}|{!@PARTNO}|{!@CASEQTY}|{!@PARTNO2}|{!@BOXDATE}|{!@EXPIREDDATE}|{!@LOTNO}^FS
+
+    ^XZ
+  </ZPL>
+  <!-- BOE_TMP B CASE -->
+  <ZPL name="041">
+    ^XA
+
+    ^FO50,20^GB1100,550,3^FS
+
+    ^CF0,40
+    ^FO100,60^FDSupplier : ^FS
+    ^FO500,60^FDYoungPoong Electronics Co,. LTD^FS
+
+    ^FO100,110^FDPart No : ^FS
+    ^FO500,110^FD{!@PARTNO}^FS
+    ^FO100,160^FDPart Description : ^FS
+    ^FO500,160^FD{!@PARTNAME}^FS
+    ^FO100,210^FDQ'ty :  ^FS
+    ^FO500,210^FD{!@QTY}^FS
+    ^FO100,260^FDSupplier Code : ^FS
+    ^FO500,260^FD{!@VENDORCODE}^FS
+    ^FO100,310^FDManufactured Date : ^FS
+    ^FO500,310^FD{!@BOXDATE}^FS
+    ^FO100,360^FDBatch No : ^FS
+    ^FO500,360^FD{!@SN}^FS
+    ^FO100,410^FDExpired Date :  ^FS
+    ^FO500,410^FD{!@EXPIREDDATE}^FS
+    ^FO100,460^FDQuality guarantee period : ^FS
+    ^FO560,460^FD6 Month^FS
+    ^FO100,510^FDLot No : ^FS
+    ^FO500,510^FD{!@LOTNO}^FS
+    ^CFJ,30
+    ^FO70,580^FDNo Commercial Value Qty : {!@DEFECTQTY} pcs^FS
+    ^CF0,40
+    ^FO70,640^FD{!@PRODUCTDEFID} / {!@QTY} / {!@PACKQTY}^FS
+    ^CFJ,30
+    ^FO750,640^FD[{!@BOXDATE}]^FS
+    ^FO1050,640^FD[{!@INSPECTOR}]^FS
+    ^CF0,40
+    ^FO70,700^FD{!@ETC}^FS
+
+    ^BY,,2
+    ^FO 830,250
+    ^BQN,2,8
+    ^FDMA,{!@SN}|{!@PARTNO}|{!@QTY}|{!@VENDORCODE}|{!@BOXDATE}|{!@EXPIREDDATE}|{!@LOTNO}^FS
+
+    ^XZ
+  </ZPL>
+  <!-- BOE_TMP B BOX -->
+  <ZPL name="042">
+    ^XA
+
+    ^FO50,20^GB1100,640,3^FS
+
+    ^BY4,1,50
+    ^FO100,30^BY3 ^BAN,50,N,N,N^FD{!@PO}^FS
+    ^CF0,40
+    ^FO100,110^FDPO : ^FS
+    ^FO420,110^FD{!@PO}^FS
+    ^FO100,160^FDSupplier : ^FS
+    ^FO420,160^FDYoungPoong Electronics Co,. LTD^FS
+    ^FO100,210^FDPart Description : ^FS
+    ^FO420,210^FD{!@PARTNAME}^FS
+    ^FO100,260^FDS/N : ^FS
+    ^FO420,260^FD{!@SN}^FS
+    ^FO100,310^FDPart No : ^FS
+    ^FO420,310^FD{!@PARTNO}^FS
+    ^FO100,360^FDSupplier Code : ^FS
+    ^FO420,360^FD{!@VENDORCODE}^FS
+    ^FO100,410^FDQuality guarantee period : ^FS
+    ^FO550,410^FD6 Month^FS
+    ^FO100,460^FDManufactured Date : ^FS
+    ^FO420,460^FD{!@BOXDATE}^FS
+    ^FO100,510^FDExpired Date :  ^FS
+    ^FO420,510^FD{!@EXPIREDDATE}^FS
+    ^FO100,560^FDQ'ty :  ^FS
+    ^FO420,560^FD{!@QTY}^FS
+    ^CF0,30
+    ^FO100,610^FDMade In Korea^FS
+    ^CF0,40
+    ^FO70,670^FDNo Commercial Value Qty : {!@DEFECTQTY} pcs^FS
+    ^FO70,720^FD{!@SN}^FS
+    ^CF0,40
+    ^FO700,830^FD[{!@BOXDATE}]^FS
+    ^FO1000,830^FD[{!@INSPECTOR}]^FS
+    ^CF0,40
+    ^FO70,830^FD{!@PRODUCTDEFID} / {!@QTY} / {!@CASEQTY}^FS
+    ^FO70,880^FD{!@ETC}^FS
+
+    ^BY,,2
+    ^FO 820,280
+    ^BQN,2,8
+    ^FDMA,{!@SN}|{!@PARTNO}|{!@QTY}|{!@VENDORCODE}|{!@BOXDATE}|{!@EXPIREDDATE}^FS
+
+    ^BY,,2
+    ^FO 1000,665
+    ^BQN,2,5
+    ^FDMA,{!@SN}|{!@INSPECTOR}|{!@QTY}|{!@DEFECTQTY}^FS
+
+    ^XZ
+  </ZPL>
+  <!-- FOXCONN BOX -->
+  <ZPL name="046">
+    ^XA
+
+    ^FO50,20^GB1100,640,3^FS
+
+    ^BY4,1,50
+    ^FO100,30^BY3 ^BAN,50,N,N,N^FD{!@PO}^FS
+    ^CF0,40
+    ^FO100,110^FDPO : ^FS
+    ^FO420,110^FD{!@PO}^FS
+    ^FO100,160^FDSupplier : ^FS
+    ^FO420,160^FDYoungPoong Electronics Co,. LTD^FS
+    ^FO100,210^FDPart Description : ^FS
+    ^FO420,210^FD{!@PARTNAME}^FS
+    ^FO100,260^FDS/N : ^FS
+    ^FO420,260^FD{!@SN}^FS
+    ^FO100,310^FDPart No : ^FS
+    ^FO420,310^FD{!@PARTNO}^FS
+    ^FO100,360^FDSupplier Code : ^FS
+    ^FO420,360^FD{!@VENDORCODE}^FS
+    ^FO100,410^FDQuality guarantee period : ^FS
+    ^FO550,410^FD6 Month^FS
+    ^FO100,460^FDManufactured Date : ^FS
+    ^FO420,460^FD{!@BOXDATE}^FS
+    ^FO100,510^FDExpired Date :  ^FS
+    ^FO420,510^FD{!@EXPIREDDATE}^FS
+    ^FO100,560^FDQ'ty :  ^FS
+    ^FO420,560^FD{!@QTY}^FS
+    ^CF0,30
+    ^FO100,610^FDMade In Korea^FS
+    ^CF0,40
+    ^FO70,670^FDNo Commercial Value Qty : {!@DEFECTQTY} pcs^FS
+    ^FO70,720^FD{!@SN}^FS
+    ^CF0,40
+    ^FO700,830^FD[{!@BOXDATE}]^FS
+    ^FO1000,830^FD[{!@INSPECTOR}]^FS
+    ^CF0,40
+    ^FO70,830^FD{!@PRODUCTDEFID} / {!@QTY} / {!@CASEQTY}^FS
+    ^FO70,880^FD{!@ETC}^FS
+
+    ^BY,,2
+    ^FO 820,280
+    ^BQN,2,8
+    ^FDMA,{!@SN}|{!@PARTNO}|{!@QTY}|{!@VENDORCODE}|{!@BOXDATE}|{!@EXPIREDDATE}^FS
+
+    ^BY,,2
+    ^FO 1000,665
+    ^BQN,2,5
+    ^FDMA,{!@SN}|{!@INSPECTOR}|{!@QTY}|{!@DEFECTQTY}^FS
+
+    ^XZ
+  </ZPL>
+  <!-- FOXCONN CASE -->
+  <ZPL name="047">
+    ^XA
+
+    ^FO50,20^GB1100,640,3^FS
+
+    ^BY4,1,50
+    ^FO100,30^BY3 ^BAN,50,N,N,N^FD{!@PO}^FS
+    ^CF0,40
+    ^FO100,110^FDPO : ^FS
+    ^FO420,110^FD{!@PO}^FS
+    ^FO100,160^FDSupplier : ^FS
+    ^FO420,160^FDYoungPoong Electronics Co,. LTD^FS
+    ^FO100,210^FDPart Description : ^FS
+    ^FO420,210^FD{!@PARTNAME}^FS
+    ^FO100,260^FDS/N : ^FS
+    ^FO420,260^FD{!@SN}^FS
+    ^FO100,310^FDPart No : ^FS
+    ^FO420,310^FD{!@PARTNO}^FS
+    ^FO100,360^FDSupplier Code : ^FS
+    ^FO420,360^FD{!@VENDORCODE}^FS
+    ^FO100,410^FDQuality guarantee period : ^FS
+    ^FO550,410^FD6 Month^FS
+    ^FO100,460^FDManufactured Date : ^FS
+    ^FO420,460^FD{!@BOXDATE}^FS
+    ^FO100,510^FDExpired Date :  ^FS
+    ^FO420,510^FD{!@EXPIREDDATE}^FS
+    ^FO100,560^FDQ'ty :  ^FS
+    ^FO420,560^FD{!@QTY}^FS
+    ^CF0,30
+    ^FO100,610^FDMade In Korea^FS
+    ^CF0,40
+    ^FO70,670^FDNo Commercial Value Qty : {!@DEFECTQTY} pcs^FS
+    ^FO70,720^FD{!@SN}^FS
+    ^CF0,40
+    ^FO700,830^FD[{!@BOXDATE}]^FS
+    ^FO1000,830^FD[{!@INSPECTOR}]^FS
+    ^CF0,40
+    ^FO70,830^FD{!@PRODUCTDEFID} / {!@QTY} / {!@CASEQTY}^FS
+    ^FO70,880^FD{!@ETC}^FS
+
+    ^BY,,2
+    ^FO 820,280
+    ^BQN,2,8
+    ^FDMA,{!@SN}|{!@PARTNO}|{!@QTY}|{!@VENDORCODE}|{!@BOXDATE}|{!@EXPIREDDATE}^FS
+
+    ^BY,,2
+    ^FO 1000,665
+    ^BQN,2,5
+    ^FDMA,{!@SN}|{!@INSPECTOR}|{!@QTY}|{!@DEFECTQTY}^FS
+
+    ^XZ
+  </ZPL>
+  
+   <!--Tianma_CASE -->
+  <ZPL name="031">
+    ^XA
+
+    --box
+    ^FO50,30^GB200,100^FS
+    ^FO250,30^GB900,100^FS
+
+    ^FO50,130^GB200,120^FS
+    ^FO250,130^GB550,120^FS
+    ^FO800,130^GB350,220^FS
+    ^FO800,130^GB350,220^FS
+
+    ^FO50,250^GB200,100^FS
+    ^FO250,250^GB550,100^FS
+
+    ^FO50,350^GB200,120^FS
+    ^FO250,350^GB550,120^FS
+    ^FO800,350^GB150,120^FS
+    ^FO800,350^GB350,120^FS
+    ^FO800,350^GB350,120^FS
+
+    ^FO50,470^GB200,120^FS
+    ^FO250,470^GB550,120^FS
+    ^FO800,470^GB150,120^FS
+    ^FO800,470^GB350,120^FS
+    ^FO800,470^GB350,120^FS
+
+    ^FO50,590^GB200,120^FS
+    ^FO250,590^GB550,120^FS
+    ^FO800,590^GB150,120^FS
+    ^FO800,590^GB350,120^FS
+    ^FO800,590^GB350,120^FS
+    --
+
+    ^CF0,35,35
+    ^FO90,65^FDsupplier^FS
+    ^FO290,65^FDYoung Poong electronics^FS
+
+    ^FO90,150^FDProduct^FS
+    ^FO90,200^FDName^FS
+    ^FO290,150^FD{!@PARTNAME}^FS
+    ^FO290,200^FD({!@PARTDESC})^FS
+
+    ^CF0,80,80
+    ^FO830,210^FDHSF+HF^FS
+
+    ^CF0,35,35
+    ^FO90,285^FDP N^FS
+    ^FO290,285^FD{!@PARTNO}^FS
+
+    ^FO90,370^FDOrder^FS
+    ^FO90,420^FDNumber^FS
+    ^FO290,395^FD{!@PO}^FS
+
+    ^FO80,490^FDProduction^FS
+    ^FO80,540^FDDate^FS
+    ^FO290,520^FD{!@BOXDATE}^FS
+
+    ^FO80,640^FDQuantity^FS
+    ^FO290,640^FD{!@QTY}^FS
+
+    ^FO820,370^FDLot^FS
+    ^FO820,420^FDNumber^FS
+    ^FO970,295^FD{!@LOTNO}^FS
+
+    ^FO820,490^FDExpiry^FS
+    ^FO820,540^FDDate^FS
+    ^FO970,520^FD{!@EXPIREDDATE}^FS
+
+    ^FO820,640^FDUnit^FS
+    ^FO970,640^FDPcs^FS
+
+    ^CF0,40,40
+    ^FO70,750^FD{!@PRODUCTDEFID}^FS
+    ^FO70,820^FD{!@ETC}^FS
+
+    ^CF0,35,35
+    ^FO690,750^FD[{!@BOXDATE2}]^FS
+    ^FO880,750^FD[{!@INSECTOR}]^FS
+
+    ^BY,,2
+    ^FO 970,730
+    ^BQN,2,5
+    ^FDMA,{!@PARTNAME}/{!@PARTNO}/{!@PO}/{!@ETC}/{!@LOTNO}/{!@QTY}^FS
+
+    ^XZ
+  </ZPL>
+  
+  <!--HINT -->
+  <ZPL name="048">
+    ^XA
+
+    ^FO50,20^GB1100,720,3^FS
+
+    ^CF0, 40
+    ^FO80,40^FDMat Code :^FS
+    ^FO300,40^FD{!@PARTNO}^FS
+
+    ^BY2,1,20
+    ^FO300,100^BCN,60,N,N,N^FD{!@PARTNO}^FS
+
+    ^FO80,200^FDName      :^FS
+    ^FO300,200^FDFPCB^FS
+    ^FO80,280^FDSpec       :^FS
+    ^FO300,280^FD{!@PARTNAME}^FS
+
+    ^FO80,360^FDLot No     :^FS
+    ^BY4,1,20
+    ^FO300,350^BCN,60,N,N,N^FD{!@BOXWEEK}^FS
+
+    ^FO300,450^FD{!@BOXWEEK}^FS
+    ^FO80,520^FDQ'ty         :^FS
+    ^FO300,520^FD{!@QTY}^FS
+
+    ^BY4,3,10
+    ^FO820,510^BCN,60,N,N,N^FD{!@QTY}^FS
+
+    ^FO80,600^FDVender     :^FS
+    ^FO300,600^FDYP Electronics^FS
+
+    ^FO810,600^FDDate of production^FS
+    ^FO940,680^FD{!@YEAR}.{!@MONTH}.{!@DAY}.^FS
+
+    ^FO80,760^FD{!@PRODUCTDEFID}{!@PRODUCTDEFVERSION}^FS
+    ^FO840,760^FD[{!@YEAR}{!@MONTH}{!@DAY}]^FS
+    ^FO1040,760^FD[{!@INSPECTOR}]^FS
+
+
+
+    ^FO830,20^GFA,8588,8588,38,,::::::::::::::::::::::hQ07FFC,hP03JF,hP07JFC,gY078O0KFE,gY0F8N03LF,gX01F8N0MF8,gX07FN03MF8,gW03FEN0NFE,gW0FFCM03OF,gV01FF8M07OF,gV03FFN0PF,gV07FEM01PF,gV0FFCM03PF,gU01FF8M07PF8,gU07FFN0QF8,gU0FFCM01QF8,gT01FF8M07QF8,gT07FFN0RF8,gT0FFCM01RF8,gS01FFCM03RF8,gS03FF8M07RF8,gS0IFN07MFC1IF8,gR01FFEN0MFC007FF8,gR03FFCM01MFI01FF8,gR07FF8M03LF8J0FF8,gR0IFN07KFEK07F,gQ01FFEN0LFCK03F,gQ03FFCN0LFL01F,gQ07FFCM01KFCM07,gQ0IF8M03KF8,gP01IF8M03KF,gP03IFN03JFC,gP07IFN07JF,gP0IFEN0JFE,gO01IFEM01JFC,gO03IFCM01JF800C,gO07IF8M03JF003F8,gO0JFN07IFC00IF,gN01IFEN0JF807IFC,gN03IFEM01JF00JFE,gN07IFCM01IFE00KF,gN0JFCM03IFC01KF8,gM01JFCM03IFC01KF8,gM03JF8M07IF801KF8,gM07JF8M07IF001KF8,gM0KF8M0IFE001KF8,gL01KFN0IFC001KF8,gL03KFN0IF8I0KF8,gL07KFM01IF8I07JF,gL07KFM01IFJ07JF,gL0KFEM01FFEJ01IFE,gL0KFEM03FFCK07FF,gL0KFCM03FF8K01FC,gK01KFCM07FF,gK01KFCM07FE,gK03KFCM0FFE,gK07KFCM0FFC,:gK07KFEM0FF8,gK07KFEL01FF8,gK0MFL01FFN01K018,gK0MFL01FEI03C0E03C00F0KF,gK0MFL03FEI07E1F07E00MF8,gJ01MF8K03FC0187E1FEFF00MF8,gJ01MFCI0303FC0387C3JF00FBKF8,gJ03NF003F87F803C787JF00F0KF8,gJ03RF87F803C78KF00E07JF8,gJ03RF87F003EF0KF00E03JF8,gJ03QFE07F003FF07JFJ01JF,gJ07QFC07F001FE07IFCK07F9E,gJ07QF807EI0800201F8K01C04,gJ07PFE007E,gJ07PF8007C,gJ07OFEI078,gJ07OF8I078,gJ03NFCJ07,gJ03NFK02,gJ01MFC,gK0LFE,gK07KF8,gK03KF,gL03FF8,gM0F8,,:::::::::::::::L02L01hTFE,K01iIFC,K07iJF,K07iJF8,K0iKFC,::J01iKFC,::::::J01iKFE,::J01gMFC1RF038IFE001IFI07MFE,J01NF87TF3FF803KFE00FFEI01FF8I0FFCI07MFC,J01NF03C0MFC1FFE1FF041KF808FF8J07FJ0FF8I07MFC,J01MFC03C07LF81FFC0FC0E07JF03IF807C03F003CFF807OFC,J01MFC07C07LF81FFC0FC0F07JF03IF80FE03F007IF807OFC,J01MFC0FE03LF81FFC0FC0LFE07IF80FF83F00JF80PFC,J01MF80FE03LF80FFC0FC1LFE0JF81FF81F01JF81PFC,J01MF81FE03LF80FF80FC1LFE0JF83FFC1F03JF81PFE,J01MF81FE07LF80FF80FC0LFE0JF81FF83F03JF81PFE,J01MF80FC07FCFF3F807F80FE03KFE07IF81FF83F01JF80PFE,J01MFC0F807F8FF1F803F00FF00KFE03IF80FC07F00JF801OFE,J01MFC0F00FF0FF07803F00FF007JFE01IF80F807F00JF800OFE,J01MFC0F01FF0FF07807F80FF8007IFE03IF80F80FF01JF003OFE,J01MFC0F01FE0FF8380FF80JF83IFE07IF81F80FF03JF00PFE,J01MF81F01FE1FF8380FFC0JFC1IFE0JF83FC0FF07JF00PFE,J01MF81F81FE1FF8380FFC0JFC1IFE0JF83FC0FF07JF81PFE,J01MF81FC07F0FF8781FFC0JFC1IFE0JF87FE07F03JF81PFE,J01MF81FE07F8FF0781FFC0JFE1IFE0JF87FF87F01JF81PFE,J01MFC1FE03F8FF1F81FFC0JFE1IFE0JF87FFC3F01JF81PFE,J01MFC1FF03FDFF3F83FFE1FE7FE3IFE1JF8IFC3F0070FF80FENFE,J01MFE3FF83IFE7F83FFE1FE1MF1JF8IFC3F8I07F80603MFE,J01QFC3LFC7FFE3FE1MF1NFE7F8I07FC0C03MFE,J01QFE7gWF9TFE,J01iKFE,:::::::::::::J01iLF,:J01hLF8FF1KFE07F3LF,J01LF8gK078gL0LF,J01KFEhT07KF,J01KFChT07KF,::J01KF8hT07KF,:J01KFChT07KF,::::::::::J01KFChT0LF,:J01KFEM07FN03CV01FF03IFC0FEL03LF,J01iLF,::::::K0iKFE,K0iKFC,K07iJF8,K03iIF8,L07C00107RF007E00F0FFC1F,,:::::::::::::^FS
+
+
+
+
+    ^XZ
+  </ZPL>
+
+
+  <!-- 수출포장 -->
+  <ZPL name="PackingExport">
+    ^XA
+
+    ^PON^FS
+    ^FO50,30^GB1100,630,3^FS
+    ^FO50,385^GB1100,1,3^FS
+
+    ^CF0,40
+    ^FO70,70^FDYPE CODE : ^FS
+    ^FO280,70^FD{!@PRODUCTDEFNAME} / {!@PRODUCTDEFREV}^FS
+
+    ^CF0,40
+    ^FO70,130^FDQ'TY : ^FS
+    ^FO230,130^FD{!@QTY}^FS
+
+    ^FO70,190^FD{!#NEXTSEGMENT:견고딕:21.5:R} : ^FS
+    ^FO370,190^FD{!#SEGMENTNAME:견고딕:21.5:R}^FS
+    ^FO70,250^FD{!#WORKORDER:견고딕:21.5:R} : ^FS
+    ^FO270,250^FD{!@LOTNO}^FS
+    ^FO70,320^FD{!#PACKINGDATE:견고딕:21.5:R} : ^FS
+    ^FO270,320^FD{!@BOXDATE} [{!@WORKERNAME}]^FS
+
+    ^BY,,2
+    ^FO850,60
+    ^BQN,2,8
+    ^FDHA,{!@PRODUCTDEFNAME}/{!@LOTNO}/{!@PANELQTY}/{!@PCSPNL}/{!@QTY}^FS
+
+    ^CF0,50
+    ^FO355,405^FD ^FS
+    ^FO925,405^FD{!@QTY}^FS
+
+    ^FO180,585^FD{!@PRODUCTDEFNAME}/{!@QTY}/{!@LOTNO}^FS
+
+    ^BY2,2
+    ^FO150,460^BCN,110,N,N,N^FD{!@PRODUCTDEFNAME}/{!@QTY}/{!@LOTNO}^FS
+
+    ^FO305,670^FDMADE IN KOREA / YP Electronics^FS
+	
+    ^XZ
+  </ZPL>
+
+  <ZPL name="InkjetQR">
+    ^FO26,20^GB8,8,4^FS
+    ^FO26,144^GB8,8,4^FS
+    ^FO380,20^GB8,8,4^FS
+    ^FO380,144^GB8,8,4^FS
+
+    ^CFF,26
+
+    ^FO40,30^BXN,6,200^FD{!@PCSID}^FS
+
+    ^FO220,30^FD{!@PRODUCTIONREGION}^FS
+    ^FO254,30^FD{!@CUSTOMERITEMID}^FS
+
+    ^FO170,70^FD{!@LOTNUMBER}^FS
+    ^FO290,70^FD{!@MKWEEK}^FS
+
+    ^FO290,110^FD{!@NO}^FS
+  </ZPL>
+  <!-- PP Case -->
+  <ZPL name="PPCase">
+    ^XA
+    ^BY3,2
+    ^FO80,50^BCN,100^FD{!@PPCASEID}^FS
+    ^XZ
+  </ZPL>
+</LabelPrintScript>

@@ -1,0 +1,30 @@
+﻿Network:
+    Main:
+        Type:
+        Assembly: Micube.Framework.Net.dll
+        Directory: 
+    Query:
+    Procedure:
+    Http:
+        Url: http://localhost:7010/do
+        Timeout: 40
+    Wcf:
+        Config: App
+
+Application:
+    Service:
+        Default: MES
+        Url:
+            MES: http://localhost:7010/do
+    SmartDeploy:
+        Url: http://172.16.4.157:8081/
+    Ftp:
+        Url: 6SOPCqwgqaYEpOGiQQ8ch3pwh6nSdjBMwhmtJ4clR484utkt53+x7UGeMoXCHu9JP7NG9pcO/kGUjT524kkmaA==
+        Id: 1YYbnZHr7BnlroOelkjj7A==
+        Password: 1YYbnZHr7BnlroOelkjj7A==
+    LanguageType: "ko-KR"
+    Log:
+        Type:
+        Directory: 
+        Assembly: Micube.Framework.Log.dll
+        FileName: ${basedir}Log\${shortdate}.txt

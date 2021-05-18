@@ -1,0 +1,7 @@
+C:\YPMES\Client\bin\Release\Micube.SmartMES.Commons.Gerber.dll
+C:\YPMES\Client\bin\Release\Micube.SmartMES.Commons.Gerber.pdb
+C:\YPMES\Client\src\Micube.SmartMES.Commons.Gerber\obj\Release\Micube.SmartMES.Commons.Gerber.csproj.CoreCompileInputs.cache
+C:\YPMES\Client\src\Micube.SmartMES.Commons.Gerber\obj\Release\Micube.SmartMES.Commons.Gerber.csproj.CopyComplete
+C:\YPMES\Client\src\Micube.SmartMES.Commons.Gerber\obj\Release\Micube.SmartMES.Commons.Gerber.dll
+C:\YPMES\Client\src\Micube.SmartMES.Commons.Gerber\obj\Release\Micube.SmartMES.Commons.Gerber.pdb
+C:\YPMES\Client\src\Micube.SmartMES.Commons.Gerber\obj\Release\Micube.SmartMES.Commons.Gerber.csprojAssemblyReference.cache

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="18.1.5.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" Margins="66, 61, 87, 50" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="18.1">
+  <Bands>
+    <Item1 Ref="1" ControlType="TopMarginBand" Name="TopMargin" HeightF="87" />
+    <Item2 Ref="2" ControlType="DetailBand" Name="Detail" HeightF="32.9999924">
+      <MultiColumn Ref="3" ColumnCount="5" ColumnSpacing="10" Layout="AcrossThenDown" Mode="UseColumnCount" />
+      <Controls>
+        <Item1 Ref="4" ControlType="XRTable" Name="table2" SizeF="130.199936,30.8258934" LocationFloat="0, 0" Padding="2,2,0,0,100">
+          <Rows>
+            <Item1 Ref="5" ControlType="XRTableRow" Name="tableRow5" Weight="1">
+              <Cells>
+                <Item1 Ref="6" ControlType="XRTableCell" Name="AREAID" Weight="1" Multiline="true" Text="AREAID" TextAlignment="MiddleCenter" Font="Times New Roman, 6.68pt, charSet=0" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="AREAID">
+                  <StylePriority Ref="7" UseFont="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="8" ControlType="XRTableCell" Name="USERNAME" Weight="1" Multiline="true" Text="INSPECTORNAME" TextAlignment="MiddleCenter" Font="Times New Roman, 4.58pt, charSet=0" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="INSPECTORNAME">
+                  <StylePriority Ref="9" UseFont="false" UseTextAlignment="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+            <Item2 Ref="10" ControlType="XRTableRow" Name="tableRow6" Weight="1">
+              <Cells>
+                <Item1 Ref="11" ControlType="XRTableCell" Name="tableCell24" Weight="2" Multiline="true" Text="tableCell24" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="12" ControlType="XRBarCode" Name="barCode1" Module="0.5" ShowText="false" SizeF="130.199936,15.4129467" LocationFloat="0, 0" Padding="0,0,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="INSPECTORBARCODE">
+                      <Symbology Ref="13" Name="Code128" />
+                      <StylePriority Ref="14" UsePadding="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="15" UsePadding="false" />
+                </Item1>
+              </Cells>
+            </Item2>
+          </Rows>
+          <StylePriority Ref="16" UsePadding="false" />
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="17" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="50" />
+    <Item4 Ref="18" ControlType="PageHeaderBand" Name="PageHeader" HeightF="50.6250076">
+      <Controls>
+        <Item1 Ref="19" ControlType="XRTable" Name="table7" SizeF="700,26.0416641" LocationFloat="0, 0">
+          <Rows>
+            <Item1 Ref="20" ControlType="XRTableRow" Name="tableRow39" Weight="1">
+              <Cells>
+                <Item1 Ref="21" ControlType="XRTableCell" Name="tableCell154" Weight="1.3610917866959542" Multiline="true" Text="tableCell154" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="22" ControlType="XRLabel" Name="lblAreaName" Multiline="true" Text="AREANAME" TextAlignment="MiddleCenter" SizeF="343.83017,26.0416641" LocationFloat="0, 0" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="AREANAME">
+                      <StylePriority Ref="23" UseTextAlignment="false" />
+                    </Item1>
+                  </Controls>
+                </Item1>
+                <Item2 Ref="24" ControlType="XRTableCell" Name="tableCell155" Weight="0.63890821330404579" Multiline="true" Text="tableCell155" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="25" ControlType="XRLabel" Name="lblUserName" Multiline="true" Text="INSPECTORNAME" TextAlignment="MiddleCenter" SizeF="161.396851,26.0416641" LocationFloat="0, 0" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="INSPECTORNAME">
+                      <StylePriority Ref="26" UseTextAlignment="false" />
+                    </Item1>
+                  </Controls>
+                </Item2>
+                <Item3 Ref="27" ControlType="XRTableCell" Name="tableCell156" Weight="0.77103145604541212" Multiline="true" Text="tableCell156" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="28" ControlType="XRLabel" Name="lblDate" Multiline="true" Text="TODAY" TextAlignment="MiddleCenter" SizeF="194.77298,26.0416641" LocationFloat="0, 0" Padding="2,2,0,0,100" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="TODAY">
+                      <StylePriority Ref="29" UseTextAlignment="false" />
+                    </Item1>
+                  </Controls>
+                </Item3>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item4>
+  </Bands>
+</XtraReportsLayoutSerializer>

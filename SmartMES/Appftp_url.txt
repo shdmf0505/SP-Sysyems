@@ -1,0 +1,127 @@
+﻿1. 운영 서버 (AP서버=>172.16.4.70:7010, Timeout:600) (UI배포서버=>172.16.4.157:8080) (FTP서버=>mesfile@172.16.4.80)
+Network:
+    Main:
+        Type:
+        Assembly: Micube.Framework.Net.dll
+        Directory: 
+    Query:
+    Procedure:
+    Http:
+        Url: http://172.16.4.70:7010/do
+        Timeout: 600
+    Wcf:
+        Config: App
+
+Application:
+    Service:
+        Default: MES
+        Url:
+            MES: http://172.16.4.71:7010/do
+    SmartDeploy:
+        Url: http://172.16.4.157:8080/
+    Ftp:
+		Url: 6SOPCqwgqaYEpOGiQQ8ch3pwh6nSdjBMwhmtJ4clR484utkt53+x7UGeMoXCHu9JP7NG9pcO/kGUjT524kkmaA==
+		Id: 1YYbnZHr7BnlroOelkjj7A==
+		Password: 1YYbnZHr7BnlroOelkjj7A==
+    LanguageType: "ko-KR"
+    Log:
+        Type:
+        Directory: 
+        Assembly: Micube.Framework.Log.dll
+        FileName: ${basedir}Log\${shortdate}.txt
+
+2. 개발 (AP서버=>172.16.4.137:7010, Timeout:40) (UI배포서버=>172.16.4.157:8081) (FTP서버=>mesfiledev@172.16.4.80)
+Network:
+    Main:
+        Type:
+        Assembly: Micube.Framework.Net.dll
+        Directory: 
+    Query:
+    Procedure:
+    Http:
+        Url: http://localhost:7010/do
+        Timeout: 40
+    Wcf:
+        Config: App
+
+Application:
+    Service:
+        Default: MES
+        Url:
+            MES: http://localhost:7010/do
+    SmartDeploy:
+        Url: http://172.16.4.157:8081/
+    Ftp:
+		Url: 6SOPCqwgqaYEpOGiQQ8ch3pwh6nSdjBMwhmtJ4clR484utkt53+x7UGeMoXCHu9JWNVDbBPsil6Zg2N4QSNpLQ==
+		Id: oAZ70H+UQsCzUnGzuRt+0VPJ4Wl+RHwqAq3W7dblpGg=
+		Password: oAZ70H+UQsCzUnGzuRt+0VPJ4Wl+RHwqAq3W7dblpGg=
+    LanguageType: "ko-KR"
+    Log:
+        Type:
+        Directory: 
+        Assembly: Micube.Framework.Log.dll
+        FileName: ${basedir}Log\${shortdate}.txt
+
+3. 통테 (AP서버=>172.16.4.137:8010, Timeout:40) (UI배포서버=>172.16.4.157:8091) (FTP서버=>mesfiletest@172.16.4.80)
+Network:
+    Main:
+        Type:
+        Assembly: Micube.Framework.Net.dll
+        Directory: 
+    Query:
+    Procedure:
+    Http:
+        Url: http://172.16.4.137:8010/do
+        Timeout: 40
+    Wcf:
+        Config: App
+
+Application:
+    Service:
+        Default: MES
+        Url:
+            MES: http://172.16.4.137:8010/do
+    SmartDeploy:
+        Url: http://172.16.4.157:8091/
+    Ftp:
+		Url: 6SOPCqwgqaYEpOGiQQ8ch3pwh6nSdjBMwhmtJ4clR484utkt53+x7UGeMoXCHu9JU/SNnYlsaw1oNmHFWi0beg==
+		Id: HHAW0xhWllVOOEzoq6vW3H4fVixPnH0jSKCIEf9nZDY=
+		Password: HHAW0xhWllVOOEzoq6vW3H4fVixPnH0jSKCIEf9nZDY=
+    LanguageType: "ko-KR"
+    Log:
+        Type:
+        Directory: 
+        Assembly: Micube.Framework.Log.dll
+        FileName: ${basedir}Log\${shortdate}.txt
+
+4. 로칼 노트북 (AP서버=>localhost:7010, Timeout:40) (UI배포서버=>172.16.4.157:8081) (FTP서버=>mesfiletest@172.16.4.80)
+Network:
+    Main:
+        Type:
+        Assembly: Micube.Framework.Net.dll
+        Directory: 
+    Query:
+    Procedure:
+    Http:
+        Url: http://localhost:7010/do
+        Timeout: 40
+    Wcf:
+        Config: App
+
+Application:
+    Service:
+        Default: MES
+        Url:
+            MES: http://localhost:7010/do
+    SmartDeploy:
+        Url: http://172.16.4.157:8081/
+    Ftp:
+        Url: 6SOPCqwgqaYEpOGiQQ8ch3pwh6nSdjBMwhmtJ4clR484utkt53+x7UGeMoXCHu9JU/SNnYlsaw1oNmHFWi0beg==
+        Id: HHAW0xhWllVOOEzoq6vW3H4fVixPnH0jSKCIEf9nZDY=
+        Password: HHAW0xhWllVOOEzoq6vW3H4fVixPnH0jSKCIEf9nZDY=
+    LanguageType: "ko-KR"
+    Log:
+        Type:
+        Directory: 
+        Assembly: Micube.Framework.Log.dll
+        FileName: ${basedir}Log\${shortdate}.txt

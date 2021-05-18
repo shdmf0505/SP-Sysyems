@@ -1,0 +1,10 @@
+C:\YPMES\Client\bin\Debug\Micube.SmartMES.Commons.SPCLibrary.dll.config
+C:\YPMES\Client\bin\Debug\Micube.SmartMES.Commons.SPCLibrary.dll
+C:\YPMES\Client\bin\Debug\Micube.SmartMES.Commons.SPCLibrary.pdb
+C:\YPMES\Client\src\Micube.SmartMES.Commons.SPCLibrary\obj\Debug\Micube.SmartMES.Commons.SPCLibrary.TestSPCLibrary01.resources
+C:\YPMES\Client\src\Micube.SmartMES.Commons.SPCLibrary\obj\Debug\Micube.SmartMES.Commons.SPCLibrary.TestSPCStatisticsData.resources
+C:\YPMES\Client\src\Micube.SmartMES.Commons.SPCLibrary\obj\Debug\Micube.SmartMES.Commons.SPCLibrary.csproj.GenerateResource.cache
+C:\YPMES\Client\src\Micube.SmartMES.Commons.SPCLibrary\obj\Debug\Micube.SmartMES.Commons.SPCLibrary.csproj.CoreCompileInputs.cache
+C:\YPMES\Client\src\Micube.SmartMES.Commons.SPCLibrary\obj\Debug\Micube.SmartMES.Commons.SPCLibrary.dll
+C:\YPMES\Client\src\Micube.SmartMES.Commons.SPCLibrary\obj\Debug\Micube.SmartMES.Commons.SPCLibrary.pdb
+C:\YPMES\Client\src\Micube.SmartMES.Commons.SPCLibrary\obj\Debug\Micube.SmartMES.Commons.SPCLibrary.csprojAssemblyReference.cache

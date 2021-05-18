@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80F336BE-4531-4951-B58D-52A824CF680B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Micube.SmartMES.Test</RootNamespace>
+    <AssemblyName>Micube.SmartMES.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Charts.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Data.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Images.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.PivotGrid.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Printing.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraBars.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraLayout.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPivotGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPrinting.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraTreeList.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Net.Wcf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.Net.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.SmartControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.SmartControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsumableTempUsing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumableTempUsing.Designer.cs">
+      <DependentUpon>ConsumableTempUsing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileUploadDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileUploadDownload.Designer.cs">
+      <DependentUpon>FileUploadDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridCellEditTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridCellEditTest.Designer.cs">
+      <DependentUpon>GridCellEditTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridGroupTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridGroupTest.Designer.cs">
+      <DependentUpon>GridGroupTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotChart.Designer.cs">
+      <DependentUpon>LotChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotInfoGridTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotInfoGridTest.Designer.cs">
+      <DependentUpon>LotInfoGridTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Template.Designer.cs">
+      <DependentUpon>Manage_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDetailGridTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDetailGridTest.Designer.cs">
+      <DependentUpon>MasterDetailGridTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OneGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OneGrid.Designer.cs">
+      <DependentUpon>OneGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\LotChartPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\LotChartPopup.Designer.cs">
+      <DependentUpon>LotChartPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartChartExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmartChartExample.Designer.cs">
+      <DependentUpon>SmartChartExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestEquipmentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestEquipmentManagement.Designer.cs">
+      <DependentUpon>TestEquipmentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestGrid.Designer.cs">
+      <DependentUpon>TestGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestUser.Designer.cs">
+      <DependentUpon>TestUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TwoGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TwoGrid.Designer.cs">
+      <DependentUpon>TwoGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlTest.Designer.cs">
+      <DependentUpon>UserControlTest.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConsumableTempUsing.resx">
+      <DependentUpon>ConsumableTempUsing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileUploadDownload.resx">
+      <DependentUpon>FileUploadDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridCellEditTest.resx">
+      <DependentUpon>GridCellEditTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridGroupTest.resx">
+      <DependentUpon>GridGroupTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotChart.resx">
+      <DependentUpon>LotChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotInfoGridTest.resx">
+      <DependentUpon>LotInfoGridTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_Template.resx">
+      <DependentUpon>Manage_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDetailGridTest.resx">
+      <DependentUpon>MasterDetailGridTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OneGrid.resx">
+      <DependentUpon>OneGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\LotChartPopup.resx">
+      <DependentUpon>LotChartPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartChartExample.resx">
+      <DependentUpon>SmartChartExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestEquipmentManagement.resx">
+      <DependentUpon>TestEquipmentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestGrid.resx">
+      <DependentUpon>TestGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestUser.resx">
+      <DependentUpon>TestUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TwoGrid.resx">
+      <DependentUpon>TwoGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlTest.resx">
+      <DependentUpon>UserControlTest.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.Controls\Micube.SmartMES.Commons.Controls.csproj">
+      <Project>{6c8616d8-4620-477e-a1ac-2a02a94d4984}</Project>
+      <Name>Micube.SmartMES.Commons.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons\Micube.SmartMES.Commons.csproj">
+      <Project>{1b6a2eb9-f134-49fc-80fa-982418d6490f}</Project>
+      <Name>Micube.SmartMES.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

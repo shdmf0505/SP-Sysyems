@@ -1,0 +1,1663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="18.1.5.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="69, 64, 122, 120" PaperKind="A4" PageWidth="2100" PageHeight="2970" Version="18.1" ShowPrintMarginsWarning="false" Dpi="254" Borders="Left, Right, Bottom">
+  <Bands>
+    <Item1 Ref="1" ControlType="TopMarginBand" Name="TopMargin" HeightF="122" Dpi="254" />
+    <Item2 Ref="2" ControlType="DetailBand" Name="Detail" Expanded="false" HeightF="0" Dpi="254" />
+    <Item3 Ref="3" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="120" Dpi="254" />
+    <Item4 Ref="4" ControlType="DetailReportBand" Name="MainReport" Level="0" Dpi="254">
+      <Bands>
+        <Item1 Ref="5" ControlType="DetailBand" Name="MainReportDetail" SnapLinePadding="0,0,0,0,254" HeightF="0" Dpi="254" />
+        <Item2 Ref="6" ControlType="GroupHeaderBand" Name="MainReportHeader" RepeatEveryPage="true" HeightF="580.8174" Dpi="254" Borders="Top">
+          <SubBands>
+            <Item1 Ref="7" ControlType="SubBand" Name="MainHeaderSubBand" HeightF="276.3541" Dpi="254">
+              <Controls>
+                <Item1 Ref="8" ControlType="XRTable" Name="table6" SizeF="1964.99817,251.3541" LocationFloat="0, 25.0000076" Dpi="254">
+                  <Rows>
+                    <Item1 Ref="9" ControlType="XRTableRow" Name="tableRow29" Weight="0.62091504401242015" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="10" ControlType="XRTableCell" Name="lblComment" Weight="0.1816603162089957" Multiline="true" Text="특이사항" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="All" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="COMMENT">
+                          <StylePriority Ref="11" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                        </Item1>
+                        <Item2 Ref="12" ControlType="XRTableCell" Name="txtComments" Weight="2.8183396837910042" Multiline="true" Dpi="254" Font="맑은 고딕, 6pt" Padding="20,20,20,20,254" Borders="Top, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="COMMENTS">
+                          <StylePriority Ref="13" UseFont="false" UsePadding="false" />
+                        </Item2>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                </Item1>
+              </Controls>
+            </Item1>
+          </SubBands>
+          <Controls>
+            <Item1 Ref="14" ControlType="XRLabel" Name="label1" TextAlignment="MiddleCenter" WordWrap="false" SizeF="557.04126,54.9671021" LocationFloat="1407.95715, 469.9001" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="All">
+              <StylePriority Ref="15" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="16" ControlType="XRLabel" Name="txtISRC" TextAlignment="MiddleCenter" WordWrap="false" SizeF="198.906616,55.0004272" LocationFloat="1209.05054, 469.86676" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SPECCHANGEFLAG">
+              <StylePriority Ref="17" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="18" ControlType="XRLabel" Name="lblISRC" Text="사양변경" TextAlignment="MiddleCenter" WordWrap="false" SizeF="124.381958,55" LocationFloat="1084.66882, 469.86676" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="ISRC">
+              <StylePriority Ref="19" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="20" ControlType="XRLabel" Name="txtProductLevel" TextAlignment="MiddleCenter" WordWrap="false" SizeF="169.529114,55.0003052" LocationFloat="915.1395, 469.866455" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTRATING">
+              <StylePriority Ref="21" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="22" ControlType="XRLabel" Name="lblProductLevel" Text="제품등급" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.98999,55" LocationFloat="796.149536, 469.866455" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTLEVEL">
+              <StylePriority Ref="23" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="24" ControlType="XRLabel" Name="txtDescription" TextAlignment="MiddleLeft" WordWrap="false" SizeF="1846.01086,55.9501953" LocationFloat="118.988884, 524.8672" Dpi="254" Font="맑은 고딕, 6pt" Padding="20,5,0,0,254" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="DESCRIPTION">
+              <StylePriority Ref="25" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item6>
+            <Item7 Ref="26" ControlType="XRLabel" Name="lblDescription" Text="비고" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.988396,55.91693" LocationFloat="0.00100930536, 524.8672" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REMARK">
+              <StylePriority Ref="27" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item7>
+            <Item8 Ref="28" ControlType="XRLabel" Name="txtEndProcessSegment" TextAlignment="MiddleCenter" WordWrap="false" SizeF="267.1595,55.0003052" LocationFloat="528.9902, 469.866943" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="ENDSEGMENTNAME">
+              <StylePriority Ref="29" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item8>
+            <Item9 Ref="30" ControlType="XRLabel" Name="lblEndProcessSegment" Text="END공정" TextAlignment="MiddleCenter" WordWrap="false" SizeF="140.000122,55" LocationFloat="388.990051, 469.867371" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="ENDPROCESSSEGMENT">
+              <StylePriority Ref="31" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item9>
+            <Item10 Ref="32" ControlType="XRLabel" Name="txtERPSalesorderNo" TextAlignment="MiddleCenter" WordWrap="false" SizeF="270.002472,55.0002441" LocationFloat="118.987549, 469.867249" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTIONORDERID">
+              <StylePriority Ref="33" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item10>
+            <Item11 Ref="34" ControlType="XRLabel" Name="lblSalseOrderNo" Text="수주번호" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.987572,55" LocationFloat="0, 469.867249" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="35" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item11>
+            <Item12 Ref="36" ControlType="XRLabel" Name="lblApproval" Text="승인용" TextAlignment="MiddleCenter" WordWrap="false" SizeF="155.017944,55.00009" LocationFloat="1407.95715, 414.9" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USAGEAPPROVAL">
+              <StylePriority Ref="37" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item12>
+            <Item13 Ref="38" ControlType="XRLabel" Name="txtForapproval" TextAlignment="MiddleCenter" WordWrap="false" SizeF="148.032959,55.00006" LocationFloat="1562.97522, 414.900024" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="FORAPPROVAL">
+              <StylePriority Ref="39" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item13>
+            <Item14 Ref="40" ControlType="XRLabel" Name="lblFirstProduction" Text="초도양산" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.991821,55.00006" LocationFloat="1711.00818, 414.866333" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="FIRSTPRODUCTION">
+              <StylePriority Ref="41" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item14>
+            <Item15 Ref="42" ControlType="XRLabel" Name="txtFirstProduction" TextAlignment="MiddleCenter" WordWrap="false" SizeF="134.999878,55.00006" LocationFloat="1830, 414.866333" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="FORFIRSTPRODUCTION">
+              <StylePriority Ref="43" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item15>
+            <Item16 Ref="44" ControlType="XRLabel" Name="lblDueDate" Text="납품요청일" TextAlignment="MiddleCenter" SizeF="124.381958,55.00009" LocationFloat="1084.66882, 414.866333" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="DELEVERYREQDATE">
+              <StylePriority Ref="45" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item16>
+            <Item17 Ref="46" ControlType="XRLabel" Name="txtDueDate" TextAlignment="MiddleCenter" WordWrap="false" SizeF="198.9065,55.00009" LocationFloat="1209.05066, 414.866333" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="DUEDATE">
+              <StylePriority Ref="47" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item17>
+            <Item18 Ref="48" ControlType="XRLabel" Name="txtLotStartDate" TextAlignment="MiddleCenter" WordWrap="false" SizeF="169.529175,55.00006" LocationFloat="915.1395, 414.866364" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LOTSTARTDATE">
+              <StylePriority Ref="49" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item18>
+            <Item19 Ref="50" ControlType="XRLabel" Name="txtPcsSize" TextFormatString="{0:#,#}" TextAlignment="MiddleRight" WordWrap="false" SizeF="87.48956,55.00003" LocationFloat="668.7701, 414.8672" Dpi="254" Font="맑은 고딕, 6pt, style=Bold" Padding="0,13,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PCSSIZE">
+              <StylePriority Ref="51" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item19>
+            <Item20 Ref="52" ControlType="XRLabel" Name="lblPcsSizeUnit" Multiline="true" Text="m²" TextAlignment="MiddleCenter" WordWrap="false" SizeF="39.89,55" LocationFloat="756.2596, 414.8672" Dpi="254" Font="맑은 고딕, 4.5pt" Padding="5,5,0,0,254" Borders="Top">
+              <StylePriority Ref="53" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item20>
+            <Item21 Ref="54" ControlType="XRLabel" Name="txtPanelQty" TextFormatString="{0:#,#}" TextAlignment="MiddleRight" WordWrap="false" SizeF="100,55.00003" LocationFloat="528.8801, 414.8672" Dpi="254" Font="맑은 고딕, 6pt, style=Bold" Padding="0,13,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PANELQTY">
+              <StylePriority Ref="55" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item21>
+            <Item22 Ref="56" ControlType="XRLabel" Name="lblPNL" Multiline="true" Text="PNL" TextAlignment="MiddleCenter" WordWrap="false" SizeF="39.89,55" LocationFloat="628.880066, 414.8672" Dpi="254" Font="맑은 고딕, 4.5pt" Padding="5,5,0,0,254" Borders="Top">
+              <StylePriority Ref="57" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item22>
+            <Item23 Ref="58" ControlType="XRLabel" Name="txtQty" TextFormatString="{0:#,#}" TextAlignment="MiddleRight" WordWrap="false" SizeF="100,55.00003" LocationFloat="388.990051, 414.8672" Dpi="254" Font="맑은 고딕, 6pt, style=Bold" Padding="0,13,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="QTY">
+              <StylePriority Ref="59" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item23>
+            <Item24 Ref="60" ControlType="XRLabel" Name="lblPCS2" Multiline="true" Text="PCS" TextAlignment="MiddleCenter" WordWrap="false" SizeF="39.89,55" LocationFloat="488.9901, 414.8672" Dpi="254" Font="맑은 고딕, 4.5pt" Padding="5,5,0,0,254" Borders="Top">
+              <StylePriority Ref="61" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item24>
+            <Item25 Ref="62" ControlType="XRLabel" Name="txtPlanQty" TextFormatString="{0:#,#}" TextAlignment="MiddleRight" WordWrap="false" SizeF="111.1202,55.00003" LocationFloat="118.987549, 414.8672" Dpi="254" Font="맑은 고딕, 6pt, style=Bold" Padding="0,13,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PLANQTY">
+              <StylePriority Ref="63" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item25>
+            <Item26 Ref="64" ControlType="XRLabel" Name="lblPCS" Multiline="true" Text="PCS" TextAlignment="MiddleCenter" WordWrap="false" SizeF="39.89061,55" LocationFloat="230.1094, 414.8672" Dpi="254" Font="맑은 고딕, 4.5pt" Padding="5,5,0,0,254" Borders="Top">
+              <StylePriority Ref="65" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item26>
+            <Item27 Ref="66" ControlType="XRLabel" Name="lblLotStartDate" Text="투입일자" TextAlignment="MiddleCenter" SizeF="118.98999,55.00009" LocationFloat="796.149536, 414.866364" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="INPUTDATE">
+              <StylePriority Ref="67" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item27>
+            <Item28 Ref="68" ControlType="XRLabel" Name="lblLotInputQty" Text="LOT투입량" TextAlignment="MiddleCenter" SizeF="118.990082,55.00003" LocationFloat="269.999969, 414.8672" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LOTINPUTQTY">
+              <StylePriority Ref="69" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item28>
+            <Item29 Ref="70" ControlType="XRLabel" Name="lblPlanQty" Text="수주량" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.987572,55.00003" LocationFloat="0, 414.8672" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PLANQTY">
+              <StylePriority Ref="71" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item29>
+            <Item30 Ref="72" ControlType="XRLabel" Name="txtRollSheet" TextAlignment="MiddleCenter" WordWrap="false" SizeF="135.000244,54.99994" LocationFloat="1829.99976, 359.866974" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="RTRSHT">
+              <StylePriority Ref="73" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item30>
+            <Item31 Ref="74" ControlType="XRLabel" Name="lblRollSheet" Text="Roll/Sheet" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.991821,54.99997" LocationFloat="1711.00818, 359.866974" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="ROLLSHEET">
+              <StylePriority Ref="75" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item31>
+            <Item32 Ref="76" ControlType="XRLabel" Name="txtMaterialClass" TextAlignment="MiddleCenter" WordWrap="false" SizeF="248.98999,54.99997" LocationFloat="1462.01819, 359.900574" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CONSUMABLETYPENAME">
+              <StylePriority Ref="77" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item32>
+            <Item33 Ref="78" ControlType="XRLabel" Name="lblMaterialClass" Text="자재품목구분" TextAlignment="MiddleCenter" SizeF="155.017944,54.99997" LocationFloat="1307.00012, 359.866974" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MATERIALCLASS">
+              <StylePriority Ref="79" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item33>
+            <Item34 Ref="80" ControlType="XRLabel" Name="txtBLKPNL" TextAlignment="MiddleCenter" WordWrap="false" SizeF="143.229,54.99991" LocationFloat="1163.77124, 359.867035" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PCSARY">
+              <StylePriority Ref="81" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item34>
+            <Item35 Ref="82" ControlType="XRLabel" Name="lblBLKPNL" Text="BLK/PNL" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.630615,54.99991" LocationFloat="1045.13953, 359.867035" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="BLKPNL">
+              <StylePriority Ref="83" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item35>
+            <Item36 Ref="84" ControlType="XRLabel" Name="txtPcsMm" TextAlignment="MiddleCenter" WordWrap="false" SizeF="130,54.99994" LocationFloat="915.1395, 359.867" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PCSMM">
+              <StylePriority Ref="85" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item36>
+            <Item37 Ref="86" ControlType="XRLabel" Name="lblPcsMm" Text="산출수[PCS/m²]" TextAlignment="MiddleCenter" SizeF="118.99,55" LocationFloat="796.149536, 359.867157" Dpi="254" Font="맑은 고딕, 5pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CALCULATION2">
+              <StylePriority Ref="87" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item37>
+            <Item38 Ref="88" ControlType="XRLabel" Name="txtArrayPanel" TextAlignment="MiddleCenter" WordWrap="false" SizeF="116.150574,55.00003" LocationFloat="679.9987, 359.867157" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="ARRAYPANEL">
+              <StylePriority Ref="89" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item38>
+            <Item39 Ref="90" ControlType="XRLabel" Name="lblArrayPanel" Text="배열수[PCS/PNL]" TextAlignment="MiddleCenter" SizeF="118.98999,55" LocationFloat="561.0088, 359.867126" Dpi="254" Font="맑은 고딕, 5pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="ARRAYPANEL">
+              <StylePriority Ref="91" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item39>
+            <Item40 Ref="92" ControlType="XRLabel" Name="txtPanelSize2" TextAlignment="MiddleCenter" WordWrap="false" SizeF="172.0187,55" LocationFloat="388.990051, 359.867126" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PNLSIZEYAXIS">
+              <StylePriority Ref="93" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item40>
+            <Item41 Ref="94" ControlType="XRLabel" Name="lblPanelSize2" Text="PNL SIZE[mm]" TextAlignment="MiddleCenter" SizeF="118.990021,55" LocationFloat="270.000061, 359.867126" Dpi="254" Font="맑은 고딕, 5pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PNL SIZE[mm]">
+              <StylePriority Ref="95" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item41>
+            <Item42 Ref="96" ControlType="XRLabel" Name="lblPanelSize" Text="PNL SIZE[mm]" TextAlignment="MiddleCenter" SizeF="118.987572,55" LocationFloat="0, 359.867126" Dpi="254" Font="맑은 고딕, 5pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PNL SIZE[mm]">
+              <StylePriority Ref="97" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item42>
+            <Item43 Ref="98" ControlType="XRLabel" Name="txtPanelSize" TextAlignment="MiddleCenter" WordWrap="false" SizeF="151.011414,55" LocationFloat="118.987549, 359.867126" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PNLSIZEXAXIS">
+              <StylePriority Ref="99" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item43>
+            <Item44 Ref="100" ControlType="XRLabel" Name="lblLayer" Text="층수" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.99,55" LocationFloat="1711.00818, 304.867126" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LAYER">
+              <StylePriority Ref="101" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item44>
+            <Item45 Ref="102" ControlType="XRLabel" Name="txtLayer" TextAlignment="MiddleCenter" WordWrap="false" SizeF="135,55" LocationFloat="1829.99817, 304.867249" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LAYER">
+              <StylePriority Ref="103" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item45>
+            <Item46 Ref="104" ControlType="XRLabel" Name="lblProductShape" Text="제품타입" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.99,55" LocationFloat="1462.01819, 304.900574" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTSHAPE">
+              <StylePriority Ref="105" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item46>
+            <Item47 Ref="106" ControlType="XRLabel" Name="txtProductShape" TextAlignment="MiddleCenter" WordWrap="false" SizeF="130,55" LocationFloat="1581.00818, 304.900574" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTSHAPE">
+              <StylePriority Ref="107" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item47>
+            <Item48 Ref="108" ControlType="XRLabel" Name="txtProductDefName" TextAlignment="MiddleLeft" WordWrap="false" SizeF="546.8783,55.00003" LocationFloat="915.1399, 304.867" Dpi="254" Font="맑은 고딕, 6pt" Padding="20,5,0,0,254" Borders="Left" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTDEFNAME">
+              <StylePriority Ref="109" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item48>
+            <Item49 Ref="110" ControlType="XRLabel" Name="lblModelName" Text="모델명" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.98999,55.00003" LocationFloat="796.149536, 304.867126" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MODELNAME">
+              <StylePriority Ref="111" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item49>
+            <Item50 Ref="112" ControlType="XRLabel" Name="txtProductDefVersion" TextAlignment="MiddleCenter" WordWrap="false" SizeF="116.150574,55.00003" LocationFloat="679.9987, 304.867126" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTDEFVERSION">
+              <StylePriority Ref="113" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item50>
+            <Item51 Ref="114" ControlType="XRLabel" Name="lblInnerRevision" Text="내부REV" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.99,55" LocationFloat="561.0088, 304.867126" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="INNERREVISION">
+              <StylePriority Ref="115" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item51>
+            <Item52 Ref="116" ControlType="XRLabel" Name="lblProductDefId" Text="품목코드" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.99,55" LocationFloat="270.000061, 304.867126" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTDEFID">
+              <StylePriority Ref="117" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item52>
+            <Item53 Ref="118" ControlType="XRLabel" Name="txtProductDefId" TextAlignment="MiddleCenter" WordWrap="false" SizeF="172.0187,55.00003" LocationFloat="388.990051, 304.867126" Dpi="254" Font="맑은 고딕, 5.8pt" Padding="5,5,0,0,254" Borders="Left" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTDEFID">
+              <StylePriority Ref="119" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item53>
+            <Item54 Ref="120" ControlType="XRLabel" Name="txtProductionType" TextAlignment="MiddleCenter" WordWrap="false" SizeF="151.01239,55.00003" LocationFloat="118.987549, 304.867126" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTIONTYPE">
+              <StylePriority Ref="121" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item54>
+            <Item55 Ref="122" ControlType="XRLabel" Name="lblProductionType" Text="생산구분" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.987572,55.00003" LocationFloat="0, 304.867126" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTIONTYPE">
+              <StylePriority Ref="123" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item55>
+            <Item56 Ref="124" ControlType="XRLabel" Name="lblWorkType" Text="작업구분" TextAlignment="MiddleCenter" WordWrap="false" SizeF="147.091431,55" LocationFloat="1636.62622, 249.867065" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Top, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="WORKTYPE">
+              <StylePriority Ref="125" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item56>
+            <Item57 Ref="126" ControlType="XRLabel" Name="txtRootLotId" TextAlignment="MiddleCenter" SizeF="459.325073,54.9999542" LocationFloat="1177.30115, 249.86702" Dpi="254" Font="맑은 고딕, 6pt, style=Bold" Padding="5,5,0,0,254" Borders="Top, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="ROOTLOTID">
+              <StylePriority Ref="127" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item57>
+            <Item58 Ref="128" ControlType="XRLabel" Name="txtWorkType" TextAlignment="MiddleCenter" WordWrap="false" SizeF="181.282715,55.00003" LocationFloat="1783.718, 249.867065" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Top, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="WORKTYPE">
+              <StylePriority Ref="129" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item58>
+            <Item59 Ref="130" ControlType="XRLabel" Name="lblQRInfo" Text="QR 정보" TextAlignment="MiddleCenter" WordWrap="false" SizeF="156.150391,55.00003" LocationFloat="1021.15076, 194.867065" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="QRINFO">
+              <StylePriority Ref="131" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item59>
+            <Item60 Ref="132" ControlType="XRLabel" Name="label5" TextAlignment="MiddleCenter" WordWrap="false" SizeF="181.282715,106.925079" LocationFloat="1783.718, 142.942017" Dpi="254" Font="맑은 고딕, 10pt, style=Bold" Padding="5,5,0,0,254" Borders="Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="STARTUSER">
+              <StylePriority Ref="133" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item60>
+            <Item61 Ref="134" ControlType="XRLabel" Name="lblCreator" Text="생성자" TextAlignment="MiddleCenter" WordWrap="false" SizeF="181.283447,56.06659" LocationFloat="1783.71716, 86.87543" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CREATOR">
+              <StylePriority Ref="135" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item61>
+            <Item62 Ref="136" ControlType="XRBarCode" Name="barCode1" Module="5.08" AutoModule="true" TextAlignment="BottomCenter" ShowText="false" SizeF="436.0249,108.908325" LocationFloat="1081.15076, 85.95874" Dpi="254" Font="Times New Roman, 8pt" Padding="25,25,13,13,254" Borders="Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTDEFIDVERSION">
+              <Symbology Ref="137" Name="Code128" CharacterSet="CharsetAuto" />
+              <StylePriority Ref="138" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item62>
+            <Item63 Ref="139" ControlType="XRLabel" Name="lblRCBarcode" Angle="270" Text="RC 바코드" TextAlignment="MiddleCenter" WordWrap="false" SizeF="60,108.908325" LocationFloat="1021.15076, 85.95874" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="RCBARCODE">
+              <StylePriority Ref="140" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item63>
+            <Item64 Ref="141" ControlType="XRLabel" Name="txtProductType" Text="제품타입" TextAlignment="MiddleCenter" WordWrap="false" SizeF="352.662354,68.65004" LocationFloat="909.9309, 0" Dpi="254" Font="맑은 고딕, 11pt, style=Bold" Padding="5,5,0,0,254" Borders="Top, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PRODUCTCLASSNAME">
+              <StylePriority Ref="142" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item64>
+            <Item65 Ref="143" ControlType="XRLabel" Name="txtUseArea" Text="사용층" TextAlignment="MiddleCenter" WordWrap="false" SizeF="251.866455,68.65004" LocationFloat="1262.59326, 0" Dpi="254" Font="맑은 고딕, 11pt, style=Bold" Padding="5,5,0,0,254" Borders="Top, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USELAYERNAME">
+              <StylePriority Ref="144" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item65>
+            <Item66 Ref="145" ControlType="XRLabel" Name="txtConsumableType" Text="자재품목구분" TextAlignment="MiddleCenter" WordWrap="false" SizeF="454.715973,68.65004" LocationFloat="454.9764, 0" Dpi="254" Font="맑은 고딕, 11pt, style=Bold" Padding="5,5,0,0,254" Borders="All" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CONSUMABLETYPENAME">
+              <StylePriority Ref="146" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item66>
+            <Item67 Ref="147" ControlType="XRLabel" Name="lblCustomerQR" Angle="270" Text="고객사 QR" TextAlignment="MiddleCenter" WordWrap="false" SizeF="60.00006,218.90831" LocationFloat="796.150452, 85.95882" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="All" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CUSTOMERQR">
+              <StylePriority Ref="148" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item67>
+            <Item68 Ref="149" ControlType="XRBarCode" Name="bcdLotIdQR" Module="5.08" Alignment="MiddleCenter" TextAlignment="BottomCenter" ShowText="false" SizeF="166.01239,163.908356" LocationFloat="118.988396, 85.95874" Dpi="254" Padding="0,0,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LOTID">
+              <Symbology Ref="150" Name="QRCode" Version="Version2" />
+              <StylePriority Ref="151" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item68>
+            <Item69 Ref="152" ControlType="XRLabel" Name="txtCustomerQR" Text="[E,1132060B7,V687TZ0103JMY272381,0001,01V0,M42,26]" TextAlignment="MiddleCenter" SizeF="606.4169,54.9999847" LocationFloat="1177.30115, 194.867065" Dpi="254" Font="맑은 고딕, 5pt" BackColor="Transparent" Padding="5,5,0,0,254" Borders="Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CUSTOMERQR">
+              <StylePriority Ref="153" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item69>
+            <Item70 Ref="154" ControlType="XRLabel" Name="txtLotId" TextAlignment="MiddleCenter" WordWrap="false" SizeF="677.161743,55.00006" LocationFloat="118.988396, 249.866943" Dpi="254" Font="맑은 고딕, 6pt, style=Bold" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LOTIDWITHMKLOTID">
+              <StylePriority Ref="155" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item70>
+            <Item71 Ref="156" ControlType="XRLabel" Name="lblLotId" Text="LOT NO" TextAlignment="MiddleCenter" WordWrap="false" SizeF="118.987389,218.90831" LocationFloat="0.00100930536, 85.95882" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LOTID">
+              <StylePriority Ref="157" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item71>
+            <Item72 Ref="158" ControlType="XRBarCode" Name="bcdLotId" Module="5.08" AutoModule="true" TextAlignment="MiddleCenter" ShowText="false" SizeF="511.149628,163.908279" LocationFloat="285.000824, 85.95882" Dpi="254" Font="Times New Roman, 8pt" Padding="25,25,13,13,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LOTID">
+              <Symbology Ref="159" Name="Code128" CharacterSet="CharsetAuto" />
+              <StylePriority Ref="160" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item72>
+            <Item73 Ref="161" ControlType="XRPictureBox" Name="picLogo" ImageAlignment="MiddleCenter" SizeF="266.5415,108.908325" LocationFloat="1517.17566, 85.95874" Dpi="254" Borders="Top, Right">
+              <StylePriority Ref="162" UseBorders="false" />
+            </Item73>
+            <Item74 Ref="163" ControlType="XRLabel" Name="lblRootLotId" Text="ROOT LOT NO" TextAlignment="MiddleCenter" WordWrap="false" SizeF="156.1502,55.0000153" LocationFloat="1021.15094, 249.86702" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Top, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="ROOTLOTNO">
+              <StylePriority Ref="164" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item74>
+            <Item75 Ref="165" ControlType="XRPanel" Name="panel1" SizeF="165.000244,218.908325" LocationFloat="856.1505, 85.95874" Dpi="254" Borders="Top, Right, Bottom">
+              <Controls>
+                <Item1 Ref="166" ControlType="XRBarCode" Name="bcdCustomerQR" Module="5.08" Alignment="MiddleCenter" TextAlignment="BottomCenter" ShowText="false" ProcessNullValues="Suppress" Text="[E,1132060B7,V687TZ0103CMY013260,0001,01U0,M42,26]" SizeF="162.354431,216.2625" LocationFloat="0, 2.64582825" Dpi="254" Padding="0,0,0,0,254" Borders="None" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CUSTOMERQR">
+                  <Symbology Ref="167" Name="QRCode" CompactionMode="Byte" Version="Version1" />
+                  <StylePriority Ref="168" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+              </Controls>
+            </Item75>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item4>
+    <Item5 Ref="169" ControlType="PageFooterBand" Name="PageFooter" HeightF="58.420002" Dpi="254">
+      <Controls>
+        <Item1 Ref="170" ControlType="XRPageInfo" Name="pageInfo2" TextAlignment="TopCenter" SizeF="137.5835,58.420002" LocationFloat="880.920654, 0" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="171" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item5>
+    <Item6 Ref="172" ControlType="DetailReportBand" Name="SubAssemblyReport" Level="2" Expanded="false" Dpi="254">
+      <Bands>
+        <Item1 Ref="173" ControlType="DetailBand" Name="SubAssemblyReportDetail" Expanded="false" HeightF="63.5" Dpi="254" Borders="All">
+          <Controls>
+            <Item1 Ref="174" ControlType="XRTable" Name="table2" SizeF="1964.99841,63.5" LocationFloat="0, 0" Dpi="254" Borders="Top, Bottom">
+              <Rows>
+                <Item1 Ref="175" ControlType="XRTableRow" Name="tableRow2" Weight="1" TextAlignment="TopRight" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="176" ControlType="XRTableCell" Name="tableCell12" Weight="1.1437768594432085" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MATERIALID">
+                      <StylePriority Ref="177" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="178" ControlType="XRTableCell" Name="tableCell13" Weight="2.6872628813937118" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MATERIALNAME">
+                      <StylePriority Ref="179" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="180" ControlType="XRTableCell" Name="tableCell14" Weight="1.9146186210594409" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleRight" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SPEC">
+                      <StylePriority Ref="181" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="182" ControlType="XRTableCell" Name="tableCell15" Weight="0.78571749508063027" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleRight" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MATERIALTYPE">
+                      <StylePriority Ref="183" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="184" ControlType="XRTableCell" Name="tableCell17" Weight="0.43435802847931215" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USERSEQUENCE">
+                      <StylePriority Ref="185" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="186" ControlType="XRTableCell" Name="tableCell18" Weight="1.03578035288446" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleRight" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PROCESSSEGMENTNAME">
+                      <StylePriority Ref="187" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="188" ControlType="XRTableCell" Name="tableCell19" Weight="0.82505623646636894" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USELAYERNAME">
+                      <StylePriority Ref="189" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="190" ControlType="XRTableCell" Name="tableCell20" Weight="0.66780279205600634" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PCSPNL">
+                      <StylePriority Ref="191" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="192" ControlType="XRTableCell" Name="tableCell21" Weight="0.67280513635579764" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PCSMM">
+                      <StylePriority Ref="193" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="194" ControlType="XRTableCell" Name="tableCell22" Weight="0.86089278140496373" Multiline="true" TextAlignment="MiddleRight" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="COMPONENTQTY">
+                      <StylePriority Ref="195" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item10>
+                  </Cells>
+                  <StylePriority Ref="196" UseTextAlignment="false" />
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="197" ControlType="GroupHeaderBand" Name="SubAssemblyReportHeader" RepeatEveryPage="true" Expanded="false" HeightF="79.99992" Dpi="254">
+          <Controls>
+            <Item1 Ref="198" ControlType="XRLabel" Name="lblUseProcessSegment" Text="사용공정" TextAlignment="MiddleCenter" WordWrap="false" SizeF="184.554077,55" LocationFloat="1241.1676, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USEPROCESSSEGMENT">
+              <StylePriority Ref="199" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="200" ControlType="XRLabel" Name="lblArrayPanel2" Text="배열수[PCS/PNL]" TextAlignment="MiddleCenter" SizeF="118.99,55" LocationFloat="1572.73157, 24.9999275" Dpi="254" Font="맑은 고딕, 5pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="ARRAYPANEL">
+              <StylePriority Ref="201" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="202" ControlType="XRLabel" Name="lblSegmentSeq" Text="공순" TextAlignment="MiddleCenter" WordWrap="false" SizeF="77.39575,55" LocationFloat="1163.772, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SEGMENTSEQ">
+              <StylePriority Ref="203" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="204" ControlType="XRLabel" Name="lblCalculatrion2" Text="산출수[PCS/m²]" TextAlignment="MiddleCenter" SizeF="118.99,55" LocationFloat="1691.72156, 24.9999275" Dpi="254" Font="맑은 고딕, 5pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CALCULATION2">
+              <StylePriority Ref="205" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="206" ControlType="XRLabel" Name="lblSpec" Text="규격" TextAlignment="MiddleCenter" WordWrap="false" SizeF="341.150024,55" LocationFloat="682.6212, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SPEC">
+              <StylePriority Ref="207" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="208" ControlType="XRLabel" Name="lblRequirementQty" Text="소요량" TextAlignment="MiddleCenter" WordWrap="false" SizeF="153.395264,55" LocationFloat="1811.60547, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="All" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUIREMENTQTY">
+              <StylePriority Ref="209" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item6>
+            <Item7 Ref="210" ControlType="XRLabel" Name="lblComponentItemId" Text="자재코드" TextAlignment="MiddleCenter" WordWrap="false" SizeF="203.800125,55" LocationFloat="0, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="COMPONENTITEMID">
+              <StylePriority Ref="211" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item7>
+            <Item8 Ref="212" ControlType="XRLabel" Name="lblUserLayer" Text="사용층" TextAlignment="MiddleCenter" WordWrap="false" SizeF="147.009644,54.9999962" LocationFloat="1425.72192, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USERLAYER">
+              <StylePriority Ref="213" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item8>
+            <Item9 Ref="214" ControlType="XRLabel" Name="lblComponentItemName" Text="자재명" TextAlignment="MiddleCenter" WordWrap="false" SizeF="478.821075,54.9999962" LocationFloat="203.800125, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="COMPONENTITEMNAME">
+              <StylePriority Ref="215" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item9>
+            <Item10 Ref="216" ControlType="XRLabel" Name="lblMaterialType" Text="자재유형" TextAlignment="MiddleCenter" WordWrap="false" SizeF="139.9998,55" LocationFloat="1023.77216, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MATERIALTYPE">
+              <StylePriority Ref="217" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item10>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item6>
+    <Item7 Ref="218" ControlType="DetailReportBand" Name="ProcessReport" Level="4" Expanded="false" Dpi="254">
+      <Bands>
+        <Item1 Ref="219" ControlType="DetailBand" Name="ProcessReportDetail" Expanded="false" HeightF="70" Dpi="254">
+          <Controls>
+            <Item1 Ref="220" ControlType="XRTable" Name="tblContent1" SizeF="1965,70" LocationFloat="0.000242233276, 0" Dpi="254" Font="맑은 고딕, 7pt" Borders="All">
+              <Rows>
+                <Item1 Ref="221" ControlType="XRTableRow" Name="tbrContent1" Weight="0.80769179304708727" Dpi="254" Borders="All">
+                  <Cells>
+                    <Item1 Ref="222" ControlType="XRTableCell" Name="tbcSite" Weight="0.51379236800172234" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PLANTID">
+                      <StylePriority Ref="223" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="224" ControlType="XRTableCell" Name="tbcUserSequence" Weight="0.51538621319056643" Multiline="true" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USERSEQUENCE">
+                      <StylePriority Ref="225" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="226" ControlType="XRTableCell" Name="tbcProcessSegmentName" Weight="2.294939420011854" CanGrow="false" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PROCESSSEGMENTNAME">
+                      <StylePriority Ref="227" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="228" ControlType="XRTableCell" Name="tbcComments" Weight="6.8596262423364873" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="COMMENTS">
+                      <StylePriority Ref="229" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="230" ControlType="XRTableCell" Name="tbcSendUser" Weight="1.3027195504273956" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 5pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SENDUSER">
+                      <StylePriority Ref="231" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="232" ControlType="XRTableCell" Name="tbcSendQty" Weight="0.81828957630871924" Multiline="true" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SENDQTY">
+                      <StylePriority Ref="233" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="234" ControlType="XRTableCell" Name="tbcSendTime" Weight="1.3377825777231607" Multiline="true" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SENDTIME">
+                      <StylePriority Ref="235" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item7>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="236" UseFont="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="237" ControlType="GroupHeaderBand" Name="ProcessReportHeader" RepeatEveryPage="true" Expanded="false" HeightF="79.99992" Dpi="254">
+          <Controls>
+            <Item1 Ref="238" ControlType="XRLabel" Name="lblProcessQty" Text="인계/불량" TextAlignment="MiddleCenter" WordWrap="false" SizeF="117.862305,54.9999962" LocationFloat="1654.45068, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PROCESSQTY">
+              <StylePriority Ref="239" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="240" ControlType="XRLabel" Name="lblProcessingDate" Text="일자" TextAlignment="MiddleCenter" WordWrap="false" SizeF="192.687256,55" LocationFloat="1772.313, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="All" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PROCESSINGDATE">
+              <StylePriority Ref="241" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="242" ControlType="XRLabel" Name="lblAreaAndWorker" Text="작업장/작업자" TextAlignment="MiddleCenter" WordWrap="false" SizeF="187.636963,54.9999962" LocationFloat="1466.81372, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="AREAANDWORKER">
+              <StylePriority Ref="243" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="244" ControlType="XRLabel" Name="lblComments" Text="특이사항" TextAlignment="MiddleCenter" WordWrap="false" SizeF="988.0248,54.9999962" LocationFloat="478.78894, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="COMMENTS">
+              <StylePriority Ref="245" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="246" ControlType="XRLabel" Name="lblProcessSegmentName" Text="공정명" TextAlignment="MiddleCenter" WordWrap="false" SizeF="330.551147,54.9999962" LocationFloat="148.237778, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PROCESSSEGMENTNAME">
+              <StylePriority Ref="247" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="248" ControlType="XRLabel" Name="lblUserSequence" Text="공순" TextAlignment="MiddleCenter" WordWrap="false" SizeF="74.23355,54.9999962" LocationFloat="74.00423, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SEGMENTSEQ">
+              <StylePriority Ref="249" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item6>
+            <Item7 Ref="250" ControlType="XRLabel" Name="lblSite" Text="Site" TextAlignment="MiddleCenter" WordWrap="false" SizeF="74.00398,54.9999962" LocationFloat="0.000242233276, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SITE">
+              <StylePriority Ref="251" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item7>
+          </Controls>
+        </Item2>
+        <Item3 Ref="252" ControlType="ReportFooterBand" Name="ProcessReportFooter" Expanded="false" HeightF="5.29166651" Dpi="254">
+          <Controls>
+            <Item1 Ref="253" ControlType="XRPageBreak" Name="pageBreak3" LocationFloat="0, 0" Dpi="254" />
+          </Controls>
+        </Item3>
+      </Bands>
+    </Item7>
+    <Item8 Ref="254" ControlType="DetailReportBand" Name="NCRReport" Level="5" Expanded="false" Dpi="254">
+      <Bands>
+        <Item1 Ref="255" ControlType="DetailBand" Name="NCRReportDetail" HeightF="0" Dpi="254" />
+        <Item2 Ref="256" ControlType="GroupHeaderBand" Name="NCRReportHeader" Expanded="false" HeightF="2597.647" Dpi="254">
+          <Controls>
+            <Item1 Ref="257" ControlType="XRTable" Name="table5" SizeF="1965.00085,238.125046" LocationFloat="0, 0" Dpi="254" Borders="All">
+              <Rows>
+                <Item1 Ref="258" ControlType="XRTableRow" Name="tableRow19" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="259" ControlType="XRTableCell" Name="tableCell226" Weight="1.3888426975303354" RowSpan="2" Multiline="true" Text="자주검사 NCR 이력카드                                   (Card lý lịch NCR kiểm tra thường xuyên)" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 12pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Right">
+                      <StylePriority Ref="260" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="261" ControlType="XRTableCell" Name="tableCell227" Weight="0.710698656860625" Multiline="true" Text="품목번호                         (Số danh mục hàng)" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 11pt" BackColor="Silver" Padding="5,5,0,0,254">
+                      <StylePriority Ref="262" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="263" ControlType="XRTableCell" Name="tableCell228" Weight="0.90045864560903954" Multiline="true" Text="품목명                                        (Tên hàng) " TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 11pt" BackColor="Silver" Padding="5,5,0,0,254">
+                      <StylePriority Ref="264" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="265" ControlType="XRTableRow" Name="tableRow20" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="266" ControlType="XRTableCell" Name="tableCell229" Weight="1.3888426975303354" Multiline="true" Text="tableCell229" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="267" UsePadding="false" />
+                    </Item1>
+                    <Item2 Ref="268" ControlType="XRTableCell" Name="tableCell230" Weight="0.710698656860625" Multiline="true" Dpi="254" Padding="5,5,0,0,254" Borders="Left, Right">
+                      <StylePriority Ref="269" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="270" ControlType="XRTableCell" Name="tableCell231" Weight="0.90045864560903954" Multiline="true" Dpi="254" Padding="5,5,0,0,254" Borders="Left, Right">
+                      <StylePriority Ref="271" UsePadding="false" />
+                    </Item3>
+                  </Cells>
+                </Item2>
+              </Rows>
+            </Item1>
+            <Item2 Ref="272" ControlType="XRTable" Name="table4" SizeF="1964.99927,2190.751" LocationFloat="0, 406.895874" Dpi="254">
+              <Rows>
+                <Item1 Ref="273" ControlType="XRTableRow" Name="tableRow4" Weight="1" Dpi="254" Borders="Left, Right, Bottom">
+                  <Cells>
+                    <Item1 Ref="274" ControlType="XRTableCell" Name="tableCell3" Weight="0.62966265711189373" Multiline="true" Text="1" TextAlignment="MiddleCenter" Dpi="254" Font="Times New Roman, 9.75pt" Padding="5,5,0,0,254">
+                      <StylePriority Ref="275" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="276" ControlType="XRTableCell" Name="tableCell4" Weight="1.174098386528166" Multiline="true" Dpi="254" Padding="5,5,0,0,254" />
+                    <Item3 Ref="277" ControlType="XRTableCell" Name="tableCell5" Weight="1.1528882234967237" Multiline="true" Dpi="254" Padding="5,5,0,0,254" />
+                    <Item4 Ref="278" ControlType="XRTableCell" Name="tableCell6" Weight="1.1906351892252067" Multiline="true" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="279" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="280" ControlType="XRTableCell" Name="tableCell7" Weight="0.92730971871386414" Multiline="true" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="281" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="282" ControlType="XRTableCell" Name="tableCell36" Weight="0.94290993773231424" Multiline="true" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="283" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="284" ControlType="XRTableCell" Name="tableCell37" Weight="0.92814153657321108" Multiline="true" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="285" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="286" ControlType="XRTableCell" Name="tableCell38" Weight="1.0326139227051736" Multiline="true" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="287" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="288" ControlType="XRTableCell" Name="tableCell39" Weight="0.96922768569386331" Multiline="true" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="289" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="290" ControlType="XRTableCell" Name="tableCell40" Weight="1.6654106776091404" Multiline="true" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="291" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="292" ControlType="XRTableCell" Name="tableCell41" Weight="1.0061941155378236" Multiline="true" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="293" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="294" ControlType="XRTableCell" Name="tableCell42" Weight="0.85577984353127123" Multiline="true" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="295" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="296" ControlType="XRTableCell" Name="tableCell43" Weight="0.52512810554134814" Multiline="true" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="297" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="298" ControlType="XRTableRow" Name="tableRow5" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="299" ControlType="XRTableCell" Name="tableCell44" Weight="0.62966265711189373" Multiline="true" Text="2" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="300" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="301" ControlType="XRTableCell" Name="tableCell45" Weight="1.174098386528166" Multiline="true" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="302" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="303" ControlType="XRTableCell" Name="tableCell46" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="304" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="305" ControlType="XRTableCell" Name="tableCell47" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="306" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="307" ControlType="XRTableCell" Name="tableCell48" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="308" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="309" ControlType="XRTableCell" Name="tableCell49" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="310" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="311" ControlType="XRTableCell" Name="tableCell50" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="312" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="313" ControlType="XRTableCell" Name="tableCell51" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="314" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="315" ControlType="XRTableCell" Name="tableCell52" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="316" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="317" ControlType="XRTableCell" Name="tableCell53" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="318" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="319" ControlType="XRTableCell" Name="tableCell54" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="320" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="321" ControlType="XRTableCell" Name="tableCell55" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="322" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="323" ControlType="XRTableCell" Name="tableCell56" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="324" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item2>
+                <Item3 Ref="325" ControlType="XRTableRow" Name="tableRow6" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="326" ControlType="XRTableCell" Name="tableCell57" Weight="0.62966265711189373" Multiline="true" Text="3" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="327" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="328" ControlType="XRTableCell" Name="tableCell58" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="329" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="330" ControlType="XRTableCell" Name="tableCell59" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="331" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="332" ControlType="XRTableCell" Name="tableCell60" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="333" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="334" ControlType="XRTableCell" Name="tableCell61" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="335" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="336" ControlType="XRTableCell" Name="tableCell62" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="337" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="338" ControlType="XRTableCell" Name="tableCell63" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="339" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="340" ControlType="XRTableCell" Name="tableCell64" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="341" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="342" ControlType="XRTableCell" Name="tableCell65" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="343" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="344" ControlType="XRTableCell" Name="tableCell66" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="345" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="346" ControlType="XRTableCell" Name="tableCell67" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="347" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="348" ControlType="XRTableCell" Name="tableCell68" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="349" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="350" ControlType="XRTableCell" Name="tableCell69" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="351" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item3>
+                <Item4 Ref="352" ControlType="XRTableRow" Name="tableRow7" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="353" ControlType="XRTableCell" Name="tableCell70" Weight="0.62966265711189373" Multiline="true" Text="4" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="354" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="355" ControlType="XRTableCell" Name="tableCell71" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="356" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="357" ControlType="XRTableCell" Name="tableCell72" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="358" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="359" ControlType="XRTableCell" Name="tableCell73" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="360" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="361" ControlType="XRTableCell" Name="tableCell74" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="362" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="363" ControlType="XRTableCell" Name="tableCell75" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="364" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="365" ControlType="XRTableCell" Name="tableCell76" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="366" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="367" ControlType="XRTableCell" Name="tableCell77" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="368" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="369" ControlType="XRTableCell" Name="tableCell78" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="370" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="371" ControlType="XRTableCell" Name="tableCell79" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="372" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="373" ControlType="XRTableCell" Name="tableCell80" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="374" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="375" ControlType="XRTableCell" Name="tableCell81" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="376" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="377" ControlType="XRTableCell" Name="tableCell82" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="378" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item4>
+                <Item5 Ref="379" ControlType="XRTableRow" Name="tableRow8" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="380" ControlType="XRTableCell" Name="tableCell83" Weight="0.62966265711189373" Multiline="true" Text="5" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="381" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="382" ControlType="XRTableCell" Name="tableCell84" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="383" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="384" ControlType="XRTableCell" Name="tableCell85" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="385" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="386" ControlType="XRTableCell" Name="tableCell86" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="387" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="388" ControlType="XRTableCell" Name="tableCell87" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="389" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="390" ControlType="XRTableCell" Name="tableCell88" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="391" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="392" ControlType="XRTableCell" Name="tableCell89" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="393" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="394" ControlType="XRTableCell" Name="tableCell90" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="395" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="396" ControlType="XRTableCell" Name="tableCell91" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="397" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="398" ControlType="XRTableCell" Name="tableCell92" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="399" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="400" ControlType="XRTableCell" Name="tableCell93" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="401" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="402" ControlType="XRTableCell" Name="tableCell94" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="403" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="404" ControlType="XRTableCell" Name="tableCell95" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="405" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item5>
+                <Item6 Ref="406" ControlType="XRTableRow" Name="tableRow9" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="407" ControlType="XRTableCell" Name="tableCell96" Weight="0.62966265711189373" Multiline="true" Text="6" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="408" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="409" ControlType="XRTableCell" Name="tableCell97" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="410" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="411" ControlType="XRTableCell" Name="tableCell98" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="412" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="413" ControlType="XRTableCell" Name="tableCell99" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="414" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="415" ControlType="XRTableCell" Name="tableCell100" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="416" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="417" ControlType="XRTableCell" Name="tableCell101" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="418" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="419" ControlType="XRTableCell" Name="tableCell102" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="420" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="421" ControlType="XRTableCell" Name="tableCell103" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="422" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="423" ControlType="XRTableCell" Name="tableCell104" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="424" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="425" ControlType="XRTableCell" Name="tableCell105" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="426" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="427" ControlType="XRTableCell" Name="tableCell106" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="428" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="429" ControlType="XRTableCell" Name="tableCell107" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="430" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="431" ControlType="XRTableCell" Name="tableCell108" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="432" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item6>
+                <Item7 Ref="433" ControlType="XRTableRow" Name="tableRow10" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="434" ControlType="XRTableCell" Name="tableCell109" Weight="0.62966265711189373" Multiline="true" Text="7" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="435" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="436" ControlType="XRTableCell" Name="tableCell110" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="437" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="438" ControlType="XRTableCell" Name="tableCell111" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="439" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="440" ControlType="XRTableCell" Name="tableCell112" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="441" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="442" ControlType="XRTableCell" Name="tableCell113" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="443" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="444" ControlType="XRTableCell" Name="tableCell114" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="445" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="446" ControlType="XRTableCell" Name="tableCell115" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="447" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="448" ControlType="XRTableCell" Name="tableCell116" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="449" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="450" ControlType="XRTableCell" Name="tableCell117" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="451" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="452" ControlType="XRTableCell" Name="tableCell118" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="453" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="454" ControlType="XRTableCell" Name="tableCell119" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="455" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="456" ControlType="XRTableCell" Name="tableCell120" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="457" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="458" ControlType="XRTableCell" Name="tableCell121" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="459" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item7>
+                <Item8 Ref="460" ControlType="XRTableRow" Name="tableRow11" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="461" ControlType="XRTableCell" Name="tableCell122" Weight="0.62966265711189373" Multiline="true" Text="8" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="462" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="463" ControlType="XRTableCell" Name="tableCell123" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="464" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="465" ControlType="XRTableCell" Name="tableCell124" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="466" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="467" ControlType="XRTableCell" Name="tableCell125" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="468" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="469" ControlType="XRTableCell" Name="tableCell126" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="470" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="471" ControlType="XRTableCell" Name="tableCell127" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="472" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="473" ControlType="XRTableCell" Name="tableCell128" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="474" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="475" ControlType="XRTableCell" Name="tableCell129" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="476" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="477" ControlType="XRTableCell" Name="tableCell130" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="478" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="479" ControlType="XRTableCell" Name="tableCell131" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="480" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="481" ControlType="XRTableCell" Name="tableCell132" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="482" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="483" ControlType="XRTableCell" Name="tableCell133" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="484" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="485" ControlType="XRTableCell" Name="tableCell134" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="486" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item8>
+                <Item9 Ref="487" ControlType="XRTableRow" Name="tableRow12" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="488" ControlType="XRTableCell" Name="tableCell135" Weight="0.62966265711189373" Multiline="true" Text="9" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="489" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="490" ControlType="XRTableCell" Name="tableCell136" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="491" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="492" ControlType="XRTableCell" Name="tableCell137" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="493" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="494" ControlType="XRTableCell" Name="tableCell138" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="495" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="496" ControlType="XRTableCell" Name="tableCell139" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="497" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="498" ControlType="XRTableCell" Name="tableCell140" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="499" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="500" ControlType="XRTableCell" Name="tableCell141" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="501" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="502" ControlType="XRTableCell" Name="tableCell142" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="503" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="504" ControlType="XRTableCell" Name="tableCell143" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="505" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="506" ControlType="XRTableCell" Name="tableCell144" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="507" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="508" ControlType="XRTableCell" Name="tableCell145" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="509" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="510" ControlType="XRTableCell" Name="tableCell146" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="511" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="512" ControlType="XRTableCell" Name="tableCell147" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="513" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item9>
+                <Item10 Ref="514" ControlType="XRTableRow" Name="tableRow13" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="515" ControlType="XRTableCell" Name="tableCell148" Weight="0.62966265711189373" Multiline="true" Text="10" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="516" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="517" ControlType="XRTableCell" Name="tableCell149" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="518" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="519" ControlType="XRTableCell" Name="tableCell150" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="520" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="521" ControlType="XRTableCell" Name="tableCell151" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="522" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="523" ControlType="XRTableCell" Name="tableCell152" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="524" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="525" ControlType="XRTableCell" Name="tableCell153" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="526" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="527" ControlType="XRTableCell" Name="tableCell154" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="528" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="529" ControlType="XRTableCell" Name="tableCell155" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="530" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="531" ControlType="XRTableCell" Name="tableCell156" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="532" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="533" ControlType="XRTableCell" Name="tableCell157" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="534" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="535" ControlType="XRTableCell" Name="tableCell158" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="536" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="537" ControlType="XRTableCell" Name="tableCell159" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="538" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="539" ControlType="XRTableCell" Name="tableCell160" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="540" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item10>
+                <Item11 Ref="541" ControlType="XRTableRow" Name="tableRow14" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="542" ControlType="XRTableCell" Name="tableCell161" Weight="0.62966265711189373" Multiline="true" Text="11" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="543" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="544" ControlType="XRTableCell" Name="tableCell162" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="545" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="546" ControlType="XRTableCell" Name="tableCell163" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="547" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="548" ControlType="XRTableCell" Name="tableCell164" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="549" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="550" ControlType="XRTableCell" Name="tableCell165" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="551" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="552" ControlType="XRTableCell" Name="tableCell166" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="553" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="554" ControlType="XRTableCell" Name="tableCell167" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="555" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="556" ControlType="XRTableCell" Name="tableCell168" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="557" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="558" ControlType="XRTableCell" Name="tableCell169" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="559" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="560" ControlType="XRTableCell" Name="tableCell170" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="561" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="562" ControlType="XRTableCell" Name="tableCell171" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="563" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="564" ControlType="XRTableCell" Name="tableCell172" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="565" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="566" ControlType="XRTableCell" Name="tableCell173" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="567" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item11>
+                <Item12 Ref="568" ControlType="XRTableRow" Name="tableRow15" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="569" ControlType="XRTableCell" Name="tableCell174" Weight="0.62966265711189373" Multiline="true" Text="12" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="570" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="571" ControlType="XRTableCell" Name="tableCell175" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="572" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="573" ControlType="XRTableCell" Name="tableCell176" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="574" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="575" ControlType="XRTableCell" Name="tableCell177" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="576" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="577" ControlType="XRTableCell" Name="tableCell178" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="578" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="579" ControlType="XRTableCell" Name="tableCell179" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="580" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="581" ControlType="XRTableCell" Name="tableCell180" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="582" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="583" ControlType="XRTableCell" Name="tableCell181" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="584" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="585" ControlType="XRTableCell" Name="tableCell182" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="586" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="587" ControlType="XRTableCell" Name="tableCell183" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="588" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="589" ControlType="XRTableCell" Name="tableCell184" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="590" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="591" ControlType="XRTableCell" Name="tableCell185" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="592" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="593" ControlType="XRTableCell" Name="tableCell186" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="594" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item12>
+                <Item13 Ref="595" ControlType="XRTableRow" Name="tableRow16" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="596" ControlType="XRTableCell" Name="tableCell187" Weight="0.62966265711189373" Multiline="true" Text="13" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="597" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="598" ControlType="XRTableCell" Name="tableCell188" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="599" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="600" ControlType="XRTableCell" Name="tableCell189" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="601" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="602" ControlType="XRTableCell" Name="tableCell190" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="603" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="604" ControlType="XRTableCell" Name="tableCell191" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="605" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="606" ControlType="XRTableCell" Name="tableCell192" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="607" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="608" ControlType="XRTableCell" Name="tableCell193" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="609" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="610" ControlType="XRTableCell" Name="tableCell194" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="611" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="612" ControlType="XRTableCell" Name="tableCell195" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="613" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="614" ControlType="XRTableCell" Name="tableCell196" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="615" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="616" ControlType="XRTableCell" Name="tableCell197" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="617" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="618" ControlType="XRTableCell" Name="tableCell198" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="619" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="620" ControlType="XRTableCell" Name="tableCell199" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="621" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item13>
+                <Item14 Ref="622" ControlType="XRTableRow" Name="tableRow17" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="623" ControlType="XRTableCell" Name="tableCell200" Weight="0.62966265711189373" Multiline="true" Text="14" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="624" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="625" ControlType="XRTableCell" Name="tableCell201" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="626" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="627" ControlType="XRTableCell" Name="tableCell202" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="628" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="629" ControlType="XRTableCell" Name="tableCell203" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="630" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="631" ControlType="XRTableCell" Name="tableCell204" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="632" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="633" ControlType="XRTableCell" Name="tableCell205" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="634" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="635" ControlType="XRTableCell" Name="tableCell206" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="636" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="637" ControlType="XRTableCell" Name="tableCell207" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="638" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="639" ControlType="XRTableCell" Name="tableCell208" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="640" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="641" ControlType="XRTableCell" Name="tableCell209" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="642" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="643" ControlType="XRTableCell" Name="tableCell210" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="644" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="645" ControlType="XRTableCell" Name="tableCell211" Weight="0.85577984353127123" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="646" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="647" ControlType="XRTableCell" Name="tableCell212" Weight="0.52512810554134814" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="648" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item14>
+                <Item15 Ref="649" ControlType="XRTableRow" Name="tableRow18" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="650" ControlType="XRTableCell" Name="tableCell213" Weight="0.62966265711189373" Multiline="true" Text="15" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="651" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="652" ControlType="XRTableCell" Name="tableCell214" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="653" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="654" ControlType="XRTableCell" Name="tableCell215" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="655" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="656" ControlType="XRTableCell" Name="tableCell216" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="657" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="658" ControlType="XRTableCell" Name="tableCell217" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="659" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="660" ControlType="XRTableCell" Name="tableCell218" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="661" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="662" ControlType="XRTableCell" Name="tableCell219" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="663" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="664" ControlType="XRTableCell" Name="tableCell220" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="665" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="666" ControlType="XRTableCell" Name="tableCell221" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="667" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="668" ControlType="XRTableCell" Name="tableCell222" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="669" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="670" ControlType="XRTableCell" Name="tableCell223" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="671" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="672" ControlType="XRTableCell" Name="tableCell224" Weight="0.85770513846008967" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="673" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="674" ControlType="XRTableCell" Name="tableCell225" Weight="0.52320281061252971" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="675" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item15>
+                <Item16 Ref="676" ControlType="XRTableRow" Name="tableRow21" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="677" ControlType="XRTableCell" Name="tableCell16" Weight="0.62966265711189373" Multiline="true" Text="16" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="678" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="679" ControlType="XRTableCell" Name="tableCell27" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="680" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="681" ControlType="XRTableCell" Name="tableCell31" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="682" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="683" ControlType="XRTableCell" Name="tableCell32" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="684" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="685" ControlType="XRTableCell" Name="tableCell34" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="686" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="687" ControlType="XRTableCell" Name="tableCell35" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="688" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="689" ControlType="XRTableCell" Name="tableCell232" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="690" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="691" ControlType="XRTableCell" Name="tableCell233" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="692" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="693" ControlType="XRTableCell" Name="tableCell234" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="694" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="695" ControlType="XRTableCell" Name="tableCell235" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="696" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="697" ControlType="XRTableCell" Name="tableCell236" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="698" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="699" ControlType="XRTableCell" Name="tableCell237" Weight="0.85770513846008967" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="700" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="701" ControlType="XRTableCell" Name="tableCell238" Weight="0.52320281061252971" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="702" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item16>
+                <Item17 Ref="703" ControlType="XRTableRow" Name="tableRow22" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="704" ControlType="XRTableCell" Name="tableCell239" Weight="0.62966265711189373" Multiline="true" Text="17" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="705" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="706" ControlType="XRTableCell" Name="tableCell240" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="707" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="708" ControlType="XRTableCell" Name="tableCell241" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="709" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="710" ControlType="XRTableCell" Name="tableCell242" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="711" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="712" ControlType="XRTableCell" Name="tableCell243" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="713" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="714" ControlType="XRTableCell" Name="tableCell244" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="715" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="716" ControlType="XRTableCell" Name="tableCell245" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="717" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="718" ControlType="XRTableCell" Name="tableCell246" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="719" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="720" ControlType="XRTableCell" Name="tableCell247" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="721" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="722" ControlType="XRTableCell" Name="tableCell248" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="723" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="724" ControlType="XRTableCell" Name="tableCell249" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="725" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="726" ControlType="XRTableCell" Name="tableCell250" Weight="0.85770513846008967" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="727" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="728" ControlType="XRTableCell" Name="tableCell251" Weight="0.52320281061252971" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="729" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item17>
+                <Item18 Ref="730" ControlType="XRTableRow" Name="tableRow23" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="731" ControlType="XRTableCell" Name="tableCell252" Weight="0.62966265711189373" Multiline="true" Text="18" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="732" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="733" ControlType="XRTableCell" Name="tableCell253" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="734" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="735" ControlType="XRTableCell" Name="tableCell254" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="736" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="737" ControlType="XRTableCell" Name="tableCell255" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="738" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="739" ControlType="XRTableCell" Name="tableCell256" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="740" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="741" ControlType="XRTableCell" Name="tableCell257" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="742" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="743" ControlType="XRTableCell" Name="tableCell258" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="744" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="745" ControlType="XRTableCell" Name="tableCell259" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="746" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="747" ControlType="XRTableCell" Name="tableCell260" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="748" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="749" ControlType="XRTableCell" Name="tableCell261" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="750" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="751" ControlType="XRTableCell" Name="tableCell262" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="752" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="753" ControlType="XRTableCell" Name="tableCell263" Weight="0.85770513846008967" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="754" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="755" ControlType="XRTableCell" Name="tableCell264" Weight="0.52320281061252971" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="756" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item18>
+                <Item19 Ref="757" ControlType="XRTableRow" Name="tableRow24" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="758" ControlType="XRTableCell" Name="tableCell265" Weight="0.62966265711189373" Multiline="true" Text="19" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="759" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="760" ControlType="XRTableCell" Name="tableCell266" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="761" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="762" ControlType="XRTableCell" Name="tableCell267" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="763" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="764" ControlType="XRTableCell" Name="tableCell268" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="765" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="766" ControlType="XRTableCell" Name="tableCell269" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="767" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="768" ControlType="XRTableCell" Name="tableCell270" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="769" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="770" ControlType="XRTableCell" Name="tableCell271" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="771" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="772" ControlType="XRTableCell" Name="tableCell272" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="773" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="774" ControlType="XRTableCell" Name="tableCell273" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="775" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="776" ControlType="XRTableCell" Name="tableCell274" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="777" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="778" ControlType="XRTableCell" Name="tableCell275" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="779" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="780" ControlType="XRTableCell" Name="tableCell276" Weight="0.85770513846008967" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="781" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="782" ControlType="XRTableCell" Name="tableCell277" Weight="0.52320281061252971" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="783" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item19>
+                <Item20 Ref="784" ControlType="XRTableRow" Name="tableRow25" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="785" ControlType="XRTableCell" Name="tableCell278" Weight="0.62966265711189373" Multiline="true" Text="20" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="786" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="787" ControlType="XRTableCell" Name="tableCell279" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="788" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="789" ControlType="XRTableCell" Name="tableCell280" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="790" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="791" ControlType="XRTableCell" Name="tableCell281" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="792" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="793" ControlType="XRTableCell" Name="tableCell282" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="794" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="795" ControlType="XRTableCell" Name="tableCell283" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="796" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="797" ControlType="XRTableCell" Name="tableCell284" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="798" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="799" ControlType="XRTableCell" Name="tableCell285" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="800" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="801" ControlType="XRTableCell" Name="tableCell286" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="802" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="803" ControlType="XRTableCell" Name="tableCell287" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="804" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="805" ControlType="XRTableCell" Name="tableCell288" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="806" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="807" ControlType="XRTableCell" Name="tableCell289" Weight="0.85770513846008967" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="808" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="809" ControlType="XRTableCell" Name="tableCell290" Weight="0.52320281061252971" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="810" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item20>
+                <Item21 Ref="811" ControlType="XRTableRow" Name="tableRow26" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="812" ControlType="XRTableCell" Name="tableCell291" Weight="0.62966265711189373" Multiline="true" Text="21" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="813" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="814" ControlType="XRTableCell" Name="tableCell292" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="815" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="816" ControlType="XRTableCell" Name="tableCell293" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="817" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="818" ControlType="XRTableCell" Name="tableCell294" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="819" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="820" ControlType="XRTableCell" Name="tableCell295" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="821" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="822" ControlType="XRTableCell" Name="tableCell296" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="823" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="824" ControlType="XRTableCell" Name="tableCell297" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="825" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="826" ControlType="XRTableCell" Name="tableCell298" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="827" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="828" ControlType="XRTableCell" Name="tableCell299" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="829" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="830" ControlType="XRTableCell" Name="tableCell300" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="831" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="832" ControlType="XRTableCell" Name="tableCell301" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="833" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="834" ControlType="XRTableCell" Name="tableCell302" Weight="0.85770513846008967" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="835" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="836" ControlType="XRTableCell" Name="tableCell303" Weight="0.52320281061252971" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="837" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item21>
+                <Item22 Ref="838" ControlType="XRTableRow" Name="tableRow27" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="839" ControlType="XRTableCell" Name="tableCell304" Weight="0.62966265711189373" Multiline="true" Text="22" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="840" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="841" ControlType="XRTableCell" Name="tableCell305" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="842" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="843" ControlType="XRTableCell" Name="tableCell306" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="844" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="845" ControlType="XRTableCell" Name="tableCell307" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="846" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="847" ControlType="XRTableCell" Name="tableCell308" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="848" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="849" ControlType="XRTableCell" Name="tableCell309" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="850" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="851" ControlType="XRTableCell" Name="tableCell310" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="852" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="853" ControlType="XRTableCell" Name="tableCell311" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="854" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="855" ControlType="XRTableCell" Name="tableCell312" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="856" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="857" ControlType="XRTableCell" Name="tableCell313" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="858" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="859" ControlType="XRTableCell" Name="tableCell314" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="860" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="861" ControlType="XRTableCell" Name="tableCell315" Weight="0.85770513846008967" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="862" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="863" ControlType="XRTableCell" Name="tableCell316" Weight="0.52320281061252971" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="864" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item22>
+                <Item23 Ref="865" ControlType="XRTableRow" Name="tableRow28" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="866" ControlType="XRTableCell" Name="tableCell317" Weight="0.62966265711189373" Multiline="true" Text="23" TextAlignment="MiddleCenter" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="867" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="868" ControlType="XRTableCell" Name="tableCell318" Weight="1.174098386528166" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="869" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="870" ControlType="XRTableCell" Name="tableCell319" Weight="1.1528882234967237" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="871" UsePadding="false" />
+                    </Item3>
+                    <Item4 Ref="872" ControlType="XRTableCell" Name="tableCell320" Weight="1.1906351892252067" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="873" UsePadding="false" />
+                    </Item4>
+                    <Item5 Ref="874" ControlType="XRTableCell" Name="tableCell321" Weight="0.92730971871386414" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="875" UsePadding="false" />
+                    </Item5>
+                    <Item6 Ref="876" ControlType="XRTableCell" Name="tableCell322" Weight="0.94290993773231424" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="877" UsePadding="false" />
+                    </Item6>
+                    <Item7 Ref="878" ControlType="XRTableCell" Name="tableCell323" Weight="0.92814153657321108" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="879" UsePadding="false" />
+                    </Item7>
+                    <Item8 Ref="880" ControlType="XRTableCell" Name="tableCell324" Weight="1.0326139227051736" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="881" UsePadding="false" />
+                    </Item8>
+                    <Item9 Ref="882" ControlType="XRTableCell" Name="tableCell325" Weight="0.96922768569386331" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="883" UsePadding="false" />
+                    </Item9>
+                    <Item10 Ref="884" ControlType="XRTableCell" Name="tableCell326" Weight="1.6654106776091404" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="885" UsePadding="false" />
+                    </Item10>
+                    <Item11 Ref="886" ControlType="XRTableCell" Name="tableCell327" Weight="1.0061941155378236" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="887" UsePadding="false" />
+                    </Item11>
+                    <Item12 Ref="888" ControlType="XRTableCell" Name="tableCell328" Weight="0.85770513846008967" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="889" UsePadding="false" />
+                    </Item12>
+                    <Item13 Ref="890" ControlType="XRTableCell" Name="tableCell329" Weight="0.52320281061252971" Multiline="true" Text=" " Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="891" UsePadding="false" />
+                    </Item13>
+                  </Cells>
+                </Item23>
+              </Rows>
+            </Item2>
+            <Item3 Ref="892" ControlType="XRLabel" Name="label87" Text="비고            Ghi chú" TextAlignment="MiddleCenter" SizeF="79.0845947,168.770874" LocationFloat="1885.91528, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Top, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="893" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="894" ControlType="XRLabel" Name="label2" Text="처리결과              Kết quả xử lý" TextAlignment="MiddleCenter" SizeF="132.291016,168.770874" LocationFloat="1753.62427, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="All" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="895" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="896" ControlType="XRLabel" Name="label59" Multiline="true" Text="공정명      Tên công đoạn" TextAlignment="MiddleCenter" SizeF="177.47467,168.770874" LocationFloat="92.52514, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="897" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="898" ControlType="XRLabel" Name="label78" Text="발견일자         Ngày phát hiện" TextAlignment="MiddleCenter" SizeF="174.262878,168.770874" LocationFloat="269.999817, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="899" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item6>
+            <Item7 Ref="900" ControlType="XRLabel" Name="label79" Text="발견공정        Công đoạn phát hiện" TextAlignment="MiddleCenter" SizeF="179.970337,168.770874" LocationFloat="444.2627, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="901" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item7>
+            <Item8 Ref="902" ControlType="XRLabel" Name="label80" Text="불량수량         Số lượng lỗi        (PNL)" TextAlignment="MiddleCenter" SizeF="140.166382,168.770874" LocationFloat="624.233032, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="903" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item8>
+            <Item9 Ref="904" ControlType="XRLabel" Name="label81" Text="부적합 상세내역              Nội dung chi tiết khô" TextAlignment="MiddleCenter" SizeF="251.533447,168.770874" LocationFloat="1350.00061, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="905" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item9>
+            <Item10 Ref="906" ControlType="XRLabel" Name="label82" Text="부적합명           Tên không phù hợp" TextAlignment="MiddleCenter" SizeF="146.700073,168.770874" LocationFloat="1203.29993, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="907" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item10>
+            <Item11 Ref="908" ControlType="XRLabel" Name="label83" Text="불량율        Tỷ lệ lỗi        (%)" TextAlignment="MiddleCenter" SizeF="156.08374,168.770874" LocationFloat="1047.21606, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="909" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item11>
+            <Item12 Ref="910" ControlType="XRLabel" Name="label84" Text="불량수량            Số lượng lỗi            (PCS)" TextAlignment="MiddleCenter" SizeF="140.170044,168.770874" LocationFloat="907.046143, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="911" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item12>
+            <Item13 Ref="912" ControlType="XRLabel" Name="label85" Text="검사수량          Số lượng kiểm tra         (PCS)" TextAlignment="MiddleCenter" SizeF="142.646729,168.770874" LocationFloat="764.3994, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="913" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item13>
+            <Item14 Ref="914" ControlType="XRLabel" Name="label86" Text="불량사진              Ảnh lỗi" TextAlignment="MiddleCenter" SizeF="152.0907,168.770874" LocationFloat="1601.53333, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SALSEORDERNO">
+              <StylePriority Ref="915" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item14>
+            <Item15 Ref="916" ControlType="XRLabel" Name="lblNumber" Text="No" TextAlignment="MiddleCenter" WordWrap="false" SizeF="92.52507,168.770874" LocationFloat="0, 238.125" Dpi="254" Font="맑은 고딕, 7pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="NUMBER">
+              <StylePriority Ref="917" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item15>
+          </Controls>
+        </Item2>
+        <Item3 Ref="918" ControlType="ReportFooterBand" Name="NCRReportFooter" Expanded="false" HeightF="2" Dpi="254">
+          <Controls>
+            <Item1 Ref="919" ControlType="XRPageBreak" Name="pageBreak1" LocationFloat="0, 0" Dpi="254" />
+          </Controls>
+        </Item3>
+      </Bands>
+    </Item8>
+    <Item9 Ref="920" ControlType="DetailReportBand" Name="MaterialReport" Level="3" Expanded="false" PageBreak="AfterBand" Dpi="254">
+      <Bands>
+        <Item1 Ref="921" ControlType="DetailBand" Name="MaterialReportDetail" Expanded="false" HeightF="63.5" Dpi="254">
+          <Controls>
+            <Item1 Ref="922" ControlType="XRTable" Name="table3" SizeF="1965,63.5" LocationFloat="0, 0" Dpi="254" Borders="Top, Bottom">
+              <Rows>
+                <Item1 Ref="923" ControlType="XRTableRow" Name="tableRow3" Weight="1" TextAlignment="TopRight" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="924" ControlType="XRTableCell" Name="tableCell23" Weight="1.4971904115914181" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MATERIALID">
+                      <StylePriority Ref="925" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="926" ControlType="XRTableCell" Name="tableCell24" Weight="3.5175782542958065" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MATERIALNAME">
+                      <StylePriority Ref="927" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="928" ControlType="XRTableCell" Name="tableCell25" Weight="3.2321721076563485" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleRight" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SPEC">
+                      <StylePriority Ref="929" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="930" ControlType="XRTableCell" Name="tableCell26" Weight="1.2281505638416144" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleRight" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MAKER">
+                      <StylePriority Ref="931" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="932" ControlType="XRTableCell" Name="txtMaker" Weight="1.0284862250999931" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MATERIALTYPE">
+                      <StylePriority Ref="933" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="934" ControlType="XRTableCell" Name="tableCell28" Weight="0.56857383970437925" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USERSEQUENCE">
+                      <StylePriority Ref="935" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="936" ControlType="XRTableCell" Name="tableCell29" Weight="1.35579317798298" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleRight" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PROCESSSEGMENTNAME">
+                      <StylePriority Ref="937" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="938" ControlType="XRTableCell" Name="tableCell30" Weight="1.1139527329782251" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USELAYERNAME">
+                      <StylePriority Ref="939" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="940" ControlType="XRTableCell" Name="tableCell33" Weight="0.89364104572625325" Multiline="true" TextAlignment="MiddleRight" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="COMPONENTQTY">
+                      <StylePriority Ref="941" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item9>
+                  </Cells>
+                  <StylePriority Ref="942" UseTextAlignment="false" />
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="943" ControlType="ReportFooterBand" Name="MaterialReportFooter" HeightF="0" Dpi="254" />
+        <Item3 Ref="944" ControlType="GroupHeaderBand" Name="MaterialReportHeader" RepeatEveryPage="true" Expanded="false" HeightF="80.00009" Dpi="254">
+          <Controls>
+            <Item1 Ref="945" ControlType="XRLabel" Name="lblMaker" Text="제조사" TextAlignment="MiddleCenter" WordWrap="false" SizeF="167.178833,55" LocationFloat="1122.59326, 25.00009" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MEASURINGMANUFACTURER">
+              <StylePriority Ref="946" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="947" ControlType="XRLabel" Name="lblMaterialType2" Text="자재유형" TextAlignment="MiddleCenter" WordWrap="false" SizeF="139.9998,55" LocationFloat="1289.77209, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="MATERIALTYPE">
+              <StylePriority Ref="948" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="949" ControlType="XRLabel" Name="lblComponentItemName2" Text="자재명" TextAlignment="MiddleCenter" WordWrap="false" SizeF="478.821075,55" LocationFloat="203.801178, 25.0000076" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="COMPONENTITEMNAME">
+              <StylePriority Ref="950" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="951" ControlType="XRLabel" Name="lblUserLayer2" Text="사용층" TextAlignment="MiddleCenter" WordWrap="false" SizeF="151.633789,55" LocationFloat="1691.72168, 25.00009" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USERLAYER">
+              <StylePriority Ref="952" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="953" ControlType="XRLabel" Name="lblComponentItemId2" Text="자재코드" TextAlignment="MiddleCenter" WordWrap="false" SizeF="203.800125,55" LocationFloat="0.00100930536, 25.0000076" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="COMPONENTITEMID">
+              <StylePriority Ref="954" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="955" ControlType="XRLabel" Name="lblRequirementQty2" Text="소요량" TextAlignment="MiddleCenter" WordWrap="false" SizeF="121.645264,54.9999962" LocationFloat="1843.35547, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="All" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUIREMENTQTY">
+              <StylePriority Ref="956" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item6>
+            <Item7 Ref="957" ControlType="XRLabel" Name="lblSpec2" Text="규격" TextAlignment="MiddleCenter" WordWrap="false" SizeF="439.971069,54.9999962" LocationFloat="682.622253, 24.9998474" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SPEC">
+              <StylePriority Ref="958" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item7>
+            <Item8 Ref="959" ControlType="XRLabel" Name="lblSegmentSeq2" Text="공순" TextAlignment="MiddleCenter" WordWrap="false" SizeF="77.39575,55" LocationFloat="1429.772, 25.00009" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SEGMENTSEQ">
+              <StylePriority Ref="960" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item8>
+            <Item9 Ref="961" ControlType="XRLabel" Name="lblUseProcessSegment2" Text="사용공정" TextAlignment="MiddleCenter" WordWrap="false" SizeF="184.554077,55" LocationFloat="1507.16772, 25.00009" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USEPROCESSSEGMENT">
+              <StylePriority Ref="962" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item9>
+          </Controls>
+        </Item3>
+      </Bands>
+    </Item9>
+    <Item10 Ref="963" ControlType="DetailReportBand" Name="GoldPlatingSegmentSpecReport" Level="1" Expanded="false" Dpi="254">
+      <Bands>
+        <Item1 Ref="964" ControlType="DetailBand" Name="GoldPlatingSegmentSpecReportDetail" Expanded="false" HeightF="63.5" Dpi="254">
+          <Controls>
+            <Item1 Ref="965" ControlType="XRTable" Name="table1" SizeF="1965,63.5" LocationFloat="0, 0" Dpi="254" Borders="Top, Bottom">
+              <Rows>
+                <Item1 Ref="966" ControlType="XRTableRow" Name="tableRow1" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="967" ControlType="XRTableCell" Name="tableCell1" Weight="0.96474463933494059" Multiline="true" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="GOLDPLATINGSEGMENT">
+                      <StylePriority Ref="968" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="969" ControlType="XRTableCell" Name="tableCell2" Weight="0.96474575260442785" Multiline="true" Text="mm² / PNL" TextAlignment="MiddleCenter" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom">
+                      <StylePriority Ref="970" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="971" ControlType="XRTableCell" Name="txtAUValue" Weight="0.96474618078499974" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="AUVALUE">
+                      <StylePriority Ref="972" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="973" ControlType="XRTableCell" Name="txtWorkArea" Weight="0.96474566696831343" TextFormatString="{0:#,#}" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CSWORKAREA">
+                      <StylePriority Ref="974" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="975" ControlType="XRTableCell" Name="txtWorkArea2" Weight="0.9647460095127709" TextFormatString="{0:#,#}" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SSWORKAREA">
+                      <StylePriority Ref="976" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="977" ControlType="XRTableCell" Name="txtScrapArea" Weight="0.96474566696831343" TextFormatString="{0:#,#}" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CSSCRAPAREA">
+                      <StylePriority Ref="978" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="979" ControlType="XRTableCell" Name="txtScrapArea2" Weight="0.96474498187939817" TextFormatString="{0:#,#}" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SSSCRAPAREA">
+                      <StylePriority Ref="980" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="981" ControlType="XRTableCell" Name="tableCell8" Weight="0.96474566696831343" TextFormatString="{0:#,#}" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SUMWORKAREA">
+                      <StylePriority Ref="982" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="983" ControlType="XRTableCell" Name="tableCell9" Weight="0.964747037146144" TextFormatString="{0:#,#}" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SUMSCRAPAREA">
+                      <StylePriority Ref="984" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="985" ControlType="XRTableCell" Name="tableCell10" Weight="0.96474566696831321" TextFormatString="{0:#,#}" RightToLeft="Yes" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="TOTALAREA">
+                      <StylePriority Ref="986" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item10>
+                    <Item11 Ref="987" ControlType="XRTableCell" Name="tableCell11" Weight="1.3806108237197714" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Right, Bottom">
+                      <StylePriority Ref="988" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item11>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="989" ControlType="ReportHeaderBand" Name="GoldPlatingSegmentSpecReportHeader" Expanded="false" HeightF="77.62511" Dpi="254">
+          <Controls>
+            <Item1 Ref="990" ControlType="XRLabel" Name="lblRemark" Text="비고" TextAlignment="MiddleCenter" WordWrap="false" SizeF="245.9989,54.9998779" LocationFloat="1719.00049, 22.6251926" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="All" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REMARK">
+              <StylePriority Ref="991" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="992" ControlType="XRLabel" Name="lblCSScrapArea" Text="CS스크랩면적" TextAlignment="MiddleCenter" WordWrap="false" SizeF="171.90004,55" LocationFloat="859.500854, 22.62503" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CSSCRAPAREA">
+              <StylePriority Ref="993" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="994" ControlType="XRLabel" Name="lblSSScrapArea" Text="SS스크랩면적" TextAlignment="MiddleCenter" WordWrap="false" SizeF="171.90004,55" LocationFloat="1031.40088, 22.62503" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SSSCRAPAREA">
+              <StylePriority Ref="995" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="996" ControlType="XRLabel" Name="lblPlatedAreaSum" Text="도금면적합" TextAlignment="MiddleCenter" WordWrap="false" SizeF="171.90004,55" LocationFloat="1203.30042, 22.62503" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PLATEDAREASUM">
+              <StylePriority Ref="997" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="998" ControlType="XRLabel" Name="lblScrapAreaSum" Text="스크랩면적합" TextAlignment="MiddleCenter" WordWrap="false" SizeF="171.90004,55" LocationFloat="1375.20044, 22.62503" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SCRAPAREASUM">
+              <StylePriority Ref="999" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="1000" ControlType="XRLabel" Name="lblPlatedAreaTotalSum" Text="총 도금면적합" TextAlignment="MiddleCenter" WordWrap="false" SizeF="171.90004,55" LocationFloat="1547.10046, 22.62503" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PLATEDAREATOTALSUM">
+              <StylePriority Ref="1001" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item6>
+            <Item7 Ref="1002" ControlType="XRLabel" Name="lblSSPlatedArea" Text="SS도금면적" TextAlignment="MiddleCenter" WordWrap="false" SizeF="171.90004,55" LocationFloat="687.600769, 22.62503" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="SSPLATEDAREA">
+              <StylePriority Ref="1003" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item7>
+            <Item8 Ref="1004" ControlType="XRLabel" Name="lblAUvalue" Text="Au두께" TextAlignment="MiddleCenter" WordWrap="false" SizeF="171.90004,55" LocationFloat="343.800629, 22.62503" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="AUVALUE">
+              <StylePriority Ref="1005" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item8>
+            <Item9 Ref="1006" ControlType="XRLabel" Name="lblPlateUnit" Text="도금단위" TextAlignment="MiddleCenter" WordWrap="false" SizeF="171.90004,55" LocationFloat="171.900345, 22.62503" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PLATEUNIT">
+              <StylePriority Ref="1007" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item9>
+            <Item10 Ref="1008" ControlType="XRLabel" Name="lblCSPlatedArea" Text="CS도금면적" TextAlignment="MiddleCenter" WordWrap="false" SizeF="171.90004,55" LocationFloat="515.700867, 22.62503" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CSPLATEDAREA">
+              <StylePriority Ref="1009" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item10>
+            <Item11 Ref="1010" ControlType="XRLabel" Name="lblPlateType" Text="도금유형" TextAlignment="MiddleCenter" WordWrap="false" SizeF="171.90004,55" LocationFloat="0.00100930536, 22.62503" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PLATETYPE">
+              <StylePriority Ref="1011" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item11>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item10>
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="1012" Name="Style1" BorderStyle="Inset" Padding="0,0,0,0,254" StringFormat="Near;Near;0;None;Character;Default" />
+  </StyleSheet>
+</XtraReportsLayoutSerializer>

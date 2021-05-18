@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48EFE122-ACEB-4FBB-9F03-30866CBD035D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Micube.SmartMES.MaterialsManagement</RootNamespace>
+    <AssemblyName>Micube.SmartMES.MaterialsManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Data.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Diagram.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Printing.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraDiagram.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraLayout.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPrinting.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraReports.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.SmartControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.SmartControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Inventorymanagement\MaterialOutflowRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialOutflowRequest.Designer.cs">
+      <DependentUpon>MaterialOutflowRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialOtherGoodsReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialOtherGoodsReceipt.Designer.cs">
+      <DependentUpon>MaterialOtherGoodsReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialOtherGoodsIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialOtherGoodsIssue.Designer.cs">
+      <DependentUpon>MaterialOtherGoodsIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialGoodsMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialGoodsMovement.Designer.cs">
+      <DependentUpon>MaterialGoodsMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialInventoryAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialInventoryAdjustment.Designer.cs">
+      <DependentUpon>MaterialInventoryAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialGoodsReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialGoodsReturn.Designer.cs">
+      <DependentUpon>MaterialGoodsReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialCarryoverProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialCarryoverProcessing.Designer.cs">
+      <DependentUpon>MaterialCarryoverProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialInventorySplit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialInventorySplit.Designer.cs">
+      <DependentUpon>MaterialInventorySplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialreleaseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialreleaseHistory.Designer.cs">
+      <DependentUpon>MaterialreleaseHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialStocktaking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialStocktaking.designer.cs">
+      <DependentUpon>MaterialStocktaking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialSystemMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventorymanagement\MaterialSystemMovement.Designer.cs">
+      <DependentUpon>MaterialSystemMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\MaterialOtherGoodsReceiptPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\MaterialOtherGoodsReceiptPopup.Designer.cs">
+      <DependentUpon>MaterialOtherGoodsReceiptPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\MaterialOtherGoodsIssuePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\MaterialOtherGoodsIssuePopup.Designer.cs">
+      <DependentUpon>MaterialOtherGoodsIssuePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\MaterialGoodsMovementPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\MaterialGoodsMovementPopup.Designer.cs">
+      <DependentUpon>MaterialGoodsMovementPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\MaterialInventoryAdjustmentPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\MaterialInventoryAdjustmentPopup.Designer.cs">
+      <DependentUpon>MaterialInventoryAdjustmentPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\MaterialGoodsReturnPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\MaterialGoodsReturnPopup.Designer.cs">
+      <DependentUpon>MaterialGoodsReturnPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\MaterialInventorySplitPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\MaterialInventorySplitPopup.Designer.cs">
+      <DependentUpon>MaterialInventorySplitPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenceInformation\MatTypeReasonRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReferenceInformation\MatTypeReasonRegistration.Designer.cs">
+      <DependentUpon>MatTypeReasonRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenceInformation\MatInventoryPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReferenceInformation\MatInventoryPeriod.Designer.cs">
+      <DependentUpon>MatInventoryPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusInformation\MaterialStatusStatisticsBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusInformation\MaterialStatusStatisticsBrowse.Designer.cs">
+      <DependentUpon>MaterialStatusStatisticsBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusInformation\MaterialNeedQtyInquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusInformation\MaterialNeedQtyInquiry.Designer.cs">
+      <DependentUpon>MaterialNeedQtyInquiry.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Inventorymanagement\MaterialCarryoverProcessing.resx">
+      <DependentUpon>MaterialCarryoverProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventorymanagement\MaterialGoodsMovement.resx">
+      <DependentUpon>MaterialGoodsMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventorymanagement\MaterialGoodsReturn.resx">
+      <DependentUpon>MaterialGoodsReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventorymanagement\MaterialInventoryAdjustment.resx">
+      <DependentUpon>MaterialInventoryAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventorymanagement\MaterialInventorySplit.resx">
+      <DependentUpon>MaterialInventorySplit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventorymanagement\MaterialOtherGoodsIssue.resx">
+      <DependentUpon>MaterialOtherGoodsIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventorymanagement\MaterialOtherGoodsReceipt.resx">
+      <DependentUpon>MaterialOtherGoodsReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventorymanagement\MaterialOutflowRequest.resx">
+      <DependentUpon>MaterialOutflowRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventorymanagement\MaterialreleaseHistory.resx">
+      <DependentUpon>MaterialreleaseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventorymanagement\MaterialStocktaking.resx">
+      <DependentUpon>MaterialStocktaking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventorymanagement\MaterialSystemMovement.resx">
+      <DependentUpon>MaterialSystemMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\MaterialGoodsMovementPopup.resx">
+      <DependentUpon>MaterialGoodsMovementPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\MaterialGoodsReturnPopup.resx">
+      <DependentUpon>MaterialGoodsReturnPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\MaterialInventoryAdjustmentPopup.resx">
+      <DependentUpon>MaterialInventoryAdjustmentPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\MaterialInventorySplitPopup.resx">
+      <DependentUpon>MaterialInventorySplitPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\MaterialOtherGoodsIssuePopup.resx">
+      <DependentUpon>MaterialOtherGoodsIssuePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\MaterialOtherGoodsReceiptPopup.resx">
+      <DependentUpon>MaterialOtherGoodsReceiptPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ReferenceInformation\MatInventoryPeriod.resx">
+      <DependentUpon>MatInventoryPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReferenceInformation\MatTypeReasonRegistration.resx">
+      <DependentUpon>MatTypeReasonRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusInformation\MaterialNeedQtyInquiry.resx">
+      <DependentUpon>MaterialNeedQtyInquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusInformation\MaterialStatusStatisticsBrowse.resx">
+      <DependentUpon>MaterialStatusStatisticsBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCsm\RequestConsumableRelease.repx" />
+    <EmbeddedResource Include="ReportCsm\MaterialStocktakingList.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.Controls\Micube.SmartMES.Commons.Controls.csproj">
+      <Project>{6c8616d8-4620-477e-a1ac-2a02a94d4984}</Project>
+      <Name>Micube.SmartMES.Commons.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons\Micube.SmartMES.Commons.csproj">
+      <Project>{1b6a2eb9-f134-49fc-80fa-982418d6490f}</Project>
+      <Name>Micube.SmartMES.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

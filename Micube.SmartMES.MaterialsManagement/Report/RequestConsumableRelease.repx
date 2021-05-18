@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="18.1.5.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" SnappingMode="SnapToGridAndSnapLines" Margins="53, 54, 90, 59" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="18.1">
+  <Bands>
+    <Item1 Ref="1" ControlType="TopMarginBand" Name="TopMargin" HeightF="90" />
+    <Item2 Ref="2" ControlType="DetailBand" Name="Detail" HeightF="0" />
+    <Item3 Ref="3" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="59" />
+    <Item4 Ref="4" ControlType="DetailReportBand" Name="DetailReport" Level="0">
+      <Bands>
+        <Item1 Ref="5" ControlType="DetailBand" Name="Detail1" HeightF="35.4">
+          <Controls>
+            <Item1 Ref="6" ControlType="XRTable" Name="table4" SizeF="719,35.4" LocationFloat="0, 0" Borders="All">
+              <Rows>
+                <Item1 Ref="7" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+                  <Cells>
+                    <Item1 Ref="8" ControlType="XRTableCell" Name="tbcSeq1" Weight="0.54139715681101386" Multiline="true" Text="1" TextAlignment="MiddleCenter" Font="맑은 고딕, 9pt" BackColor="Transparent" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTSEQUENCE">
+                      <StylePriority Ref="9" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="10" ControlType="XRTableCell" Name="tbcItemCode1" Weight="1.3555593639951231" Multiline="true" Text="5010000615" TextAlignment="MiddleLeft" Font="맑은 고딕, 9pt" BackColor="Transparent" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CONSUMABLEDEFID">
+                      <StylePriority Ref="11" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="12" ControlType="XRTableCell" Name="tbcItemName1" Weight="3.6878379741415115" Multiline="true" Text="DSF-600 122512R(P)500(NC)[500mm*100M]" TextAlignment="MiddleLeft" Font="맑은 고딕, 9pt" BackColor="Transparent" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CONSUMABLEDEFNAME">
+                      <StylePriority Ref="13" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="14" ControlType="XRTableCell" Name="tbcUnit1" Weight="0.75905813251040266" Multiline="true" Text="M" TextAlignment="MiddleCenter" Font="맑은 고딕, 9pt" BackColor="Transparent" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="UNIT">
+                      <StylePriority Ref="15" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="16" ControlType="XRTableCell" Name="tbcLotId1" Weight="2.3860047495825767" Multiline="true" Text="190916F002-0-BA01-001-000" TextAlignment="MiddleLeft" Font="맑은 고딕, 9pt" BackColor="Transparent" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LOTID">
+                      <StylePriority Ref="17" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="18" ControlType="XRTableCell" Name="tbcQty1" Weight="1.1888698026872306" Multiline="true" Text="12,235" TextAlignment="MiddleRight" Font="맑은 고딕, 9pt" BackColor="Transparent" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTQTY">
+                      <StylePriority Ref="19" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item6>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="20" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="21" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="147.900024">
+          <Controls>
+            <Item1 Ref="22" ControlType="XRBarCode" Name="barProductDefIdVersion" AutoModule="true" TextAlignment="BottomCenter" ShowText="false" SizeF="190,23.6" LocationFloat="530.000061, 1" Font="Times New Roman, 8pt" Padding="0,0,3,2,100" Borders="None" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTNO">
+              <Symbology Ref="23" Name="Code39" WideNarrowRatio="3" CalcCheckSum="false" />
+              <StylePriority Ref="24" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="25" ControlType="XRLabel" Name="lblTopRptType" Text="(회수용)" TextAlignment="TopCenter" WordWrap="false" SizeF="262.699951,23.5000038" LocationFloat="241.9, 34" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top" BorderWidth="0">
+              <StylePriority Ref="26" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="27" ControlType="XRLabel" Name="txtTopReleaseDate" TextAlignment="MiddleCenter" WordWrap="false" SizeF="161.4,27.5" LocationFloat="343.35, 84.00001" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" BorderWidth="1" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="RELEASEDATE">
+              <StylePriority Ref="28" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="29" ControlType="XRLabel" Name="txtTopRequestDate" TextAlignment="MiddleCenter" WordWrap="false" SizeF="161.4,27.5" LocationFloat="343.199951, 56.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" BorderWidth="1" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTDATE">
+              <StylePriority Ref="30" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="31" ControlType="XRLabel" Name="lblTopReleaseDate" Text="발행일자" TextAlignment="MiddleCenter" WordWrap="false" SizeF="102.3,27.5" LocationFloat="241.899979, 83.9999847" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" BorderWidth="1">
+              <StylePriority Ref="32" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="33" ControlType="XRLabel" Name="lblTopRequestDate" Text="청구일자" TextAlignment="MiddleCenter" WordWrap="false" SizeF="102.3,27.5" LocationFloat="241.899979, 56.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" BorderWidth="1">
+              <StylePriority Ref="34" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item6>
+            <Item7 Ref="35" ControlType="XRLabel" Name="lblTopTitle" Text="자재 청구[불출] 전표" TextAlignment="BottomCenter" WordWrap="false" SizeF="262.849976,29.9999866" LocationFloat="241.899979, 4" Font="맑은 고딕, 18pt" Padding="0,0,0,0,100" Borders="Left, Top" BorderWidth="0">
+              <StylePriority Ref="36" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item7>
+            <Item8 Ref="37" ControlType="XRLabel" Name="lblTopRequestType" Text="청구구분" TextAlignment="MiddleCenter" WordWrap="false" SizeF="66.9,27.5" LocationFloat="0, 30.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top">
+              <StylePriority Ref="38" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item8>
+            <Item9 Ref="39" ControlType="XRLabel" Name="txtTopRequestType" TextAlignment="MiddleCenter" WordWrap="false" SizeF="157.4,27.5" LocationFloat="65.8999939, 30.5000057" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" BorderColor="Black" Borders="Left, Top, Right" BorderWidth="1" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTTYPE">
+              <StylePriority Ref="40" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item9>
+            <Item10 Ref="41" ControlType="XRLabel" Name="lblTopRequestTeam" Text="청구부서" TextAlignment="MiddleCenter" WordWrap="false" SizeF="66.9,27.5" LocationFloat="0, 56.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top">
+              <StylePriority Ref="42" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item10>
+            <Item11 Ref="43" ControlType="XRLabel" Name="txtTopRequestTeam" TextAlignment="MiddleCenter" WordWrap="false" SizeF="157.4,27.5" LocationFloat="65.8999939, 56.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTDEPARTMENT">
+              <StylePriority Ref="44" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item11>
+            <Item12 Ref="45" ControlType="XRLabel" Name="lblTopRequestNo" Text="청구번호" TextAlignment="MiddleCenter" WordWrap="false" SizeF="66.9,27.5" LocationFloat="0, 84" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Bottom">
+              <StylePriority Ref="46" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item12>
+            <Item13 Ref="47" ControlType="XRLabel" Name="txtTopRequestNo" TextAlignment="MiddleCenter" WordWrap="false" SizeF="157.4,27.5" LocationFloat="65.8999939, 83.99999" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTNO">
+              <StylePriority Ref="48" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item13>
+            <Item14 Ref="49" ControlType="XRLabel" Name="txtTopMaster" TextAlignment="MiddleRight" WordWrap="false" SizeF="59,59" LocationFloat="660.5, 52.4999962" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" BorderWidth="1">
+              <StylePriority Ref="50" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item14>
+            <Item15 Ref="51" ControlType="XRLabel" Name="txtTopTeamMaster" TextAlignment="MiddleRight" WordWrap="false" SizeF="59,59" LocationFloat="603, 52.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Bottom" BorderWidth="1">
+              <StylePriority Ref="52" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item15>
+            <Item16 Ref="53" ControlType="XRLabel" Name="txtTopManager" TextAlignment="MiddleRight" WordWrap="false" SizeF="59,59" LocationFloat="545, 52.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" BorderWidth="1">
+              <StylePriority Ref="54" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item16>
+            <Item17 Ref="55" ControlType="XRLabel" Name="lblTopMaster" Text="임 원" TextAlignment="MiddleCenter" WordWrap="false" SizeF="59,27.5" LocationFloat="660.5, 24.9999924" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" BorderWidth="1">
+              <StylePriority Ref="56" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item17>
+            <Item18 Ref="57" ControlType="XRLabel" Name="lblTopTeamMaster" Text="부문장" TextAlignment="MiddleCenter" WordWrap="false" SizeF="59,27.5" LocationFloat="603, 24.9999676" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top" BorderWidth="1">
+              <StylePriority Ref="58" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item18>
+            <Item19 Ref="59" ControlType="XRLabel" Name="lblTopManager" Text="담 당" TextAlignment="MiddleCenter" WordWrap="false" SizeF="59,27.5" LocationFloat="545, 25" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" BorderWidth="1">
+              <StylePriority Ref="60" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item19>
+            <Item20 Ref="61" ControlType="XRTable" Name="table3" SizeF="719,35.40001" LocationFloat="0, 112.500015" Borders="All">
+              <Rows>
+                <Item1 Ref="62" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+                  <Cells>
+                    <Item1 Ref="63" ControlType="XRTableCell" Name="tbcTopSeq" Weight="0.62375538670538477" Multiline="true" Text="SEQ" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="0,0,0,0,100" Borders="All">
+                      <StylePriority Ref="64" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="65" ControlType="XRTableCell" Name="tbcTopItemCode" Weight="1.5617691548021357" Multiline="true" Text="자재CODE" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="66" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="67" ControlType="XRTableCell" Name="tbcTopItemName" Weight="4.2488376667888836" Multiline="true" Text="품 명" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="68" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="69" ControlType="XRTableCell" Name="tbcTopUnit" Weight="0.87452720881195956" Multiline="true" Text="단위" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="70" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="71" ControlType="XRTableCell" Name="tbcTopLotId" Weight="2.7489677260719421" Multiline="true" Text="청구근거" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="72" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="73" ControlType="XRTableCell" Name="tbcTopQty" Weight="1.3697206450791877" Multiline="true" Text="청 구 량" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="74" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item6>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="75" UseBorders="false" />
+            </Item20>
+            <Item21 Ref="76" ControlType="XRLabel" Name="lblTopRequestUser" Text="청구자" TextAlignment="MiddleCenter" WordWrap="false" SizeF="66.9,27.5" LocationFloat="0, 4" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top">
+              <StylePriority Ref="77" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item21>
+            <Item22 Ref="78" ControlType="XRLabel" Name="txtTopRequestUser" TextAlignment="MiddleCenter" WordWrap="false" SizeF="157.4,27.5" LocationFloat="65.8999939, 4" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTUSER">
+              <StylePriority Ref="79" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item22>
+            <Item23 Ref="80" ControlType="XRLabel" Name="lblTopEmpty6" Multiline="true" Text="확&#xD;&#xA;&#xD;&#xA;인" TextAlignment="MiddleCenter" SizeF="23.5999756,86.5000153" LocationFloat="522.5, 25" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" BorderWidth="1">
+              <StylePriority Ref="81" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item23>
+          </Controls>
+        </Item2>
+        <Item3 Ref="82" ControlType="GroupFooterBand" Name="GroupFooter1" Expanded="false" HeightF="49.89314">
+          <Controls>
+            <Item1 Ref="83" ControlType="XRLine" Name="line1" LineWidth="1.1" LineStyle="Dash" SizeF="718.7083,5.210001" LocationFloat="1.29171515, 5.208333" BorderWidth="2" BorderDashStyle="Dash" />
+          </Controls>
+        </Item3>
+      </Bands>
+    </Item4>
+    <Item5 Ref="84" ControlType="DetailReportBand" Name="DetailReport1" Level="1">
+      <Bands>
+        <Item1 Ref="85" ControlType="DetailBand" Name="Detail2" HeightF="35.4">
+          <Controls>
+            <Item1 Ref="86" ControlType="XRTable" Name="table2" SizeF="719,35.4" LocationFloat="0, 0" Borders="All">
+              <Rows>
+                <Item1 Ref="87" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+                  <Cells>
+                    <Item1 Ref="88" ControlType="XRTableCell" Name="tbcSeq2" Weight="0.51680370373929441" Multiline="true" Text="1" TextAlignment="MiddleCenter" Font="맑은 고딕, 9pt" BackColor="White" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTSEQUENCE">
+                      <StylePriority Ref="89" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="90" ControlType="XRTableCell" Name="tbcItemCode2" Weight="1.3781896333554713" Multiline="true" Text="5010000615" TextAlignment="MiddleLeft" Font="맑은 고딕, 9pt" BackColor="Transparent" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CONSUMABLEDEFID">
+                      <StylePriority Ref="91" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="92" ControlType="XRTableCell" Name="tbcItemName2" Weight="3.6177648586200477" Multiline="true" Text="DSF-600 122512R(P)500(NC)[500mm*100M]" TextAlignment="MiddleLeft" Font="맑은 고딕, 9pt" BackColor="Transparent" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="CONSUMABLEDEFNAME">
+                      <StylePriority Ref="93" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="94" ControlType="XRTableCell" Name="tbcUnit2" Weight="0.68902524412175437" Multiline="true" Text="M" TextAlignment="MiddleCenter" Font="맑은 고딕, 9pt" BackColor="Transparent" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="UNIT">
+                      <StylePriority Ref="95" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="96" ControlType="XRTableCell" Name="tbcLotId2" Weight="2.5841574814465704" Multiline="true" Text="190916F002-0-BA01-001-000" TextAlignment="MiddleLeft" Font="맑은 고딕, 9pt" BackColor="Transparent" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LOTID">
+                      <StylePriority Ref="97" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="98" ControlType="XRTableCell" Name="tbcQty2" Weight="1.2162627475204857" Multiline="true" Text="12,235" TextAlignment="MiddleRight" Font="맑은 고딕, 9pt" BackColor="Transparent" Padding="2,2,0,0,100" Borders="Left, Right, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTQTY">
+                      <StylePriority Ref="99" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item6>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="100" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="101" ControlType="GroupHeaderBand" Name="GroupHeader2" HeightF="147.9">
+          <Controls>
+            <Item1 Ref="102" ControlType="XRBarCode" Name="barCode1" AutoModule="true" TextAlignment="BottomCenter" ShowText="false" SizeF="190,23.6" LocationFloat="530, 1" Font="Times New Roman, 8pt" Padding="0,0,3,2,100" Borders="None" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTNO">
+              <Symbology Ref="103" Name="Code39" WideNarrowRatio="3" CalcCheckSum="false" />
+              <StylePriority Ref="104" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="105" ControlType="XRLabel" Name="lblBtmTitle" Text="자재 청구[불출] 전표" TextAlignment="BottomCenter" WordWrap="false" SizeF="262.85,30" LocationFloat="241.9, 4" Font="맑은 고딕, 18pt" Padding="0,0,0,0,100" Borders="Left, Top" BorderWidth="0">
+              <StylePriority Ref="106" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="107" ControlType="XRLabel" Name="lblBtmRptType" Text="(불출용)" TextAlignment="TopCenter" WordWrap="false" SizeF="262.7,23.5" LocationFloat="241.9, 34" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top" BorderWidth="0">
+              <StylePriority Ref="108" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="109" ControlType="XRLabel" Name="lblBtmEmtpy6" Multiline="true" Text="확&#xD;&#xA;&#xD;&#xA;인" TextAlignment="MiddleCenter" SizeF="23.6,86.5" LocationFloat="522.5, 25" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" BorderWidth="1">
+              <StylePriority Ref="110" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="111" ControlType="XRLabel" Name="txtBtmRequestDate" TextAlignment="MiddleCenter" WordWrap="false" SizeF="161.4,27.5" LocationFloat="343.2, 56.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" BorderWidth="1" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTDATE">
+              <StylePriority Ref="112" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="113" ControlType="XRLabel" Name="txtBtmReleaseDate" TextAlignment="MiddleCenter" WordWrap="false" SizeF="161.4,27.5" LocationFloat="343.35, 84" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" BorderWidth="1" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="RELEASEDATE">
+              <StylePriority Ref="114" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item6>
+            <Item7 Ref="115" ControlType="XRLabel" Name="lblBtmRequestDate" Text="청구일자" TextAlignment="MiddleCenter" WordWrap="false" SizeF="102.3,27.5" LocationFloat="241.9, 56.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" BorderWidth="1">
+              <StylePriority Ref="116" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item7>
+            <Item8 Ref="117" ControlType="XRLabel" Name="lblBtmReleaseDate" Text="발행일자" TextAlignment="MiddleCenter" WordWrap="false" SizeF="102.3,27.5" LocationFloat="241.9, 84" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" BorderWidth="1">
+              <StylePriority Ref="118" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item8>
+            <Item9 Ref="119" ControlType="XRLabel" Name="txtBtmRequestTeam" TextAlignment="MiddleCenter" WordWrap="false" SizeF="157.4,27.5" LocationFloat="65.9, 56.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTDEPARTMENT">
+              <StylePriority Ref="120" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item9>
+            <Item10 Ref="121" ControlType="XRLabel" Name="lblBtmRequestTeam" Text="청구부서" TextAlignment="MiddleCenter" WordWrap="false" SizeF="66.9,27.5" LocationFloat="0, 56.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top">
+              <StylePriority Ref="122" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item10>
+            <Item11 Ref="123" ControlType="XRLabel" Name="txtBtmRequestType" TextAlignment="MiddleCenter" WordWrap="false" SizeF="157.4,27.5" LocationFloat="65.9, 30.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTTYPE">
+              <StylePriority Ref="124" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item11>
+            <Item12 Ref="125" ControlType="XRLabel" Name="lblBtmRequestType" Text="청구구분" TextAlignment="MiddleCenter" WordWrap="false" SizeF="66.9,27.5" LocationFloat="0, 30.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top">
+              <StylePriority Ref="126" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item12>
+            <Item13 Ref="127" ControlType="XRLabel" Name="txtBtmRequestUser" TextAlignment="MiddleCenter" WordWrap="false" SizeF="157.4,27.5" LocationFloat="65.8999939, 3.999992" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTUSER">
+              <StylePriority Ref="128" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item13>
+            <Item14 Ref="129" ControlType="XRLabel" Name="lblBtmRequestUser" Text="청구자" TextAlignment="MiddleCenter" WordWrap="false" SizeF="66.9,27.5" LocationFloat="0, 3.999992" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top">
+              <StylePriority Ref="130" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item14>
+            <Item15 Ref="131" ControlType="XRTable" Name="table1" SizeF="719,35.4" LocationFloat="0, 112.5" Borders="All">
+              <Rows>
+                <Item1 Ref="132" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+                  <Cells>
+                    <Item1 Ref="133" ControlType="XRTableCell" Name="tbcBtmSeq" Weight="0.59046286923178082" Multiline="true" Text="SEQ" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="134" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="135" ControlType="XRTableCell" Name="tbcBtmItemCode" Weight="1.5745676308631214" Multiline="true" Text="자재CODE" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="136" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="137" ControlType="XRTableCell" Name="tbcBtmItemName" Weight="4.1332399722423192" Multiline="true" Text="품 명" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="138" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="139" ControlType="XRTableCell" Name="tbcBtmUnit" Weight="0.78728375960426455" Multiline="true" Text="단위" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="140" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="141" ControlType="XRTableCell" Name="tbcBtmLotId" Weight="2.9523144333509812" Multiline="true" Text="청구근거" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="142" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="143" ControlType="XRTableCell" Name="tbcBtmQty" Weight="1.3895549857867087" Multiline="true" Text="청 구 량" TextAlignment="MiddleCenter" Font="맑은 고딕, 11.25pt, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="144" UseFont="false" UseBackColor="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item6>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="145" UseBorders="false" />
+            </Item15>
+            <Item16 Ref="146" ControlType="XRLabel" Name="txtBtmRequestNo" TextAlignment="MiddleCenter" WordWrap="false" SizeF="157.4,27.5" LocationFloat="65.9, 84" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REQUESTNO">
+              <StylePriority Ref="147" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item16>
+            <Item17 Ref="148" ControlType="XRLabel" Name="lblBtmRequestNo" Text="청구번호" TextAlignment="MiddleCenter" WordWrap="false" SizeF="66.9,27.5" LocationFloat="0, 84" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Bottom">
+              <StylePriority Ref="149" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item17>
+            <Item18 Ref="150" ControlType="XRLabel" Name="lblBtmManager" Text="담 당" TextAlignment="MiddleCenter" WordWrap="false" SizeF="59,27.5" LocationFloat="545, 25" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" BorderWidth="1">
+              <StylePriority Ref="151" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item18>
+            <Item19 Ref="152" ControlType="XRLabel" Name="lblBtmTeamMaster" Text="부문장" TextAlignment="MiddleCenter" WordWrap="false" SizeF="59,27.5" LocationFloat="603, 25" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top" BorderWidth="1">
+              <StylePriority Ref="153" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item19>
+            <Item20 Ref="154" ControlType="XRLabel" Name="lblBtmMaster" Text="임 원" TextAlignment="MiddleCenter" WordWrap="false" SizeF="59,27.5" LocationFloat="660.5, 25" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Right" BorderWidth="1">
+              <StylePriority Ref="155" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item20>
+            <Item21 Ref="156" ControlType="XRLabel" Name="txtBtmManager" TextAlignment="MiddleRight" WordWrap="false" SizeF="59,59" LocationFloat="545, 52.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" BorderWidth="1">
+              <StylePriority Ref="157" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item21>
+            <Item22 Ref="158" ControlType="XRLabel" Name="txtBtmTeamMaster" TextAlignment="MiddleRight" WordWrap="false" SizeF="59,59" LocationFloat="603, 52.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="Left, Top, Bottom" BorderWidth="1">
+              <StylePriority Ref="159" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item22>
+            <Item23 Ref="160" ControlType="XRLabel" Name="txtBtmMaster" TextAlignment="MiddleRight" WordWrap="false" SizeF="59,59" LocationFloat="660.5, 52.5" Font="맑은 고딕, 10pt" Padding="0,0,0,0,100" Borders="All" BorderWidth="1">
+              <StylePriority Ref="161" UseFont="false" UsePadding="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+            </Item23>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item5>
+  </Bands>
+</XtraReportsLayoutSerializer>

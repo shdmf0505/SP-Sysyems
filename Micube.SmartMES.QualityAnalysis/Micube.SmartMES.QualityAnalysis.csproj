@@ -1,0 +1,2112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2ED54EEE-BD37-4DC6-92E9-D89EA81A0D90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Micube.SmartMES.QualityAnalysis</RootNamespace>
+    <AssemblyName>Micube.SmartMES.QualityAnalysis</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Analysis\DefectAnalysis.resx">
+      <DependentUpon>DefectAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\LOTAnalysis.resx">
+      <DependentUpon>LOTAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\Popup\LotViewPopup.resx">
+      <DependentUpon>LotViewPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\Popup\DaySelectPopup.resx">
+      <DependentUpon>DaySelectPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\Popup\LotSelectPopup.resx">
+      <DependentUpon>LotSelectPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\Popup\DefectSelectPopup.resx">
+      <DependentUpon>DefectSelectPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\UserControl\ucEquipmentLOT.resx">
+      <DependentUpon>ucEquipmentLOT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\UserControl\ucAreaEquipment.resx">
+      <DependentUpon>ucAreaEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\UserControl\ucDayYieldRate.resx">
+      <DependentUpon>ucDayYieldRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\UserControl\ucItemYieldRate.resx">
+      <DependentUpon>ucItemYieldRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\UserControl\ucLotYieldRate.resx">
+      <DependentUpon>ucLotYieldRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\UserControl\ucProcessArea.resx">
+      <DependentUpon>ucProcessArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\UserControl\ucProcessAreaGrid.resx">
+      <DependentUpon>ucProcessAreaGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\YieldStatus.resx">
+      <DependentUpon>YieldStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\CheckSheet\AOIDailyCheckSheet.resx">
+      <DependentUpon>AOIDailyCheckSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\CheckSheet\BBTDailyCheckSheet.resx">
+      <DependentUpon>BBTDailyCheckSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\CheckSheet\HoleAOIDailyCheckSheet.resx">
+      <DependentUpon>HoleAOIDailyCheckSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\ManualDefectRate\Popup\popupRecipeGroupList.resx">
+      <DependentUpon>popupRecipeGroupList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullList\MaterialsConnector.resx">
+      <DependentUpon>MaterialsConnector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullList\MaterialsShield.resx">
+      <DependentUpon>MaterialsShield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullList\MaterialsSIP.resx">
+      <DependentUpon>MaterialsSIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullList\OutIncomingDaily.resx">
+      <DependentUpon>OutIncomingDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullList\ProcessedGoods.resx">
+      <DependentUpon>ProcessedGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullList\TrayParkingMaterials.resx">
+      <DependentUpon>TrayParkingMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasureFormMgnt\MeasureFormManagement.resx">
+      <DependentUpon>MeasureFormManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutgoingMeasure\Popup\popupThreeDimensionMeasure.resx">
+      <DependentUpon>popupThreeDimensionMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutgoingMeasure\ThreeDimensionMeasureValueSearch.resx">
+      <DependentUpon>ThreeDimensionMeasureValueSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutgoingMeasure\FlatnessMeasureValueSearch.resx">
+      <DependentUpon>FlatnessMeasureValueSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutgoingMeasure\Popup\popupFlatnessMeasure.resx">
+      <DependentUpon>popupFlatnessMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutgoingMeasure\Popup\popupXRFMeasure.resx">
+      <DependentUpon>popupXRFMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutgoingMeasure\XRFMeasureValueSearch.resx">
+      <DependentUpon>XRFMeasureValueSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\FileProgressDialogPopup.resx">
+      <DependentUpon>FileProgressDialogPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\MeasureFormManagementPopup.resx">
+      <DependentUpon>MeasureFormManagementPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ReliaVerifiResultBBTPopup.resx">
+      <DependentUpon>ReliaVerifiResultBBTPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ReliaVerifiResultBBTAbnormalOccurrencePopup.resx">
+      <DependentUpon>ReliaVerifiResultBBTAbnormalOccurrencePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReliabilityVerification\ReliabilityVerificationAbnormalOccurrenceBBT.resx">
+      <DependentUpon>ReliabilityVerificationAbnormalOccurrenceBBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReliabilityVerification\ReliabilityVerificationRequestBBT.resx">
+      <DependentUpon>ReliabilityVerificationRequestBBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReliabilityVerification\ReliaVerifiResultBBT.resx">
+      <DependentUpon>ReliaVerifiResultBBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfFinishInspection\FinalInspectionResultInquiry.resx">
+      <DependentUpon>FinalInspectionResultInquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\Popup\SelectNextResourceShipmentPopup.resx">
+      <DependentUpon>SelectNextResourceShipmentPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\Popup\SelectResourcePopup.resx">
+      <DependentUpon>SelectResourcePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\Popup\SelectReworkRoutingShipToFinish.resx">
+      <DependentUpon>SelectReworkRoutingShipToFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\Popup\ShipmentInspExportPopup.resx">
+      <DependentUpon>ShipmentInspExportPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\Popup\ShipmentInspExportRegistPopup.resx">
+      <DependentUpon>ShipmentInspExportRegistPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\Popup\ShipmentInspMappingPopup.resx">
+      <DependentUpon>ShipmentInspMappingPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\Popup\StayReasonCode.resx">
+      <DependentUpon>StayReasonCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\ShipmentInspExport.resx">
+      <DependentUpon>ShipmentInspExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\ShipmentInspMapping.resx">
+      <DependentUpon>ShipmentInspMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullList\RawMaterials.resx">
+      <DependentUpon>RawMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullList\subMaterials.resx">
+      <DependentUpon>SubMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\BBTMultiVerificationResultControl.resx">
+      <DependentUpon>BBTMultiVerificationResultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ReqularMultiVerificationResultControl.resx">
+      <DependentUpon>ReqularMultiVerificationResultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\MultiVerificationResultControl.resx">
+      <DependentUpon>MultiVerificationResultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YieldDefect\AffectLot.resx">
+      <DependentUpon>AffectLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditMgnt\AuditManagementledger.resx">
+      <DependentUpon>AuditManagementledger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditMgnt\AuditSchedule.resx">
+      <DependentUpon>AuditSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePointMgnt\ChangePointManagement.resx">
+      <DependentUpon>ChangePointManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePointMgnt\popup\ChangePointRequestPopup.resx">
+      <DependentUpon>ChangePointRequestPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chemical\ChemicalAnalysisStatus.resx">
+      <DependentUpon>ChemicalAnalysisStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chemical\popup\ChemicalissuePopup.resx">
+      <DependentUpon>ChemicalissuePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\DefectMap\UserControl\ucTypeComparison.resx">
+      <DependentUpon>ucTypeComparison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\ManualDefectRate\DefectRateByRepair.resx">
+      <DependentUpon>DefectRateByRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\ManualDefectRate\Popup\popupLotListByPeriod.resx">
+      <DependentUpon>popupLotListByPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\ManualDefectRate\Popup\popupProductListByPeriod.resx">
+      <DependentUpon>popupProductListByPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\ManualDefectRate\UserControl\ucRateDefault.resx">
+      <DependentUpon>ucRateDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\ManualDefectRate\UserControl\ucRateEquipmentType.resx">
+      <DependentUpon>ucRateEquipmentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\ManualDefectRate\UserControl\ucRateGroup.resx">
+      <DependentUpon>ucRateGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\ManualDefectRate\UserControl\ucRateMain.resx">
+      <DependentUpon>ucRateMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\ClaimLotManagement.resx">
+      <DependentUpon>ClaimLotManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\DefectCancel.resx">
+      <DependentUpon>DefectCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\DefectCause.resx">
+      <DependentUpon>DefectCause.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\DefectAccept.resx">
+      <DependentUpon>DefectAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\DefectMergeAccept.resx">
+      <DependentUpon>DefectMergeAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\DefectStatusSearch.resx">
+      <DependentUpon>DefectStatusSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\Popup\AcceptCancelPopup.resx">
+      <DependentUpon>AcceptCancelPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\Popup\DefectCodeMakeup.resx">
+      <DependentUpon>DefectCodeMakeup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\Popup\DefectCodeTakeout.resx">
+      <DependentUpon>DefectCodeTakeout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\Popup\DefectLotDefectCodePopup.resx">
+      <DependentUpon>DefectLotDefectCodePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\Popup\DefectRoutingPathPopup.resx">
+      <DependentUpon>DefectRoutingPathPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\Popup\ReworkRoutingPopup.resx">
+      <DependentUpon>ReworkRoutingPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMgnt\Popup\DefectCancelRoutingPopup.resx">
+      <DependentUpon>DefectCancelRoutingPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtchingRate\EtchingRateSpecMgnt.resx">
+      <DependentUpon>EtchingRateSpecMgnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtchingRate\EtchingRateStandardMgnt.resx">
+      <DependentUpon>EtchingRateStandardMgnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtchingRate\Popup\EtchingRateMeasurePopup.resx">
+      <DependentUpon>EtchingRateMeasurePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtchingRate\Popup\EtchingRateReMeasurePopup.resx">
+      <DependentUpon>EtchingRateReMeasurePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtchingRate\Popup\popupSpecValue.resx">
+      <DependentUpon>popupSpecValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtchingRate\Popup\EtchingRateSpecDetailPopup.resx">
+      <DependentUpon>EtchingRateSpecDetailPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\Popup\SubassemblyImportInspectionResultPopup.resx">
+      <DependentUpon>SubassemblyImportInspectionResultPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\Popup\SubassemblyInspAbnormalOccurrencePopup.resx">
+      <DependentUpon>SubassemblyInspAbnormalOccurrencePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\ProcessImportInspAbnormalOccurrence.resx">
+      <DependentUpon>ProcessImportInspAbnormalOccurrence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\SubassemblyImportInspectionResult.resx">
+      <DependentUpon>SubassemblyImportInspectionResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InspectionMgnt\Inspection.resx">
+      <DependentUpon>Inspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InspectionMgnt\InspectionPaper.resx">
+      <DependentUpon>InspectionPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InspectionMgnt\InspectionGrade.resx">
+      <DependentUpon>InspectionGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InspectionMgnt\popup\InspectionGradeHistoryPopup.resx">
+      <DependentUpon>InspectionGradeHistoryPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InspectionMgnt\popup\InspectorPopup.resx">
+      <DependentUpon>InspectorPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\LOTAnalysisGrid.resx">
+      <DependentUpon>LOTAnalysisGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\MeasuringInstCalibrationPlan.resx">
+      <DependentUpon>MeasuringInstCalibrationPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\MeasuringInstRepair.resx">
+      <DependentUpon>MeasuringInstRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\MeasuringInstSearch.resx">
+      <DependentUpon>MeasuringInstSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\MeasuringInstRNR.resx">
+      <DependentUpon>MeasuringInstRNR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\MeasuringInstCalibration.resx">
+      <DependentUpon>MeasuringInstCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\Popup\MeasuringInstRepairPopup.resx">
+      <DependentUpon>MeasuringInstRepairPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\Popup\MeasuringInstRNRReportPopup.resx">
+      <DependentUpon>MeasuringInstRNRReportPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\Popup\MeasuringCardInformationReportPopup.resx">
+      <DependentUpon>MeasuringCardInformationReportPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\Popup\QualityAddFilesPopup.resx">
+      <DependentUpon>QualityAddFilesPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\Popup\QualityAddImagePopup.resx">
+      <DependentUpon>QualityAddImagePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\Popup\MeasuringCardInformationPopup.resx">
+      <DependentUpon>MeasuringCardInformationPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\Popup\QualityModifiyImagePopup.resx">
+      <DependentUpon>QualityModifiyImagePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasuringInstMgnt\Popup\SendMailApprovaPopup.resx">
+      <DependentUpon>SendMailApprovaPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\AffectLotPopup.resx">
+      <DependentUpon>AffectLotPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\AuditManageRegistQuarterPopup.resx">
+      <DependentUpon>AuditManageRegistQuarterPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\AuditManageRegistPopup.resx">
+      <DependentUpon>AuditManageRegistPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ManufacturingHistoryDataViewPopup.resx">
+      <DependentUpon>ManufacturingHistoryDataViewPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ProductionPriceRegistrationPopup.resx">
+      <DependentUpon>ProductionPriceRegistrationPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ManufacturingHistoryPopup.resx">
+      <DependentUpon>ManufacturingHistoryPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\Popup\RawMaterialImportInspectionAbnormalOccurrencePopup.resx">
+      <DependentUpon>RawMaterialImportInspectionAbnormalOccurrencePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ReliabilityVerificationConsumableRegularPopup.resx">
+      <DependentUpon>ReliabilityVerificationConsumableRegularPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ReliaVerifiResultNonRegularPopup.resx">
+      <DependentUpon>ReliaVerifiResultNonRegularPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ReliabilityVerificationRequestNonRegularPopup.resx">
+      <DependentUpon>ReliabilityVerificationRequestNonRegularPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ReliaVerifiResultNonRegularAbnormalOccurrencePopup.resx">
+      <DependentUpon>ReliaVerifiResultNonRegularAbnormalOccurrencePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ReliaVerifiResultRegularAbnormalOccurrencePopup.resx">
+      <DependentUpon>ReliaVerifiResultRegularAbnormalOccurrencePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ReReliaVerifiResultRegularPopup.resx">
+      <DependentUpon>ReReliaVerifiResultRegularPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ReliaVerifiResultRegularPopup.resx">
+      <DependentUpon>ReliaVerifiResultRegularPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ReReliabilityVerificationRequestRegularPopup.resx">
+      <DependentUpon>ReReliabilityVerificationRequestRegularPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ReliabilityVerificationRequestRegularPopup.resx">
+      <DependentUpon>ReliabilityVerificationRequestRegularPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\SecondOpinionPopup.resx">
+      <DependentUpon>SecondOpinionPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\SendMailPopup.resx">
+      <DependentUpon>SendMailPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chemical\Chemicalissue.resx">
+      <DependentUpon>Chemicalissue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chemical\ChemicalReanalysisRequest.resx">
+      <DependentUpon>ChemicalReanalysisRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chemical\ChemicalRegistration.resx">
+      <DependentUpon>ChemicalRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\DefectMap\DefectMapByItem.resx">
+      <DependentUpon>DefectMapByItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\DefectMap\DefectMapByLot.resx">
+      <DependentUpon>DefectMapByLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\ManualDefectRate\DefectRateByEquipmentType.resx">
+      <DependentUpon>DefectRateByEquipmentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\ManualDefectRate\DefectRateByLayer.resx">
+      <DependentUpon>DefectRateByLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\ManualDefectRate\Popup\popupGroupList.resx">
+      <DependentUpon>popupGroupList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\DefectMap\UserControl\ucDefectMapBasicForm.resx">
+      <DependentUpon>ucDefectMapBasicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\DefectMap\UserControl\ucBBTDiagram.resx">
+      <DependentUpon>ucBBTDiagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\DefectMap\UserControl\ucAOIDiagram.resx">
+      <DependentUpon>ucAOIDiagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefectMap\DefectMap\UserControl\ucLotDefetMap.resx">
+      <DependentUpon>ucLotDefetMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\RawMaterialImportInspectionAbnormalOccurrence.resx">
+      <DependentUpon>RawMaterialImportInspectionAbnormalOccurrence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\RawMaterialImportInspectionResult.resx">
+      <DependentUpon>RawMaterialImportInspectionResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\Popup\RawMaterialImportInspectionResultPopup.resx">
+      <DependentUpon>RawMaterialImportInspectionResultPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\ProcessImportInspectionRequest.resx">
+      <DependentUpon>ProcessImportInspectionRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\Popup\ProcessInspectionRequestLotPopup.resx">
+      <DependentUpon>ProcessInspectionRequestLotPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\ProcessImportInspectionResult.resx">
+      <DependentUpon>ProcessImportInspectionResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\Popup\ProcessImportInspectionResultPopup.resx">
+      <DependentUpon>ProcessImportInspectionResultPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\Popup\ProcessImportInspAbnormalOccurrencePopup.resx">
+      <DependentUpon>ProcessImportInspAbnormalOccurrencePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityCostAnalysis\AbnormalCostTotalStatus.resx">
+      <DependentUpon>AbnormalCostTotalStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityCostAnalysis\QCostStatus.resx">
+      <DependentUpon>QCostStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityCostAnalysis\WorkDefectPriceStatus.resx">
+      <DependentUpon>WorkDefectPriceStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualitySpecification\Popup\QualitySpecificationIssuePopup.resx">
+      <DependentUpon>QualitySpecificationIssuePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualitySpecification\QualitySpecificationIssue.resx">
+      <DependentUpon>QualitySpecificationIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReliabilityVerification\ReliabilityVerificationAbnormalOccurrenceNonRegular.resx">
+      <DependentUpon>ReliabilityVerificationAbnormalOccurrenceNonRegular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReliabilityVerification\ReliabilityVerificationAbnormalOccurrenceRegular.resx">
+      <DependentUpon>ReliabilityVerificationAbnormalOccurrenceRegular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReliabilityVerification\ReliabilityVerificationConsumableRegular.resx">
+      <DependentUpon>ReliabilityVerificationConsumableRegular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReliabilityVerification\ReliaVerifiResultNonRegular.resx">
+      <DependentUpon>ReliaVerifiResultNonRegular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReliabilityVerification\ReliabilityVerificationRequestNonRegular.resx">
+      <DependentUpon>ReliabilityVerificationRequestNonRegular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReliabilityVerification\ReliaVerifiResultRegular.resx">
+      <DependentUpon>ReliaVerifiResultRegular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\Popup\RawAssyImportInspectionResultPopup.resx">
+      <DependentUpon>RawAssyImportInspectionResultPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualitySpecification\Popup\popupMeasureValueRegistration.resx">
+      <DependentUpon>popupMeasureValueRegistration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualitySpecification\QualitySpecification.resx">
+      <DependentUpon>QualitySpecification.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReliabilityVerification\ReliabilityVerificationRequestRegular.resx">
+      <DependentUpon>ReliabilityVerificationRequestRegular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInspection\SubassemblyInspAbnormalOccurrence.resx">
+      <DependentUpon>SubassemblyInspAbnormalOccurrence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfFinishInspection\IndependentInspectionInputOutput.resx">
+      <DependentUpon>IndependentInspectionInputOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfFinishInspection\Popup\SelfFinishAOIInspAbnormalOccurrencePopup.resx">
+      <DependentUpon>SelfFinishAOIInspAbnormalOccurrencePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfFinishInspection\SelfFinishAOIInspAbnormalOccurrence.resx">
+      <DependentUpon>SelfFinishAOIInspAbnormalOccurrence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\Popup\ShipmentInspAbnormalOccurrencePopup.resx">
+      <DependentUpon>ShipmentInspAbnormalOccurrencePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\Popup\ShipmentInspMessagePopup.resx">
+      <DependentUpon>ShipmentInspMessagePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\Popup\ShipmentInspNCRPopup.resx">
+      <DependentUpon>ShipmentInspNCRPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\ShipmentInspAbnormalOccurrence.resx">
+      <DependentUpon>ShipmentInspAbnormalOccurrence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\ShipmentInspectionResult.resx">
+      <DependentUpon>ShipmentInspectionResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\ShipmentInspHistory.resx">
+      <DependentUpon>ShipmentInspHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\Popup\ShipmentInspHistoryPopup.resx">
+      <DependentUpon>ShipmentInspHistoryPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\ShipmentInspLRRModelList.resx">
+      <DependentUpon>ShipmentInspLRRModelList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentInspection\ShipmentInspLRRList.resx">
+      <DependentUpon>ShipmentInspLRRList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucLotInfo.resx">
+      <DependentUpon>ucLotInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucShipmentInspDefect.resx">
+      <DependentUpon>ucShipmentInspDefect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucShipmentInfo.resx">
+      <DependentUpon>ucShipmentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucProcessInspDefect.resx">
+      <DependentUpon>ucProcessInspDefect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\IssueRegistraionControl.resx">
+      <DependentUpon>IssueRegistraionControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ManufacturingHistoryControl.resx">
+      <DependentUpon>ManufacturingHistoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\NCRProgressControl.resx">
+      <DependentUpon>NCRProgressControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucLotMessageGrd.resx">
+      <DependentUpon>ucLotMessageGrd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucSelfImageControl.resx">
+      <DependentUpon>ucSelfImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\VerificationResultControl.resx">
+      <DependentUpon>VerificationResultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YieldDefect\AffectLotComputation.resx">
+      <DependentUpon>AffectLotComputation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YieldDefect\NonAdjRatio.resx">
+      <DependentUpon>NonAdjRatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YieldDefect\Popup\StatusByItemPopup.resx">
+      <DependentUpon>StatusByItemPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YieldDefect\Popup\StatusByTypePopup.resx">
+      <DependentUpon>StatusByTypePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YieldDefect\DefectStatusByProcessEquipment.resx">
+      <DependentUpon>DefectStatusByProcessEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YieldDefect\YieldDefectStatusByDefect.resx">
+      <DependentUpon>YieldDefectStatusByDefect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YieldDefect\YieldStatusByDaily.resx">
+      <DependentUpon>YieldStatusByDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YieldDefect\YieldDefectStatusByProductItem.resx">
+      <DependentUpon>YieldDefectStatusByProductItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YieldDefect\YieldDefectStatusByLOT.resx">
+      <DependentUpon>YieldDefectStatusByLOT.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analysis\DefectAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis\DefectAnalysis.Designer.cs">
+      <DependentUpon>DefectAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\LOTAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis\LOTAnalysis.Designer.cs">
+      <DependentUpon>LOTAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\Popup\LotViewPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis\Popup\LotViewPopup.Designer.cs">
+      <DependentUpon>LotViewPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\Popup\DaySelectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis\Popup\DaySelectPopup.Designer.cs">
+      <DependentUpon>DaySelectPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\Popup\LotSelectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis\Popup\LotSelectPopup.Designer.cs">
+      <DependentUpon>LotSelectPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\Popup\DefectSelectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis\Popup\DefectSelectPopup.Designer.cs">
+      <DependentUpon>DefectSelectPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucEquipmentLOT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucEquipmentLOT.Designer.cs">
+      <DependentUpon>ucEquipmentLOT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucAreaEquipment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucAreaEquipment.Designer.cs">
+      <DependentUpon>ucAreaEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucDayYieldRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucDayYieldRate.Designer.cs">
+      <DependentUpon>ucDayYieldRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucItemYieldRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucItemYieldRate.Designer.cs">
+      <DependentUpon>ucItemYieldRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucLotYieldRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucLotYieldRate.Designer.cs">
+      <DependentUpon>ucLotYieldRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucProcessArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucProcessArea.Designer.cs">
+      <DependentUpon>ucProcessArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucProcessAreaGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\UserControl\ucProcessAreaGrid.Designer.cs">
+      <DependentUpon>ucProcessAreaGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\YieldParameter.cs" />
+    <Compile Include="Analysis\YieldStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis\YieldStatus.Designer.cs">
+      <DependentUpon>YieldStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\CheckSheet\AOIDailyCheckSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\CheckSheet\AOIDailyCheckSheet.Designer.cs">
+      <DependentUpon>AOIDailyCheckSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\CheckSheet\BBTDailyCheckSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\CheckSheet\BBTDailyCheckSheet.Designer.cs">
+      <DependentUpon>BBTDailyCheckSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\CheckSheet\HoleAOIDailyCheckSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\CheckSheet\HoleAOIDailyCheckSheet.Designer.cs">
+      <DependentUpon>HoleAOIDailyCheckSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\Popup\popupRecipeGroupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\Popup\popupRecipeGroupList.Designer.cs">
+      <DependentUpon>popupRecipeGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullList\MaterialsConnector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullList\MaterialsConnector.Designer.cs">
+      <DependentUpon>MaterialsConnector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullList\MaterialsShield.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullList\MaterialsShield.Designer.cs">
+      <DependentUpon>MaterialsShield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullList\MaterialsSIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullList\MaterialsSIP.Designer.cs">
+      <DependentUpon>MaterialsSIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullList\OutIncomingDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullList\OutIncomingDaily.Designer.cs">
+      <DependentUpon>OutIncomingDaily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullList\ProcessedGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullList\ProcessedGoods.Designer.cs">
+      <DependentUpon>ProcessedGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullList\TrayParkingMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullList\TrayParkingMaterials.Designer.cs">
+      <DependentUpon>TrayParkingMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\QcmImageHelper.cs" />
+    <Compile Include="KeyboardClipboard\ClipboardFormat.cs" />
+    <Compile Include="KeyboardClipboard\ClipboardManager.cs" />
+    <Compile Include="KeyboardClipboard\CommonUtils.cs" />
+    <Compile Include="MeasureFormMgnt\MeasureFormManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasureFormMgnt\MeasureFormManagement.designer.cs">
+      <DependentUpon>MeasureFormManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutgoingMeasure\Popup\popupThreeDimensionMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutgoingMeasure\Popup\popupThreeDimensionMeasure.Designer.cs">
+      <DependentUpon>popupThreeDimensionMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutgoingMeasure\ThreeDimensionMeasureValueSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutgoingMeasure\ThreeDimensionMeasureValueSearch.Designer.cs">
+      <DependentUpon>ThreeDimensionMeasureValueSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutgoingMeasure\FlatnessMeasureValueSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutgoingMeasure\FlatnessMeasureValueSearch.Designer.cs">
+      <DependentUpon>FlatnessMeasureValueSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutgoingMeasure\Popup\popupFlatnessMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutgoingMeasure\Popup\popupFlatnessMeasure.Designer.cs">
+      <DependentUpon>popupFlatnessMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutgoingMeasure\Popup\popupXRFMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutgoingMeasure\Popup\popupXRFMeasure.Designer.cs">
+      <DependentUpon>popupXRFMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutgoingMeasure\XRFMeasureValueSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutgoingMeasure\XRFMeasureValueSearch.Designer.cs">
+      <DependentUpon>XRFMeasureValueSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\FileProgressDialogPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\FileProgressDialogPopup.Designer.cs">
+      <DependentUpon>FileProgressDialogPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\MeasureFormManagementPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\MeasureFormManagementPopup.Designer.cs">
+      <DependentUpon>MeasureFormManagementPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultBBTPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultBBTPopup.Designer.cs">
+      <DependentUpon>ReliaVerifiResultBBTPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultBBTAbnormalOccurrencePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultBBTAbnormalOccurrencePopup.Designer.cs">
+      <DependentUpon>ReliaVerifiResultBBTAbnormalOccurrencePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationAbnormalOccurrenceBBT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationAbnormalOccurrenceBBT.Designer.cs">
+      <DependentUpon>ReliabilityVerificationAbnormalOccurrenceBBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationRequestBBT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationRequestBBT.Designer.cs">
+      <DependentUpon>ReliabilityVerificationRequestBBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliaVerifiResultBBT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliaVerifiResultBBT.Designer.cs">
+      <DependentUpon>ReliaVerifiResultBBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\SelectResourcePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\SelectResourcePopup.Designer.cs">
+      <DependentUpon>SelectResourcePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspExportPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspExportPopup.Designer.cs">
+      <DependentUpon>ShipmentInspExportPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspExportRegistPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspExportRegistPopup.Designer.cs">
+      <DependentUpon>ShipmentInspExportRegistPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspMappingPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspMappingPopup.Designer.cs">
+      <DependentUpon>ShipmentInspMappingPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\StayReasonCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\StayReasonCode.Designer.cs">
+      <DependentUpon>StayReasonCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\SelectNextResourceShipmentPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\SelectNextResourceShipmentPopup.Designer.cs">
+      <DependentUpon>SelectNextResourceShipmentPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\SelectReworkRoutingShipToFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\SelectReworkRoutingShipToFinish.Designer.cs">
+      <DependentUpon>SelectReworkRoutingShipToFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspExport.designer.cs">
+      <DependentUpon>ShipmentInspExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspMapping.designer.cs">
+      <DependentUpon>ShipmentInspMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullList\RawMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullList\RawMaterials.Designer.cs">
+      <DependentUpon>RawMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullList\SubMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullList\SubMaterials.Designer.cs">
+      <DependentUpon>SubMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BBTMultiVerificationResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\BBTMultiVerificationResultControl.Designer.cs">
+      <DependentUpon>BBTMultiVerificationResultControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ReqularMultiVerificationResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ReqularMultiVerificationResultControl.Designer.cs">
+      <DependentUpon>ReqularMultiVerificationResultControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MultiVerificationResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\MultiVerificationResultControl.Designer.cs">
+      <DependentUpon>MultiVerificationResultControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YieldDefect\AffectLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YieldDefect\AffectLot.Designer.cs">
+      <DependentUpon>AffectLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditMgnt\AuditManagementledger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditMgnt\AuditManagementledger.Designer.cs">
+      <DependentUpon>AuditManagementledger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditMgnt\AuditSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditMgnt\AuditSchedule.Designer.cs">
+      <DependentUpon>AuditSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePointMgnt\ChangePointManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePointMgnt\ChangePointManagement.Designer.cs">
+      <DependentUpon>ChangePointManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePointMgnt\popup\ChangePointRequestPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePointMgnt\popup\ChangePointRequestPopup.Designer.cs">
+      <DependentUpon>ChangePointRequestPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chemical\ChemicalAnalysisStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chemical\ChemicalAnalysisStatus.Designer.cs">
+      <DependentUpon>ChemicalAnalysisStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chemical\popup\ChemicalissuePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chemical\popup\ChemicalissuePopup.Designer.cs">
+      <DependentUpon>ChemicalissuePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\UserControl\ucTypeComparison.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\UserControl\ucTypeComparison.Designer.cs">
+      <DependentUpon>ucTypeComparison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\DefectRateByProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\DefectRateByProcess.Designer.cs">
+      <DependentUpon>DefectRateByProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\DefectRateByRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\DefectRateByRecipe.Designer.cs">
+      <DependentUpon>DefectRateByRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\DefectRateByRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\DefectRateByRepair.Designer.cs">
+      <DependentUpon>DefectRateByRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\Popup\popupLotListByPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\Popup\popupLotListByPeriod.Designer.cs">
+      <DependentUpon>popupLotListByPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\Popup\popupProductListByPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\Popup\popupProductListByPeriod.Designer.cs">
+      <DependentUpon>popupProductListByPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\UserControl\ucRateDefault.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\UserControl\ucRateDefault.Designer.cs">
+      <DependentUpon>ucRateDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\UserControl\ucRateEquipmentType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\UserControl\ucRateEquipmentType.Designer.cs">
+      <DependentUpon>ucRateEquipmentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\UserControl\ucRateGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\UserControl\ucRateGroup.Designer.cs">
+      <DependentUpon>ucRateGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\UserControl\ucRateMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\UserControl\ucRateMain.Designer.cs">
+      <DependentUpon>ucRateMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\ClaimLotManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\ClaimLotManagement.Designer.cs">
+      <DependentUpon>ClaimLotManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\DefectCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\DefectCancel.Designer.cs">
+      <DependentUpon>DefectCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\DefectCause.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\DefectCause.Designer.cs">
+      <DependentUpon>DefectCause.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\DefectAccept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\DefectAccept.Designer.cs">
+      <DependentUpon>DefectAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\DefectMergeAccept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\DefectMergeAccept.Designer.cs">
+      <DependentUpon>DefectMergeAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\DefectStatusSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\DefectStatusSearch.Designer.cs">
+      <DependentUpon>DefectStatusSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\AcceptCancelPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\AcceptCancelPopup.Designer.cs">
+      <DependentUpon>AcceptCancelPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\DefectCodeMakeup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\DefectCodeMakeup.Designer.cs">
+      <DependentUpon>DefectCodeMakeup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\DefectCodeTakeout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\DefectCodeTakeout.Designer.cs">
+      <DependentUpon>DefectCodeTakeout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\DefectLotDefectCodePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\DefectLotDefectCodePopup.Designer.cs">
+      <DependentUpon>DefectLotDefectCodePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\DefectRoutingPathPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\DefectRoutingPathPopup.Designer.cs">
+      <DependentUpon>DefectRoutingPathPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\ReworkRoutingPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\ReworkRoutingPopup.Designer.cs">
+      <DependentUpon>ReworkRoutingPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\DefectCancelRoutingPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMgnt\Popup\DefectCancelRoutingPopup.Designer.cs">
+      <DependentUpon>DefectCancelRoutingPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EtchingRate\Popup\EtchingRateReMeasurePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtchingRate\Popup\EtchingRateReMeasurePopup.Designer.cs">
+      <DependentUpon>EtchingRateReMeasurePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EtchingRate\Popup\EtchingRateMeasurePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtchingRate\Popup\EtchingRateMeasurePopup.Designer.cs">
+      <DependentUpon>EtchingRateMeasurePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EtchingRate\EtchingRateHelper.cs" />
+    <Compile Include="EtchingRate\EtchingRateSpecMgnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtchingRate\EtchingRateSpecMgnt.Designer.cs">
+      <DependentUpon>EtchingRateSpecMgnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EtchingRate\EtchingRateStandardMgnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtchingRate\EtchingRateStandardMgnt.Designer.cs">
+      <DependentUpon>EtchingRateStandardMgnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EtchingRate\Popup\popupSpecValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtchingRate\Popup\popupSpecValue.Designer.cs">
+      <DependentUpon>popupSpecValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EtchingRate\Popup\EtchingRateSpecDetailPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtchingRate\Popup\EtchingRateSpecDetailPopup.Designer.cs">
+      <DependentUpon>EtchingRateSpecDetailPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\InspectionHelper.cs" />
+    <Compile Include="Helper\MeasuringHelper.cs" />
+    <Compile Include="InspectionMgnt\Inspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InspectionMgnt\Inspection.Designer.cs">
+      <DependentUpon>Inspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InspectionMgnt\InspectionPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InspectionMgnt\InspectionPaper.Designer.cs">
+      <DependentUpon>InspectionPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InspectionMgnt\InspectionGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InspectionMgnt\InspectionGrade.Designer.cs">
+      <DependentUpon>InspectionGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InspectionMgnt\popup\InspectionGradeHistoryPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InspectionMgnt\popup\InspectionGradeHistoryPopup.Designer.cs">
+      <DependentUpon>InspectionGradeHistoryPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InspectionMgnt\popup\InspectorPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InspectionMgnt\popup\InspectorPopup.Designer.cs">
+      <DependentUpon>InspectorPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\LOTAnalysisGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis\LOTAnalysisGrid.Designer.cs">
+      <DependentUpon>LOTAnalysisGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\MeasuringInstCalibrationPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\MeasuringInstCalibrationPlan.Designer.cs">
+      <DependentUpon>MeasuringInstCalibrationPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\MeasuringInstRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\MeasuringInstRepair.Designer.cs">
+      <DependentUpon>MeasuringInstRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\MeasuringInstSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\MeasuringInstSearch.Designer.cs">
+      <DependentUpon>MeasuringInstSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\MeasuringInstRNR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\MeasuringInstRNR.Designer.cs">
+      <DependentUpon>MeasuringInstRNR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\MeasuringInstCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\MeasuringInstCalibration.Designer.cs">
+      <DependentUpon>MeasuringInstCalibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\MeasuringInstRepairPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\MeasuringInstRepairPopup.Designer.cs">
+      <DependentUpon>MeasuringInstRepairPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\MeasuringInstRNRReportPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\MeasuringInstRNRReportPopup.Designer.cs">
+      <DependentUpon>MeasuringInstRNRReportPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\MeasuringCardInformationReportPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\MeasuringCardInformationReportPopup.Designer.cs">
+      <DependentUpon>MeasuringCardInformationReportPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\QualityAddFilesPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\QualityAddFilesPopup.Designer.cs">
+      <DependentUpon>QualityAddFilesPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\QualityAddImagePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\QualityAddImagePopup.Designer.cs">
+      <DependentUpon>QualityAddImagePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\MeasuringCardInformationPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\MeasuringCardInformationPopup.Designer.cs">
+      <DependentUpon>MeasuringCardInformationPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\QualityModifiyImagePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\QualityModifiyImagePopup.Designer.cs">
+      <DependentUpon>QualityModifiyImagePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\SendMailApprovaPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasuringInstMgnt\Popup\SendMailApprovaPopup.Designer.cs">
+      <DependentUpon>SendMailApprovaPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\AffectLotPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\AffectLotPopup.Designer.cs">
+      <DependentUpon>AffectLotPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\AuditManageRegistQuarterPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\AuditManageRegistQuarterPopup.Designer.cs">
+      <DependentUpon>AuditManageRegistQuarterPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\AuditManageRegistPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\AuditManageRegistPopup.Designer.cs">
+      <DependentUpon>AuditManageRegistPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ManufacturingHistoryDataViewPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ManufacturingHistoryDataViewPopup.Designer.cs">
+      <DependentUpon>ManufacturingHistoryDataViewPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ProductionPriceRegistrationPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ProductionPriceRegistrationPopup.Designer.cs">
+      <DependentUpon>ProductionPriceRegistrationPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ManufacturingHistoryPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ManufacturingHistoryPopup.Designer.cs">
+      <DependentUpon>ManufacturingHistoryPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\RawMaterialImportInspectionAbnormalOccurrencePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\RawMaterialImportInspectionAbnormalOccurrencePopup.Designer.cs">
+      <DependentUpon>RawMaterialImportInspectionAbnormalOccurrencePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ReliabilityVerificationConsumableRegularPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ReliabilityVerificationConsumableRegularPopup.Designer.cs">
+      <DependentUpon>ReliabilityVerificationConsumableRegularPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultNonRegularPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultNonRegularPopup.Designer.cs">
+      <DependentUpon>ReliaVerifiResultNonRegularPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ReliabilityVerificationRequestNonRegularPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ReliabilityVerificationRequestNonRegularPopup.Designer.cs">
+      <DependentUpon>ReliabilityVerificationRequestNonRegularPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultNonRegularAbnormalOccurrencePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultNonRegularAbnormalOccurrencePopup.Designer.cs">
+      <DependentUpon>ReliaVerifiResultNonRegularAbnormalOccurrencePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultRegularAbnormalOccurrencePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultRegularAbnormalOccurrencePopup.Designer.cs">
+      <DependentUpon>ReliaVerifiResultRegularAbnormalOccurrencePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ReReliaVerifiResultRegularPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ReReliaVerifiResultRegularPopup.Designer.cs">
+      <DependentUpon>ReReliaVerifiResultRegularPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultRegularPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ReliaVerifiResultRegularPopup.Designer.cs">
+      <DependentUpon>ReliaVerifiResultRegularPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ReReliabilityVerificationRequestRegularPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ReReliabilityVerificationRequestRegularPopup.Designer.cs">
+      <DependentUpon>ReReliabilityVerificationRequestRegularPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ReliabilityVerificationRequestRegularPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ReliabilityVerificationRequestRegularPopup.Designer.cs">
+      <DependentUpon>ReliabilityVerificationRequestRegularPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\SecondOpinionPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\SecondOpinionPopup.Designer.cs">
+      <DependentUpon>SecondOpinionPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\SendMailPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\SendMailPopup.Designer.cs">
+      <DependentUpon>SendMailPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chemical\Chemicalissue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chemical\Chemicalissue.Designer.cs">
+      <DependentUpon>Chemicalissue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chemical\ChemicalReanalysisRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chemical\ChemicalReanalysisRequest.Designer.cs">
+      <DependentUpon>ChemicalReanalysisRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chemical\ChemicalRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chemical\ChemicalRegistration.Designer.cs">
+      <DependentUpon>ChemicalRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\DefectMapByLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\DefectMapByLot.Designer.cs">
+      <DependentUpon>DefectMapByLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\DefectRateByEquipmentType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\DefectRateByEquipmentType.Designer.cs">
+      <DependentUpon>DefectRateByEquipmentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\DefectMapHelper.cs" />
+    <Compile Include="DefectMap\DefectMap\DefectMapByItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\DefectMapByItem.Designer.cs">
+      <DependentUpon>DefectMapByItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\DefectRateByLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\DefectRateByLayer.Designer.cs">
+      <DependentUpon>DefectRateByLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\Popup\popupGroupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefectMap\ManualDefectRate\Popup\popupGroupList.designer.cs">
+      <DependentUpon>popupGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\UserControl\ucDefectMapBasicForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\UserControl\ucDefectMapBasicForm.Designer.cs">
+      <DependentUpon>ucDefectMapBasicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\UserControl\ucBBTDiagram.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\UserControl\ucBBTDiagram.Designer.cs">
+      <DependentUpon>ucBBTDiagram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\UserControl\ucAOIDiagram.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\UserControl\ucAOIDiagram.Designer.cs">
+      <DependentUpon>ucAOIDiagram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\UserControl\ucLotDefetMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DefectMap\DefectMap\UserControl\ucLotDefetMap.Designer.cs">
+      <DependentUpon>ucLotDefetMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\ProcessImportInspectionRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\ProcessImportInspectionRequest.Designer.cs">
+      <DependentUpon>ProcessImportInspectionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\ProcessInspectionRequestLotPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\ProcessInspectionRequestLotPopup.Designer.cs">
+      <DependentUpon>ProcessInspectionRequestLotPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\ProcessImportInspectionResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\ProcessImportInspectionResult.Designer.cs">
+      <DependentUpon>ProcessImportInspectionResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\ProcessImportInspectionResultPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\ProcessImportInspectionResultPopup.Designer.cs">
+      <DependentUpon>ProcessImportInspectionResultPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\ProcessImportInspAbnormalOccurrence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\ProcessImportInspAbnormalOccurrence.Designer.cs">
+      <DependentUpon>ProcessImportInspAbnormalOccurrence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\ProcessImportInspAbnormalOccurrencePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\ProcessImportInspAbnormalOccurrencePopup.Designer.cs">
+      <DependentUpon>ProcessImportInspAbnormalOccurrencePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\RawMaterialImportInspectionResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\RawMaterialImportInspectionResult.Designer.cs">
+      <DependentUpon>RawMaterialImportInspectionResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\RawMaterialImportInspectionResultPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\RawMaterialImportInspectionResultPopup.Designer.cs">
+      <DependentUpon>RawMaterialImportInspectionResultPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\RawMaterialImportInspectionAbnormalOccurrence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\RawMaterialImportInspectionAbnormalOccurrence.Designer.cs">
+      <DependentUpon>RawMaterialImportInspectionAbnormalOccurrence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityCostAnalysis\AbnormalCostTotalStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityCostAnalysis\AbnormalCostTotalStatus.Designer.cs">
+      <DependentUpon>AbnormalCostTotalStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityCostAnalysis\QCostStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityCostAnalysis\QCostStatus.Designer.cs">
+      <DependentUpon>QCostStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityCostAnalysis\WorkDefectPriceStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityCostAnalysis\WorkDefectPriceStatus.Designer.cs">
+      <DependentUpon>WorkDefectPriceStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualitySpecification\Popup\QualitySpecificationIssuePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualitySpecification\Popup\QualitySpecificationIssuePopup.Designer.cs">
+      <DependentUpon>QualitySpecificationIssuePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualitySpecification\QualitySpecificationIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualitySpecification\QualitySpecificationIssue.Designer.cs">
+      <DependentUpon>QualitySpecificationIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationAbnormalOccurrenceNonRegular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationAbnormalOccurrenceNonRegular.Designer.cs">
+      <DependentUpon>ReliabilityVerificationAbnormalOccurrenceNonRegular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationAbnormalOccurrenceRegular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationAbnormalOccurrenceRegular.Designer.cs">
+      <DependentUpon>ReliabilityVerificationAbnormalOccurrenceRegular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationConsumableRegular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationConsumableRegular.Designer.cs">
+      <DependentUpon>ReliabilityVerificationConsumableRegular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliaVerifiResultNonRegular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliaVerifiResultNonRegular.Designer.cs">
+      <DependentUpon>ReliaVerifiResultNonRegular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationRequestNonRegular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationRequestNonRegular.Designer.cs">
+      <DependentUpon>ReliabilityVerificationRequestNonRegular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliaVerifiResultRegular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliaVerifiResultRegular.Designer.cs">
+      <DependentUpon>ReliaVerifiResultRegular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\RawAssyImportInspectionResultPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\RawAssyImportInspectionResultPopup.Designer.cs">
+      <DependentUpon>RawAssyImportInspectionResultPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualitySpecification\Popup\popupMeasureValueRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualitySpecification\Popup\popupMeasureValueRegistration.Designer.cs">
+      <DependentUpon>popupMeasureValueRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualitySpecification\QualitySpecification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualitySpecification\QualitySpecification.Designer.cs">
+      <DependentUpon>QualitySpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\SubassemblyImportInspectionResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\SubassemblyImportInspectionResult.Designer.cs">
+      <DependentUpon>SubassemblyImportInspectionResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationRequestRegular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReliabilityVerification\ReliabilityVerificationRequestRegular.Designer.cs">
+      <DependentUpon>ReliabilityVerificationRequestRegular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\SubassemblyImportInspectionResultPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\SubassemblyImportInspectionResultPopup.Designer.cs">
+      <DependentUpon>SubassemblyImportInspectionResultPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\SubassemblyInspAbnormalOccurrence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\SubassemblyInspAbnormalOccurrence.Designer.cs">
+      <DependentUpon>SubassemblyInspAbnormalOccurrence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\SubassemblyInspAbnormalOccurrencePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInspection\Popup\SubassemblyInspAbnormalOccurrencePopup.Designer.cs">
+      <DependentUpon>SubassemblyInspAbnormalOccurrencePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfFinishInspection\Popup\SelfFinishAOIInspAbnormalOccurrencePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfFinishInspection\Popup\SelfFinishAOIInspAbnormalOccurrencePopup.Designer.cs">
+      <DependentUpon>SelfFinishAOIInspAbnormalOccurrencePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfFinishInspection\SelfFinishAOIInspAbnormalOccurrence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfFinishInspection\SelfFinishAOIInspAbnormalOccurrence.Designer.cs">
+      <DependentUpon>SelfFinishAOIInspAbnormalOccurrence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfFinishInspection\FinalInspectionResultInquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfFinishInspection\FinalInspectionResultInquiry.Designer.cs">
+      <DependentUpon>FinalInspectionResultInquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfFinishInspection\IndependentInspectionInputOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfFinishInspection\IndependentInspectionInputOutput.Designer.cs">
+      <DependentUpon>IndependentInspectionInputOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspAbnormalOccurrencePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspAbnormalOccurrencePopup.Designer.cs">
+      <DependentUpon>ShipmentInspAbnormalOccurrencePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspAbnormalOccurrence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspAbnormalOccurrence.Designer.cs">
+      <DependentUpon>ShipmentInspAbnormalOccurrence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspectionResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspectionResult.Designer.cs">
+      <DependentUpon>ShipmentInspectionResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspMessagePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspMessagePopup.Designer.cs">
+      <DependentUpon>ShipmentInspMessagePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspNCRPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspNCRPopup.Designer.cs">
+      <DependentUpon>ShipmentInspNCRPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspHistory.Designer.cs">
+      <DependentUpon>ShipmentInspHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspHistoryPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\Popup\ShipmentInspHistoryPopup.Designer.cs">
+      <DependentUpon>ShipmentInspHistoryPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspLRRModelList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspLRRModelList.Designer.cs">
+      <DependentUpon>ShipmentInspLRRModelList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspLRRList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentInspection\ShipmentInspLRRList.Designer.cs">
+      <DependentUpon>ShipmentInspLRRList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CustomizedToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucLotInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucLotInfo.Designer.cs">
+      <DependentUpon>ucLotInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucShipmentInspDefect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucShipmentInspDefect.Designer.cs">
+      <DependentUpon>ucShipmentInspDefect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucShipmentInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucShipmentInfo.Designer.cs">
+      <DependentUpon>ucShipmentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucProcessInspDefect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucProcessInspDefect.Designer.cs">
+      <DependentUpon>ucProcessInspDefect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\IssueRegistraionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\IssueRegistraionControl.Designer.cs">
+      <DependentUpon>IssueRegistraionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ManufacturingHistoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ManufacturingHistoryControl.Designer.cs">
+      <DependentUpon>ManufacturingHistoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\NCRProgressControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\NCRProgressControl.Designer.cs">
+      <DependentUpon>NCRProgressControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucLotMessageGrd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucLotMessageGrd.Designer.cs">
+      <DependentUpon>ucLotMessageGrd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucSelfImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucSelfImageControl.Designer.cs">
+      <DependentUpon>ucSelfImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\VerificationResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\VerificationResultControl.Designer.cs">
+      <DependentUpon>VerificationResultControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YieldDefect\AffectLotComputation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YieldDefect\AffectLotComputation.Designer.cs">
+      <DependentUpon>AffectLotComputation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YieldDefect\NonAdjRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YieldDefect\NonAdjRatio.Designer.cs">
+      <DependentUpon>NonAdjRatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YieldDefect\Popup\StatusByItemPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YieldDefect\Popup\StatusByItemPopup.Designer.cs">
+      <DependentUpon>StatusByItemPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YieldDefect\Popup\StatusByTypePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YieldDefect\Popup\StatusByTypePopup.Designer.cs">
+      <DependentUpon>StatusByTypePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YieldDefect\DefectStatusByProcessEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YieldDefect\DefectStatusByProcessEquipment.Designer.cs">
+      <DependentUpon>DefectStatusByProcessEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YieldDefect\YieldDefectStatusByDefect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YieldDefect\YieldDefectStatusByDefect.Designer.cs">
+      <DependentUpon>YieldDefectStatusByDefect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YieldDefect\YieldStatusByDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YieldDefect\YieldStatusByDaily.Designer.cs">
+      <DependentUpon>YieldStatusByDaily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YieldDefect\YieldDefectStatusByProductItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YieldDefect\YieldDefectStatusByProductItem.Designer.cs">
+      <DependentUpon>YieldDefectStatusByProductItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YieldDefect\YieldDefectStatusByLOT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YieldDefect\YieldDefectStatusByLOT.Designer.cs">
+      <DependentUpon>YieldDefectStatusByLOT.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Charts.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Data.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.DataAccess.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.DataAccess.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Diagram.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Images.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Office.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Pdf.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.PivotGrid.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Printing.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.RichEdit.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Sparkline.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Spreadsheet.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.Utils.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraBars.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.UI, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraCharts.v18.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraDiagram.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraLayout.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraNavBar.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPivotGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraPrinting.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraReports.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraRichEdit.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraScheduler.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraScheduler.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraSpreadsheet.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraTreeList.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress\DevExpress.XtraVerticalGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.1.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.1.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Jot, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Jot.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Micube.Framework">
+      <HintPath>..\..\lib\Micube.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.Net">
+      <HintPath>..\..\lib\Micube.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Micube.Framework.SmartControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Micube.Framework.SmartControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Nito.AsyncEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Enlightenment">
+      <HintPath>..\..\lib\Nito.AsyncEx.Enlightenment.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\lib\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\lib\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SmartDeploy.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\SmartDeploy.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections" />
+    <Reference Include="System.ComponentModel.EventBasedAsync" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.Debug" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Reflection" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Extensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.ValueTuple, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TimeZoneConverter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=e20ab7d0d9479841, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\TimeZoneConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report\RequestPrinting.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ImportInspection.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\InspectorLabel.repx" />
+    <EmbeddedResource Include="Report\ChangePointApplicationReport.repx" />
+    <EmbeddedResource Include="Report\SubassemblyImportInspection.repx" />
+    <None Include="Resources\113-2006-b-aoi-target.gbr_Top.png" />
+    <None Include="Resources\InstrumentationDocument019.xls" />
+    <None Include="Resources\InstrumentationDocument019.xlsx" />
+    <None Include="Resources\MeasuringInstCardList01.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drl.gbr_Top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.Controls\Micube.SmartMES.Commons.Controls.csproj">
+      <Project>{6c8616d8-4620-477e-a1ac-2a02a94d4984}</Project>
+      <Name>Micube.SmartMES.Commons.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons.SPCLibrary\Micube.SmartMES.Commons.SPCLibrary.csproj">
+      <Project>{22839825-69f9-48de-8eb7-d88ee70bbc78}</Project>
+      <Name>Micube.SmartMES.Commons.SPCLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Micube.SmartMES.Commons\Micube.SmartMES.Commons.csproj">
+      <Project>{1b6a2eb9-f134-49fc-80fa-982418d6490f}</Project>
+      <Name>Micube.SmartMES.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>
