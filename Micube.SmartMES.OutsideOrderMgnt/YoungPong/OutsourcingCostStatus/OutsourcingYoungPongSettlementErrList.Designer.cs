@@ -29,222 +29,222 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.smartSplitTableLayoutPanel1 = new Micube.Framework.SmartControls.SmartSplitTableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.smartSplitTableLayoutPanel2 = new Micube.Framework.SmartControls.SmartSplitTableLayoutPanel();
             this.grdSearchReduce = new Micube.Framework.SmartControls.SmartBandedGrid();
             this.grdSearchDetail = new Micube.Framework.SmartControls.SmartBandedGrid();
             this.grdSearch = new Micube.Framework.SmartControls.SmartBandedGrid();
             this.grdMaster = new Micube.Framework.SmartControls.SmartBandedGrid();
-            this.btnAggregate = new Micube.Framework.SmartControls.SmartButton();
+            this.smartLayoutControl1 = new Micube.Framework.SmartControls.SmartLayoutControl();
+            this.smartLayoutControlGroup1 = new Micube.Framework.SmartControls.SmartLayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlCondition)).BeginInit();
-            this.pnlToolbar.SuspendLayout();
             this.pnlContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlMain)).BeginInit();
-            this.smartSplitTableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.smartSplitTableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.smartLayoutControl1)).BeginInit();
+            this.smartLayoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.smartLayoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCondition
             // 
             this.pnlCondition.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(441, 278, 650, 400);
-            this.pnlCondition.Size = new System.Drawing.Size(371, 900);
+            this.pnlCondition.Size = new System.Drawing.Size(296, 517);
             // 
             // pnlToolbar
             // 
-            this.pnlToolbar.Controls.Add(this.btnAggregate);
-            this.pnlToolbar.Size = new System.Drawing.Size(843, 30);
-            this.pnlToolbar.Controls.SetChildIndex(this.btnAggregate, 0);
+            this.pnlToolbar.Size = new System.Drawing.Size(919, 24);
             // 
             // pnlContent
             // 
             this.pnlContent.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.pnlContent.Appearance.Options.UseBackColor = true;
-            this.pnlContent.Controls.Add(this.smartSplitTableLayoutPanel1);
-            this.pnlContent.Size = new System.Drawing.Size(843, 903);
+            this.pnlContent.Controls.Add(this.smartLayoutControl1);
+            this.pnlContent.Size = new System.Drawing.Size(919, 521);
             // 
             // pnlMain
             // 
             this.pnlMain.Location = new System.Drawing.Point(19, 19);
-            this.pnlMain.Size = new System.Drawing.Size(1224, 939);
-            // 
-            // smartSplitTableLayoutPanel1
-            // 
-            this.smartSplitTableLayoutPanel1.ColumnCount = 1;
-            this.smartSplitTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.smartSplitTableLayoutPanel1.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.smartSplitTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.smartSplitTableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.smartSplitTableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.smartSplitTableLayoutPanel1.Name = "smartSplitTableLayoutPanel1";
-            this.smartSplitTableLayoutPanel1.RowCount = 1;
-            this.smartSplitTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.smartSplitTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 472F));
-            this.smartSplitTableLayoutPanel1.Size = new System.Drawing.Size(843, 903);
-            this.smartSplitTableLayoutPanel1.TabIndex = 6;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.smartSplitTableLayoutPanel2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.grdSearch, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.grdMaster, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 180F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(837, 897);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // smartSplitTableLayoutPanel2
-            // 
-            this.smartSplitTableLayoutPanel2.ColumnCount = 2;
-            this.smartSplitTableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.smartSplitTableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.smartSplitTableLayoutPanel2.Controls.Add(this.grdSearchReduce, 1, 0);
-            this.smartSplitTableLayoutPanel2.Controls.Add(this.grdSearchDetail, 0, 0);
-            this.smartSplitTableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.smartSplitTableLayoutPanel2.Location = new System.Drawing.Point(0, 716);
-            this.smartSplitTableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.smartSplitTableLayoutPanel2.Name = "smartSplitTableLayoutPanel2";
-            this.smartSplitTableLayoutPanel2.RowCount = 1;
-            this.smartSplitTableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.smartSplitTableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 180F));
-            this.smartSplitTableLayoutPanel2.Size = new System.Drawing.Size(837, 181);
-            this.smartSplitTableLayoutPanel2.TabIndex = 12;
+            this.pnlMain.Size = new System.Drawing.Size(1224, 550);
             // 
             // grdSearchReduce
             // 
             this.grdSearchReduce.Caption = "";
-            this.grdSearchReduce.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdSearchReduce.GridButtonItem = ((Micube.Framework.SmartControls.GridButtonItem)((((((Micube.Framework.SmartControls.GridButtonItem.Add | Micube.Framework.SmartControls.GridButtonItem.Copy) 
             | Micube.Framework.SmartControls.GridButtonItem.Delete) 
             | Micube.Framework.SmartControls.GridButtonItem.Preview) 
             | Micube.Framework.SmartControls.GridButtonItem.Import) 
             | Micube.Framework.SmartControls.GridButtonItem.Export)));
             this.grdSearchReduce.IsUsePaging = false;
-            this.grdSearchReduce.LanguageKey = "OUTSOURCINGCOSTSTATUSLISTREDUCE";
-            this.grdSearchReduce.Location = new System.Drawing.Point(585, 0);
+            this.grdSearchReduce.LanguageKey = "";
+            this.grdSearchReduce.Location = new System.Drawing.Point(667, 416);
             this.grdSearchReduce.Margin = new System.Windows.Forms.Padding(0);
             this.grdSearchReduce.Name = "grdSearchReduce";
             this.grdSearchReduce.ShowBorder = true;
             this.grdSearchReduce.ShowStatusBar = false;
-            this.grdSearchReduce.Size = new System.Drawing.Size(252, 181);
+            this.grdSearchReduce.Size = new System.Drawing.Size(250, 103);
             this.grdSearchReduce.TabIndex = 6;
             this.grdSearchReduce.UseAutoBestFitColumns = false;
             // 
             // grdSearchDetail
             // 
             this.grdSearchDetail.Caption = "";
-            this.grdSearchDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdSearchDetail.GridButtonItem = ((Micube.Framework.SmartControls.GridButtonItem)((((((Micube.Framework.SmartControls.GridButtonItem.Add | Micube.Framework.SmartControls.GridButtonItem.Copy) 
             | Micube.Framework.SmartControls.GridButtonItem.Delete) 
             | Micube.Framework.SmartControls.GridButtonItem.Preview) 
             | Micube.Framework.SmartControls.GridButtonItem.Import) 
             | Micube.Framework.SmartControls.GridButtonItem.Export)));
             this.grdSearchDetail.IsUsePaging = false;
-            this.grdSearchDetail.LanguageKey = "OUTSOURCINGCOSTSTATUSLISTDETAIL";
-            this.grdSearchDetail.Location = new System.Drawing.Point(0, 0);
+            this.grdSearchDetail.LanguageKey = "";
+            this.grdSearchDetail.Location = new System.Drawing.Point(2, 416);
             this.grdSearchDetail.Margin = new System.Windows.Forms.Padding(0);
             this.grdSearchDetail.Name = "grdSearchDetail";
             this.grdSearchDetail.ShowBorder = true;
             this.grdSearchDetail.ShowStatusBar = false;
-            this.grdSearchDetail.Size = new System.Drawing.Size(585, 181);
+            this.grdSearchDetail.Size = new System.Drawing.Size(661, 103);
             this.grdSearchDetail.TabIndex = 6;
             this.grdSearchDetail.UseAutoBestFitColumns = false;
             // 
             // grdSearch
             // 
             this.grdSearch.Caption = "외주 창고 입출고 L/T 내역";
-            this.grdSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdSearch.GridButtonItem = ((Micube.Framework.SmartControls.GridButtonItem)((((((Micube.Framework.SmartControls.GridButtonItem.Add | Micube.Framework.SmartControls.GridButtonItem.Copy) 
             | Micube.Framework.SmartControls.GridButtonItem.Delete) 
             | Micube.Framework.SmartControls.GridButtonItem.Preview) 
             | Micube.Framework.SmartControls.GridButtonItem.Import) 
             | Micube.Framework.SmartControls.GridButtonItem.Export)));
             this.grdSearch.IsUsePaging = false;
-            this.grdSearch.LanguageKey = "OUTSOURCINGSETTLEMENTERRDETAIL";
-            this.grdSearch.Location = new System.Drawing.Point(0, 358);
+            this.grdSearch.LanguageKey = "";
+            this.grdSearch.Location = new System.Drawing.Point(2, 222);
             this.grdSearch.Margin = new System.Windows.Forms.Padding(0);
             this.grdSearch.Name = "grdSearch";
             this.grdSearch.ShowBorder = true;
             this.grdSearch.ShowStatusBar = false;
-            this.grdSearch.Size = new System.Drawing.Size(837, 358);
+            this.grdSearch.Size = new System.Drawing.Size(915, 190);
             this.grdSearch.TabIndex = 11;
             this.grdSearch.UseAutoBestFitColumns = false;
             // 
             // grdMaster
             // 
             this.grdMaster.Caption = "외주 창고 입출고 L/T 내역";
-            this.grdMaster.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdMaster.GridButtonItem = ((Micube.Framework.SmartControls.GridButtonItem)((((((Micube.Framework.SmartControls.GridButtonItem.Add | Micube.Framework.SmartControls.GridButtonItem.Copy) 
             | Micube.Framework.SmartControls.GridButtonItem.Delete) 
             | Micube.Framework.SmartControls.GridButtonItem.Preview) 
             | Micube.Framework.SmartControls.GridButtonItem.Import) 
             | Micube.Framework.SmartControls.GridButtonItem.Export)));
             this.grdMaster.IsUsePaging = false;
-            this.grdMaster.LanguageKey = "OUTSOURCINGSETTLEMENTERRMASTER";
-            this.grdMaster.Location = new System.Drawing.Point(0, 0);
+            this.grdMaster.LanguageKey = "";
+            this.grdMaster.Location = new System.Drawing.Point(2, 2);
             this.grdMaster.Margin = new System.Windows.Forms.Padding(0);
             this.grdMaster.Name = "grdMaster";
             this.grdMaster.ShowBorder = true;
             this.grdMaster.ShowStatusBar = false;
-            this.grdMaster.Size = new System.Drawing.Size(837, 358);
+            this.grdMaster.Size = new System.Drawing.Size(915, 216);
             this.grdMaster.TabIndex = 9;
             this.grdMaster.UseAutoBestFitColumns = false;
             // 
-            // btnAggregate
+            // smartLayoutControl1
             // 
-            this.btnAggregate.AllowFocus = false;
-            this.btnAggregate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAggregate.IsBusy = false;
-            this.btnAggregate.IsWrite = true;
-            this.btnAggregate.LanguageKey = "OUTSOURCEAGGREGATE";
-            this.btnAggregate.Location = new System.Drawing.Point(1436, 5);
-            this.btnAggregate.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.btnAggregate.Name = "btnAggregate";
-            this.btnAggregate.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.btnAggregate.Size = new System.Drawing.Size(80, 25);
-            this.btnAggregate.TabIndex = 5;
-            this.btnAggregate.Text = "외주비집계";
-            this.btnAggregate.TooltipLanguageKey = "";
-            this.btnAggregate.Visible = false;
+            this.smartLayoutControl1.Controls.Add(this.grdSearchReduce);
+            this.smartLayoutControl1.Controls.Add(this.grdSearchDetail);
+            this.smartLayoutControl1.Controls.Add(this.grdSearch);
+            this.smartLayoutControl1.Controls.Add(this.grdMaster);
+            this.smartLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.smartLayoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.smartLayoutControl1.Name = "smartLayoutControl1";
+            this.smartLayoutControl1.Root = this.smartLayoutControlGroup1;
+            this.smartLayoutControl1.Size = new System.Drawing.Size(919, 521);
+            this.smartLayoutControl1.TabIndex = 7;
+            this.smartLayoutControl1.Text = "smartLayoutControl1";
+            // 
+            // smartLayoutControlGroup1
+            // 
+            this.smartLayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.smartLayoutControlGroup1.GroupBordersVisible = false;
+            this.smartLayoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem4});
+            this.smartLayoutControlGroup1.Name = "smartLayoutControlGroup1";
+            this.smartLayoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.smartLayoutControlGroup1.Size = new System.Drawing.Size(919, 521);
+            this.smartLayoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.grdMaster;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(919, 220);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.grdSearch;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 220);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(919, 194);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.grdSearchDetail;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 414);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(665, 107);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.grdSearchReduce;
+            this.layoutControlItem4.Location = new System.Drawing.Point(665, 414);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(254, 107);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
             // 
             // OutsourcingYoungPongSettlementErrList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 977);
+            this.ClientSize = new System.Drawing.Size(1262, 588);
             this.Name = "OutsourcingYoungPongSettlementErrList";
             this.Padding = new System.Windows.Forms.Padding(19);
             this.Text = "SmartConditionBaseForm";
             ((System.ComponentModel.ISupportInitialize)(this.pnlCondition)).EndInit();
-            this.pnlToolbar.ResumeLayout(false);
-            this.pnlToolbar.PerformLayout();
             this.pnlContent.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlMain)).EndInit();
-            this.smartSplitTableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.smartSplitTableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.smartLayoutControl1)).EndInit();
+            this.smartLayoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.smartLayoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Framework.SmartControls.SmartSplitTableLayoutPanel smartSplitTableLayoutPanel1;
-        private Framework.SmartControls.SmartButton btnAggregate;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Framework.SmartControls.SmartBandedGrid grdMaster;
         private Framework.SmartControls.SmartBandedGrid grdSearch;
-        private Framework.SmartControls.SmartSplitTableLayoutPanel smartSplitTableLayoutPanel2;
         private Framework.SmartControls.SmartBandedGrid grdSearchReduce;
         private Framework.SmartControls.SmartBandedGrid grdSearchDetail;
+        private Framework.SmartControls.SmartLayoutControl smartLayoutControl1;
+        private Framework.SmartControls.SmartLayoutControlGroup smartLayoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
 }

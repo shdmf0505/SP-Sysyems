@@ -83,7 +83,7 @@
             <Item18 Ref="48" ControlType="XRLabel" Name="txtLotStartDate" TextAlignment="MiddleCenter" WordWrap="false" SizeF="169.529175,55.00006" LocationFloat="915.1395, 414.866364" Dpi="254" Font="맑은 고딕, 6pt" Padding="5,5,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="LOTSTARTDATE">
               <StylePriority Ref="49" UseFont="false" UseBorders="false" UseTextAlignment="false" />
             </Item18>
-            <Item19 Ref="50" ControlType="XRLabel" Name="txtPcsSize" TextFormatString="{0:#,#}" TextAlignment="MiddleRight" WordWrap="false" SizeF="87.48956,55.00003" LocationFloat="668.7701, 414.8672" Dpi="254" Font="맑은 고딕, 6pt, style=Bold" Padding="0,13,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PCSSIZE">
+            <Item19 Ref="50" ControlType="XRLabel" Name="txtPcsSize" TextAlignment="MiddleRight" WordWrap="false" SizeF="87.48956,55.00003" LocationFloat="668.7701, 414.8672" Dpi="254" Font="맑은 고딕, 6pt, style=Bold" Padding="0,13,0,0,254" Borders="Left, Top" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="PCSSIZE">
               <StylePriority Ref="51" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
             </Item19>
             <Item20 Ref="52" ControlType="XRLabel" Name="lblPcsSizeUnit" Multiline="true" Text="m²" TextAlignment="MiddleCenter" WordWrap="false" SizeF="39.89,55" LocationFloat="756.2596, 414.8672" Dpi="254" Font="맑은 고딕, 4.5pt" Padding="5,5,0,0,254" Borders="Top">
@@ -273,9 +273,9 @@
         </Item1>
       </Controls>
     </Item5>
-    <Item6 Ref="172" ControlType="DetailReportBand" Name="SubAssemblyReport" Level="2" Expanded="false" Dpi="254">
+    <Item6 Ref="172" ControlType="DetailReportBand" Name="SubAssemblyReport" Level="2" Dpi="254">
       <Bands>
-        <Item1 Ref="173" ControlType="DetailBand" Name="SubAssemblyReportDetail" Expanded="false" HeightF="63.5" Dpi="254" Borders="All">
+        <Item1 Ref="173" ControlType="DetailBand" Name="SubAssemblyReportDetail" HeightF="63.5" Dpi="254" Borders="All">
           <Controls>
             <Item1 Ref="174" ControlType="XRTable" Name="table2" SizeF="1964.99841,63.5" LocationFloat="0, 0" Dpi="254" Borders="Top, Bottom">
               <Rows>
@@ -318,7 +318,7 @@
             </Item1>
           </Controls>
         </Item1>
-        <Item2 Ref="197" ControlType="GroupHeaderBand" Name="SubAssemblyReportHeader" RepeatEveryPage="true" Expanded="false" HeightF="79.99992" Dpi="254">
+        <Item2 Ref="197" ControlType="GroupHeaderBand" Name="SubAssemblyReportHeader" RepeatEveryPage="true" HeightF="79.99992" Dpi="254">
           <Controls>
             <Item1 Ref="198" ControlType="XRLabel" Name="lblUseProcessSegment" Text="사용공정" TextAlignment="MiddleCenter" WordWrap="false" SizeF="184.554077,55" LocationFloat="1241.1676, 24.9999275" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="Left, Top, Bottom" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="USEPROCESSSEGMENT">
               <StylePriority Ref="199" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
@@ -1570,9 +1570,9 @@
         </Item3>
       </Bands>
     </Item9>
-    <Item10 Ref="963" ControlType="DetailReportBand" Name="GoldPlatingSegmentSpecReport" Level="1" Expanded="false" Dpi="254">
+    <Item10 Ref="963" ControlType="DetailReportBand" Name="GoldPlatingSegmentSpecReport" Level="1" Dpi="254">
       <Bands>
-        <Item1 Ref="964" ControlType="DetailBand" Name="GoldPlatingSegmentSpecReportDetail" Expanded="false" HeightF="63.5" Dpi="254">
+        <Item1 Ref="964" ControlType="DetailBand" Name="GoldPlatingSegmentSpecReportDetail" HeightF="63.5" Dpi="254">
           <Controls>
             <Item1 Ref="965" ControlType="XRTable" Name="table1" SizeF="1965,63.5" LocationFloat="0, 0" Dpi="254" Borders="Top, Bottom">
               <Rows>
@@ -1617,7 +1617,7 @@
             </Item1>
           </Controls>
         </Item1>
-        <Item2 Ref="989" ControlType="ReportHeaderBand" Name="GoldPlatingSegmentSpecReportHeader" Expanded="false" HeightF="77.62511" Dpi="254">
+        <Item2 Ref="989" ControlType="ReportHeaderBand" Name="GoldPlatingSegmentSpecReportHeader" HeightF="77.62511" Dpi="254">
           <Controls>
             <Item1 Ref="990" ControlType="XRLabel" Name="lblRemark" Text="비고" TextAlignment="MiddleCenter" WordWrap="false" SizeF="245.9989,54.9998779" LocationFloat="1719.00049, 22.6251926" Dpi="254" Font="맑은 고딕, 6pt" BackColor="Silver" Padding="5,5,0,0,254" Borders="All" Tag_type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Tag="REMARK">
               <StylePriority Ref="991" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />

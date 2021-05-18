@@ -253,6 +253,12 @@
     <Compile Include="ItemManagement\ProductHistoryView.Designer.cs">
       <DependentUpon>ProductHistoryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemManagement\ProductMasterPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemManagement\ProductMasterPlan.Designer.cs">
+      <DependentUpon>ProductMasterPlan.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemManagement\ProductSpecification2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1272,6 +1278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItemManagement\ProductHistoryView.resx">
       <DependentUpon>ProductHistoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemManagement\ProductMasterPlan.resx">
+      <DependentUpon>ProductMasterPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemManagement\ProductSpecification2.resx">
       <DependentUpon>ProductSpecification2.cs</DependentUpon>

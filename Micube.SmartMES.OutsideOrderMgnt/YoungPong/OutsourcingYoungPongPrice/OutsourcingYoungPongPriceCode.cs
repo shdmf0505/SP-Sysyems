@@ -4,38 +4,31 @@ using Micube.Framework;
 using Micube.Framework.Net;
 using Micube.Framework.SmartControls;
 using Micube.Framework.SmartControls.Grid.BandedGrid;
-using System;
 using Micube.SmartMES.Commons.Controls;
+using Micube.SmartMES.OutsideOrderMgnt.Popup;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Micube.SmartMES.OutsideOrderMgnt.Popup;
-#endregion
+
+#endregion using
 
 namespace Micube.SmartMES.OutsideOrderMgnt
 {
     /// <summary>
-    /// 프 로 그 램 명  :  외주관리> 외주 단가 관리> 외주단가관리 
+    /// 프 로 그 램 명  :  외주관리> 외주 단가 관리> 외주단가관리
     /// 업  무  설  명  : 외주단가분류관리
     /// 생    성    자  : CHOISSTAR
     /// 생    성    일  : 2020-02-11
-    /// 수  정  이  력  : 
-    /// 
-    /// 
-    /// 
+    /// 수  정  이  력  :
+    ///
+    ///
+    ///
     /// </summary>
     public partial class OutsourcingYoungPongPriceCode : SmartConditionManualBaseForm
     {
-        #region Local Variables
-
-
-        #endregion
-
         #region 생성자
 
         public OutsourcingYoungPongPriceCode()
@@ -43,7 +36,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             InitializeComponent();
         }
 
-        #endregion
+        #endregion 생성자
 
         #region 컨텐츠 영역 초기화
 
@@ -60,7 +53,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             InitializeGrid();
         }
 
-        /// <summary>        
+        /// <summary>
         /// 코드그룹 리스트 그리드를 초기화한다.
         /// </summary>
         private void InitializeGrid()
@@ -73,7 +66,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             InitializeGrid_Tab1Master();
             InitializeGrid_Tab2Master();
         }
-        /// <summary>        
+
+        /// <summary>
         /// 코드그룹 리스트 그리드를 초기화한다.
         /// </summary>
         private void InitializeGrid_Master()
@@ -87,9 +81,9 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             grdMaster.View.AddTextBoxColumn("PROCESSSEGMENTCLASSID", 80)
                 .SetIsReadOnly()
 
-                ;// 
+                ;//
             grdMaster.View.AddTextBoxColumn("PROCESSSEGMENTCLASSNAME", 200)
-                .SetIsReadOnly();// 
+                .SetIsReadOnly();//
 
             grdMaster.View.AddComboBoxColumn("ISEXCEPT", 80, new SqlQuery("GetCodeList", "00001", "CODECLASSID=YesNo", $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
                 .SetDefault("N")
@@ -98,37 +92,28 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             grdMaster.View.SetKeyColumn("PLANTID", "PROCESSSEGMENTCLASSID");
 
             grdMaster.View.PopulateColumns();
-
         }
-        /// <summary>        
+
+        /// <summary>
         /// 코드그룹 리스트 그리드를 초기화한다.
         /// </summary>
         private void InitializeGrid_Detail()
         {
-
             grdDetail.GridButtonItem = GridButtonItem.Add | GridButtonItem.Delete | GridButtonItem.Export | GridButtonItem.Expand | GridButtonItem.Restore;
 
-            grdDetail.View.AddTextBoxColumn("ENTERPRISEID", 200)
-                .SetIsHidden();
-            grdDetail.View.AddTextBoxColumn("PLANTID", 200)
-                .SetIsHidden();
-            grdDetail.View.AddTextBoxColumn("PROCESSSEGMENTCLASSID", 200)
-                .SetIsHidden();
-            grdDetail.View.AddTextBoxColumn("OSPPRICECODE", 80)
-                .SetIsHidden();
-            grdDetail.View.AddTextBoxColumn("PRICENAME", 150)
-                .SetLabel("OSPPRICENAME");
+            grdDetail.View.AddTextBoxColumn("ENTERPRISEID", 200).SetIsHidden();
+            grdDetail.View.AddTextBoxColumn("PLANTID", 200).SetIsHidden();
+            grdDetail.View.AddTextBoxColumn("PROCESSSEGMENTCLASSID", 200).SetIsHidden();
+            grdDetail.View.AddTextBoxColumn("OSPPRICECODE", 80).SetIsHidden();
 
-            //  .SetIsReadOnly();
+            grdDetail.View.AddTextBoxColumn("PRICENAME", 150).SetLabel("OSPPRICENAME");
+            
             //단가분류 팝업
             InitializeGrid_Priceclassid();
-            grdDetail.View.AddTextBoxColumn("PRICECLASSNAME", 150)
-                .SetIsReadOnly();
 
-            grdDetail.View.AddSpinEditColumn("PRIORITY", 100)
-                .SetTextAlignment(TextAlignment.Right)
-                .SetDisplayFormat("#,##0", MaskTypes.Numeric)
-                .SetValidationIsRequired();
+            grdDetail.View.AddTextBoxColumn("PRICECLASSNAME", 150).SetIsReadOnly();
+            grdDetail.View.AddSpinEditColumn("PRIORITY", 100).SetTextAlignment(TextAlignment.Right).SetValidationIsRequired();
+            grdDetail.View.AddSpinEditColumn("GROUPNO", 100).SetTextAlignment(TextAlignment.Right).SetValidationIsRequired();
             grdDetail.View.AddComboBoxColumn("CALCULATEUNIT", 100, new SqlQuery("GetUomDefinitionMapListByOsp", "10001", "UOMCATEGORY=OSP", $"LANGUAGETYPE={UserInfo.Current.LanguageType}"), "UOMDEFID", "UOMDEFID")
                 .SetValidationIsRequired();
 
@@ -218,8 +203,9 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             grdDetail.View.SetKeyColumn("PLANTID", "PRICECLASSID");
             grdDetail.View.PopulateColumns();
         }
+
         /// <summary>
-        /// grid Priceclassid 가져오기 
+        /// grid Priceclassid 가져오기
         /// </summary>
         private void InitializeGrid_Priceclassid()
         {
@@ -239,7 +225,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
                 .SetPopupApplySelection((selectedRows, dataGridRow) =>
                 {
-
                     int irow = 0;
                     int crow = 0;
                     DataRow classRow = grdDetail.View.GetFocusedDataRow();
@@ -250,7 +235,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         if (irow == 0)
                         {
                             string sPriceitemid = row["PRICECLASSID"].ToString();
-
 
                             int icheck = SearchidKey(sPriceitemid, "PRICECLASSID", crow);
                             if (icheck == -1)
@@ -343,17 +327,13 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             popupGridConsumabledefid.GridColumns.AddTextBoxColumn("PRICEITEMNAME05", 100).SetIsReadOnly().SetLabel("PRICEITEMNAME");
             popupGridConsumabledefid.GridColumns.AddTextBoxColumn("ISRANGE05", 80).SetIsReadOnly().SetLabel("ISRANGE");
             popupGridConsumabledefid.GridColumns.AddTextBoxColumn("RANGEUNIT05", 80).SetIsReadOnly().SetLabel("RANGEUNIT");
-
-
-
-
         }
-        /// <summary>        
+
+        /// <summary>
         /// 단가 그리드를 초기화한다.
         /// </summary>
         private void InitializeGrid_Tab1Master()
         {
-
             grdTab1Master.GridButtonItem = GridButtonItem.Add | GridButtonItem.Delete | GridButtonItem.Export | GridButtonItem.Expand | GridButtonItem.Restore;
             grdTab1Master.View.GridMultiSelectionMode = GridMultiSelectionMode.CellSelect;
 
@@ -366,11 +346,10 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             grdTab1Master.View.AddComboBoxColumn("OSPPRODUCTIONTYPE", 100, new SqlQuery("GetCodeList", "00001", "CODECLASSID=OSPProductionType", $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
                 .SetLabel("PRODUCTIONTYPE")
                 .SetEmptyItem("*", "*")
-                .SetIsHidden();  // 
+                .SetIsHidden();  //
             grdTab1Master.View.AddTextBoxColumn("PRODUCTDEFID", 100).SetIsHidden();
             grdTab1Master.View.AddTextBoxColumn("PRODUCTDEFVERSION", 100).SetIsHidden();
             grdTab1Master.View.AddTextBoxColumn("PRODUCTDEFNAME", 200).SetIsHidden();
-
 
             grdTab1Master.View.AddTextBoxColumn("PRICEITEMID01", 200).SetIsHidden();
             grdTab1Master.View.AddTextBoxColumn("PRICEITEMID02", 200).SetIsHidden();
@@ -450,12 +429,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 .SetIsHidden();
             grdTab1Master.View.PopulateColumns();
         }
-        /// <summary>        
+
+        /// <summary>
         /// 단가 그리드를 초기화한다.
         /// </summary>
         private void InitializeGrid_Tab2Master()
         {
-
             grdTab2Master.GridButtonItem = GridButtonItem.Add | GridButtonItem.Delete | GridButtonItem.Export | GridButtonItem.Expand | GridButtonItem.Restore;
             grdTab2Master.View.GridMultiSelectionMode = GridMultiSelectionMode.CellSelect;
 
@@ -468,12 +447,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             grdTab2Master.View.AddComboBoxColumn("OSPPRODUCTIONTYPE", 100, new SqlQuery("GetCodeList", "00001", "CODECLASSID=OSPProductionType", $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
                 .SetLabel("PRODUCTIONTYPE")
                 .SetEmptyItem("*", "*")
-                .SetIsHidden();  // 
+                .SetIsHidden();  //
 
             grdTab2Master.View.AddTextBoxColumn("PRODUCTDEFID", 100).SetIsHidden();
             grdTab2Master.View.AddTextBoxColumn("PRODUCTDEFVERSION", 100).SetIsHidden();
             grdTab2Master.View.AddTextBoxColumn("PRODUCTDEFNAME", 200).SetIsHidden();
-
 
             grdTab2Master.View.AddTextBoxColumn("PRICEITEMID01", 200).SetIsHidden();
             grdTab2Master.View.AddTextBoxColumn("PRICEITEMID02", 200).SetIsHidden();
@@ -553,12 +531,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 .SetIsHidden();
             grdTab2Master.View.PopulateColumns();
         }
-        /// <summary>        
+
+        /// <summary>
         /// 단가 그리드를 초기화한다.
         /// </summary>
         private void InitializeGrid_Tab1Detail()
         {
-
             grdTab1Detail.GridButtonItem = GridButtonItem.Add | GridButtonItem.Delete | GridButtonItem.Export | GridButtonItem.Expand | GridButtonItem.Restore;
             //grdTab1Detail.View.GridMultiSelectionMode = GridMultiSelectionMode.CheckBoxSelect;
 
@@ -571,10 +549,10 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 .SetIsHidden();
             grdTab1Detail.View.AddDateEditColumn("STARTDATE", 100)
                 .SetValidationIsRequired()
-                .SetDisplayFormat("yyyy-MM-dd", MaskTypes.DateTime);                              //  
+                .SetDisplayFormat("yyyy-MM-dd", MaskTypes.DateTime);                              //
             grdTab1Detail.View.AddDateEditColumn("ENDDATE", 100)
                 .SetValidationIsRequired()
-                .SetDisplayFormat("yyyy-MM-dd", MaskTypes.DateTime);                              //  
+                .SetDisplayFormat("yyyy-MM-dd", MaskTypes.DateTime);                              //
             grdTab1Detail.View.AddSpinEditColumn("OSPPRICE", 100)
                 .SetValidationIsRequired()
                 .SetTextAlignment(TextAlignment.Right)
@@ -587,12 +565,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             grdTab1Detail.View.SetKeyColumn("PLANTID", "ENTERPRISEID", "PRICECOMBINATIONID", "STARTDATE");
             grdTab1Detail.View.PopulateColumns();
         }
-        /// <summary>        
+
+        /// <summary>
         /// 단가 그리드를 초기화한다.
         /// </summary>
         private void InitializeGrid_Tab2Detail()
         {
-
             grdTab2Detail.GridButtonItem = GridButtonItem.Add | GridButtonItem.Delete | GridButtonItem.Export | GridButtonItem.Expand | GridButtonItem.Restore;
             //grdTab2Detail.View.GridMultiSelectionMode = GridMultiSelectionMode.CheckBoxSelect;
 
@@ -605,10 +583,10 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 .SetIsHidden();
             grdTab2Detail.View.AddDateEditColumn("STARTDATE", 100)
                 .SetValidationIsRequired()
-                .SetDisplayFormat("yyyy-MM-dd", MaskTypes.DateTime);                              //  
+                .SetDisplayFormat("yyyy-MM-dd", MaskTypes.DateTime);                              //
             grdTab2Detail.View.AddDateEditColumn("ENDDATE", 100)
                 .SetValidationIsRequired()
-                .SetDisplayFormat("yyyy-MM-dd", MaskTypes.DateTime);                              //  
+                .SetDisplayFormat("yyyy-MM-dd", MaskTypes.DateTime);                              //
             grdTab2Detail.View.AddSpinEditColumn("OSPPRICE", 100)
                 .SetValidationIsRequired()
                 .SetTextAlignment(TextAlignment.Right)
@@ -621,7 +599,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             grdTab2Detail.View.SetKeyColumn("PLANTID", "ENTERPRISEID", "PRICECOMBINATIONID", "STARTDATE");
             grdTab2Detail.View.PopulateColumns();
         }
-        #endregion
+
+        #endregion 컨텐츠 영역 초기화
 
         #region Event
 
@@ -644,7 +623,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             grdTab2Master.View.ShowingEditor += GrdTab2Master_ShowingEditor;
 
-
             grdTab1Detail.View.AddingNewRow += GrdTab1Detail_AddingNewRow;
             grdTab2Detail.View.AddingNewRow += GrdTab2Detail_AddingNewRow;
             grdTab1Detail.View.CellValueChanged += GrdTab1Detail_CellValueChanged;
@@ -657,14 +635,10 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             grdTab2Master.ToolbarDeleteRow += GrdTab2Master_ToolbarDeleteRow;
             grdTab1Detail.ToolbarDeleteRow += GrdTab1Detail_ToolbarDeleteRow;
             grdTab2Detail.ToolbarDeleteRow += GrdTab2Detail_ToolbarDeleteRow;
-
-
-
         }
+
         private void GrdTab1Detail_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-
-
             if (e.Column.FieldName == "STARTDATE")
             {
                 grdTab1Detail.View.CellValueChanged -= GrdTab1Detail_CellValueChanged;
@@ -697,12 +671,10 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 grdTab1Detail.View.SetFocusedRowCellValue("ENDDATE", dateBudget.ToString("yyyy-MM-dd"));// 예산일자
                 grdTab1Detail.View.CellValueChanged += GrdTab1Detail_CellValueChanged;
             }
-
         }
+
         private void GrdTab2Detail_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-
-
             if (e.Column.FieldName == "STARTDATE")
             {
                 grdTab2Detail.View.CellValueChanged -= GrdTab2Detail_CellValueChanged;
@@ -735,8 +707,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 grdTab2Detail.View.SetFocusedRowCellValue("ENDDATE", dateBudget.ToString("yyyy-MM-dd"));// 예산일자
                 grdTab2Detail.View.CellValueChanged += GrdTab2Detail_CellValueChanged;
             }
-
         }
+
         /// <summary>
         /// 코드그룹 리스트 그리드에서 추가 버튼 클릭 시 호출
         /// </summary>
@@ -816,7 +788,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 grdTab1Master.View.SetFocusedRowCellValue("ITEMVALUE05NAME", "*");
             }
 
-            grdTab1Master.View.SetFocusedRowCellValue("VALIDSTATE", "Valid");// 
+            grdTab1Master.View.SetFocusedRowCellValue("VALIDSTATE", "Valid");//
         }
 
         private void GrdTab2Master_AddingNewRow(Framework.SmartControls.Grid.BandedGrid.SmartBandedGridView sender, Framework.SmartControls.Grid.AddNewRowArgs args)
@@ -893,7 +865,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 grdTab2Master.View.SetFocusedRowCellValue("ITEMVALUE05NAME", "*");
             }
 
-            grdTab2Master.View.SetFocusedRowCellValue("VALIDSTATE", "Valid");// 
+            grdTab2Master.View.SetFocusedRowCellValue("VALIDSTATE", "Valid");//
         }
 
         /// <summary>
@@ -903,7 +875,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         /// <param name="args"></param>
         private void GrdTab1Detail_AddingNewRow(Framework.SmartControls.Grid.BandedGrid.SmartBandedGridView sender, Framework.SmartControls.Grid.AddNewRowArgs args)
         {
-            //추가 할때 단가기준 그리드의 상태값을 체크 처리 
+            //추가 할때 단가기준 그리드의 상태값을 체크 처리
 
             if (grdMaster.View.DataRowCount == 0)
             {
@@ -955,10 +927,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             //grdOspPrice.View.CellValueChanged += GrdOspPrice_CellValueChanged;
             grdTab1Detail.View.ClearSorting();
             grdTab1Detail.View.Columns["STARTDATE"].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
-            grdTab1Detail.View.SetFocusedRowCellValue("VALIDSTATE", "Valid");// 
-
+            grdTab1Detail.View.SetFocusedRowCellValue("VALIDSTATE", "Valid");//
         }
-
 
         /// <summary>
         /// 단가등록 그리드에서 추가 버튼 클릭 시 호출
@@ -967,7 +937,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         /// <param name="args"></param>
         private void GrdTab2Detail_AddingNewRow(Framework.SmartControls.Grid.BandedGrid.SmartBandedGridView sender, Framework.SmartControls.Grid.AddNewRowArgs args)
         {
-            //추가 할때 단가기준 그리드의 상태값을 체크 처리 
+            //추가 할때 단가기준 그리드의 상태값을 체크 처리
 
             if (grdMaster.View.DataRowCount == 0)
             {
@@ -1019,9 +989,9 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             //grdOspPrice.View.CellValueChanged += GrdOspPrice_CellValueChanged;
             grdTab2Detail.View.ClearSorting();
             grdTab2Detail.View.Columns["STARTDATE"].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
-            grdTab2Detail.View.SetFocusedRowCellValue("VALIDSTATE", "Valid");// 
-
+            grdTab2Detail.View.SetFocusedRowCellValue("VALIDSTATE", "Valid");//
         }
+
         /// <summary>
         /// GrdDetail_ToolbarDeleteRow
         /// </summary>
@@ -1029,7 +999,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         /// <param name="e"></param>
         private void GrdDetail_ToolbarDeleteRow(object sender, EventArgs e)
         {
-
             DataRow row = grdDetail.View.GetFocusedDataRow();
             if (row == null)
             {
@@ -1040,8 +1009,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 row["VALIDSTATE"] = "Invalid";
                 (grdDetail.View.DataSource as DataView).Table.AcceptChanges();
             }
-
         }
+
         /// <summary>
         /// GrdTab1Master_ToolbarDeleteRow
         /// </summary>
@@ -1056,7 +1025,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     e.Cancel = true;
                     return;
                 }
-
             }
             else
             {
@@ -1066,14 +1034,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             if (grdMaster.View.DataRowCount == 0)
             {
-
                 e.Cancel = true;
                 return;
             }
             DataTable changed = grdMaster.GetChangedRows();
             if (changed.Rows.Count > 0)
             {
-
                 e.Cancel = true;
                 return;
             }
@@ -1091,7 +1057,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             DataRow row = grdDetail.View.GetFocusedDataRow();
             OutsourcingYoungPongPriceCodePopup itemPopup = new OutsourcingYoungPongPriceCodePopup("N", row);
             itemPopup.ShowDialog(this);
-
 
             grdTab1Master.ToolbarAddingRow -= GrdTab1Master_ToolbarAddingRow;
             DataTable dtTab1Master = GetOspypricecombination("N");
@@ -1112,7 +1077,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 grdTab1Master.View.FocusedRowHandle = 0;
                 grdTab1Master.View.SelectRow(0);
                 focusedRowChangedTab1Master();
-
             }
             grdTab1Master.ToolbarAddingRow += GrdTab1Master_ToolbarAddingRow;
             e.Cancel = true;
@@ -1134,7 +1098,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     e.Cancel = true;
                     return;
                 }
-
             }
             else
             {
@@ -1143,14 +1106,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             }
             if (grdMaster.View.DataRowCount == 0)
             {
-
                 e.Cancel = true;
                 return;
             }
             DataTable changed = grdMaster.GetChangedRows();
             if (changed.Rows.Count != 0)
             {
-
                 e.Cancel = true;
                 return;
             }
@@ -1188,13 +1149,13 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 grdTab2Master.View.FocusedRowHandle = 0;
                 grdTab2Master.View.SelectRow(0);
                 focusedRowChangedTab2Master();
-
             }
             grdTab2Master.ToolbarAddingRow += GrdTab2Master_ToolbarAddingRow;
             e.Cancel = true;
 
             //재조회??
         }
+
         /// <summary>
         /// GrdTab1Master_ToolbarDeleteRow
         /// </summary>
@@ -1202,7 +1163,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         /// <param name="e"></param>
         private void GrdTab1Master_ToolbarDeleteRow(object sender, EventArgs e)
         {
-
             DataRow row = grdTab1Master.View.GetFocusedDataRow();
             if (row == null)
             {
@@ -1213,8 +1173,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 row["VALIDSTATE"] = "Invalid";
                 (grdTab1Master.View.DataSource as DataView).Table.AcceptChanges();
             }
-
         }
+
         /// <summary>
         /// GrdTab1Master_ToolbarDeleteRow
         /// </summary>
@@ -1222,7 +1182,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         /// <param name="e"></param>
         private void GrdTab2Master_ToolbarDeleteRow(object sender, EventArgs e)
         {
-
             DataRow row = grdTab2Master.View.GetFocusedDataRow();
             if (row == null)
             {
@@ -1233,8 +1192,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 row["VALIDSTATE"] = "Invalid";
                 (grdTab2Master.View.DataSource as DataView).Table.AcceptChanges();
             }
-
         }
+
         /// <summary>
         /// GrdTab1Detail_ToolbarDeleteRow
         /// </summary>
@@ -1242,7 +1201,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         /// <param name="e"></param>
         private void GrdTab1Detail_ToolbarDeleteRow(object sender, EventArgs e)
         {
-
             DataRow row = grdTab1Detail.View.GetFocusedDataRow();
             if (row == null)
             {
@@ -1253,8 +1211,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 row["VALIDSTATE"] = "Invalid";
                 (grdTab1Detail.View.DataSource as DataView).Table.AcceptChanges();
             }
-
         }
+
         /// <summary>
         /// GrdTab2Detail_ToolbarDeleteRow
         /// </summary>
@@ -1262,7 +1220,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         /// <param name="e"></param>
         private void GrdTab2Detail_ToolbarDeleteRow(object sender, EventArgs e)
         {
-
             DataRow row = grdTab2Detail.View.GetFocusedDataRow();
             if (row == null)
             {
@@ -1273,8 +1230,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 row["VALIDSTATE"] = "Invalid";
                 (grdTab2Detail.View.DataSource as DataView).Table.AcceptChanges();
             }
-
         }
+
         /// <summary>
         /// 단가코드 리스트 그리드의 포커스 행 변경 이벤트
         /// </summary>
@@ -1295,7 +1252,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             focusedRowChangedDetail();
         }
 
-
         /// <summary>
         /// 단가코드 리스트 그리드의 포커스 행 변경 이벤트
         /// </summary>
@@ -1305,10 +1261,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         {
             focusedRowChangedTab1Master();
         }
+
         private void GrdTab2Master_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             focusedRowChangedTab2Master();
         }
+
         /// <summary>
         /// 코드그룹 리스트 그리드에서 추가 버튼 클릭 시 호출
         /// </summary>
@@ -1332,8 +1290,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             grdDetail.View.SetFocusedRowCellValue("ENTERPRISEID", UserInfo.Current.Enterprise.ToString());// 회사코드
             grdDetail.View.SetFocusedRowCellValue("PLANTID", grdMaster.View.GetFocusedRowCellValue("PLANTID"));// plantid
-            grdDetail.View.SetFocusedRowCellValue("PROCESSSEGMENTCLASSID", grdMaster.View.GetFocusedRowCellValue("PROCESSSEGMENTCLASSID"));// 
-            grdDetail.View.SetFocusedRowCellValue("VALIDSTATE", "Valid");// 
+            grdDetail.View.SetFocusedRowCellValue("PROCESSSEGMENTCLASSID", grdMaster.View.GetFocusedRowCellValue("PROCESSSEGMENTCLASSID"));//
+            grdDetail.View.SetFocusedRowCellValue("VALIDSTATE", "Valid");//
         }
 
         private void GrdDetail_ShowingEditor(object sender, CancelEventArgs e)
@@ -1344,7 +1302,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             {
                 e.Cancel = true;
             }
-
         }
 
         private void GrdTab1Master_ShowingEditor(object sender, CancelEventArgs e)
@@ -1368,6 +1325,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 e.Cancel = true;
             }
         }
+
         /// <summary>
         /// 코드그룹 리스트 그리드에서 추가 버튼 클릭 시 호출
         /// </summary>
@@ -1378,7 +1336,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             throw new NotImplementedException();
         }
 
-        #endregion
+        #endregion Event
 
         #region 툴바
 
@@ -1387,10 +1345,9 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         /// </summary>
         protected override void OnToolbarSaveClick()
         {
-
         }
 
-        #endregion
+        #endregion 툴바
 
         #region 검색
 
@@ -1408,7 +1365,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             values = Commons.CommonFunction.ConvertParameter(values);
             DataTable dtPriceItem = await SqlExecuter.QueryAsync("GetOutsourcingYoungPongPriceCode", "10001", values);
 
-
             if (dtPriceItem.Rows.Count < 1) // 검색 조건에 해당하는 코드를 포함한 코드클래스가 없는 경우
             {
                 ShowMessage("NoSelectData"); // 조회할 데이터가 없습니다.
@@ -1420,7 +1376,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 grdMaster.View.FocusedRowHandle = 0;
                 grdMaster.View.SelectRow(0);
                 focusedRowChangedMaster();
-
             }
         }
 
@@ -1432,15 +1387,15 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             base.InitializeCondition();
 
             // TODO : 조회조건 추가 구성이 필요한 경우 사용
-            // 중공정 
+            // 중공정
             InitializeConditionPopup_Processsegmentclassid();
         }
+
         /// <summary>
-        /// 중공정 설정 
+        /// 중공정 설정
         /// </summary>
         private void InitializeConditionPopup_Processsegmentclassid()
         {
-
             ////// 팝업 컬럼설정
             ////var processsegmentclassidPopupColumn = Conditions.AddSelectPopup("p_processsegmentclassid", new SqlQuery("GetProcesssegmentclassidListByOsp", "10001", $"LANGUAGETYPE={UserInfo.Current.LanguageType}", $"ENTERPRISEID={UserInfo.Current.Enterprise}"), "MIDDLEPROCESSSEGMENTCLASSNAME", "MIDDLEPROCESSSEGMENTCLASSID")
             ////   .SetPopupLayout("MIDDLEPROCESSSEGMENTCLASS", PopupButtonStyles.Ok_Cancel, true, false)
@@ -1461,6 +1416,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
              .SetLabel("MIDDLEPROCESSSEGMENTCLASS")
              .SetPosition(0.2);
         }
+
         /// <summary>
         /// 조회조건의 컨트롤을 추가한다.
         /// </summary>
@@ -1471,7 +1427,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             // TODO : 조회조건의 컨트롤에 기능 추가가 필요한 경우 사용
         }
 
-        #endregion
+        #endregion 검색
 
         #region 유효성 검사
 
@@ -1493,6 +1449,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             //    throw MessageException.Create("NoSaveData");
             //}
         }
+
         protected override void OnToolbarClick(object sender, EventArgs e)
         {
             //base.OnToolbarClick(sender, e);
@@ -1500,22 +1457,23 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             if (btn.Name.ToString().Equals("Save"))
             {
-
                 ProcSave(btn.Text);
             }
         }
-        #endregion
+
+        #endregion 유효성 검사
 
         #region Private Function
+
         /// <summary>
         /// 그리드의 포커스 행 변경시 행의 작업목록의 내용을 매핑처리 함.
         /// </summary>
         private void focusedRowChangedMaster()
         {
-            //포커스 행 체크 
+            //포커스 행 체크
             if (grdMaster.View.FocusedRowHandle < 0) return;
 
-            //단가코드 정보 가져오기 
+            //단가코드 정보 가져오기
             Dictionary<string, object> Param = new Dictionary<string, object>();
 
             Param.Add("P_PLANTID", grdMaster.View.GetFocusedRowCellValue("PLANTID"));
@@ -1539,16 +1497,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             else
             {
                 grdDetail.DataSource = dtDetail;
-
             }
             if (dtDetail.Rows.Count > 0)
             {
                 grdDetail.View.FocusedRowHandle = 0;
                 grdDetail.View.SelectRow(0);
                 focusedRowChangedDetail();
-
             }
-            //포커스 이동 처리 
+            //포커스 이동 처리
         }
 
         private void focusedRowChangedDetail()
@@ -1594,7 +1550,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 grdTab1Master.View.FocusedRowHandle = 0;
                 grdTab1Master.View.SelectRow(0);
                 focusedRowChangedTab1Master();
-
             }
 
             ///InitializeGrid_GrdTab2MasterDisplay("Y");
@@ -1619,10 +1574,9 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 grdTab2Master.View.FocusedRowHandle = 0;
                 grdTab2Master.View.SelectRow(0);
                 focusedRowChangedTab2Master();
-
             }
 
-            //포커스 이동 처리 
+            //포커스 이동 처리
         }
 
         /// <summary>
@@ -1630,7 +1584,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         /// </summary>
         private void focusedRowChangedTab1Master()
         {
-            //포커스 행 체크 
+            //포커스 행 체크
             if (grdTab1Master.View.FocusedRowHandle < 0) return;
 
             Dictionary<string, object> Param = new Dictionary<string, object>();
@@ -1647,7 +1601,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 DataTable dtDetail = (grdTab1Detail.DataSource as DataTable).Clone();
                 //grdDetail.View.ClearDatas();
                 grdTab1Detail.DataSource = dtDetail;
-
             }
             else
             {
@@ -1660,7 +1613,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         /// </summary>
         private void focusedRowChangedTab2Master()
         {
-            //포커스 행 체크 
+            //포커스 행 체크
             if (grdTab2Master.View.FocusedRowHandle < 0) return;
 
             Dictionary<string, object> Param = new Dictionary<string, object>();
@@ -1677,17 +1630,16 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 DataTable dtDetail = (grdTab2Detail.DataSource as DataTable).Clone();
                 //grdDetail.View.ClearDatas();
                 grdTab2Detail.DataSource = dtDetail;
-
             }
             else
             {
                 grdTab2Detail.DataSource = dtPrice;
             }
-
         }
+
         private DataTable GetOspypricecombination(string strProductGubun)
         {
-            //단가코드 정보 가져오기 
+            //단가코드 정보 가져오기
             Dictionary<string, object> Param = new Dictionary<string, object>();
 
             Param.Add("P_PLANTID", grdDetail.View.GetFocusedRowCellValue("PLANTID"));
@@ -1710,14 +1662,15 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             return dtDetail;
         }
+
         // TODO : 화면에서 사용할 내부 함수 추가
         /// <summary>
         /// 마스터 정보를 조회한다.
         /// </summary>
         private void LoadData()
         {
-
         }
+
         /// <summary>
         ///  중복 체크 함수
         /// </summary>
@@ -1735,7 +1688,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 {
                     DataRow row = grdDetail.View.GetDataRow(irow);
 
-                    // 행 삭제만 제외 
+                    // 행 삭제만 제외
                     if (grdDetail.View.IsDeletedRow(row) == false)
                     {
                         string strTemnpValue = row[colstringName].ToString();
@@ -1744,7 +1697,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         {
                             return irow;
                         }
-
                     }
                 }
             }
@@ -1771,7 +1723,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             {
                 if (CheckPriceDateKeyColumns() == false)
                 {
-
                     return false;
                 }
             }
@@ -1813,7 +1764,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             {
                 if (ProcSaveCheckTabMaster() == false)
                 {
-
                     return false;
                 }
             }
@@ -1821,7 +1771,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             {
                 if (ProcSaveCheckTabDetail() == false)
                 {
-
                     return false;
                 }
             }
@@ -1834,15 +1783,13 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             return true;
         }
+
         private bool ProcSaveCheckTabMaster()
         {
-
             if (tabCom.SelectedTabPage.Name.Equals("tabProcesssegment"))
             {
-
                 for (int irow = 0; irow < grdTab1Master.View.DataRowCount; irow++)
                 {
-
                     DataRow row = grdTab1Master.View.GetDataRow(irow);
 
                     if (row.RowState == DataRowState.Added || row.RowState == DataRowState.Modified)
@@ -1946,7 +1893,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             this.ShowMessage(MessageBoxButtons.OK, "InValidOspData007", lblPeriodid);
                             return false;
                         }
-
                     }
                 }
             }
@@ -1954,7 +1900,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             {
                 for (int irow = 0; irow < grdTab2Master.View.DataRowCount; irow++)
                 {
-
                     DataRow row = grdTab2Master.View.GetDataRow(irow);
 
                     if (row.RowState == DataRowState.Added || row.RowState == DataRowState.Modified)
@@ -2066,18 +2011,17 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             return false;
                         }
                     }
-
                 }
             }
 
             return true;
         }
+
         private bool ProcSaveCheckTabDetail()
         {
             DataTable changedTabDetail = null;
             if (tabCom.SelectedTabPage.Name.Equals("tabProcesssegment"))
             {
-
                 grdTab1Detail.View.FocusedRowHandle = grdTab1Detail.View.FocusedRowHandle;
                 grdTab1Detail.View.FocusedColumn = grdTab1Detail.View.Columns["STARTDATE"];
                 grdTab1Detail.View.ShowEditor();
@@ -2096,19 +2040,15 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         this.ShowMessage(MessageBoxButtons.OK, "OspCheckStartEnd");
                         return false;
                     }
-
                 }
                 if (CheckPriceTabDateKeyColumns(grdTab1Detail) == false)
                 {
-
                     this.ShowMessage(MessageBoxButtons.OK, "OspCheckDuplStartEnd");
                     return false;
                 }
             }
             else
             {
-
-
                 grdTab2Detail.View.FocusedRowHandle = grdTab2Detail.View.FocusedRowHandle;
                 grdTab2Detail.View.FocusedColumn = grdTab2Detail.View.Columns["STARTDATE"];
                 grdTab2Detail.View.ShowEditor();
@@ -2128,19 +2068,17 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         this.ShowMessage(MessageBoxButtons.OK, "OspCheckStartEnd");
                         return false;
                     }
-
                 }
                 if (CheckPriceTabDateKeyColumns(grdTab2Detail) == false)
                 {
-
                     this.ShowMessage(MessageBoxButtons.OK, "OspCheckDuplStartEnd");
                     return false;
                 }
             }
 
-
             return true;
         }
+
         private void ProcSave(string strtitle)
         {
             if (ProcSaveCheck() == false)
@@ -2148,16 +2086,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 return;
             }
 
-
             DialogResult result = System.Windows.Forms.DialogResult.No;
 
-            result = this.ShowMessage(MessageBoxButtons.YesNo, "OspDoProcessWant", strtitle);//저장하시겠습니까? 
+            result = this.ShowMessage(MessageBoxButtons.YesNo, "OspDoProcessWant", strtitle);//저장하시겠습니까?
 
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 try
                 {
-
                     this.ShowWaitArea();
                     DataTable dtSaveMaster = grdMaster.GetChangedRows();
                     dtSaveMaster.TableName = "listMain";
@@ -2232,8 +2168,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 finally
                 {
                     this.CloseWaitArea();
-
-
                 }
             }
         }
@@ -2257,7 +2191,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     grdMaster.View.SelectRow(0);
                     focusedRowChangedMaster();
                 }
-
             }
         }
 
@@ -2279,12 +2212,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 focusedRowChangedDetail();
             }
         }
+
         private void OnSaveTabMasterDisplay(string strtempno)
         {
-
             if (tabCom.SelectedTabPage.Name.Equals("tabProcesssegment"))
             {
-                //재조회 
+                //재조회
                 DataTable dtTab1Master = GetOspypricecombination("N");
                 if (dtTab1Master.Rows.Count < 1)
                 {
@@ -2341,15 +2274,13 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     focusedRowChangedTab2Master();
                 }
             }
-
         }
 
         private void OnSaveTabDetailDisplay()
         {
-
             if (tabCom.SelectedTabPage.Name.Equals("tabProcesssegment"))
             {
-                //재조회 
+                //재조회
                 string strtempno = grdTab1Detail.View.GetFocusedRowCellValue("STARTDATE").ToString();
                 focusedRowChangedTab1Master();
                 int irow = GetGridRowSearch(grdTab1Detail.View, "STARTDATE", strtempno);
@@ -2357,13 +2288,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 {
                     grdTab1Detail.View.FocusedRowHandle = irow;
                     grdTab1Detail.View.SelectRow(irow);
-
                 }
                 else
                 {
                     grdTab1Detail.View.FocusedRowHandle = 0;
                     grdTab1Detail.View.SelectRow(0);
-
                 }
             }
             else
@@ -2375,17 +2304,15 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 {
                     grdTab2Detail.View.FocusedRowHandle = irow;
                     grdTab2Detail.View.SelectRow(irow);
-
                 }
                 else
                 {
                     grdTab2Detail.View.FocusedRowHandle = 0;
                     grdTab2Detail.View.SelectRow(0);
-
                 }
             }
-
         }
+
         private void OnSaveConfrimSearch()
         {
             // TODO : 조회 SP 변경
@@ -2396,8 +2323,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             DataTable dtPriceItem = SqlExecuter.Query("GetOutsourcingYoungPongPriceCode", "10001", values);
 
             grdMaster.DataSource = dtPriceItem;
-
         }
+
         /// <summary>
         /// 그리드 이동에 필요한 row 찾기
         /// </summary>
@@ -2418,11 +2345,9 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             }
             return iRow;
         }
-        #endregion
 
         private void InitializeGrid_GrdTab2MasterDisplay(string IsProduct)
         {
-
             grdTab2Master.View.GridMultiSelectionMode = GridMultiSelectionMode.CellSelect;
             grdTab2Master.View.AddTextBoxColumn("ENTERPRISEID", 200).SetIsHidden();
             grdTab2Master.View.AddTextBoxColumn("PLANTID", 200).SetIsHidden();
@@ -2433,7 +2358,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             grdTab2Master.View.AddComboBoxColumn("OSPPRODUCTIONTYPE", 100, new SqlQuery("GetCodeList", "00001", "CODECLASSID=OSPProductionType", $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
                 .SetLabel("PRODUCTIONTYPE")
                 .SetEmptyItem("*", "*")
-                .SetIsHidden();  // 
+                .SetIsHidden();  //
             InitializeGrid_productdePopup();
             grdTab2Master.View.AddTextBoxColumn("PRODUCTDEFVERSION", 80).SetIsReadOnly();
             grdTab2Master.View.AddTextBoxColumn("PRODUCTDEFNAME", 150).SetIsReadOnly();
@@ -2450,12 +2375,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             DataRow row = grdDetail.View.GetFocusedDataRow();
             if (row != null)
             {
-                #region PRICEITEMID01 
+                #region PRICEITEMID01
 
                 if (!(row["PRICEITEMID01"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE01"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE01"].ToString().Equals("Y"))  //구간여부
                     {
                         string strFormatmask = row["FORMATMASK01"].ToString();
                         if (strFormatmask.Equals(""))
@@ -2486,13 +2410,13 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             {
                                 string param = "CODECLASSID=" + row["DATASET01"].ToString();
                                 grdTab2Master.View.AddComboBoxColumn("ITEMVALUE01", 100, new SqlQuery("GetCodeList", "00001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             else
                             {
                                 string param = row["DATASET01"].ToString();
                                 grdTab2Master.View.AddComboBoxColumn("ITEMVALUE01", 100, new SqlQuery("GetCodeList", "10001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             grdTab2Master.View.AddTextBoxColumn("ITEMVALUE01NAME", 100).SetIsHidden();
                         }
@@ -2501,7 +2425,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             grdTab2Master.View.AddTextBoxColumn("ITEMVALUE01", 100);
                             grdTab2Master.View.AddTextBoxColumn("ITEMVALUE01NAME", 100).SetIsHidden();
                         }
-
                     }
                 }
                 else
@@ -2510,13 +2433,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     grdTab2Master.View.AddTextBoxColumn("ITEMVALUE01FR", 200).SetIsHidden();
                     grdTab2Master.View.AddTextBoxColumn("ITEMVALUE01TO", 200).SetIsHidden();
                 }
-                #endregion
-                #region PRICEITEMID02 
+
+                #endregion PRICEITEMID01
+
+                #region PRICEITEMID02
 
                 if (!(row["PRICEITEMID02"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE02"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE02"].ToString().Equals("Y"))  //구간여부
                     {
                         string strFormatmask = row["FORMATMASK02"].ToString();
                         if (strFormatmask.Equals(""))
@@ -2547,13 +2471,13 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             {
                                 string param = "CODECLASSID=" + row["DATASET02"].ToString();
                                 grdTab2Master.View.AddComboBoxColumn("ITEMVALUE02", 100, new SqlQuery("GetCodeList", "00001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             else
                             {
                                 string param = row["DATASET02"].ToString();
                                 grdTab2Master.View.AddComboBoxColumn("ITEMVALUE02", 100, new SqlQuery("GetCodeList", "10001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             grdTab2Master.View.AddTextBoxColumn("ITEMVALUE02NAME", 100).SetIsHidden();
                         }
@@ -2570,13 +2494,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     grdTab2Master.View.AddTextBoxColumn("ITEMVALUE02FR", 200).SetIsHidden();
                     grdTab2Master.View.AddTextBoxColumn("ITEMVALUE02TO", 200).SetIsHidden();
                 }
-                #endregion
-                #region PRICEITEMID03 
+
+                #endregion PRICEITEMID02
+
+                #region PRICEITEMID03
 
                 if (!(row["PRICEITEMID03"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE03"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE03"].ToString().Equals("Y"))  //구간여부
                     {
                         string strFormatmask = row["FORMATMASK03"].ToString();
                         if (strFormatmask.Equals(""))
@@ -2607,13 +2532,13 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             {
                                 string param = "CODECLASSID=" + row["DATASET03"].ToString();
                                 grdTab2Master.View.AddComboBoxColumn("ITEMVALUE03", 100, new SqlQuery("GetCodeList", "00001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             else
                             {
                                 string param = row["DATASET03"].ToString();
                                 grdTab2Master.View.AddComboBoxColumn("ITEMVALUE03", 100, new SqlQuery("GetCodeList", "10001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             grdTab2Master.View.AddTextBoxColumn("ITEMVALUE03NAME", 100).SetIsHidden();
                         }
@@ -2630,13 +2555,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     grdTab2Master.View.AddTextBoxColumn("ITEMVALUE03FR", 200).SetIsHidden();
                     grdTab2Master.View.AddTextBoxColumn("ITEMVALUE03TO", 200).SetIsHidden();
                 }
-                #endregion
-                #region PRICEITEMID04 
+
+                #endregion PRICEITEMID03
+
+                #region PRICEITEMID04
 
                 if (!(row["PRICEITEMID04"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE04"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE04"].ToString().Equals("Y"))  //구간여부
                     {
                         string strFormatmask = row["FORMATMASK04"].ToString();
                         if (strFormatmask.Equals(""))
@@ -2667,13 +2593,13 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             {
                                 string param = "CODECLASSID=" + row["DATASET04"].ToString();
                                 grdTab2Master.View.AddComboBoxColumn("ITEMVALUE04", 100, new SqlQuery("GetCodeList", "00001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             else
                             {
                                 string param = row["DATASET04"].ToString();
                                 grdTab2Master.View.AddComboBoxColumn("ITEMVALUE04", 100, new SqlQuery("GetCodeList", "10001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             grdTab2Master.View.AddTextBoxColumn("ITEMVALUE04NAME", 100).SetIsHidden();
                         }
@@ -2690,13 +2616,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     grdTab2Master.View.AddTextBoxColumn("ITEMVALUE04FR", 200).SetIsHidden();
                     grdTab2Master.View.AddTextBoxColumn("ITEMVALUE04TO", 200).SetIsHidden();
                 }
-                #endregion
-                #region PRICEITEMID05 
+
+                #endregion PRICEITEMID04
+
+                #region PRICEITEMID05
 
                 if (!(row["PRICEITEMID05"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE05"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE05"].ToString().Equals("Y"))  //구간여부
                     {
                         string strFormatmask = row["FORMATMASK05"].ToString();
                         if (strFormatmask.Equals(""))
@@ -2718,7 +2645,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         grdTab2Master.View.AddTextBoxColumn("ITEMVALUE05TO", 80).SetIsHidden();
                         if (row["COMPONENTTYPE05"].ToString().Equals("PopUp"))
                         {
-                            //수정 예정 
+                            //수정 예정
 
                             InitializeGrid_Tab2CommonPopup(row["DATASETTYPE05"].ToString(), row["DATASET05"].ToString(), "ITEMVALUE05", "ITEMVALUE05NAME");
                             grdTab2Master.View.AddTextBoxColumn("ITEMVALUE05NAME", 100).SetIsReadOnly();
@@ -2729,13 +2656,13 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             {
                                 string param = "CODECLASSID=" + row["DATASET05"].ToString();
                                 grdTab2Master.View.AddComboBoxColumn("ITEMVALUE05", 100, new SqlQuery("GetCodeList", "00001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             else
                             {
                                 string param = row["DATASET05"].ToString();
                                 grdTab2Master.View.AddComboBoxColumn("ITEMVALUE05", 100, new SqlQuery("GetCodeList", "10001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             grdTab2Master.View.AddTextBoxColumn("ITEMVALUE05NAME", 100).SetIsHidden();
                         }
@@ -2752,10 +2679,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     grdTab2Master.View.AddTextBoxColumn("ITEMVALUE05FR", 200).SetIsHidden();
                     grdTab2Master.View.AddTextBoxColumn("ITEMVALUE05TO", 200).SetIsHidden();
                 }
-                #endregion
+
+                #endregion PRICEITEMID05
             }
 
-            this.InitializeGrid_Tab2VendorPopup();// 
+            this.InitializeGrid_Tab2VendorPopup();//
             grdTab2Master.View.AddTextBoxColumn("OSPVENDORNAME", 200).SetIsReadOnly();
             grdTab2Master.View.AddComboBoxColumn("PRICEUNIT", 100, new SqlQuery("GetUomDefinitionMapListByOsp", "10001", "UOMCATEGORY=OSP", $"LANGUAGETYPE={UserInfo.Current.LanguageType}"), "UOMDEFID", "UOMDEFID")
                 .SetValidationIsRequired()
@@ -2765,12 +2693,10 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 .SetValidationIsRequired()
                 .SetDefault("Valid")
                 .SetIsReadOnly();
-
         }
 
         private void InitializeGrid_GrdTab1MasterDisplay(string IsProduct)
         {
-
             grdTab1Master.View.GridMultiSelectionMode = GridMultiSelectionMode.CellSelect;
             grdTab1Master.View.AddTextBoxColumn("ENTERPRISEID", 200).SetIsHidden();
             grdTab1Master.View.AddTextBoxColumn("PLANTID", 200).SetIsHidden();
@@ -2781,12 +2707,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             //grdTab1Master.View.AddComboBoxColumn("OSPPRODUCTIONTYPE", 100, new SqlQuery("GetCodeList", "00001", "CODECLASSID=OSPProductionType", $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
             //    .SetLabel("PRODUCTIONTYPE")
-            //    .SetEmptyItem("*", "*");  // 
+            //    .SetEmptyItem("*", "*");  //
 
             grdTab1Master.View.AddTextBoxColumn("PRODUCTDEFID", 100).SetIsHidden();
             grdTab1Master.View.AddTextBoxColumn("PRODUCTDEFVERSION", 100).SetIsHidden();
             grdTab1Master.View.AddTextBoxColumn("PRODUCTDEFNAME", 200).SetIsHidden();
-
 
             grdTab1Master.View.AddTextBoxColumn("PRICEITEMID01", 200).SetIsHidden();
             grdTab1Master.View.AddTextBoxColumn("PRICEITEMID02", 200).SetIsHidden();
@@ -2801,12 +2726,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             DataRow row = grdDetail.View.GetFocusedDataRow();
             if (row != null)
             {
-                #region PRICEITEMID01 
+                #region PRICEITEMID01
 
                 if (!(row["PRICEITEMID01"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE01"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE01"].ToString().Equals("Y"))  //구간여부
                     {
                         string strFormatmask = row["FORMATMASK01"].ToString();
                         if (strFormatmask.Equals(""))
@@ -2838,25 +2762,23 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             {
                                 //string param = "CODECLASSID=" + row["DATASET01"].ToString();
                                 //grdTab1Master.View.AddComboBoxColumn("ITEMVALUE01", 100, new SqlQuery("GetCodeList", "00001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                //   .SetEmptyItem("*", "*");  // 
+                                //   .SetEmptyItem("*", "*");  //
                                 grdTab1Master.View.AddTextBoxColumn("ITEMVALUE01", 80).SetIsReadOnly();
                             }
                             else
                             {
                                 //string param = row["DATASET01"].ToString();
                                 //grdTab1Master.View.AddComboBoxColumn("ITEMVALUE01", 100, new SqlQuery("GetCodeList", "10001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                //   .SetEmptyItem("*", "*");  // 
+                                //   .SetEmptyItem("*", "*");  //
                                 grdTab1Master.View.AddTextBoxColumn("ITEMVALUE01", 80).SetIsReadOnly();
                             }
                             grdTab1Master.View.AddTextBoxColumn("ITEMVALUE01NAME", 100).SetIsHidden();
-
                         }
                         else
                         {
                             grdTab1Master.View.AddTextBoxColumn("ITEMVALUE01", 100);
                             grdTab1Master.View.AddTextBoxColumn("ITEMVALUE01NAME", 100).SetIsHidden();
                         }
-
                     }
                 }
                 else
@@ -2865,13 +2787,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     grdTab1Master.View.AddTextBoxColumn("ITEMVALUE01FR", 200).SetIsHidden();
                     grdTab1Master.View.AddTextBoxColumn("ITEMVALUE01TO", 200).SetIsHidden();
                 }
-                #endregion
-                #region PRICEITEMID02 
+
+                #endregion PRICEITEMID01
+
+                #region PRICEITEMID02
 
                 if (!(row["PRICEITEMID02"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE02"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE02"].ToString().Equals("Y"))  //구간여부
                     {
                         string strFormatmask = row["FORMATMASK02"].ToString();
                         if (strFormatmask.Equals(""))
@@ -2902,7 +2825,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             if (row["DATASETTYPE02"].ToString().Equals("CodeClass"))
                             {
                                 grdTab1Master.View.AddTextBoxColumn("ITEMVALUE02", 80).SetIsReadOnly();
-
                             }
                             else
                             {
@@ -2923,13 +2845,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     grdTab1Master.View.AddTextBoxColumn("ITEMVALUE02FR", 200).SetIsHidden();
                     grdTab1Master.View.AddTextBoxColumn("ITEMVALUE02TO", 200).SetIsHidden();
                 }
-                #endregion
-                #region PRICEITEMID03 
+
+                #endregion PRICEITEMID02
+
+                #region PRICEITEMID03
 
                 if (!(row["PRICEITEMID03"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE03"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE03"].ToString().Equals("Y"))  //구간여부
                     {
                         string strFormatmask = row["FORMATMASK03"].ToString();
                         if (strFormatmask.Equals(""))
@@ -2961,7 +2884,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             {
                                 //string param = "CODECLASSID=" + row["DATASET03"].ToString();
                                 //grdTab1Master.View.AddComboBoxColumn("ITEMVALUE03", 100, new SqlQuery("GetCodeList", "00001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                //   .SetEmptyItem("*", "*");  // 
+                                //   .SetEmptyItem("*", "*");  //
 
                                 grdTab1Master.View.AddTextBoxColumn("ITEMVALUE03", 80).SetIsReadOnly();
                             }
@@ -2969,7 +2892,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             {
                                 string param = row["DATASET03"].ToString();
                                 grdTab1Master.View.AddComboBoxColumn("ITEMVALUE03", 100, new SqlQuery("GetCodeList", "10001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             grdTab1Master.View.AddTextBoxColumn("ITEMVALUE03NAME", 100).SetIsHidden();
                         }
@@ -2986,13 +2909,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     grdTab1Master.View.AddTextBoxColumn("ITEMVALUE03FR", 200).SetIsHidden();
                     grdTab1Master.View.AddTextBoxColumn("ITEMVALUE03TO", 200).SetIsHidden();
                 }
-                #endregion
-                #region PRICEITEMID04 
+
+                #endregion PRICEITEMID03
+
+                #region PRICEITEMID04
 
                 if (!(row["PRICEITEMID04"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE04"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE04"].ToString().Equals("Y"))  //구간여부
                     {
                         string strFormatmask = row["FORMATMASK04"].ToString();
                         if (strFormatmask.Equals(""))
@@ -3023,13 +2947,13 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             {
                                 string param = "CODECLASSID=" + row["DATASET04"].ToString();
                                 grdTab1Master.View.AddComboBoxColumn("ITEMVALUE04", 100, new SqlQuery("GetCodeList", "00001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             else
                             {
                                 string param = row["DATASET04"].ToString();
                                 grdTab1Master.View.AddComboBoxColumn("ITEMVALUE04", 100, new SqlQuery("GetCodeList", "10001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             grdTab1Master.View.AddTextBoxColumn("ITEMVALUE04NAME", 100).SetIsHidden();
                         }
@@ -3046,13 +2970,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     grdTab1Master.View.AddTextBoxColumn("ITEMVALUE04FR", 200).SetIsHidden();
                     grdTab1Master.View.AddTextBoxColumn("ITEMVALUE04TO", 200).SetIsHidden();
                 }
-                #endregion
-                #region PRICEITEMID05 
+
+                #endregion PRICEITEMID04
+
+                #region PRICEITEMID05
 
                 if (!(row["PRICEITEMID05"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE05"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE05"].ToString().Equals("Y"))  //구간여부
                     {
                         string strFormatmask = row["FORMATMASK05"].ToString();
                         if (strFormatmask.Equals(""))
@@ -3074,7 +2999,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         grdTab1Master.View.AddTextBoxColumn("ITEMVALUE05TO", 80).SetIsHidden();
                         if (row["COMPONENTTYPE05"].ToString().Equals("PopUp"))
                         {
-                            //수정 예정 
+                            //수정 예정
 
                             InitializeGrid_Tab1CommonPopup(row["DATASETTYPE05"].ToString(), row["DATASET05"].ToString(), "ITEMVALUE05", "ITEMVALUE05NAME");
                             grdTab1Master.View.AddTextBoxColumn("ITEMVALUE05NAME", 100).SetIsReadOnly();
@@ -3085,13 +3010,13 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             {
                                 string param = "CODECLASSID=" + row["DATASET05"].ToString();
                                 grdTab1Master.View.AddComboBoxColumn("ITEMVALUE05", 100, new SqlQuery("GetCodeList", "00001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             else
                             {
                                 string param = row["DATASET05"].ToString();
                                 grdTab1Master.View.AddComboBoxColumn("ITEMVALUE05", 100, new SqlQuery("GetCodeList", "10001", param, $"LANGUAGETYPE={UserInfo.Current.LanguageType}"))
-                                   .SetEmptyItem("*", "*");  // 
+                                   .SetEmptyItem("*", "*");  //
                             }
                             grdTab1Master.View.AddTextBoxColumn("ITEMVALUE05NAME", 100).SetIsHidden();
                         }
@@ -3108,10 +3033,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     grdTab1Master.View.AddTextBoxColumn("ITEMVALUE05FR", 200).SetIsHidden();
                     grdTab1Master.View.AddTextBoxColumn("ITEMVALUE05TO", 200).SetIsHidden();
                 }
-                #endregion
+
+                #endregion PRICEITEMID05
             }
 
-            this.InitializeGrid_Tab1VendorPopup();// 
+            this.InitializeGrid_Tab1VendorPopup();//
             grdTab1Master.View.AddTextBoxColumn("OSPVENDORNAME", 200).SetIsReadOnly();
             grdTab1Master.View.AddComboBoxColumn("PRICEUNIT", 100, new SqlQuery("GetUomDefinitionMapListByOsp", "10001", "UOMCATEGORY=OSP", $"LANGUAGETYPE={UserInfo.Current.LanguageType}"), "UOMDEFID", "UOMDEFID")
                 .SetValidationIsRequired()
@@ -3121,15 +3047,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 .SetValidationIsRequired()
                 .SetDefault("Valid")
                 .SetIsReadOnly();
-
         }
+
         /// <summary>
         /// InitializeGrid_productdePopup
         /// </summary>
         /// <param name="TargetView"></param>
         private void InitializeGrid_productdePopup()
         {
-
             var popupGridProcessSegments = grdTab2Master.View.AddSelectPopupColumn("PRODUCTDEFID", 120,
                new SqlQuery("GetProductdefidPoplistByOsp", "10001", $"LANGUAGETYPE={UserInfo.Current.LanguageType}", $"ENTERPRISEID={UserInfo.Current.Enterprise}"))
                // 팝업 폼 타이틀(다국어 키 입력), 버튼 유형, 검색 버튼 활성화 여부, 자동 검색 여부
@@ -3164,9 +3089,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             popupGridProcessSegments.GridColumns.AddTextBoxColumn("PRODUCTDEFID", 150);
             popupGridProcessSegments.GridColumns.AddTextBoxColumn("PRODUCTDEFVERSION", 150);
             popupGridProcessSegments.GridColumns.AddTextBoxColumn("PRODUCTDEFNAME", 200);
-
-
         }
+
         /// <summary>
         /// InitializeGrid_CommonPopup
         /// </summary>
@@ -3210,7 +3134,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             popupGridProcessSegments.Conditions.AddTextBox("P_CODENAME");
             popupGridProcessSegments.GridColumns.AddTextBoxColumn("CODEID", 100);
             popupGridProcessSegments.GridColumns.AddTextBoxColumn("CODENAME", 200);
-
         }
 
         private void InitializeGrid_Tab1CommonPopup(string strDataSettype, string strDataset, string targetid, string targetname)
@@ -3253,7 +3176,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 .SetLabel("CODENAME");
             popupGridProcessSegments.GridColumns.AddTextBoxColumn("CODEID", 100);
             popupGridProcessSegments.GridColumns.AddTextBoxColumn("CODENAME", 200);
-
         }
 
         /// <summary>
@@ -3295,9 +3217,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             popupGridProcessSegments.GridColumns.AddTextBoxColumn("OSPVENDORID", 150)
                 .SetValidationKeyColumn();
             popupGridProcessSegments.GridColumns.AddTextBoxColumn("OSPVENDORNAME", 200);
-
-
         }
+
         private void InitializeGrid_Tab1VendorPopup()
         {
             var popupGridProcessSegments = grdTab1Master.View.AddSelectPopupColumn("OSPVENDORID",
@@ -3334,16 +3255,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             popupGridProcessSegments.GridColumns.AddTextBoxColumn("OSPVENDORID", 150)
                 .SetValidationKeyColumn();
             popupGridProcessSegments.GridColumns.AddTextBoxColumn("OSPVENDORNAME", 200);
-
-
         }
+
         private void GrdTab1MasterDisplayCaptionHidden()
         {
             //DataRow row = grdDetail.View.GetFocusedDataRow();
 
             //if (row == null)
             //{
-
             //    return;
             //}
             grdTab1Master.View.Columns["OSPPRODUCTIONTYPE"].OwnerBand.Visible = false;
@@ -3408,7 +3327,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             //if (row == null)
             //{
-
             //    return;
             //}
             if (grdTab2Master.View.Columns["OSPPRODUCTIONTYPE"] != null)
@@ -3537,15 +3455,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 grdTab2Master.View.Columns["VALIDSTATE"].OwnerBand.Visible = false;
                 grdTab2Master.View.Columns["VALIDSTATE"].Visible = false;
             }
-
         }
+
         private void InitializeGrid_GrdTab1MasterDisplayCaption()
         {
             DataRow row = grdDetail.View.GetFocusedDataRow();
 
             if (row == null)
             {
-
                 return;
             }
             grdTab1Master.View.Columns["OSPPRODUCTIONTYPE"].OwnerBand.Visible = true;
@@ -3553,12 +3470,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             if (row != null)
             {
-                #region PRICEITEMID01 
+                #region PRICEITEMID01
 
                 if (!(row["PRICEITEMID01"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE01"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE01"].ToString().Equals("Y"))  //구간여부
                     {
                         grdTab1Master.View.Columns["ITEMVALUE01FR"].OwnerBand.Visible = true;
                         grdTab1Master.View.Columns["ITEMVALUE01TO"].OwnerBand.Visible = true;
@@ -3570,13 +3486,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         grdTab1Master.View.Columns["ITEMVALUE01FR"].ToolTip = row["PRICEITEMNAME01"].ToString() + "Fr";
                         grdTab1Master.View.Columns["ITEMVALUE01TO"].Caption = row["PRICEITEMNAME01"].ToString() + "To";
                         grdTab1Master.View.Columns["ITEMVALUE01TO"].ToolTip = row["PRICEITEMNAME01"].ToString() + "To";
-
                     }
                     else
                     {
                         if (row["COMPONENTTYPE01"].ToString().Equals("PopUp"))
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE01"].OwnerBand.Visible = true;
                             grdTab1Master.View.Columns["ITEMVALUE01NAME"].OwnerBand.Visible = true;
 
@@ -3586,11 +3500,9 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             grdTab1Master.View.Columns["ITEMVALUE01"].ToolTip = row["PRICEITEMNAME01"].ToString() + "Id";
                             grdTab1Master.View.Columns["ITEMVALUE01NAME"].Caption = row["PRICEITEMNAME01"].ToString();
                             grdTab1Master.View.Columns["ITEMVALUE01NAME"].ToolTip = row["PRICEITEMNAME01"].ToString();
-
                         }
                         else if (row["COMPONENTTYPE01"].ToString().Equals("ComboBox"))
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE01NAME"].OwnerBand.Visible = true;
                             grdTab1Master.View.Columns["ITEMVALUE01NAME"].Visible = true;
                             grdTab1Master.View.Columns["ITEMVALUE01NAME"].ToolTip = row["PRICEITEMNAME01"].ToString();
@@ -3598,23 +3510,21 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE01"].OwnerBand.Visible = true;
                             grdTab1Master.View.Columns["ITEMVALUE01"].Visible = true;
                             grdTab1Master.View.Columns["ITEMVALUE01"].ToolTip = row["PRICEITEMNAME01"].ToString();
                             grdTab1Master.View.Columns["ITEMVALUE01"].Caption = row["PRICEITEMNAME01"].ToString();
-
                         }
-
                     }
                 }
 
-                #endregion
-                #region PRICEITEMID02 
+                #endregion PRICEITEMID01
+
+                #region PRICEITEMID02
 
                 if (!(row["PRICEITEMID02"].ToString().Equals("")))
                 {
-                    if (row["ISRANGE02"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE02"].ToString().Equals("Y"))  //구간여부
                     {
                         grdTab1Master.View.Columns["ITEMVALUE02FR"].OwnerBand.Visible = true;
                         grdTab1Master.View.Columns["ITEMVALUE02TO"].OwnerBand.Visible = true;
@@ -3631,7 +3541,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     {
                         if (row["COMPONENTTYPE02"].ToString().Equals("PopUp"))
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE02"].OwnerBand.Visible = true;
                             grdTab1Master.View.Columns["ITEMVALUE02NAME"].OwnerBand.Visible = true;
 
@@ -3642,13 +3551,10 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             grdTab1Master.View.Columns["ITEMVALUE02"].ToolTip = row["PRICEITEMNAME02"].ToString() + "Id";
                             grdTab1Master.View.Columns["ITEMVALUE02NAME"].Caption = row["PRICEITEMNAME02"].ToString();
                             grdTab1Master.View.Columns["ITEMVALUE02NAME"].ToolTip = row["PRICEITEMNAME02"].ToString();
-
                         }
                         else if (row["COMPONENTTYPE02"].ToString().Equals("ComboBox"))
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE02NAME"].OwnerBand.Visible = true;
-
 
                             grdTab1Master.View.Columns["ITEMVALUE02NAME"].Visible = true;
                             grdTab1Master.View.Columns["ITEMVALUE02NAME"].ToolTip = row["PRICEITEMNAME02"].ToString();
@@ -3656,25 +3562,23 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE02"].OwnerBand.Visible = true;
 
                             grdTab1Master.View.Columns["ITEMVALUE02"].Visible = true;
 
                             grdTab1Master.View.Columns["ITEMVALUE02"].ToolTip = row["PRICEITEMNAME02"].ToString();
                             grdTab1Master.View.Columns["ITEMVALUE02"].Caption = row["PRICEITEMNAME02"].ToString();
-
                         }
-
                     }
                 }
 
-                #endregion
-                #region PRICEITEMID03 
+                #endregion PRICEITEMID02
+
+                #region PRICEITEMID03
 
                 if (!(row["PRICEITEMID03"].ToString().Equals("")))
                 {
-                    if (row["ISRANGE03"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE03"].ToString().Equals("Y"))  //구간여부
                     {
                         grdTab1Master.View.Columns["ITEMVALUE03FR"].OwnerBand.Visible = true;
                         grdTab1Master.View.Columns["ITEMVALUE03TO"].OwnerBand.Visible = true;
@@ -3691,7 +3595,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     {
                         if (row["COMPONENTTYPE03"].ToString().Equals("PopUp"))
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE03"].OwnerBand.Visible = true;
                             grdTab1Master.View.Columns["ITEMVALUE03NAME"].OwnerBand.Visible = true;
 
@@ -3704,7 +3607,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else if (row["COMPONENTTYPE03"].ToString().Equals("ComboBox"))
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE03NAME"].OwnerBand.Visible = true;
 
                             grdTab1Master.View.Columns["ITEMVALUE03NAME"].Visible = true;
@@ -3713,26 +3615,23 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE03"].OwnerBand.Visible = true;
 
                             grdTab1Master.View.Columns["ITEMVALUE03"].Visible = true;
 
                             grdTab1Master.View.Columns["ITEMVALUE03"].Caption = row["PRICEITEMNAME03"].ToString();
                             grdTab1Master.View.Columns["ITEMVALUE03"].ToolTip = row["PRICEITEMNAME03"].ToString();
-
                         }
-
                     }
                 }
 
-                #endregion
+                #endregion PRICEITEMID03
 
-                #region PRICEITEMID04 
+                #region PRICEITEMID04
 
                 if (!(row["PRICEITEMID04"].ToString().Equals("")))
                 {
-                    if (row["ISRANGE04"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE04"].ToString().Equals("Y"))  //구간여부
                     {
                         grdTab1Master.View.Columns["ITEMVALUE04FR"].OwnerBand.Visible = true;
                         grdTab1Master.View.Columns["ITEMVALUE04TO"].OwnerBand.Visible = true;
@@ -3762,7 +3661,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else if (row["COMPONENTTYPE04"].ToString().Equals("ComboBox"))
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE04NAME"].OwnerBand.Visible = true;
 
                             grdTab1Master.View.Columns["ITEMVALUE04NAME"].Visible = true;
@@ -3771,25 +3669,23 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE04"].OwnerBand.Visible = true;
 
                             grdTab1Master.View.Columns["ITEMVALUE04"].Visible = true;
 
                             grdTab1Master.View.Columns["ITEMVALUE04"].Caption = row["PRICEITEMNAME04"].ToString();
                             grdTab1Master.View.Columns["ITEMVALUE04"].ToolTip = row["PRICEITEMNAME04"].ToString();
-
                         }
-
                     }
                 }
 
-                #endregion
-                #region PRICEITEMID05 
+                #endregion PRICEITEMID04
+
+                #region PRICEITEMID05
 
                 if (!(row["PRICEITEMID05"].ToString().Equals("")))
                 {
-                    if (row["ISRANGE05"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE05"].ToString().Equals("Y"))  //구간여부
                     {
                         grdTab1Master.View.Columns["ITEMVALUE05FR"].OwnerBand.Visible = true;
                         grdTab1Master.View.Columns["ITEMVALUE05TO"].OwnerBand.Visible = true;
@@ -3806,7 +3702,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     {
                         if (row["COMPONENTTYPE05"].ToString().Equals("PopUp"))
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE05"].OwnerBand.Visible = true;
                             grdTab1Master.View.Columns["ITEMVALUE05NAME"].OwnerBand.Visible = true;
 
@@ -3819,8 +3714,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else if (row["COMPONENTTYPE05"].ToString().Equals("ComboBox"))
                         {
-
-
                             grdTab1Master.View.Columns["ITEMVALUE05NAME"].OwnerBand.Visible = true;
 
                             grdTab1Master.View.Columns["ITEMVALUE05NAME"].Visible = true;
@@ -3829,20 +3722,18 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else
                         {
-
                             grdTab1Master.View.Columns["ITEMVALUE05"].OwnerBand.Visible = true;
 
                             grdTab1Master.View.Columns["ITEMVALUE05"].Visible = true;
 
                             grdTab1Master.View.Columns["ITEMVALUE05"].Caption = row["PRICEITEMNAME05"].ToString();
                             grdTab1Master.View.Columns["ITEMVALUE05"].ToolTip = row["PRICEITEMNAME05"].ToString();
-
                         }
-
                     }
                 }
 
-                #endregion
+                #endregion PRICEITEMID05
+
                 grdTab1Master.View.Columns["OSPVENDORID"].OwnerBand.Visible = true;
                 grdTab1Master.View.Columns["OSPVENDORNAME"].OwnerBand.Visible = true;
                 grdTab1Master.View.Columns["PRICEUNIT"].OwnerBand.Visible = true;
@@ -3853,9 +3744,9 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 grdTab1Master.View.Columns["VALIDSTATE"].Visible = true;
             }
         }
+
         private void InitializeGrid_GrdTab2MasterDisplayCaption()
         {
-
             DataRow row = grdDetail.View.GetFocusedDataRow();
             if (row == null)
             {
@@ -3872,12 +3763,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             grdTab2Master.View.Columns["PRODUCTDEFNAME"].Visible = true;
             if (row != null)
             {
-                #region PRICEITEMID01 
+                #region PRICEITEMID01
 
                 if (!(row["PRICEITEMID01"].ToString().Equals("")))
                 {
-
-                    if (row["ISRANGE01"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE01"].ToString().Equals("Y"))  //구간여부
                     {
                         grdTab2Master.View.Columns["ITEMVALUE01FR"].OwnerBand.Visible = true;
                         grdTab2Master.View.Columns["ITEMVALUE01TO"].OwnerBand.Visible = true;
@@ -3889,13 +3779,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         grdTab2Master.View.Columns["ITEMVALUE01FR"].ToolTip = row["PRICEITEMNAME01"].ToString() + "Fr";
                         grdTab2Master.View.Columns["ITEMVALUE01TO"].Caption = row["PRICEITEMNAME01"].ToString() + "To";
                         grdTab2Master.View.Columns["ITEMVALUE01TO"].ToolTip = row["PRICEITEMNAME01"].ToString() + "To";
-
                     }
                     else
                     {
                         if (row["COMPONENTTYPE01"].ToString().Equals("PopUp"))
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE01"].OwnerBand.Visible = true;
                             grdTab2Master.View.Columns["ITEMVALUE01NAME"].OwnerBand.Visible = true;
 
@@ -3905,11 +3793,9 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             grdTab2Master.View.Columns["ITEMVALUE01"].ToolTip = row["PRICEITEMNAME01"].ToString() + "Id";
                             grdTab2Master.View.Columns["ITEMVALUE01NAME"].Caption = row["PRICEITEMNAME01"].ToString();
                             grdTab2Master.View.Columns["ITEMVALUE01NAME"].ToolTip = row["PRICEITEMNAME01"].ToString();
-
                         }
                         else if (row["COMPONENTTYPE01"].ToString().Equals("ComboBox"))
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE01NAME"].OwnerBand.Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE01NAME"].Visible = true;
@@ -3918,25 +3804,23 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE01"].OwnerBand.Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE01"].Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE01"].ToolTip = row["PRICEITEMNAME01"].ToString();
                             grdTab2Master.View.Columns["ITEMVALUE01"].Caption = row["PRICEITEMNAME01"].ToString();
-
                         }
-
                     }
                 }
 
-                #endregion
-                #region PRICEITEMID02 
+                #endregion PRICEITEMID01
+
+                #region PRICEITEMID02
 
                 if (!(row["PRICEITEMID02"].ToString().Equals("")))
                 {
-                    if (row["ISRANGE02"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE02"].ToString().Equals("Y"))  //구간여부
                     {
                         grdTab2Master.View.Columns["ITEMVALUE02FR"].OwnerBand.Visible = true;
                         grdTab2Master.View.Columns["ITEMVALUE02TO"].OwnerBand.Visible = true;
@@ -3953,7 +3837,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     {
                         if (row["COMPONENTTYPE02"].ToString().Equals("PopUp"))
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE02"].OwnerBand.Visible = true;
                             grdTab2Master.View.Columns["ITEMVALUE02NAME"].OwnerBand.Visible = true;
 
@@ -3964,11 +3847,9 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             grdTab2Master.View.Columns["ITEMVALUE02"].ToolTip = row["PRICEITEMNAME02"].ToString() + "Id";
                             grdTab2Master.View.Columns["ITEMVALUE02NAME"].Caption = row["PRICEITEMNAME02"].ToString();
                             grdTab2Master.View.Columns["ITEMVALUE02NAME"].ToolTip = row["PRICEITEMNAME02"].ToString();
-
                         }
                         else if (row["COMPONENTTYPE02"].ToString().Equals("ComboBox"))
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE02NAME"].OwnerBand.Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE02NAME"].Visible = true;
@@ -3977,25 +3858,23 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE02"].OwnerBand.Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE02"].Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE02"].ToolTip = row["PRICEITEMNAME02"].ToString();
                             grdTab2Master.View.Columns["ITEMVALUE02"].Caption = row["PRICEITEMNAME02"].ToString();
-
                         }
-
                     }
                 }
 
-                #endregion
-                #region PRICEITEMID03 
+                #endregion PRICEITEMID02
+
+                #region PRICEITEMID03
 
                 if (!(row["PRICEITEMID03"].ToString().Equals("")))
                 {
-                    if (row["ISRANGE03"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE03"].ToString().Equals("Y"))  //구간여부
                     {
                         grdTab2Master.View.Columns["ITEMVALUE03FR"].OwnerBand.Visible = true;
                         grdTab2Master.View.Columns["ITEMVALUE03TO"].OwnerBand.Visible = true;
@@ -4012,7 +3891,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     {
                         if (row["COMPONENTTYPE03"].ToString().Equals("PopUp"))
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE03"].OwnerBand.Visible = true;
                             grdTab2Master.View.Columns["ITEMVALUE03NAME"].OwnerBand.Visible = true;
 
@@ -4025,7 +3903,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else if (row["COMPONENTTYPE03"].ToString().Equals("ComboBox"))
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE03NAME"].OwnerBand.Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE03NAME"].Visible = true;
@@ -4034,26 +3911,23 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE03"].OwnerBand.Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE03"].Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE03"].Caption = row["PRICEITEMNAME03"].ToString();
                             grdTab2Master.View.Columns["ITEMVALUE03"].ToolTip = row["PRICEITEMNAME03"].ToString();
-
                         }
-
                     }
                 }
 
-                #endregion
+                #endregion PRICEITEMID03
 
-                #region PRICEITEMID04 
+                #region PRICEITEMID04
 
                 if (!(row["PRICEITEMID04"].ToString().Equals("")))
                 {
-                    if (row["ISRANGE04"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE04"].ToString().Equals("Y"))  //구간여부
                     {
                         grdTab2Master.View.Columns["ITEMVALUE04FR"].OwnerBand.Visible = true;
                         grdTab2Master.View.Columns["ITEMVALUE04TO"].OwnerBand.Visible = true;
@@ -4070,7 +3944,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     {
                         if (row["COMPONENTTYPE04"].ToString().Equals("PopUp"))
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE04"].OwnerBand.Visible = true;
                             grdTab2Master.View.Columns["ITEMVALUE04NAME"].OwnerBand.Visible = true;
 
@@ -4083,7 +3956,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else if (row["COMPONENTTYPE04"].ToString().Equals("ComboBox"))
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE04NAME"].OwnerBand.Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE04NAME"].Visible = true;
@@ -4092,25 +3964,23 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE04"].OwnerBand.Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE04"].Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE04"].Caption = row["PRICEITEMNAME04"].ToString();
                             grdTab2Master.View.Columns["ITEMVALUE04"].ToolTip = row["PRICEITEMNAME04"].ToString();
-
                         }
-
                     }
                 }
 
-                #endregion
-                #region PRICEITEMID05 
+                #endregion PRICEITEMID04
+
+                #region PRICEITEMID05
 
                 if (!(row["PRICEITEMID05"].ToString().Equals("")))
                 {
-                    if (row["ISRANGE05"].ToString().Equals("Y"))  //구간여부 
+                    if (row["ISRANGE05"].ToString().Equals("Y"))  //구간여부
                     {
                         grdTab2Master.View.Columns["ITEMVALUE05FR"].OwnerBand.Visible = true;
                         grdTab2Master.View.Columns["ITEMVALUE05TO"].OwnerBand.Visible = true;
@@ -4127,7 +3997,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     {
                         if (row["COMPONENTTYPE05"].ToString().Equals("PopUp"))
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE05"].OwnerBand.Visible = true;
                             grdTab2Master.View.Columns["ITEMVALUE05NAME"].OwnerBand.Visible = true;
 
@@ -4140,7 +4009,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else if (row["COMPONENTTYPE05"].ToString().Equals("ComboBox"))
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE05NAME"].OwnerBand.Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE05NAME"].Visible = true;
@@ -4149,20 +4017,18 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         }
                         else
                         {
-
                             grdTab2Master.View.Columns["ITEMVALUE05"].OwnerBand.Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE05"].Visible = true;
 
                             grdTab2Master.View.Columns["ITEMVALUE05"].Caption = row["PRICEITEMNAME05"].ToString();
                             grdTab2Master.View.Columns["ITEMVALUE05"].ToolTip = row["PRICEITEMNAME05"].ToString();
-
                         }
-
                     }
                 }
 
-                #endregion
+                #endregion PRICEITEMID05
+
                 grdTab2Master.View.Columns["OSPVENDORID"].OwnerBand.Visible = true;
                 grdTab2Master.View.Columns["OSPVENDORNAME"].OwnerBand.Visible = true;
                 grdTab2Master.View.Columns["PRICEUNIT"].OwnerBand.Visible = true;
@@ -4184,7 +4050,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             for (int irow = 0; irow < grdDetail.View.DataRowCount; irow++)
             {
-
                 DataRow row = grdDetail.View.GetDataRow(irow);
 
                 if (row.RowState == DataRowState.Added || row.RowState == DataRowState.Modified)
@@ -4210,17 +4075,17 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     }
                     else
                     {
-                        // 에러 우선순위 중복 
+                        // 에러 우선순위 중복
                         string lblPeriodid = grdDetail.View.Columns["PRIORITY"].Caption.ToString();
                         this.ShowMessage(MessageBoxButtons.OK, "InValidOspData007", lblPeriodid);
                         return false;
                     }
-                    //중복값 체크 처리 
-
+                    //중복값 체크 처리
                 }
             }
             return blcheck;
         }
+
         /// <summary>
         ///  중복 체크 함수
         /// </summary>
@@ -4252,8 +4117,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             string strItemvalue03 = ""; string strItemvalue03fr = ""; string strItemvalue03to = "";
             string strItemvalue04 = ""; string strItemvalue04fr = ""; string strItemvalue04to = "";
             string strItemvalue05 = ""; string strItemvalue05fr = ""; string strItemvalue05to = "";
-            #region  strItemvalue셋팅
+
+            #region strItemvalue셋팅
+
             #region PRICEITEMID01
+
             if (strPriceitemid01.Equals(""))
             {
                 strItemvalue01 = ""; strItemvalue01fr = ""; strItemvalue01to = "";
@@ -4270,10 +4138,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     strItemvalue01 = "";
                     strItemvalue01fr = drValue["ITEMVALUE01FR"].ToString(); strItemvalue01to = drValue["ITEMVALUE01TO"].ToString();
                 }
-
             }
-            #endregion
+
+            #endregion PRICEITEMID01
+
             #region PRICEITEMID02
+
             if (strPriceitemid02.Equals(""))
             {
                 strItemvalue02 = ""; strItemvalue02fr = ""; strItemvalue02to = "";
@@ -4290,10 +4160,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     strItemvalue02 = "";
                     strItemvalue02fr = drValue["ITEMVALUE02FR"].ToString(); strItemvalue02to = drValue["ITEMVALUE02TO"].ToString();
                 }
-
             }
-            #endregion
+
+            #endregion PRICEITEMID02
+
             #region PRICEITEMID03
+
             if (strPriceitemid03.Equals(""))
             {
                 strItemvalue03 = ""; strItemvalue03fr = ""; strItemvalue03to = "";
@@ -4310,10 +4182,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     strItemvalue03 = "";
                     strItemvalue03fr = drValue["ITEMVALUE03FR"].ToString(); strItemvalue03to = drValue["ITEMVALUE03TO"].ToString();
                 }
-
             }
-            #endregion
+
+            #endregion PRICEITEMID03
+
             #region PRICEITEMID04
+
             if (strPriceitemid04.Equals(""))
             {
                 strItemvalue04 = ""; strItemvalue04fr = ""; strItemvalue04to = "";
@@ -4330,10 +4204,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     strItemvalue04 = "";
                     strItemvalue04fr = drValue["ITEMVALUE04FR"].ToString(); strItemvalue04to = drValue["ITEMVALUE04TO"].ToString();
                 }
-
             }
-            #endregion
+
+            #endregion PRICEITEMID04
+
             #region PRICEITEMID05
+
             if (strPriceitemid05.Equals(""))
             {
                 strItemvalue05 = ""; strItemvalue05fr = ""; strItemvalue05to = "";
@@ -4350,16 +4226,18 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     strItemvalue05 = "";
                     strItemvalue05fr = drValue["ITEMVALUE05FR"].ToString(); strItemvalue05to = drValue["ITEMVALUE05TO"].ToString();
                 }
-
             }
-            #endregion
-            #endregion
+
+            #endregion PRICEITEMID05
+
+            #endregion strItemvalue셋팅
+
             for (int irow = 0; irow < grdTab1Master.View.DataRowCount; irow++)
             {
                 if (icurRow != irow)
                 {
                     DataRow row = grdTab1Master.View.GetDataRow(irow);
-                    // 행 삭제만 제외 
+                    // 행 삭제만 제외
                     if (grdTab1Master.View.IsDeletedRow(row) == false)
                     {
                         string strTempOspproductiontype = row["OSPPRODUCTIONTYPE"].ToString();
@@ -4371,8 +4249,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         string strTempItemvalue03 = ""; string strTempItemvalue03fr = ""; string strTempItemvalue03to = "";
                         string strTempItemvalue04 = ""; string strTempItemvalue04fr = ""; string strTempItemvalue04to = "";
                         string strTempItemvalue05 = ""; string strTempItemvalue05fr = ""; string strTempItemvalue05to = "";
-                        #region  strTempItemvalue셋팅
+
+                        #region strTempItemvalue셋팅
+
                         #region PRICEITEMID01
+
                         if (strPriceitemid01.Equals(""))
                         {
                             strTempItemvalue01 = ""; strTempItemvalue01fr = ""; strTempItemvalue01to = "";
@@ -4389,10 +4270,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                                 strTempItemvalue01 = "";
                                 strTempItemvalue01fr = row["ITEMVALUE01FR"].ToString(); strTempItemvalue01to = row["ITEMVALUE01TO"].ToString();
                             }
-
                         }
-                        #endregion
+
+                        #endregion PRICEITEMID01
+
                         #region PRICEITEMID02
+
                         if (strPriceitemid02.Equals(""))
                         {
                             strTempItemvalue02 = ""; strTempItemvalue02fr = ""; strTempItemvalue02to = "";
@@ -4409,10 +4292,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                                 strTempItemvalue02 = "";
                                 strTempItemvalue02fr = row["ITEMVALUE02FR"].ToString(); strTempItemvalue02to = row["ITEMVALUE02TO"].ToString();
                             }
-
                         }
-                        #endregion
+
+                        #endregion PRICEITEMID02
+
                         #region PRICEITEMID03
+
                         if (strPriceitemid03.Equals(""))
                         {
                             strTempItemvalue03 = ""; strTempItemvalue03fr = ""; strTempItemvalue03to = "";
@@ -4429,10 +4314,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                                 strTempItemvalue03 = "";
                                 strTempItemvalue03fr = row["ITEMVALUE03FR"].ToString(); strTempItemvalue03to = row["ITEMVALUE03TO"].ToString();
                             }
-
                         }
-                        #endregion
+
+                        #endregion PRICEITEMID03
+
                         #region PRICEITEMID04
+
                         if (strPriceitemid04.Equals(""))
                         {
                             strTempItemvalue04 = ""; strTempItemvalue04fr = ""; strTempItemvalue04to = "";
@@ -4449,10 +4336,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                                 strTempItemvalue04 = "";
                                 strTempItemvalue04fr = row["ITEMVALUE04FR"].ToString(); strTempItemvalue04to = row["ITEMVALUE04TO"].ToString();
                             }
-
                         }
-                        #endregion
+
+                        #endregion PRICEITEMID04
+
                         #region PRICEITEMID05
+
                         if (strPriceitemid05.Equals(""))
                         {
                             strTempItemvalue05 = ""; strTempItemvalue05fr = ""; strTempItemvalue05to = "";
@@ -4469,11 +4358,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                                 strTempItemvalue05 = "";
                                 strTempItemvalue05fr = row["ITEMVALUE05FR"].ToString(); strTempItemvalue05to = row["ITEMVALUE05TO"].ToString();
                             }
-
                         }
-                        #endregion
 
-                        #endregion
+                        #endregion PRICEITEMID05
+
+                        #endregion strTempItemvalue셋팅
 
                         if (strOspproductiontype.Equals(strTempOspproductiontype) && strProductdefid.Equals(strTempProductdefid) && strProductdefversion.Equals(strTempProductdefversion)
                             && strItemvalue01.Equals(strTempItemvalue01) && strItemvalue01fr.Equals(strTempItemvalue01fr) && strItemvalue01to.Equals(strTempItemvalue01to)
@@ -4485,7 +4374,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         {
                             return irow;
                         }
-
                     }
                 }
             }
@@ -4523,8 +4411,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             string strItemvalue03 = ""; string strItemvalue03fr = ""; string strItemvalue03to = "";
             string strItemvalue04 = ""; string strItemvalue04fr = ""; string strItemvalue04to = "";
             string strItemvalue05 = ""; string strItemvalue05fr = ""; string strItemvalue05to = "";
-            #region  strItemvalue셋팅
+
+            #region strItemvalue셋팅
+
             #region PRICEITEMID01
+
             if (strPriceitemid01.Equals(""))
             {
                 strItemvalue01 = ""; strItemvalue01fr = ""; strItemvalue01to = "";
@@ -4541,10 +4432,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     strItemvalue01 = "";
                     strItemvalue01fr = drValue["ITEMVALUE01FR"].ToString(); strItemvalue01to = drValue["ITEMVALUE01TO"].ToString();
                 }
-
             }
-            #endregion
+
+            #endregion PRICEITEMID01
+
             #region PRICEITEMID02
+
             if (strPriceitemid02.Equals(""))
             {
                 strItemvalue02 = ""; strItemvalue02fr = ""; strItemvalue02to = "";
@@ -4561,10 +4454,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     strItemvalue02 = "";
                     strItemvalue02fr = drValue["ITEMVALUE02FR"].ToString(); strItemvalue02to = drValue["ITEMVALUE02TO"].ToString();
                 }
-
             }
-            #endregion
+
+            #endregion PRICEITEMID02
+
             #region PRICEITEMID03
+
             if (strPriceitemid03.Equals(""))
             {
                 strItemvalue03 = ""; strItemvalue03fr = ""; strItemvalue03to = "";
@@ -4581,10 +4476,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     strItemvalue03 = "";
                     strItemvalue03fr = drValue["ITEMVALUE03FR"].ToString(); strItemvalue03to = drValue["ITEMVALUE03TO"].ToString();
                 }
-
             }
-            #endregion
+
+            #endregion PRICEITEMID03
+
             #region PRICEITEMID04
+
             if (strPriceitemid04.Equals(""))
             {
                 strItemvalue04 = ""; strItemvalue04fr = ""; strItemvalue04to = "";
@@ -4601,10 +4498,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     strItemvalue04 = "";
                     strItemvalue04fr = drValue["ITEMVALUE04FR"].ToString(); strItemvalue04to = drValue["ITEMVALUE04TO"].ToString();
                 }
-
             }
-            #endregion
+
+            #endregion PRICEITEMID04
+
             #region PRICEITEMID05
+
             if (strPriceitemid05.Equals(""))
             {
                 strItemvalue05 = ""; strItemvalue05fr = ""; strItemvalue05to = "";
@@ -4621,16 +4520,18 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     strItemvalue05 = "";
                     strItemvalue05fr = drValue["ITEMVALUE05FR"].ToString(); strItemvalue05to = drValue["ITEMVALUE05TO"].ToString();
                 }
-
             }
-            #endregion
-            #endregion
+
+            #endregion PRICEITEMID05
+
+            #endregion strItemvalue셋팅
+
             for (int irow = 0; irow < grdTab2Master.View.DataRowCount; irow++)
             {
                 if (icurRow != irow)
                 {
                     DataRow row = grdTab2Master.View.GetDataRow(irow);
-                    // 행 삭제만 제외 
+                    // 행 삭제만 제외
                     if (grdTab2Master.View.IsDeletedRow(row) == false)
                     {
                         string strTempOspproductiontype = row["OSPPRODUCTIONTYPE"].ToString();
@@ -4642,8 +4543,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         string strTempItemvalue03 = ""; string strTempItemvalue03fr = ""; string strTempItemvalue03to = "";
                         string strTempItemvalue04 = ""; string strTempItemvalue04fr = ""; string strTempItemvalue04to = "";
                         string strTempItemvalue05 = ""; string strTempItemvalue05fr = ""; string strTempItemvalue05to = "";
-                        #region  strTempItemvalue셋팅
+
+                        #region strTempItemvalue셋팅
+
                         #region PRICEITEMID01
+
                         if (strPriceitemid01.Equals(""))
                         {
                             strTempItemvalue01 = ""; strTempItemvalue01fr = ""; strTempItemvalue01to = "";
@@ -4660,10 +4564,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                                 strTempItemvalue01 = "";
                                 strTempItemvalue01fr = row["ITEMVALUE01FR"].ToString(); strTempItemvalue01to = row["ITEMVALUE01TO"].ToString();
                             }
-
                         }
-                        #endregion
+
+                        #endregion PRICEITEMID01
+
                         #region PRICEITEMID02
+
                         if (strPriceitemid02.Equals(""))
                         {
                             strTempItemvalue02 = ""; strTempItemvalue02fr = ""; strTempItemvalue02to = "";
@@ -4680,10 +4586,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                                 strTempItemvalue02 = "";
                                 strTempItemvalue02fr = row["ITEMVALUE02FR"].ToString(); strTempItemvalue02to = row["ITEMVALUE02TO"].ToString();
                             }
-
                         }
-                        #endregion
+
+                        #endregion PRICEITEMID02
+
                         #region PRICEITEMID03
+
                         if (strPriceitemid03.Equals(""))
                         {
                             strTempItemvalue03 = ""; strTempItemvalue03fr = ""; strTempItemvalue03to = "";
@@ -4700,10 +4608,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                                 strTempItemvalue03 = "";
                                 strTempItemvalue03fr = row["ITEMVALUE03FR"].ToString(); strTempItemvalue03to = row["ITEMVALUE03TO"].ToString();
                             }
-
                         }
-                        #endregion
+
+                        #endregion PRICEITEMID03
+
                         #region PRICEITEMID04
+
                         if (strPriceitemid04.Equals(""))
                         {
                             strTempItemvalue04 = ""; strTempItemvalue04fr = ""; strTempItemvalue04to = "";
@@ -4720,10 +4630,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                                 strTempItemvalue04 = "";
                                 strTempItemvalue04fr = row["ITEMVALUE04FR"].ToString(); strTempItemvalue04to = row["ITEMVALUE04TO"].ToString();
                             }
-
                         }
-                        #endregion
+
+                        #endregion PRICEITEMID04
+
                         #region PRICEITEMID05
+
                         if (strPriceitemid05.Equals(""))
                         {
                             strTempItemvalue05 = ""; strTempItemvalue05fr = ""; strTempItemvalue05to = "";
@@ -4740,11 +4652,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                                 strTempItemvalue05 = "";
                                 strTempItemvalue05fr = row["ITEMVALUE05FR"].ToString(); strTempItemvalue05to = row["ITEMVALUE05TO"].ToString();
                             }
-
                         }
-                        #endregion
 
-                        #endregion
+                        #endregion PRICEITEMID05
+
+                        #endregion strTempItemvalue셋팅
 
                         if (strOspproductiontype.Equals(strTempOspproductiontype) && strProductdefid.Equals(strTempProductdefid) && strProductdefversion.Equals(strTempProductdefversion)
                             && strItemvalue01.Equals(strTempItemvalue01) && strItemvalue01fr.Equals(strTempItemvalue01fr) && strItemvalue01to.Equals(strTempItemvalue01to)
@@ -4756,12 +4668,12 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         {
                             return irow;
                         }
-
                     }
                 }
             }
             return iresultRow;
         }
+
         /// <summary>
         ///  중복 체크 함수
         /// </summary>
@@ -4779,7 +4691,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 {
                     DataRow row = grdDetail.View.GetDataRow(irow);
 
-                    // 행 삭제만 제외 
+                    // 행 삭제만 제외
                     if (grdDetail.View.IsDeletedRow(row) == false)
                     {
                         string strTemnpValue = row[colstringName].ToString();
@@ -4788,16 +4700,14 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                         {
                             return irow;
                         }
-
                     }
                 }
             }
             return iresultRow;
         }
 
-
         /// <summary>
-        /// 단가 기준  key 중복 체크 
+        /// 단가 기준  key 중복 체크
         /// </summary>
         /// <returns></returns>
         private bool CheckPriceTabDateKeyColumns(SmartBandedGrid TargetDetail)
@@ -4808,10 +4718,8 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 return blcheck;
             }
 
-
             for (int irow = 0; irow < TargetDetail.View.DataRowCount; irow++)
             {
-
                 DataRow row = TargetDetail.View.GetDataRow(irow);
 
                 if (row.RowState == DataRowState.Added || row.RowState == DataRowState.Modified)
@@ -4821,7 +4729,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                     if (SearchPriceDateKey(TargetDetail, dateStartdate, dateEnddate, irow) < 0)
                     {
                         blcheck = true;
-
                     }
                     else
                     {
@@ -4849,7 +4756,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 {
                     DataRow row = TargetDetail.View.GetDataRow(irow);
 
-                    // 행 삭제만 제외 
+                    // 행 삭제만 제외
                     if (TargetDetail.View.IsDeletedRow(row) == false)
                     {
                         DateTime dateSearchStartdate = Convert.ToDateTime(row["STARTDATE"]);
@@ -4869,5 +4776,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             }
             return iresultRow;
         }
+
+        #endregion Private Function
     }
 }

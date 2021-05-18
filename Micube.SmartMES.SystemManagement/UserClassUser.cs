@@ -108,6 +108,8 @@ namespace Micube.SmartMES.SystemManagement
             grdUserClassUser.View.AddTextBoxColumn("POSITION", 100);
             grdUserClassUser.View.AddTextBoxColumn("EMAILADDRESS", 150);
             grdUserClassUser.View.AddTextBoxColumn("CELLPHONENUMBER", 100);
+            grdUserClassUser.View.AddTextBoxColumn("CREATOR", 80).SetTextAlignment(TextAlignment.Center);
+            grdUserClassUser.View.AddTextBoxColumn("CREATEDTIME", 130).SetDisplayFormat("yyyy-MM-dd HH:mm:ss").SetTextAlignment(TextAlignment.Center);
 
             grdUserClassUser.View.SetIsReadOnly();
 

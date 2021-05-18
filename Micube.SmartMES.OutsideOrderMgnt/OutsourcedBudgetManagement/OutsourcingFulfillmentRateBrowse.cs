@@ -117,17 +117,30 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             grdSub.View.AddTextBoxColumn("PROCESSSEGMENTCLASSNAME", 200);
             grdSub.View.AddTextBoxColumn("vendorid", 120)
                        .SetIsHidden();
-            grdSub.View.AddTextBoxColumn("vendorname", 200);
+            grdSub.View.AddTextBoxColumn("vendorname", 200)
+                       .SetLabel("OSPVENDORNAME");
             grdSub.View.AddTextBoxColumn("PRODUCTIONTYPE", 120)
                        .SetIsHidden();
             grdSub.View.AddTextBoxColumn("PRODUCTIONTYPENAME", 130);
             grdSub.View.AddTextBoxColumn("PRODUCTDEFTYPE", 100)
                        .SetIsHidden();
             grdSub.View.AddTextBoxColumn("PRODUCTDEFTYPENAME", 150);
-            grdSub.View.AddSpinEditColumn("PANELQTY", 120);
-            grdSub.View.AddSpinEditColumn("PCSQTY", 120);
-            grdSub.View.AddSpinEditColumn("M2QTY", 120);
-            grdSub.View.AddSpinEditColumn("SETTLEAMOUNT", 120);
+            grdSub.View.AddSpinEditColumn("PANELQTY", 120)
+                       .SetTextAlignment(TextAlignment.Right)
+                       .SetDisplayFormat("#,##0.##", MaskTypes.Numeric);
+            grdSub.View.AddSpinEditColumn("PCSQTY", 120)
+                       .SetIsHidden()
+                       .SetTextAlignment(TextAlignment.Right)
+                       .SetDisplayFormat("#,##0.##", MaskTypes.Numeric);
+            grdSub.View.AddSpinEditColumn("M2QTY", 120)
+                       .SetTextAlignment(TextAlignment.Right)
+                       .SetDisplayFormat("#,##0.##", MaskTypes.Numeric);
+            grdSub.View.AddSpinEditColumn("SETTLEAMOUNT", 120)
+                       .SetTextAlignment(TextAlignment.Right)
+                       .SetDisplayFormat("#,##0.##", MaskTypes.Numeric);
+            grdSub.View.AddTextBoxColumn("PRODUCTDEFID", 120);
+            grdSub.View.AddTextBoxColumn("PRODUCTDEFVERSION", 100);
+            grdSub.View.AddTextBoxColumn("PRODUCTDEFNAME", 200);
             grdSub.View.PopulateColumns();
             grdSub.View.SetIsReadOnly();
         }
@@ -150,30 +163,23 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 {
                     ((SmartSelectPopupEdit)Conditions.GetControl("p_TOPPROCESSSEGMENTCLASSID")).ReadOnly = false;
                     ((SmartSelectPopupEdit)Conditions.GetControl("p_processsegmentclassid")).ReadOnly = false;
-                    ((SmartSelectPopupEdit)Conditions.GetControl("PROCESSSEGMENTID")).ReadOnly = false;
                     ((SmartComboBox)Conditions.GetControl("P_SPECSUBTYPENAME")).ReadOnly = true;
-                    //((SmartComboBox)Conditions.GetControl("P_PRODUCTIONTYPE")).ReadOnly = false;
-                    //((SmartComboBox)Conditions.GetControl("P_MASTERDATACLASSID")).ReadOnly = false;
                 }
                 else
                 {
                     ((SmartSelectPopupEdit)Conditions.GetControl("p_TOPPROCESSSEGMENTCLASSID")).ReadOnly = true;
                     ((SmartSelectPopupEdit)Conditions.GetControl("p_processsegmentclassid")).ReadOnly = true;
-                    ((SmartSelectPopupEdit)Conditions.GetControl("PROCESSSEGMENTID")).ReadOnly = true;
-                    ((SmartComboBox)Conditions.GetControl("P_SPECSUBTYPENAME")).ReadOnly = false;
-                    //((SmartComboBox)Conditions.GetControl("P_PRODUCTIONTYPE")).ReadOnly = true;
-                    //((SmartComboBox)Conditions.GetControl("P_MASTERDATACLASSID")).ReadOnly = true;
+                    Conditions.GetCondition("p_processsegmentclassid").IsRequired = false;
                 }
 
                 ((SmartComboBox)Conditions.GetControl("P_SPECSUBTYPENAME")).EditValue = "*";
                 ((SmartSelectPopupEdit)Conditions.GetControl("p_TOPPROCESSSEGMENTCLASSID")).EditValue = string.Empty;
                 ((SmartSelectPopupEdit)Conditions.GetControl("p_processsegmentclassid")).EditValue = string.Empty;
-                ((SmartSelectPopupEdit)Conditions.GetControl("PROCESSSEGMENTID")).EditValue = string.Empty;
             };
 
             grdMain.View.RowStyle += View_RowStyle;
-            //grdMain.View.RowCellStyle += View_RowCellStyle;
 
+            grdSub.View.RowStyle += View_RowStyleSub;
 
             // 이행율 목록 포커스 이동시
             grdMain.View.FocusedRowChanged += (s, e) =>
@@ -184,6 +190,11 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                 }
 
                 if (e.FocusedRowHandle.Equals(e.PrevFocusedRowHandle))
+                {
+                    return;
+                }
+
+                if (grdMain.View.GetFocusedRowCellValue("OSPVENDORID") == DBNull.Value)
                 {
                     return;
                 }
@@ -239,7 +250,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
         private void View_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
         {
             if (grdMain.View.GetRowCellValue(e.RowHandle, "STANDARDUNIT") == DBNull.Value)
-            //if (grdMain.View.GetRowCellValue(e.RowHandle, "OSPVENDORNAME").ToString().Equals(Language.Get("SUBTOTAL")))
             {
                 e.Appearance.BackColor = Color.LightYellow;
                 e.Appearance.FontStyleDelta = FontStyle.Bold;
@@ -247,22 +257,16 @@ namespace Micube.SmartMES.OutsideOrderMgnt
             }
         }
 
-        //private void View_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        //{
-        //    DataRowView row = (sender as GridView).GetRow(e.RowHandle) as DataRowView;
+        private void View_RowStyleSub(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        {
+            if (grdSub.View.GetRowCellValue(e.RowHandle, "VENDORID") == DBNull.Value)
+            {
+                e.Appearance.BackColor = Color.LightYellow;
+                e.Appearance.FontStyleDelta = FontStyle.Bold;
+                e.HighPriority = true;
+            }
+        }
 
-        //    if (Format.GetInteger(row["VENDORNAME"]).Equals(0))
-        //    {
-        //        e.Appearance.BackColor = ColorTranslator.FromHtml("#D8DADE");
-        //        e.Appearance.Font = new Font(e.Appearance.Font, FontStyle.Bold);
-        //        //e.Appearance.ForeColor = Color.Black;
-        //    }
-        //    else if (row["VENDORNAME"].ToString().ToInt32() > 1)
-        //    {
-        //        e.Appearance.BackColor = Color.LightSkyBlue;
-        //        e.Appearance.Font = new Font(e.Appearance.Font, FontStyle.Bold);
-        //    }
-        //}
         #endregion Event
 
         #region 검색
@@ -354,25 +358,6 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                             dr["SENDPANELQTYDAYSUM"] = 0;
                         }
                     }
-
-                    //foreach (DataRow dr in dt.Rows)
-                    //{
-                    //    if (dr["OSPVENDORNAME"].ToString() == Language.Get("SUBTOTAL"))
-                    //    {
-                    //        dr["SENDPANELQTYMONSUM"] = dblSendpanelqtymonsum;
-                    //        dr["SENDPANELQTYDAYSUM"] = dblSendpanelqtydaysum;
-                    //    }
-                    //    else
-                    //    {
-                    //        dblSendpanelqtymon = Format.GetDouble(dr["SENDPANELQTYMON"], 0);
-                    //        dblSendpanelqtyday = Format.GetDouble(dr["SENDPANELQTYDAY"], 0);
-                    //        dblSendpanelqtymonsum += dblSendpanelqtymon;
-                    //        dblSendpanelqtydaysum += dblSendpanelqtydaysum;
-                    //        dr["SENDPANELQTYMONSUM"] = 0;
-                    //        dr["SENDPANELQTYDAYSUM"] = 0;
-                    //    }
-                    //}
-
 
                     //end of sum
                     foreach (DataRow dr in dt.Rows)
@@ -492,8 +477,9 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                                   .SetPopupLayout("MIDDLEPROCESSSEGMENTCLASS", PopupButtonStyles.Ok_Cancel, true, false)
                                   .SetPopupLayoutForm(400, 600)
                                   .SetLabel("MIDDLEPROCESSSEGMENTCLASS")
+                                  //.SetValidationIsRequired()
                                   .SetRelationIds("P_TOPPROCESSSEGMENTCLASSID")
-                                  .SetPopupResultCount(1)
+                                  .SetPopupResultCount(0)
                                   .SetPosition(0.4);
 
             condition.Conditions.AddTextBox("MIDDLEPROCESSSEGMENTCLASSNAME").SetLabel("MIDDLEPROCESSSEGMENTCLASSNAME");
@@ -503,28 +489,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             #endregion (0.4) 중공정 설정
 
-            #region (0.5) 공정 선택팝업
-
-            condition = Conditions.AddSelectPopup("PROCESSSEGMENTID", new SqlQuery("GetProcessSegmentListByOsp", "10001", param), "PROCESSSEGMENTNAME", "PROCESSSEGMENTID")
-                                  .SetPopupLayout("PROCESSSEGMENTID", PopupButtonStyles.Ok_Cancel, true, false)
-                                  .SetPopupLayoutForm(500, 600)
-                                  .SetLabel("PROCESSSEGMENTNAME")
-                                  .SetRelationIds("P_TOPPROCESSSEGMENTCLASSID", "P_PROCESSSEGMENTCLASSID")
-                                  .SetPopupResultCount(1)
-                                  .SetPosition(0.5)
-                                  .SetIsHidden();
-
-            condition.ValueFieldName = "PROCESSSEGMENTID";
-            condition.DisplayFieldName = "PROCESSSEGMENTNAME";
-
-            condition.Conditions.AddTextBox("PROCESSSEGMENTNAME").SetLabel("PROCESSSEGMENT");
-
-            condition.GridColumns.AddTextBoxColumn("PROCESSSEGMENTID", 100).SetValidationKeyColumn();
-            condition.GridColumns.AddTextBoxColumn("PROCESSSEGMENTNAME", 250);
-
-            #endregion (0.5) 공정 선택팝업
-
-            #region (0.6) 작업방식 설정
+            #region (0.5) 작업방식 설정
 
             param.Add("P_CODECLASSID", "OutsourcingSpecWorkType");
             param.Add("P_CODENOTIN", "OutsourcingSpecWorkType008','OutsourcingSpecWorkType009");
@@ -534,36 +499,35 @@ namespace Micube.SmartMES.OutsideOrderMgnt
                       .SetIsReadOnly()
                       .SetEmptyItem(Language.Get("ALLVIEWS"), "*", true)
                       .SetDefault("*")
-                      .SetPosition(0.6);
+                      .SetPosition(0.5);
 
-            #endregion (0.6) 작업방식 설정
+            #endregion (0.5) 작업방식 설정
 
-            #region (0.7) 집계코드 설정
+            #region (0.6) 집계코드 설정
 
-            //param["CODECLASSID"] = "OSPSumCode";
             param["CODECLASSID"] = "StandardUnit";
 
             Conditions.AddComboBox("p_ospsumcode", new SqlQuery("GetCodeList", "00001", param))
                       .SetLabel("OSPSUMCODE")
-                      .SetPosition(0.7)
+                      .SetPosition(0.6)
                       .SetEmptyItem(Language.Get("ALLVIEWS"), "*", true)
                       .SetDefault("*");
 
-            #endregion (0.7) 집계코드 설정
+            #endregion (0.6) 집계코드 설정
 
             // 양산/샘플 (Production/Sample)
             Conditions.AddComboBox("P_PRODUCTIONTYPE", new SqlQuery("GetOutsourcedDistributionSearchConditionProductionType", "10001", param))
                       .SetLabel("PRODUCTIONTYPE")
                       .SetEmptyItem(Language.Get("ALLVIEWS"), "*", true)
                       .SetDefault("Production")
-                      .SetPosition(0.8);
+                      .SetPosition(0.7);
 
             // 제품/반제품 (Product/SubAssembly)
             Conditions.AddComboBox("P_MASTERDATACLASSID", new SqlQuery("GetOutsourcedDistributionSearchConditionMasterdataclassid", "10001", param))
                       .SetLabel("MASTERDATACLASSID")
                       .SetEmptyItem(Language.Get("ALLVIEWS"), "*", true)
                       .SetDefault("Product")
-                      .SetPosition(0.9);
+                      .SetPosition(0.8);
         }
 
         #endregion 검색

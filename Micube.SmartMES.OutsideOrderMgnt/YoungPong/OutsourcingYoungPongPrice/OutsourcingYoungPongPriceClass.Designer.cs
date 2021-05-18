@@ -28,111 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.smartSplitTableLayoutPanel1 = new Micube.Framework.SmartControls.SmartSplitTableLayoutPanel();
-            this.grdDetail = new Micube.Framework.SmartControls.SmartBandedGrid();
-            this.grdMaster = new Micube.Framework.SmartControls.SmartBandedGrid();
+            this.components = new System.ComponentModel.Container();
+            this.grdSub = new Micube.Framework.SmartControls.SmartBandedGrid();
+            this.grdMain = new Micube.Framework.SmartControls.SmartBandedGrid();
+            this.smartSpliterContainer1 = new Micube.Framework.SmartControls.SmartSpliterContainer();
             ((System.ComponentModel.ISupportInitialize)(this.pnlCondition)).BeginInit();
             this.pnlContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlMain)).BeginInit();
-            this.smartSplitTableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.smartSpliterContainer1)).BeginInit();
+            this.smartSpliterContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCondition
             // 
-            this.pnlCondition.Size = new System.Drawing.Size(371, 900);
+            this.pnlCondition.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(441, 278, 650, 400);
+            this.pnlCondition.Size = new System.Drawing.Size(296, 906);
             // 
             // pnlToolbar
             // 
-            this.pnlToolbar.Size = new System.Drawing.Size(843, 30);
+            this.pnlToolbar.Size = new System.Drawing.Size(919, 24);
             // 
             // pnlContent
             // 
             this.pnlContent.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.pnlContent.Appearance.Options.UseBackColor = true;
-            this.pnlContent.Controls.Add(this.smartSplitTableLayoutPanel1);
-            this.pnlContent.Size = new System.Drawing.Size(843, 903);
+            this.pnlContent.Controls.Add(this.smartSpliterContainer1);
+            this.pnlContent.Size = new System.Drawing.Size(919, 910);
             // 
             // pnlMain
             // 
             this.pnlMain.Location = new System.Drawing.Point(19, 19);
             this.pnlMain.Size = new System.Drawing.Size(1224, 939);
             // 
-            // smartSplitTableLayoutPanel1
+            // grdSub
             // 
-            this.smartSplitTableLayoutPanel1.ColumnCount = 2;
-            this.smartSplitTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.64641F));
-            this.smartSplitTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.35359F));
-            this.smartSplitTableLayoutPanel1.Controls.Add(this.grdDetail, 0, 0);
-            this.smartSplitTableLayoutPanel1.Controls.Add(this.grdMaster, 0, 0);
-            this.smartSplitTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.smartSplitTableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.smartSplitTableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.smartSplitTableLayoutPanel1.Name = "smartSplitTableLayoutPanel1";
-            this.smartSplitTableLayoutPanel1.RowCount = 1;
-            this.smartSplitTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.smartSplitTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 628F));
-            this.smartSplitTableLayoutPanel1.Size = new System.Drawing.Size(843, 903);
-            this.smartSplitTableLayoutPanel1.TabIndex = 0;
-            // 
-            // grdDetail
-            // 
-            this.grdDetail.Caption = "";
-            this.grdDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdDetail.GridButtonItem = ((Micube.Framework.SmartControls.GridButtonItem)((((((Micube.Framework.SmartControls.GridButtonItem.Add | Micube.Framework.SmartControls.GridButtonItem.Copy) 
+            this.grdSub.Caption = "";
+            this.grdSub.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdSub.GridButtonItem = ((Micube.Framework.SmartControls.GridButtonItem)((((((Micube.Framework.SmartControls.GridButtonItem.Add | Micube.Framework.SmartControls.GridButtonItem.Copy) 
             | Micube.Framework.SmartControls.GridButtonItem.Delete) 
             | Micube.Framework.SmartControls.GridButtonItem.Preview) 
             | Micube.Framework.SmartControls.GridButtonItem.Import) 
             | Micube.Framework.SmartControls.GridButtonItem.Export)));
-            this.grdDetail.IsUsePaging = false;
-            this.grdDetail.LanguageKey = "OUTSOURCINGYOUNGPONGPRICECLASSDETAILLIST";
-            this.grdDetail.Location = new System.Drawing.Point(367, 0);
-            this.grdDetail.Margin = new System.Windows.Forms.Padding(0);
-            this.grdDetail.Name = "grdDetail";
-            this.grdDetail.ShowBorder = true;
-            this.grdDetail.Size = new System.Drawing.Size(476, 903);
-            this.grdDetail.TabIndex = 10;
-            this.grdDetail.UseAutoBestFitColumns = false;
+            this.grdSub.IsUsePaging = false;
+            this.grdSub.LanguageKey = "";
+            this.grdSub.Location = new System.Drawing.Point(0, 0);
+            this.grdSub.Margin = new System.Windows.Forms.Padding(0);
+            this.grdSub.Name = "grdSub";
+            this.grdSub.ShowBorder = true;
+            this.grdSub.Size = new System.Drawing.Size(244, 910);
+            this.grdSub.TabIndex = 10;
+            this.grdSub.UseAutoBestFitColumns = false;
             // 
-            // grdMaster
+            // grdMain
             // 
-            this.grdMaster.Caption = "";
-            this.grdMaster.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaster.GridButtonItem = ((Micube.Framework.SmartControls.GridButtonItem)((((((Micube.Framework.SmartControls.GridButtonItem.Add | Micube.Framework.SmartControls.GridButtonItem.Copy) 
+            this.grdMain.Caption = "";
+            this.grdMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdMain.GridButtonItem = ((Micube.Framework.SmartControls.GridButtonItem)((((((Micube.Framework.SmartControls.GridButtonItem.Add | Micube.Framework.SmartControls.GridButtonItem.Copy) 
             | Micube.Framework.SmartControls.GridButtonItem.Delete) 
             | Micube.Framework.SmartControls.GridButtonItem.Preview) 
             | Micube.Framework.SmartControls.GridButtonItem.Import) 
             | Micube.Framework.SmartControls.GridButtonItem.Export)));
-            this.grdMaster.IsUsePaging = false;
-            this.grdMaster.LanguageKey = "OUTSOURCINGYOUNGPONGPRICECLASSLIST";
-            this.grdMaster.Location = new System.Drawing.Point(0, 0);
-            this.grdMaster.Margin = new System.Windows.Forms.Padding(0);
-            this.grdMaster.Name = "grdMaster";
-            this.grdMaster.ShowBorder = true;
-            this.grdMaster.Size = new System.Drawing.Size(367, 903);
-            this.grdMaster.TabIndex = 9;
-            this.grdMaster.UseAutoBestFitColumns = false;
+            this.grdMain.IsUsePaging = false;
+            this.grdMain.LanguageKey = "";
+            this.grdMain.Location = new System.Drawing.Point(0, 0);
+            this.grdMain.Margin = new System.Windows.Forms.Padding(0);
+            this.grdMain.Name = "grdMain";
+            this.grdMain.ShowBorder = true;
+            this.grdMain.Size = new System.Drawing.Size(670, 910);
+            this.grdMain.TabIndex = 9;
+            this.grdMain.UseAutoBestFitColumns = false;
+            // 
+            // smartSpliterContainer1
+            // 
+            this.smartSpliterContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.smartSpliterContainer1.Location = new System.Drawing.Point(0, 0);
+            this.smartSpliterContainer1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.smartSpliterContainer1.Name = "smartSpliterContainer1";
+            this.smartSpliterContainer1.Panel1.Controls.Add(this.grdMain);
+            this.smartSpliterContainer1.Panel1.Text = "Panel1";
+            this.smartSpliterContainer1.Panel2.Controls.Add(this.grdSub);
+            this.smartSpliterContainer1.Panel2.Text = "Panel2";
+            this.smartSpliterContainer1.Size = new System.Drawing.Size(919, 910);
+            this.smartSpliterContainer1.SplitterPosition = 670;
+            this.smartSpliterContainer1.TabIndex = 1;
+            this.smartSpliterContainer1.Text = "smartSpliterContainer1";
             // 
             // OutsourcingYoungPongPriceClass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 977);
             this.Name = "OutsourcingYoungPongPriceClass";
-            this.Padding = new System.Windows.Forms.Padding(19, 19, 19, 19);
+            this.Padding = new System.Windows.Forms.Padding(19);
             this.Text = "SmartConditionBaseForm";
             ((System.ComponentModel.ISupportInitialize)(this.pnlCondition)).EndInit();
             this.pnlContent.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlMain)).EndInit();
-            this.smartSplitTableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.smartSpliterContainer1)).EndInit();
+            this.smartSpliterContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Framework.SmartControls.SmartSplitTableLayoutPanel smartSplitTableLayoutPanel1;
-        private Framework.SmartControls.SmartBandedGrid grdDetail;
-        private Framework.SmartControls.SmartBandedGrid grdMaster;
+        private Framework.SmartControls.SmartBandedGrid grdSub;
+        private Framework.SmartControls.SmartBandedGrid grdMain;
+        private Framework.SmartControls.SmartSpliterContainer smartSpliterContainer1;
     }
 }

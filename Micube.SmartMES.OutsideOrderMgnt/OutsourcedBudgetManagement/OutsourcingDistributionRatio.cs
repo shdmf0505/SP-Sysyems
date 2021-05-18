@@ -154,6 +154,7 @@ namespace Micube.SmartMES.OutsideOrderMgnt
 
             //셀렉트팝업시 아래 주석 처리 2021-04-26 오근영
             grdRight.View.AddComboBoxColumn("VENDORID", 150, new SqlQueryAdapter(), "VENDORNAME", "VENDORID")
+                         .SetLabel("OSPVENDORNAME")
                          .SetValidationKeyColumn()
                          .SetValidationIsRequired();
 
